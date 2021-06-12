@@ -15,11 +15,11 @@ C:/Users/x79/Documents/GitHub/GPA4300Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50100
+63414
 Successfully changed project path to: C:/Users/x79/Documents/GitHub/GPA4300Game
 C:/Users/x79/Documents/GitHub/GPA4300Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 25.54 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 24.67 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -35,63 +35,175 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56432
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001517 seconds.
+Registered in 0.001525 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 25.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 24.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.899 seconds
+- Completed reload, in  0.867 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003148 seconds.
+Registered in 0.002967 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.833 seconds
+- Completed reload, in  0.822 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
 Refreshing native plugins compatible for Editor in 0.27 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1388 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 64.8 MB.
-System memory in use after: 64.8 MB.
+System memory in use after: 64.9 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1821.
-Total: 1.802500 ms (FindLiveObjects: 0.144500 ms CreateObjectMapping: 0.030300 ms MarkObjects: 1.558400 ms  DeleteObjects: 0.068000 ms)
+Total: 1.597100 ms (FindLiveObjects: 0.146900 ms CreateObjectMapping: 0.029700 ms MarkObjects: 1.351800 ms  DeleteObjects: 0.067900 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Test Level.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Test Level.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed6596c1d1d2522b59c803aaec2915d') in 0.013778 seconds
-  Import took 0.015759 seconds .
+  path: Assets/Materials/Mat_Player.mat
+  artifactKey: Guid(bd36f59fd0f6ba04993d6fb36feb8df7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Mat_Player.mat using Guid(bd36f59fd0f6ba04993d6fb36feb8df7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be1164af061f2f13df578790aba3cd21') in 0.086442 seconds
+  Import took 0.088386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Materials/Mat_Floor.mat
+  artifactKey: Guid(c421861b5c6a5be408bb0e628f9e4101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Mat_Floor.mat using Guid(c421861b5c6a5be408bb0e628f9e4101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c1b1ac170d72b5b2843ba9cafa922d6') in 0.024764 seconds
+  Import took 0.026565 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.012084 seconds.
+  path: Assets/Textures/floor_diff - Height.psd
+  artifactKey: Guid(edd269493b05f4c489a79aef08e24271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_diff - Height.psd using Guid(edd269493b05f4c489a79aef08e24271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21ed806fcfdf2a13a3de699c2cf7ccf8') in 0.028749 seconds
+  Import took 0.030789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Textures/floor_diff - Metallic.png
+  artifactKey: Guid(6a4bed0361155974d8ef00f0edf8e0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_diff - Metallic.png using Guid(6a4bed0361155974d8ef00f0edf8e0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2433b51f8fb86a0057368649cdc9adeb') in 0.039377 seconds
+  Import took 0.041134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Textures/floor_diff - Height.psd
+  artifactKey: Guid(edd269493b05f4c489a79aef08e24271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_diff - Height.psd using Guid(edd269493b05f4c489a79aef08e24271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21ed806fcfdf2a13a3de699c2cf7ccf8') in 0.013905 seconds
+  Import took 0.015658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Textures/floor_diff - Metallic.png
+  artifactKey: Guid(6a4bed0361155974d8ef00f0edf8e0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_diff - Metallic.png using Guid(6a4bed0361155974d8ef00f0edf8e0cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2433b51f8fb86a0057368649cdc9adeb') in 0.037279 seconds
+  Import took 0.039132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Textures/red_hip.png
+  artifactKey: Guid(13a399a940b94b84dbcabf78c6d770d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/red_hip.png using Guid(13a399a940b94b84dbcabf78c6d770d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db8b2e428bbb0809cf493e67614b4e1') in 0.040998 seconds
+  Import took 0.042759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Textures/floor_norm.png
+  artifactKey: Guid(60804555649ae9b418a7467563d0b45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_norm.png using Guid(60804555649ae9b418a7467563d0b45a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfcc6e36ebd04b06a8cb8b4b004e526e') in 0.010921 seconds
+  Import took 0.012686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Textures/red_zoom.png
+  artifactKey: Guid(7ee85774c8dc66047be4eabc0739f047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/red_zoom.png using Guid(7ee85774c8dc66047be4eabc0739f047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32f49c7c685e43b93aa06eec67ab7631') in 0.010987 seconds
+  Import took 0.013050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Textures/floor_diff.png
+  artifactKey: Guid(5ba484de7dee6bd4fb66271376fe95fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_diff.png using Guid(5ba484de7dee6bd4fb66271376fe95fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0841cc5c8a39ba26d4c4f629f44c455c') in 0.008818 seconds
+  Import took 0.010636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/Textures/floor_diff - Occlusion.jpg
+  artifactKey: Guid(3bb7b0eef74fedc4b8ffeb7e7c440d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_diff - Occlusion.jpg using Guid(3bb7b0eef74fedc4b8ffeb7e7c440d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f75624f700d8bbe1045a95278220021') in 0.009901 seconds
+  Import took 0.011663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007208 seconds.
+  path: Assets/Textures/floor_diff.png
+  artifactKey: Guid(5ba484de7dee6bd4fb66271376fe95fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/floor_diff.png using Guid(5ba484de7dee6bd4fb66271376fe95fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0841cc5c8a39ba26d4c4f629f44c455c') in 0.006921 seconds
+  Import took 0.008837 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002982 seconds.
+Registered in 0.002985 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.790 seconds
+- Completed reload, in  0.802 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1383 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.7 MB.
-System memory in use after: 64.8 MB.
+System memory in use before: 68.1 MB.
+System memory in use after: 68.2 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1824.
-Total: 1.724400 ms (FindLiveObjects: 0.137300 ms CreateObjectMapping: 0.029500 ms MarkObjects: 1.511800 ms  DeleteObjects: 0.044800 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1878.
+Total: 1.649000 ms (FindLiveObjects: 0.154000 ms CreateObjectMapping: 0.030500 ms MarkObjects: 1.414600 ms  DeleteObjects: 0.048800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 465.208958 seconds.
+  path: Assets/Scripts/GameController.cs
+  artifactKey: Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameController.cs using Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff71e6f4b8dae442af321367df274c65') in 0.011776 seconds
+  Import took 0.013921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.007152 seconds.
+  path: Assets/Scripts/GameController.cs
+  artifactKey: Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameController.cs using Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff71e6f4b8dae442af321367df274c65') in 0.001424 seconds
+  Import took 0.003112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 74.339222 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(6fc0917942dfd4042993cc6f74f4ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(6fc0917942dfd4042993cc6f74f4ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58792e4ebe96a4d00e522b4d7a688174') in 0.005652 seconds
+  Import took 0.007808 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
