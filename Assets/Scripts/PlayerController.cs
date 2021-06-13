@@ -21,30 +21,30 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody PlayerBody;
+    private Rigidbody playerBody;
     [SerializeField]
-    private bool SprintActive = true;
+    private bool sprintActive = true;
     [SerializeField]
-    private bool JumpActive = false;
+    private bool jumpActive = false;
     [SerializeField]
-    private bool RotatePlayerWithButtons = false;
+    private bool rotatePlayerWithButtons = false;
 
-    public Vector3 StartPosition;
-    public Transform CamTransform;
+    public Vector3 startPosition;
+    public Transform camTransform;
 
-    public float MoveSpeed = 5f;
+    public float moveSpeed = 5f;
     [Tooltip("Sprint Speed = Move Speed * Speed Multiplier")]
-    public float SpeedMultiplier = 2f;
-    public float RotateSpeed = 200f;
-    public float FallingDownLimit = -5f;
-    public float JumpForce = 5f;
+    public float speedMultiplier = 2f;
+    public float rotatingSpeed = 200f;
+    public float fallingDownLimit = -5f;
+    public float jumpForce = 5f;
     public bool groundCheck;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerBody = GetComponent<Rigidbody>();
-        PlayerBody.transform.position = StartPosition;
+        playerBody = GetComponent<Rigidbody>();
+        playerBody.transform.position = startPosition;
     }
 
     // Update is called once per frame
@@ -67,9 +67,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void FallingDownCheck()
     {
-        if (transform.position.y <= FallingDownLimit)
+        if (transform.position.y <= fallingDownLimit)
         {
-            PlayerBody.transform.position = StartPosition;
+            playerBody.transform.position = startPosition;
         }
     }
 
@@ -84,29 +84,29 @@ public class PlayerController : MonoBehaviour
         float speed;
 
         // Sprint
-        if (Input.GetButton("Run") && SprintActive)
+        if (Input.GetButton("Run") && sprintActive)
         {
-            speed = MoveSpeed * SpeedMultiplier;
+            speed = moveSpeed * speedMultiplier;
         }
         else
         {
-            speed = MoveSpeed;
+            speed = moveSpeed;
         }
 
         // Mit der Tastatur drehen
-        if (RotatePlayerWithButtons)
+        if (rotatePlayerWithButtons)
         {
-            Quaternion deltaRotation = Quaternion.Euler(0, keyInput.x * RotateSpeed * Time.deltaTime, 0);
-            PlayerBody.MoveRotation(PlayerBody.rotation * deltaRotation);
+            Quaternion deltaRotation = Quaternion.Euler(0, keyInput.x * rotatingSpeed * Time.deltaTime, 0);
+            playerBody.MoveRotation(playerBody.rotation * deltaRotation);
         }
         else
         {
             // Zur Seite gehen
-            PlayerBody.MovePosition(PlayerBody.position + speed * Time.deltaTime * keyInput.x * transform.right);
+            playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.x * transform.right);
         }
 
         // Nach vorne gehen
-        PlayerBody.MovePosition(PlayerBody.position + speed * Time.deltaTime * keyInput.z * transform.forward);
+        playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.z * transform.forward);
     }
 
     /// <summary>
@@ -117,12 +117,12 @@ public class PlayerController : MonoBehaviour
         Vector3 mouseInput = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 
         // Spieler sieht nach oben oder unten
-        Quaternion deltaRotationY = Quaternion.Euler(RotateSpeed * Time.deltaTime * -mouseInput.y, 0, 0);
-        CamTransform.Rotate(deltaRotationY.eulerAngles);
+        Quaternion deltaRotationY = Quaternion.Euler(rotatingSpeed * Time.deltaTime * -mouseInput.y, 0, 0);
+        camTransform.Rotate(deltaRotationY.eulerAngles);
 
         // Spieler dreht sich nach links oder rechts
-        Quaternion deltaRotationX = Quaternion.Euler(0, RotateSpeed * Time.deltaTime * mouseInput.x, 0);
-        PlayerBody.MoveRotation(PlayerBody.rotation * deltaRotationX);
+        Quaternion deltaRotationX = Quaternion.Euler(0, rotatingSpeed * Time.deltaTime * mouseInput.x, 0);
+        playerBody.MoveRotation(playerBody.rotation * deltaRotationX);
 
     }
 
@@ -131,9 +131,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && groundCheck && JumpActive)
+        if (Input.GetButtonDown("Jump") && groundCheck && jumpActive)
         {
-            PlayerBody.AddForceAtPosition(transform.up * JumpForce, transform.position, ForceMode.Impulse);
+            playerBody.AddForceAtPosition(transform.up * jumpForce, transform.position, ForceMode.Impulse);
             groundCheck = false;
         }
     }
