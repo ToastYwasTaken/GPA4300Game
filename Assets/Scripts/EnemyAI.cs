@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 /******************************************************************************
  * Project: GPA4300Game
  * File: EnemyAI.cs
- * Version: 1.0
+ * Version: 1.01
  * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
  * 
  * 
@@ -23,27 +22,39 @@ using UnityEngine.AI;
  *****************************************************************************/
 public class EnemyAI : MonoBehaviour
 {
-    public Transform destPointA;
-    public Transform destPointB;
+    [Header("UI Controls")]
+    public Text destText;
 
+    [Header("AI Controls")]
+    public Transform[] destPoints;
     public NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = destPointA.position;
-
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(destPointB.position);
+        agent.SetDestination(NextDestination().position);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
 
+        // TODO: Patrouilliere
+        // TODO: Suche Spieler
 
+    }
 
+    /// <summary>
+    /// Bestimmt per Zufallzahl ein neues Ziel
+    /// </summary>
+    /// <returns></returns>
+    private Transform NextDestination()
+    {
+        int rnd = Random.Range(0, destPoints.Length);
+        destText.text = $"Destination: {destPoints[rnd].name}";
+
+        return destPoints[rnd];
     }
 
     /// <summary>
@@ -61,5 +72,14 @@ public class EnemyAI : MonoBehaviour
     public void AgentResume()
     {
         agent.isStopped = false;
+    }
+
+    /// <summary>
+    /// Bestimmt für den Agent ein neues Ziel
+    /// </summary>
+    public void NextDestPoint()
+    {
+        agent.ResetPath();
+        agent.SetDestination(NextDestination().position);
     }
 }

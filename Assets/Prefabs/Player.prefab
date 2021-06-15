@@ -87,17 +87,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc0917942dfd4042993cc6f74f4ac98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SprintActive: 1
-  JumpActive: 1
-  RotatePlayerWithButtons: 0
-  StartPosition: {x: 0, y: 1, z: 0}
-  CamTransform: {fileID: 1314761338233513067}
-  MoveSpeed: 5
-  SpeedMultiplier: 2
-  RotateSpeed: 200
-  FallingDownLimit: -5
-  JumpForce: 200
+  startPosition: {x: 0, y: 1, z: 0}
+  camTransform: {fileID: 1314761338233513067}
+  sprintActive: 1
+  speedMultiplier: 2
+  jumpActive: 1
+  jumpForce: 200
   groundCheck: 0
+  rotatePlayerWithButtons: 0
+  maxVerticalCameraAngle: 45
+  moveSpeed: 5
+  rotationSpeed: 200
+  fallingDownLimit: -5
 --- !u!114 &5424257757402489991
 MonoBehaviour:
   m_ObjectHideFlags: 0

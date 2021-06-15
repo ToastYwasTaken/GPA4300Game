@@ -247,11 +247,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1395eb90d423194493a5a46c4e60fe4, type: 3}
---- !u!4 &348877266 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1314761338233513067, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
-  m_PrefabInstance: {fileID: 5424257758072092084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &388263278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1620,7 +1615,7 @@ Canvas:
   m_GameObject: {fileID: 2100372047}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1831738185}
   m_PlaneDistance: 80
   m_PixelPerfect: 0
@@ -1628,7 +1623,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: -1
+  m_AdditionalShaderChannelsFlag: 7
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1759,18 +1754,6 @@ PrefabInstance:
     - target: {fileID: 1480618712829794266, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3651380658326241305, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
-      propertyPath: jumpActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3651380658326241305, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
-      propertyPath: camTransform
-      value: 
-      objectReference: {fileID: 348877266}
-    - target: {fileID: 3651380658326241305, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
-      propertyPath: rotatingSpeed
-      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5424257757402489990, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
       propertyPath: m_Name

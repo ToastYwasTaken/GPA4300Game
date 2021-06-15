@@ -3,7 +3,7 @@ using UnityEngine;
 /******************************************************************************
  * Project: GPA4300Game
  * File: PlayerController.cs
- * Version: 1.0
+ * Version: 1.01
  * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
  * 
  * 
@@ -16,29 +16,39 @@ using UnityEngine;
  * ChangeLog
  * ----------------------------
  *  11.06.2021  RK  Created
+ *  15.06.2021  RK  Added max vertical Camera angle
  *  
  *****************************************************************************/
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerBody;
-    [SerializeField]
-    private bool sprintActive = true;
-    [SerializeField]
-    private bool jumpActive = false;
-    [SerializeField]
-    private bool rotatePlayerWithButtons = false;
 
     public Vector3 startPosition;
     public Transform camTransform;
 
-    public float moveSpeed = 5f;
+    [SerializeField]
+    private bool sprintActive = true;
+
     [Tooltip("Sprint Speed = Move Speed * Speed Multiplier")]
     public float speedMultiplier = 2f;
-    public float rotatingSpeed = 200f;
+
+    [SerializeField]
+    private bool jumpActive = false;
+    public float jumpForce = 200f;
+
+    [SerializeField]
+    private bool groundCheck;
+
+    [SerializeField]
+    private bool rotatePlayerWithButtons = false;
+
+    public float maxVerticalCameraAngle = 45f;
+    private float cameraAngle = 0f;
+
+    public float moveSpeed = 5f;
+    public float rotationSpeed = 200f;
     public float fallingDownLimit = -5f;
-    public float jumpForce = 5f;
-    public bool groundCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +73,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Setzt den Spieler zu Start Position zurück, wenn er fällt
+    /// Setzt den Spieler zu Startposition zurück, wenn er fällt
     /// </summary>
     void FallingDownCheck()
     {
@@ -96,7 +106,7 @@ public class PlayerController : MonoBehaviour
         // Mit der Tastatur drehen
         if (rotatePlayerWithButtons)
         {
-            Quaternion deltaRotation = Quaternion.Euler(0, keyInput.x * rotatingSpeed * Time.deltaTime, 0);
+            Quaternion deltaRotation = Quaternion.Euler(0, keyInput.x * rotationSpeed * Time.deltaTime, 0);
             playerBody.MoveRotation(playerBody.rotation * deltaRotation);
         }
         else
@@ -117,13 +127,19 @@ public class PlayerController : MonoBehaviour
         Vector3 mouseInput = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 
         // Spieler sieht nach oben oder unten
-        Quaternion deltaRotationY = Quaternion.Euler(rotatingSpeed * Time.deltaTime * -mouseInput.y, 0, 0);
-        camTransform.Rotate(deltaRotationY.eulerAngles);
+        cameraAngle += -mouseInput.y * rotationSpeed * Time.deltaTime;
+
+        // Winkel der Kamera auf min und max begrenzen
+        cameraAngle = Mathf.Clamp(cameraAngle, -maxVerticalCameraAngle, maxVerticalCameraAngle);
+        // Debug.Log(cameraAngle);
+
+        // Rotationswinkel zuweisen
+        // camTransform.rotation = Quaternion.Euler(cameraAngle, 0, 0); -> nicht mehr schwenkbar
+        camTransform.transform.localEulerAngles = new Vector3(cameraAngle, 0, 0);
 
         // Spieler dreht sich nach links oder rechts
-        Quaternion deltaRotationX = Quaternion.Euler(0, rotatingSpeed * Time.deltaTime * mouseInput.x, 0);
+        Quaternion deltaRotationX = Quaternion.Euler(0, rotationSpeed * Time.deltaTime * mouseInput.x, 0);
         playerBody.MoveRotation(playerBody.rotation * deltaRotationX);
-
     }
 
     /// <summary>
@@ -133,7 +149,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && groundCheck && jumpActive)
         {
-            playerBody.AddForceAtPosition(transform.up * jumpForce, transform.position, ForceMode.Impulse);
+            playerBody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             groundCheck = false;
         }
     }
