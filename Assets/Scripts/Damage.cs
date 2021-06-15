@@ -27,17 +27,17 @@ using UnityEngine;
 public class Damage : MonoBehaviour
 { 
     [SerializeField]
-    private float edamage = 20f;    //Schaden des Gegners am Spieler
+    private byte edamage = 20;    //Schaden des Gegners am Spieler
 
     [SerializeField]
-    private float pdamage = 20f;   //Schaden des Spielers an Gegnern
+    private byte pdamage = 20;   //Schaden des Spielers an Gegnern
 
-    public float pDamageProperty 
+    public byte pDamageProperty 
     { 
         get => pdamage;
         set => pdamage = value; 
     }
-    public float eDamageProperty
+    public byte eDamageProperty
     {
         get => edamage;
         set => edamage = value;

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 /******************************************************************************
  * Project: GPA4300Game
  * File: GUIHealth.cs
@@ -26,6 +28,16 @@ using UnityEngine;
  //TODO
 public class GUIHealth : MonoBehaviour
 {
+    [SerializeField]
+    private TextMeshProUGUI healthText;
+
+    [SerializeField]
+    private Image healthImage;
+
+    private byte phealth;
+    private byte defaultHealthColorRed = 95;
+    private byte changeGradientRed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +47,34 @@ public class GUIHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        phealth = GetComponent<PlayerHealth>().pHealthProperty; //100 - 0
+        changeGradientRed = (byte)(defaultHealthColorRed + (100 - phealth));
+        healthText.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
+        healthImage.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
+        if(phealth < 30)
+        {
+            for(float i = 0f; i <= 1f; i+= 0.1f)
+            {
+                healthImage.transform.localScale = new Vector3(
+                    (Mathf.Lerp(healthImage.transform.localScale.x, 
+                    healthImage.transform.localScale.x + 0.025f, 
+                    Mathf.SmoothStep(0f, 1f, i))),
+                    (Mathf.Lerp(healthImage.transform.localScale.y, 
+                    healthImage.transform.localScale.y + 0.025f, 
+                    Mathf.SmoothStep(0f, 1f, i))), 
+                    healthImage.transform.localScale.z);
+            }
+            for (float i = 0f; i <= 1f; i += 0.1f)
+            {
+                healthImage.transform.localScale = new Vector3(
+                    (Mathf.Lerp(healthImage.transform.localScale.x,
+                    healthImage.transform.localScale.x - 0.025f,
+                    Mathf.SmoothStep(0f, 1f, i))),
+                    (Mathf.Lerp(healthImage.transform.localScale.y,
+                    healthImage.transform.localScale.y - 0.025f,
+                    Mathf.SmoothStep(0f, 1f, i))),
+                    healthImage.transform.localScale.z);
+            }
+        }
     }
 }

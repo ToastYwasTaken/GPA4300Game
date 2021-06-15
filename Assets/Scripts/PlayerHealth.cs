@@ -26,9 +26,9 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    private float phealth = 100f;    //Startwert
+    private byte phealth = 100;    //Startwert
     public GameObject edamageObject;
-    private float edamage;
+    private byte edamage;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,10 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(phealth < 0)
+        {
+            
+        }
     }
 
     private void OnCollisionEnter(Collision collision)  
@@ -48,5 +51,11 @@ public class PlayerHealth : MonoBehaviour
         {
             phealth -= edamage;
         }
+    }
+
+    public byte pHealthProperty 
+    { 
+        get => phealth;
+        set => phealth = value; 
     }
 }
