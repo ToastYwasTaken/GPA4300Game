@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -22,39 +23,104 @@ using UnityEngine.UI;
  *****************************************************************************/
 public class EnemyAI : MonoBehaviour
 {
+    private NavMeshAgent agent;
+    [Header("Dev Mode")]
+    [SerializeField]
+    private bool useMouseDest = false;
+
     [Header("UI Controls")]
     public Text destText;
 
     [Header("AI Controls")]
-    public Transform[] destPoints;
-    public NavMeshAgent agent;
+    public GameObject[] patrolPoints;
+    public float pauseTime = 3f;
+
+    private void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(NextDestination().position);
+        GetComponent<SearchPlayerAI>().StartSearchingPlayer();
+        agent.stoppingDistance = 0;
+        SetDestination(NextDestination());    
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        // TODO
+        // Partrolling();
+    }
 
-        // TODO: Patrouilliere
-        // TODO: Suche Spieler
+    private void FixedUpdate()
+    {
+        if (useMouseDest)
+        {
+            MouseDestination();
+        }
+    }
 
+    private bool DestinationReached()
+    {
+        // if (agent.transform.position == )
+
+        return true;
+    }
+
+    private void Partrolling()
+    {
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {
+            Debug.Log("Ziel erreicht!");
+            // Warte einen Moment
+            StartCoroutine(nameof(WaitAMoment), pauseTime);
+
+            // Lege neues Ziel fest
+            SetDestination(NextDestination());
+        }
+
+ 
+        // Debug.Log("remaing: " + agent.remainingDistance + " | stopping: " + agent.stoppingDistance);
+    }
+
+    IEnumerator WaitAMoment(float _seconds)
+    {
+        yield return new WaitForSeconds(_seconds);
     }
 
     /// <summary>
     /// Bestimmt per Zufallzahl ein neues Ziel
     /// </summary>
     /// <returns></returns>
-    private Transform NextDestination()
+    public GameObject NextDestination()
     {
-        int rnd = Random.Range(0, destPoints.Length);
-        destText.text = $"Destination: {destPoints[rnd].name}";
+        int rnd = Random.Range(0, patrolPoints.Length);
+        return patrolPoints[rnd];
+    } 
 
-        return destPoints[rnd];
+    /// <summary>
+    /// Ziel und Abstand festlegen
+    /// </summary>
+    /// <param name="_destGameObject"></param>
+    public void SetDestination(GameObject _destGameObject, float _destDistance)
+    {
+        agent.stoppingDistance = _destDistance;
+        agent.SetDestination(_destGameObject.transform.position);
+
+        destText.text = $"Destination: {_destGameObject.name}";
+    }
+
+    /// <summary>
+    /// Ziel festlegen
+    /// </summary>
+    /// <param name="_destGameObject"></param>
+    public void SetDestination(GameObject _destGameObject)
+    {
+        agent.stoppingDistance = 0f;
+        agent.SetDestination(_destGameObject.transform.position);
+        destText.text = $"Destination: {_destGameObject.name}";
     }
 
     /// <summary>
@@ -62,6 +128,7 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     public void AgentStop()
     {
+        GetComponent<SearchPlayerAI>().isPlayerDetected = false;
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
     }
@@ -71,15 +138,31 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     public void AgentResume()
     {
+        GetComponent<SearchPlayerAI>().StartSearchingPlayer();
         agent.isStopped = false;
     }
 
     /// <summary>
-    /// Bestimmt für den Agent ein neues Ziel
+    /// Legt zufällig ein neues Ziel fest
     /// </summary>
-    public void NextDestPoint()
+    public void SetNextPatrolPoint()
     {
-        agent.ResetPath();
-        agent.SetDestination(NextDestination().position);
+        SetDestination(NextDestination());
+    }
+
+    /// <summary>
+    /// Ziel durch Mausklick festlegen
+    /// </summary>
+    private void MouseDestination()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out RaycastHit raycast))
+            {
+                agent.SetDestination(raycast.point);
+            }
+        }
     }
 }

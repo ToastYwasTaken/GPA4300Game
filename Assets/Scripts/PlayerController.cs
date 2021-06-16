@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool sprintActive = true;
 
-    [Tooltip("Sprint Speed = Move Speed * Speed Multiplier")]
+    [Tooltip("Sprint Speed")]
     public float speedMultiplier = 2f;
 
     [SerializeField]
@@ -38,14 +38,13 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 200f;
 
     [SerializeField]
-    private bool groundCheck;
-
+    private bool isGrounded;
     [SerializeField]
     private bool rotatePlayerWithButtons = false;
+    [SerializeField]
 
-    public float maxVerticalCameraAngle = 45f;
+    private float maxVerticalCameraAngle = 45f;
     private float cameraAngle = 0f;
-
     public float moveSpeed = 5f;
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -5f;
@@ -62,7 +61,7 @@ public class PlayerController : MonoBehaviour
     {
         // Verhindert das der Player unendlich fällt
         FallingDownCheck();
-
+        // Springen
         Jump();
     }
 
@@ -134,7 +133,6 @@ public class PlayerController : MonoBehaviour
         // Debug.Log(cameraAngle);
 
         // Rotationswinkel zuweisen
-        // camTransform.rotation = Quaternion.Euler(cameraAngle, 0, 0); -> nicht mehr schwenkbar
         camTransform.transform.localEulerAngles = new Vector3(cameraAngle, 0, 0);
 
         // Spieler dreht sich nach links oder rechts
@@ -147,10 +145,10 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && groundCheck && jumpActive)
+        if (Input.GetButtonDown("Jump") && isGrounded && jumpActive)
         {
             playerBody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-            groundCheck = false;
+            isGrounded = false;
         }
     }
 
@@ -158,7 +156,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            groundCheck = true;
+            isGrounded = true;
         }
     }
 

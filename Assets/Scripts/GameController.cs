@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
     }
 

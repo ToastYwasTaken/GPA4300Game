@@ -1913,10 +1913,6 @@ PrefabInstance:
       propertyPath: edamageObject
       value: 
       objectReference: {fileID: 1425772167}
-    - target: {fileID: 5721739335729589417, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
 --- !u!1001 &8426253948514080450

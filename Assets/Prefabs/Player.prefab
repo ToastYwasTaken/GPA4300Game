@@ -93,7 +93,7 @@ MonoBehaviour:
   speedMultiplier: 2
   jumpActive: 1
   jumpForce: 200
-  groundCheck: 0
+  isGrounded: 0
   rotatePlayerWithButtons: 0
   maxVerticalCameraAngle: 45
   moveSpeed: 5
