@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
 OS: 'Windows 10 Pro; OS build 19043.1052; Version 2009; 64bit' Language: 'de' Physical Memory: 32713 MB
@@ -1843,3 +1844,186 @@ Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2125.
 Total: 1.711500 ms (FindLiveObjects: 0.144400 ms CreateObjectMapping: 0.038500 ms MarkObjects: 1.479600 ms  DeleteObjects: 0.048200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+=======
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1052; Version 2009; 64bit' Language: 'de' Physical Memory: 32694 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/x79/Documents/GitHub/GPA4300Game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+65212
+Successfully changed project path to: C:/Users/x79/Documents/GitHub/GPA4300Game
+C:/Users/x79/Documents/GitHub/GPA4300Game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 26.04 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.11f1 (99c7afb366b3)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/x79/Documents/GitHub/GPA4300Game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c06)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   27.21.14.6663
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56860
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001506 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 26.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.880 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002976 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.823 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.29 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1442 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.2 MB.
+System memory in use after: 68.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1876.
+Total: 1.496100 ms (FindLiveObjects: 0.134600 ms CreateObjectMapping: 0.033000 ms MarkObjects: 1.263300 ms  DeleteObjects: 0.064200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/RK Test Level.unity
+  artifactKey: Guid(ca2253501f2ede44e9e3b0a74204f55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/RK Test Level.unity using Guid(ca2253501f2ede44e9e3b0a74204f55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c356e180f8261370864ac8e8cc2744ea') in 0.013972 seconds
+  Import took 0.016162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Scenes/FM Test Level.unity
+  artifactKey: Guid(a98aac7cc1c1f3f4ba87616c00fcda82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/FM Test Level.unity using Guid(a98aac7cc1c1f3f4ba87616c00fcda82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d5411dfe900b15605b19033dce0f7d') in 0.004857 seconds
+  Import took 0.006807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.010791 seconds.
+  path: Assets/Scenes/Death Scene.unity
+  artifactKey: Guid(c6eb67afcc33004449d4ba76c179694a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Death Scene.unity using Guid(c6eb67afcc33004449d4ba76c179694a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '885f00b9c2eb0144b82f8e175f47bbdf') in 0.005098 seconds
+  Import took 0.007235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.608441 seconds.
+  path: Assets/Scenes/Default Level 1.unity
+  artifactKey: Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level 1.unity using Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9239c5c2280f0f8fcab1ec25f95ea9c5') in 0.005248 seconds
+  Import took 0.007266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.844863 seconds.
+  path: Assets/Scenes/JP Test Level.unity
+  artifactKey: Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JP Test Level.unity using Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28ec8f0c8414b08270b8e364e9975581') in 0.005011 seconds
+  Import took 0.007059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.369765 seconds.
+  path: Assets/Scenes/JP Test Level.unity
+  artifactKey: Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JP Test Level.unity using Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2e6aad196cc094eee44897caf2db58') in 0.002053 seconds
+  Import took 0.004136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000490 seconds.
+  path: Assets/Scenes/JP Test Level.unity
+  artifactKey: Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JP Test Level.unity using Guid(02467ff0c2dc02a458086d2f9f1b16c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d2e6aad196cc094eee44897caf2db58') in 0.001601 seconds
+  Import took 0.003294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.408156 seconds.
+  path: Assets/Scenes/Default Level 1.unity
+  artifactKey: Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level 1.unity using Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a0757b2912789383ae16438f70b624b') in 0.002295 seconds
+  Import took 0.004357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.256744 seconds.
+  path: Assets/Scenes/JP Test Level.unity
+  artifactKey: Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JP Test Level.unity using Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5457a8cfa8f0dcf8b1cbfc57e8965912') in 0.002100 seconds
+  Import took 0.004087 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.397075 seconds.
+  path: Assets/Scenes/JP Test Level.unity
+  artifactKey: Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JP Test Level.unity using Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9536b3a4034ea3890289bbdbe1b53b') in 0.001687 seconds
+  Import took 0.003651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000613 seconds.
+  path: Assets/Scenes/JP Test Level.unity
+  artifactKey: Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JP Test Level.unity using Guid(6f1b976fdd77f034d873f5f02b24cacb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc9536b3a4034ea3890289bbdbe1b53b') in 0.001846 seconds
+  Import took 0.003445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.753429 seconds.
+  path: Assets/Scenes/Default Level 1.unity
+  artifactKey: Guid(1652f0e772e5f6e48b1b9797085ed10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level 1.unity using Guid(1652f0e772e5f6e48b1b9797085ed10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e8e8fa325c92b0323f4d43d2a34e7f6') in 0.001882 seconds
+  Import took 0.003915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.217503 seconds.
+  path: Assets/Scenes/JP Test Level.unity
+  artifactKey: Guid(1652f0e772e5f6e48b1b9797085ed10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JP Test Level.unity using Guid(1652f0e772e5f6e48b1b9797085ed10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ad46520b5454eee4fd21b4a1263524') in 0.001879 seconds
+  Import took 0.003838 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.215961 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE).unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE).unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e743c987a1bc60e322a6254b3ff22bb2') in 0.005220 seconds
+  Import took 0.007209 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+>>>>>>> Stashed changes
