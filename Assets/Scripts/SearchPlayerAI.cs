@@ -25,9 +25,9 @@ public class SearchPlayerAI : MonoBehaviour
     [SerializeField]
     private float fieldOfView = 120f;
     [SerializeField]
-    private float ViewOffest = 0.5f;
+    private float viewOffest = 0.5f;
     [SerializeField]
-    private float layerMaskValue = 5f;
+    private float viewMaxDistance = 5f;
     [SerializeField]
     private float searchingTime = 0.5f;
     [SerializeField]
@@ -69,13 +69,13 @@ public class SearchPlayerAI : MonoBehaviour
         Vector3 direction = player.transform.position - transform.position;
         Ray ray = new Ray(transform.position, direction.normalized);
         
-        if (Physics.Raycast(ray, out RaycastHit raycast, layerMaskValue))
+        if (Physics.Raycast(ray, out RaycastHit raycast, viewMaxDistance))
         {
             if (raycast.collider.gameObject  == player)
             {
                 Vector3 rayDirection = raycast.transform.position - transform.position;
                 float angle = Vector3.Angle(rayDirection, transform.forward);
-                if (angle < fieldOfView * ViewOffest)
+                if (angle < fieldOfView * viewOffest)
                 {
                     StopSearchingPlayer();
                 }

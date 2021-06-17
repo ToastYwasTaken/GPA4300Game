@@ -47,7 +47,7 @@ public class EnemyAI : MonoBehaviour
         agent.stoppingDistance = 0;
 
         SetDestination(NextDestination());
- 
+
     }
 
     private void Update()
@@ -61,30 +61,49 @@ public class EnemyAI : MonoBehaviour
         {
             MouseDestination();
         }
-
-        StartCoroutine(nameof(Partrolling));
+        PatrolUpdate();
+      //  StartCoroutine(nameof(Partrolling));
     }
 
     private IEnumerator Partrolling()
     {
+         Debug.Log("Remaining Distance: " + agent.remainingDistance);
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            Debug.Log("Ziel erreicht!");
 
-            if (agent.pathPending)
-            {
-                yield return null;
-            }
+            Quaternion currentAngle = agent.transform.localRotation.normalized;
 
-           // Debug.Log("remaing: " + agent.remainingDistance + " | stopping: " + agent.stoppingDistance);
-            if ( agent.remainingDistance <= agent.stoppingDistance)
-            {
-               // Debug.Log("Ziel erreicht!");
+            // Warte einen Moment
+            yield return new WaitForSeconds(2f);
+            agent.transform.localEulerAngles = new Vector3(0f, currentAngle.y + 45f, 0f);
 
-                // Warte einen Moment
-                yield return new WaitForSeconds(pauseTime);
+            yield return new WaitForSeconds(2f);
+            agent.transform.localEulerAngles = new Vector3(0f, currentAngle.y - 45f, 0f);
 
-                // Lege neues Ziel fest
-                SetDestination(NextDestination());
-            }
-      
+            // Warte einen Moment
+            yield return new WaitForSeconds(pauseTime);
+            // Lege neues Ziel fest
+            SetDestination(NextDestination());
+        }
+
+    }
+
+    private void PatrolUpdate()
+    {
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            Debug.Log("Ziel erreicht!");
+
+            Quaternion currentAngle = agent.transform.localRotation.normalized;
+
+            agent.transform.localEulerAngles = new Vector3(0f, currentAngle.y + 45f, 0f);
+
+            agent.transform.localEulerAngles = new Vector3(0f, currentAngle.y - 45f, 0f);
+
+            // Lege neues Ziel fest
+            SetDestination(NextDestination());
+        }
     }
 
     /// <summary>
@@ -95,7 +114,7 @@ public class EnemyAI : MonoBehaviour
     {
         int rnd = Random.Range(0, patrolPoints.Length);
         return patrolPoints[rnd];
-    } 
+    }
 
     /// <summary>
     /// Ziel und Abstand festlegen
