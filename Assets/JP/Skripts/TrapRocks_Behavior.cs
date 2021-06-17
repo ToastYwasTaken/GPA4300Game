@@ -6,21 +6,54 @@ public class TrapRocks_Behavior : MonoBehaviour
 {
     [SerializeField]
     private GameObject rockPrefab;
-    private int rocksNumber = 7;
     [SerializeField]
-    private Transform[] spawnPoints;
-    private float timeBetweenSpawns = 0.25f;
+    private int numberOfRocks;
+    //[SerializeField]
+    public Transform[] spawnPoints;
+    [SerializeField]
+    private float deflectionForce;
+    [SerializeField]
+    private float timeBetweenSpawns;
+
+    private IEnumerator spawnRocks()
+    {
+        for (int i = 0; i < numberOfRocks; i++)
+        {
+            int spawnPosition = Random.Range(0, spawnPoints.Length);
+            int deflection = Random.Range(0, 4);
+
+            GameObject rock = Instantiate(rockPrefab);
+            rock.transform.Translate(spawnPoints[spawnPosition].position);
+
+            Rigidbody rockRB = rock.GetComponent<Rigidbody>();
+            switch (deflection)
+            {
+                case 0:
+                    rockRB.AddForce(deflectionForce, 0, 0);
+                    break;
+                case 1:
+                    rockRB.AddForce(-deflectionForce, 0, 0);
+                    break;
+                case 2:
+                    rockRB.AddForce(0, 0, deflectionForce);
+                    break;
+                case 3:
+                    rockRB.AddForce(0, 0, -deflectionForce);
+                    break;
+                default:
+                    break;
+            }
+
+
+            yield return new WaitForSeconds(timeBetweenSpawns);
+        }
+    }
 
     private void OnTriggerEnter(Collider _other)
     {
         if (_other.gameObject.tag == "Player")
         {
-            for (int i = 0; i < rocksNumber; i++)
-            {
-                int spawnPosition = Random.Range(0, spawnPoints.Length);
-                GameObject rock = Instantiate(rockPrefab);
-                rock.transform.Translate(spawnPoints[spawnPosition].position);
-            }
+            StartCoroutine(spawnRocks());
         }
     }
 }
