@@ -45,13 +45,14 @@ public class EnemyAI : MonoBehaviour
     {
         GetComponent<SearchPlayerAI>().StartSearchingPlayer();
         agent.stoppingDistance = 0;
-        SetDestination(NextDestination());    
+
+        SetDestination(NextDestination());
+ 
     }
 
     private void Update()
     {
         // TODO
-        // Partrolling();
     }
 
     private void FixedUpdate()
@@ -60,34 +61,30 @@ public class EnemyAI : MonoBehaviour
         {
             MouseDestination();
         }
+
+        StartCoroutine(nameof(Partrolling));
     }
 
-    private bool DestinationReached()
+    private IEnumerator Partrolling()
     {
-        // if (agent.transform.position == )
 
-        return true;
-    }
+            if (agent.pathPending)
+            {
+                yield return null;
+            }
 
-    private void Partrolling()
-    {
-        if (agent.remainingDistance <= agent.stoppingDistance)
-        {
-            Debug.Log("Ziel erreicht!");
-            // Warte einen Moment
-            StartCoroutine(nameof(WaitAMoment), pauseTime);
+           // Debug.Log("remaing: " + agent.remainingDistance + " | stopping: " + agent.stoppingDistance);
+            if ( agent.remainingDistance <= agent.stoppingDistance)
+            {
+               // Debug.Log("Ziel erreicht!");
 
-            // Lege neues Ziel fest
-            SetDestination(NextDestination());
-        }
+                // Warte einen Moment
+                yield return new WaitForSeconds(pauseTime);
 
- 
-        // Debug.Log("remaing: " + agent.remainingDistance + " | stopping: " + agent.stoppingDistance);
-    }
-
-    IEnumerator WaitAMoment(float _seconds)
-    {
-        yield return new WaitForSeconds(_seconds);
+                // Lege neues Ziel fest
+                SetDestination(NextDestination());
+            }
+      
     }
 
     /// <summary>
