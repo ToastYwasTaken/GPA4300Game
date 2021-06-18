@@ -40,16 +40,21 @@ public class EnemyAI : MonoBehaviour
     public float attackSpeed = 7f;
     public float stoppingDistance = 0.1f;
     public float distanceToThePlayer = 2.7f;
-
+    public float attackdistance = 6f;
 
     SearchPlayerAI searchAI;
     Pathfinding pathfinding;
+    EnemyAnimation enemyAnim;
+    
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         searchAI = GetComponent<SearchPlayerAI>();
         pathfinding = GetComponent<Pathfinding>();
+        enemyAnim = FindObjectOfType<EnemyAnimation>();
+
+
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -76,20 +81,20 @@ public class EnemyAI : MonoBehaviour
             MouseDestination();
         }
 
-        if (!player)
-        {
-            Debug.LogError("Kein Spieler gefunden!");
-            return;
-        }
-
         if (!searchAI.isPlayerDetected)
         {
             agent.speed = patrolSpeed;
+           // agent.acceleration = 0.1f;
+            // enemyAnim.PlayMoveAnimation();
             Patrol();
         }
         else
         {
+
             agent.speed = attackSpeed;
+          //  agent.acceleration = 1f;
+           // enemyAnim.PlayRunAnimation();
+            StartCoroutine(nameof(AttackPlayer));
             SetDestination(player.transform, distanceToThePlayer);
         }
     }
@@ -121,6 +126,25 @@ public class EnemyAI : MonoBehaviour
 
         AgentResume();
     }
+
+
+    IEnumerator AttackPlayer()
+    {
+        if (agent.remainingDistance <= attackdistance)
+        {
+            AgentStop();
+
+            enemyAnim.PlayAttackAnimation();
+            yield return new WaitForSeconds(1f);
+
+            AgentResume();
+        }
+        else
+        {
+            enemyAnim.PlayRunAnimation();
+        }
+    }
+
 
     /// <summary>
     /// IN ARBEIT

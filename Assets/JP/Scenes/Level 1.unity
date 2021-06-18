@@ -1208,6 +1208,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 954424591}
     m_Modifications:
+    - target: {fileID: -6009668984329546476, guid: 0d12f6a1eaf86d74d8f0a393dd5fb93d, type: 3}
+      propertyPath: rockPrefab
+      value: 
+      objectReference: {fileID: 5786306800450730375, guid: 9e3d5bbe4ae14c54bb3917d07322e0de, type: 3}
     - target: {fileID: 7398989889043196670, guid: 0d12f6a1eaf86d74d8f0a393dd5fb93d, type: 3}
       propertyPath: m_Name
       value: TrapRocks1
@@ -2024,6 +2028,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1480618712829794266, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480618712829794266, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480618712829794266, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480618712829794266, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1480618712829794266, guid: df6a207f216ab214d9100f7380ff92fa, type: 3}
