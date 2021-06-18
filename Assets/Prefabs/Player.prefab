@@ -52,10 +52,10 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5424257757402489990}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 712f797601b8af341b06c3e0cb44c374, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.61
+  m_Radius: 0.55
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5424257757402489990}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf1c81ba9878fd04ebd8c436993f56cd, type: 3}
   m_Name: 
@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 1314761338233513067}
   - component: {fileID: 2664535315288060243}
   - component: {fileID: 1919303048403383543}
-  - component: {fileID: 6251691648646789900}
   m_Layer: 0
   m_Name: CamHead
   m_TagString: Untagged
@@ -196,19 +195,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6251691648646789900
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7470416358754093750}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8433340340981265543
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +206,6 @@ GameObject:
   - component: {fileID: 7975482075877313333}
   - component: {fileID: 1256103169312407883}
   - component: {fileID: 8285116895719057570}
-  - component: {fileID: 8573153887419002884}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -291,20 +276,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &8573153887419002884
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8433340340981265543}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8479243149028384566
 GameObject:
   m_ObjectHideFlags: 0
