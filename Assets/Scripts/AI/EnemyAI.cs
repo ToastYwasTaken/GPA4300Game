@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /******************************************************************************
  * Project: GPA4300Game
  * File: EnemyAI.cs
- * Version: 1.01
+ * Version: 1.02
  * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
  * 
  * 
@@ -21,6 +21,14 @@ using UnityEngine.UI;
  *  14.06.2021  RK  Created
  *  
  *****************************************************************************/
+
+/*TODO
+    - Spieler soll sich am Zielpunkt umsehen
+    - Animation Übergänge verbessern
+    - Dynamic verbessern
+ */
+
+
 public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent agent;
@@ -40,7 +48,7 @@ public class EnemyAI : MonoBehaviour
     public float attackSpeed = 7f;
     public float stoppingDistance = 0.1f;
     public float distanceToThePlayer = 2.7f;
-    public float attackdistance = 6f;
+    public float attackdistance = 3f;
 
     SearchPlayerAI searchAI;
     Pathfinding pathfinding;
@@ -66,12 +74,9 @@ public class EnemyAI : MonoBehaviour
             agent.stoppingDistance = stoppingDistance;
             agent.speed = patrolSpeed;
             SetDestination(NextDestination(), stoppingDistance);
+            enemyAnim.PlayMoveAnimation();
         }
 
-        if (searchAI)
-        {
-
-        }
     }
 
     private void FixedUpdate()
@@ -84,16 +89,11 @@ public class EnemyAI : MonoBehaviour
         if (!searchAI.isPlayerDetected)
         {
             agent.speed = patrolSpeed;
-           // agent.acceleration = 0.1f;
-            // enemyAnim.PlayMoveAnimation();
             Patrol();
         }
         else
         {
-
             agent.speed = attackSpeed;
-          //  agent.acceleration = 1f;
-           // enemyAnim.PlayRunAnimation();
             StartCoroutine(nameof(AttackPlayer));
             SetDestination(player.transform, distanceToThePlayer);
         }
@@ -109,11 +109,15 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.Log("Ziel erreicht!");
 
+            enemyAnim.PlayIdleAnimation();
+
             AgentStop();
             StartCoroutine(nameof(PatrolPause));
             // Lege neues Ziel fest
             SetDestination(NextDestination(), stoppingDistance);
+
         }
+
         
     }
 
@@ -123,8 +127,9 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(pauseTime);
         
         agent.speed = patrolSpeed;
-
+        
         AgentResume();
+        enemyAnim.PlayMoveAnimation();
     }
 
 
@@ -229,6 +234,8 @@ public class EnemyAI : MonoBehaviour
 
     public void TestFunction()
     {
-        LookAround();
+        // LookAround();
+        //transform.Rotate(0, Time.deltaTime * -100, 0);
+        enemyAnim.PlayRunAnimation();
     }
 }

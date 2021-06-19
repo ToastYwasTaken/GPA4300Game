@@ -382,6 +382,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8426253948135631609, guid: d1395eb90d423194493a5a46c4e60fe4, type: 3}
   m_PrefabInstance: {fileID: 1030057403}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &177771281 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1129804843396262370, guid: 2745fbe1382026748bd68032968812f3, type: 3}
+  m_PrefabInstance: {fileID: 1129804842887674635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e17cf89c9e10e40bf4a5d217ff7c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &194733646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,9 +3592,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EnemyAI, Assembly-CSharp
-        m_MethodName: SetNextPatrolPoint
+      - m_Target: {fileID: 1623563937}
+        m_TargetAssemblyTypeName: EnemyAnimation, Assembly-CSharp
+        m_MethodName: PlayMoveAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3828,7 +3839,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177771281}
         m_TargetAssemblyTypeName: EnemyAI, Assembly-CSharp
         m_MethodName: AgentStop
         m_Mode: 1
@@ -3961,7 +3972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177771281}
         m_TargetAssemblyTypeName: EnemyAI, Assembly-CSharp
         m_MethodName: AgentResume
         m_Mode: 1
@@ -4114,9 +4125,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1623563937}
-        m_TargetAssemblyTypeName: EnemyAnimation, Assembly-CSharp
-        m_MethodName: PlayAttackAnimation
+      - m_Target: {fileID: 177771281}
+        m_TargetAssemblyTypeName: EnemyAI, Assembly-CSharp
+        m_MethodName: TestFunction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5483,16 +5494,28 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1019931652496163308, guid: 2745fbe1382026748bd68032968812f3, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 77b1d2a5bc314714aa3d55c1159b745b, type: 2}
+    - target: {fileID: 1019931652496163308, guid: 2745fbe1382026748bd68032968812f3, type: 3}
       propertyPath: m_AnimatePhysics
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1019931652496163308, guid: 2745fbe1382026748bd68032968812f3, type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 77b1d2a5bc314714aa3d55c1159b745b, type: 2}
+    - target: {fileID: 1019931652496163308, guid: 2745fbe1382026748bd68032968812f3, type: 3}
+      propertyPath: m_Animations.Array.data[6]
+      value: 
+      objectReference: {fileID: 7400000, guid: 7bd7538e4de8e6b48bac06bed1b90988, type: 2}
     - target: {fileID: 1129804843396262370, guid: 2745fbe1382026748bd68032968812f3, type: 3}
       propertyPath: destText
       value: 
       objectReference: {fileID: 407182517}
     - target: {fileID: 1129804843396262370, guid: 2745fbe1382026748bd68032968812f3, type: 3}
       propertyPath: attackSpeed
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1129804843396262370, guid: 2745fbe1382026748bd68032968812f3, type: 3}
       propertyPath: useMouseDest
@@ -5573,6 +5596,10 @@ PrefabInstance:
     - target: {fileID: 1129930738838545028, guid: 2745fbe1382026748bd68032968812f3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129930740340494176, guid: 2745fbe1382026748bd68032968812f3, type: 3}
+      propertyPath: m_Name
+      value: Wizard
       objectReference: {fileID: 0}
     - target: {fileID: 1129930740962678696, guid: 2745fbe1382026748bd68032968812f3, type: 3}
       propertyPath: m_IsActive
