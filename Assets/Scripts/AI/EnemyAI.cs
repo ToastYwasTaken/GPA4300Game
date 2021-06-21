@@ -23,7 +23,7 @@ using UnityEngine.UI;
  *****************************************************************************/
 
 /*TODO
-    - Spieler soll sich am Zielpunkt umsehen
+    - Gegner soll sich am Zielpunkt umsehen
     - Animation Übergänge verbessern
     - Dynamic verbessern
  */
@@ -43,25 +43,32 @@ public class EnemyAI : MonoBehaviour
 
     [Header("AI Controls")]
     public Transform[] patrolPoints;
-    public float pauseTime = 3f;
+    public float patrolPause = 3f;
     public float patrolSpeed = 4f;
+    public float attackPause = 1.5f;
     public float attackSpeed = 7f;
-    public float stoppingDistance = 0.1f;
+    public float attackDistance = 3f;
+    public float distanceToThePatrolPoint = 0.1f;
     public float distanceToThePlayer = 2.7f;
-    public float attackdistance = 3f;
+   
+    public float currentAngle;
+    public float angle;
+    public float lookValue = 45f;
+    public float lookSpeed = 10f;
+    public bool isRight = false;
 
     SearchPlayerAI searchAI;
     Pathfinding pathfinding;
-    EnemyAnimation enemyAnim;
-    
+    EnemyAnimator enemyAnim;
+
+
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         searchAI = GetComponent<SearchPlayerAI>();
         pathfinding = GetComponent<Pathfinding>();
-        enemyAnim = FindObjectOfType<EnemyAnimation>();
-
+        enemyAnim = FindObjectOfType<EnemyAnimator>();
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -69,84 +76,96 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (agent)
-        {
-            agent.stoppingDistance = stoppingDistance;
-            agent.speed = patrolSpeed;
-            SetDestination(NextDestination(), stoppingDistance);
-            enemyAnim.PlayMoveAnimation();
-        }
+        //if (agent)
+        //{
+        //    agent.speed = patrolSpeed;
+        //    agent.updatePosition = true;
+        //    SetDestination(NextDestination(), distanceToThePatrolPoint);
+        //    enemyAnim.PlayIdleAnimation(true);
+        //}
 
+        currentAngle = agent.transform.rotation.eulerAngles.y;
     }
 
     private void FixedUpdate()
     {
+        LookAround();
+
         if (useMouseDest)
         {
             MouseDestination();
         }
 
-        if (!searchAI.isPlayerDetected)
-        {
-            agent.speed = patrolSpeed;
-            //Patrol();
-        }
-        else
-        {
-            agent.speed = attackSpeed;
-            StartCoroutine(nameof(AttackPlayer));
-            SetDestination(player.transform, distanceToThePlayer);
-        }
+        //if (!searchAI.isPlayerDetected)
+        //{
+        //    agent.speed = patrolSpeed;
+        //    StopCoroutine(nameof(AttackPlayer));
+        //    StartCoroutine(nameof(Patrol));
+        //}
+        //else
+        //{
+        //    agent.speed = attackSpeed;
+        //    StopCoroutine(nameof(Patrol));
+        //    StartCoroutine(nameof(AttackPlayer));
+        //    SetDestination(player.transform, distanceToThePlayer);
+            
+        //}
+    }
+
+    public void TestFunction()
+    {
+        // Zum testen von Methoden
+    
     }
 
     /// <summary>
     /// Patrouillieren
     /// </summary>
-    private void Patrol()
+    IEnumerator Patrol()
     {
-    
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
             Debug.Log("Ziel erreicht!");
 
-            enemyAnim.PlayIdleAnimation();
+            enemyAnim.PlayMoveAnimation(false);
+            enemyAnim.PlayRunAnimation(false);
+            enemyAnim.PlayIdleAnimation(true);
 
-            AgentStop();
-            StartCoroutine(nameof(PatrolPause));
+            AgentStop();      
+            
             // Lege neues Ziel fest
-            SetDestination(NextDestination(), stoppingDistance);
+            SetDestination(NextDestination(), distanceToThePatrolPoint);
 
+            yield return new WaitForSeconds(patrolPause);
+
+            AgentResume();
+            enemyAnim.PlayIdleAnimation(false);
+            enemyAnim.PlayMoveAnimation(true);
         }
-
-        
+        else
+        {
+            enemyAnim.PlayRunAnimation(false);
+        }
     }
-
-    IEnumerator PatrolPause()
-    {
-        agent.speed = 0.1f;
-        yield return new WaitForSeconds(pauseTime);
-        
-        agent.speed = patrolSpeed;
-        
-        AgentResume();
-        enemyAnim.PlayMoveAnimation();
-    }
-
 
     IEnumerator AttackPlayer()
     {
-        if (agent.remainingDistance <= attackdistance)
+        if (agent.remainingDistance <= attackDistance)
         {
+            Debug.Log("Attack");
+
             AgentStop();
 
-            enemyAnim.PlayAttackAnimation();
-            yield return new WaitForSeconds(1f);
+            // Angriff durchführen
+            enemyAnim.TriggerAttack(); 
+            yield return new WaitForSeconds(attackPause);
 
             AgentResume();
         }
         else
         {
-            enemyAnim.PlayRunAnimation();
+            enemyAnim.PlayMoveAnimation(false);
+            enemyAnim.PlayRunAnimation(true);
         }
     }
 
@@ -157,15 +176,40 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     private void LookAround()
     {
-        Quaternion currentAngle = agent.transform.localRotation.normalized;
+        float rightValue = currentAngle + lookValue;
+        float leftValue = currentAngle - lookValue;
 
-        float angle = 0f;
+        //Debug.Log("Right value: " + rightValue);
+        //Debug.Log("Left value: " + leftValue);
 
-        angle = Mathf.Clamp(angle, -45f, 45);
-        // Debug.Log(cameraAngle);
 
-        // Rotationswinkel zuweisen
-        agent.transform.localEulerAngles = new Vector3(0, angle * Time.deltaTime, 0);
+     
+
+        angle = Mathf.Clamp(agent.transform.rotation.eulerAngles.y, leftValue, rightValue);
+
+
+        Debug.Log(Mathf.Abs( agent.transform.rotation.eulerAngles.y));
+        if (angle >= rightValue)
+        {
+           isRight = true;  
+        }
+       // Debug.Log(angle + " : " + leftValue);
+
+        if (angle <= leftValue)
+        {
+           isRight = false;
+        }
+
+        if (!isRight)
+        {
+            // angle = Mathf.Clamp(Vector3.up.y * lookSpeed * Time.deltaTime, leftValue, rightValue);
+            agent.transform.Rotate(Vector3.up * lookSpeed * Time.deltaTime);
+        }
+        else
+        {
+            // angle = Mathf.Clamp(Vector3.up.y * lookSpeed * Time.deltaTime, leftValue, rightValue);
+            agent.transform.Rotate(-Vector3.up * lookSpeed * Time.deltaTime);
+        }
     }
 
     /// <summary>
@@ -213,7 +257,7 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     public void SetNextPatrolPoint()
     {
-        SetDestination(NextDestination(), stoppingDistance);
+        SetDestination(NextDestination(), distanceToThePatrolPoint);
     }
 
     /// <summary>
@@ -232,10 +276,4 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void TestFunction()
-    {
-         LookAround();
-        //transform.Rotate(0, Time.deltaTime * -100, 0);
-       // enemyAnim.PlayRunAnimation();
-    }
 }

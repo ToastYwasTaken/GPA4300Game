@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Default Level (DONT DELETE).unity
+- path: Assets/Scenes/RK Test Level.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
