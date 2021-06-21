@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /******************************************************************************
  * Project: GPA4300Game
  * File: PlayerHealth.cs
@@ -26,14 +27,18 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField]
-    private byte phealth = 100;    //Startwert
-    public GameObject edamageObject;
-    private byte edamage;
+    private sbyte phealth = 100;    //Startwert
+    public sbyte pdamage;   //Basisschaden des Spielers
+    public GameObject enemy;
+    private EnemyHealth enemyHealth;
+    private sbyte edamage;
 
     // Start is called before the first frame update
     void Start()
     {
-        edamage = edamageObject.GetComponent<Damage>().eDamageProperty;
+        enemyHealth = enemy.GetComponent<EnemyHealth>();
+        edamage = enemyHealth.edamage;
+        Debug.Log("Edamage: " + edamage); //TODO edamage doesnt get displayed... why
     }
 
     // Update is called once per frame
@@ -41,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(phealth < 0)
         {
-            
+            SceneManager.LoadScene(1);  //loading death screen
         }
     }
 
@@ -50,10 +55,12 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.tag.Equals("Enemy"))   //tag = "Enemy"
         {
             phealth -= edamage;
+            Debug.Log(phealth);
+            Debug.Log(edamage);
         }
     }
 
-    public byte pHealthProperty 
+    public sbyte pHealthProperty 
     { 
         get => phealth;
         set => phealth = value; 

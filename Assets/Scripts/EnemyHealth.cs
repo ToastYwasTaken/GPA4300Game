@@ -26,14 +26,18 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
-    private byte ehealth = 100;    //Startwert
-    public GameObject pdamageObject;
-    private byte pdamage;
+    private sbyte ehealth = 100;    //Startwert
+    public sbyte edamage;    //Basisschaden des Gegners
+    public GameObject player;
+    private PlayerHealth playerHealth;
+    private sbyte pdamage;
 
     // Start is called before the first frame update
     void Start()
     {
-        pdamage = pdamageObject.GetComponent<Damage>().pDamageProperty;
+        playerHealth = player.GetComponent<PlayerHealth>();
+        pdamage = playerHealth.pdamage;
+        Debug.Log("Pdamage: " + pdamage);
     }
 
     // Update is called once per frame
@@ -50,7 +54,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public byte eHealthProperty
+    public sbyte eHealthProperty
     {
         get => ehealth;
         set => ehealth = value;
