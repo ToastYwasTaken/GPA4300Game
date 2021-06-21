@@ -89,7 +89,7 @@ public class EnemyAI : MonoBehaviour
         if (!searchAI.isPlayerDetected)
         {
             agent.speed = patrolSpeed;
-            Patrol();
+            //Patrol();
         }
         else
         {
@@ -165,7 +165,7 @@ public class EnemyAI : MonoBehaviour
         // Debug.Log(cameraAngle);
 
         // Rotationswinkel zuweisen
-        agent.transform.localEulerAngles = new Vector3(0, angle, 0);
+        agent.transform.localEulerAngles = new Vector3(0, angle * Time.deltaTime, 0);
     }
 
     /// <summary>
@@ -234,8 +234,8 @@ public class EnemyAI : MonoBehaviour
 
     public void TestFunction()
     {
-        // LookAround();
+         LookAround();
         //transform.Rotate(0, Time.deltaTime * -100, 0);
-        enemyAnim.PlayRunAnimation();
+       // enemyAnim.PlayRunAnimation();
     }
 }
