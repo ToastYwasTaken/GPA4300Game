@@ -404,6 +404,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rockPrefab: {fileID: 0}
   numberOfRocks: 6
-  spawnPoints: []
+  spawnPoints:
+  - {fileID: 5362910955152086234}
+  - {fileID: 4508975984272013845}
+  - {fileID: 2248384679321466391}
+  - {fileID: 840953708564656391}
+  - {fileID: 3238332752827095005}
+  - {fileID: 8073936718879156299}
+  - {fileID: 6489902548353691288}
+  - {fileID: 5893885085601667275}
+  - {fileID: 7253919961456401467}
   deflectionForce: 50
   timeBetweenSpawns: 0.25
