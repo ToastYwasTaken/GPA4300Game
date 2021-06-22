@@ -54,32 +54,26 @@ public class GUIOptionMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DeactivateOptionMenuGUI();
     }
 
     // Update is called once per frame
     void Update()   
     {
-        if (Input.GetKeyDown(KeyCode.Escape)&& !isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape)&& !isPaused)   //PAUSING
         {
-            isPaused = true;
-            Time.timeScale = 0;
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.eulerAngles.z);
+            ActivateOptionMenuGUI();
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 
+                transform.rotation.eulerAngles.y, transform.eulerAngles.z); //freezing rotation
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             Debug.Log("In Pause");
-            if (buttonExitToDesktop.onClick.Equals(true))
-            {
-                Debug.Log("clicked exit to Desktop");
-            }else if (buttonExitToMainMenu.onClick.Equals(true))
-            {
-                Debug.Log("clicked exit to Main Menu");
-            }
-
-            if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
-            {
-                Time.timeScale = 1;
-                isPaused = false;
-                Debug.Log("Exited Pause");
-            }
+        } else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)    //RESUMING
+        {
+            DeactivateOptionMenuGUI();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Debug.Log("Exited Pause");
         }
     }
 
@@ -93,5 +87,36 @@ public class GUIOptionMenu : MonoBehaviour
         Application.Quit();
     }
 
+    private void DeactivateOptionMenuGUI()
+    {
+        //deactivate the elements of the pause menu
+        textPaused.enabled = false;
+        textSettingVolume.enabled = false;
+        sliderVolume.gameObject.SetActive(false);
+        textSettingSensitivity.enabled = false;
+        sliderSensitivity.gameObject.SetActive(false);
+        buttonExitToDesktop.gameObject.SetActive(false);
+        buttonExitToMainMenu.gameObject.SetActive(false);
+
+        isPaused = false;    //flag
+
+        Time.timeScale = 1; //continues every time based function
+    }
+
+    private void ActivateOptionMenuGUI()
+    {
+        //activate the elements of the pause menu
+        textPaused.enabled = true;
+        textSettingVolume.enabled = true;
+        sliderVolume.gameObject.SetActive(true);
+        textSettingSensitivity.enabled = true;
+        sliderSensitivity.gameObject.SetActive(true);
+        buttonExitToDesktop.gameObject.SetActive(true);
+        buttonExitToMainMenu.gameObject.SetActive(true);
+
+        isPaused = true;    //flag
+
+        Time.timeScale = 0; //makes every time based function stop //Update is still called every frame
+    }
 
 }
