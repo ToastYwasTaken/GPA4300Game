@@ -17,6 +17,7 @@ using UnityEngine;
  * ----------------------------
  *  11.06.2021  RK  Created
  *  15.06.2021  RK  Added max vertical Camera angle
+ *  22.06.2021  FM  added check if the game is paused
  *  
  *****************************************************************************/
 
@@ -59,16 +60,22 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Verhindert das der Player unendlich fällt
-        FallingDownCheck();
-        // Springen
-        Jump();
+        if (!GUIOptionMenu.isPaused) //verhindert movement wenn das Spiel pausiert ist
+        {
+            // Verhindert das der Player unendlich fällt
+            FallingDownCheck();
+            // Springen
+            Jump();
+        }
     }
 
     private void FixedUpdate()
     {
-        PlayerRotating();
-        PlayerMovement();
+        if (!GUIOptionMenu.isPaused) //verhindert movement wenn das Spiel pausiert ist
+        { 
+            PlayerRotating();
+            PlayerMovement();
+        }
     }
 
     /// <summary>
@@ -87,35 +94,35 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void PlayerMovement()
     {
-        Vector3 keyInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            Vector3 keyInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
-        // Bewegungsgeschwindigkeit
-        float speed;
+            // Bewegungsgeschwindigkeit
+            float speed;
 
-        // Sprint
-        if (Input.GetButton("Run") && sprintActive)
-        {
-            speed = moveSpeed * speedMultiplier;
-        }
-        else
-        {
-            speed = moveSpeed;
-        }
+            // Sprint
+            if (Input.GetButton("Run") && sprintActive)
+            {
+                speed = moveSpeed * speedMultiplier;
+            }
+            else
+            {
+                speed = moveSpeed;
+            }
 
-        // Mit der Tastatur drehen
-        if (rotatePlayerWithButtons)
-        {
-            Quaternion deltaRotation = Quaternion.Euler(0, keyInput.x * rotationSpeed * Time.deltaTime, 0);
-            playerBody.MoveRotation(playerBody.rotation * deltaRotation);
-        }
-        else
-        {
-            // Zur Seite gehen
-            playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.x * transform.right);
-        }
+            // Mit der Tastatur drehen
+            if (rotatePlayerWithButtons)
+            {
+                Quaternion deltaRotation = Quaternion.Euler(0, keyInput.x * rotationSpeed * Time.deltaTime, 0);
+                playerBody.MoveRotation(playerBody.rotation * deltaRotation);
+            }
+            else
+            {
+                // Zur Seite gehen
+                playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.x * transform.right);
+            }
 
-        // Nach vorne gehen
-        playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.z * transform.forward);
+            // Nach vorne gehen
+            playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.z * transform.forward);
     }
 
     /// <summary>

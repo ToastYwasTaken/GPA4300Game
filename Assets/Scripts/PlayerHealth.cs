@@ -18,6 +18,7 @@ using UnityEngine.SceneManagement;
  * ChangeLog
  * ----------------------------
  *  11.06.2021  FM  Created
+ *  22.06.2021  FM  Edited health mechanic
  *  
  *****************************************************************************/
 
@@ -38,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
     {
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         edamage = enemyHealth.edamage;
-        Debug.Log("Edamage: " + edamage); //TODO edamage doesnt get displayed... why
+        Debug.Log("Edamage: " + edamage);
     }
 
     // Update is called once per frame

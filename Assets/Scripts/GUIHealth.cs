@@ -19,13 +19,14 @@ using TMPro;
  * ChangeLog
  * ----------------------------
  *  11.06.2021  FM  Created
+ *  22.06.2021  FM  fixed issue that caused not displaying the healthCount
  *  
  *****************************************************************************/
 
 /// <summary>
 /// Kümmert sich um die Lebensanzeige im Canvas
 /// </summary>
- //TODO
+ 
 public class GUIHealth : MonoBehaviour
 {
     public GameObject player;
@@ -50,13 +51,13 @@ public class GUIHealth : MonoBehaviour
     void Update()   
     {
         phealth = player.GetComponent<PlayerHealth>().pHealthProperty; //100 - 0
-        healthText.SetText(phealth.ToString());
+        healthText.text = phealth.ToString();
         changeGradientRed = (byte)(defaultHealthColorRed + (100 - phealth));
         healthText.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
         healthImage.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
         if(phealth < 30)
         {
-            for(float i = 0f; i <= 1f; i+= 0.1f)            //TODO
+            for(float i = 0f; i <= 1f; i+= 0.1f)            //TODO doesnt work yet
             {
                 healthImage.transform.localScale = new Vector3(
                     (Mathf.Lerp(healthImage.transform.localScale.x, 
