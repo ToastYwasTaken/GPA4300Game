@@ -57,28 +57,38 @@ public class GUIHealth : MonoBehaviour
         healthImage.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
         if(phealth < 30)
         {
-            for(float i = 0f; i <= 1f; i+= 0.1f)            //TODO doesnt work yet
-            {
-                healthImage.transform.localScale = new Vector3(
-                    (Mathf.Lerp(healthImage.transform.localScale.x, 
-                    healthImage.transform.localScale.x + 0.025f, 
-                    Mathf.SmoothStep(0f, 1f, i))),
-                    (Mathf.Lerp(healthImage.transform.localScale.y, 
-                    healthImage.transform.localScale.y + 0.025f, 
-                    Mathf.SmoothStep(0f, 1f, i))), 
-                    healthImage.transform.localScale.z);
-            }
-            for (float i = 0f; i <= 1f; i += 0.1f)
-            {
-                healthImage.transform.localScale = new Vector3(
-                    (Mathf.Lerp(healthImage.transform.localScale.x,
-                    healthImage.transform.localScale.x - 0.025f,
-                    Mathf.SmoothStep(0f, 1f, i))),
-                    (Mathf.Lerp(healthImage.transform.localScale.y,
-                    healthImage.transform.localScale.y - 0.025f,
-                    Mathf.SmoothStep(0f, 1f, i))),
-                    healthImage.transform.localScale.z);
-            }
+            StartCoroutine("PulseHeart");
+        }
+    }
+
+    private IEnumerator PulseHeart()
+    {
+        for (float i = 0f; i <= 1f; i += 0.4f)            //TODO doesnt work yet
+        {
+            Debug.Log(healthImage.transform.localScale);
+            healthImage.transform.localScale = new Vector3(
+                (Mathf.Lerp(healthImage.transform.localScale.x,
+                healthImage.transform.localScale.x + 0.03f,
+                Mathf.SmoothStep(0f, 1f, i))),
+                (Mathf.Lerp(healthImage.transform.localScale.y,
+                healthImage.transform.localScale.y + 0.03f,
+                Mathf.SmoothStep(0f, 1f, i))),
+                healthImage.transform.localScale.z);
+            yield return new WaitForSeconds(0.02f);
+        }
+        for (float i = 0f; i <= 1f; i += 0.4f)
+        {
+            Debug.Log(healthImage.transform.localScale);
+            healthImage.transform.localScale = new Vector3(
+                (Mathf.Lerp(healthImage.transform.localScale.x,
+                healthImage.transform.localScale.x - 0.03f,
+                Mathf.SmoothStep(0f, 1f, i))),
+                (Mathf.Lerp(healthImage.transform.localScale.y,
+                healthImage.transform.localScale.y - 0.03f,
+                Mathf.SmoothStep(0f, 1f, i))),
+                healthImage.transform.localScale.z);
+            yield return new WaitForSeconds(0.02f);
+
         }
     }
 }
