@@ -43,9 +43,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7606551003303115959}
     m_Modifications:
+    - target: {fileID: 4451918051289528697, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_Name
       value: Wall_Prefab (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8535431168843354944, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_RootOrder
@@ -167,9 +175,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7606551003303115959}
     m_Modifications:
+    - target: {fileID: 4451918051289528697, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_Name
       value: Wall_Prefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8535431168843354944, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_RootOrder
@@ -229,9 +245,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7606551003303115959}
     m_Modifications:
+    - target: {fileID: 4451918051289528697, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_Name
       value: Wall_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8535431168843354944, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_RootOrder
@@ -291,9 +315,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7606551003303115959}
     m_Modifications:
+    - target: {fileID: 4451918051289528697, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_Name
       value: Wall_Prefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924969087873539673, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8535431168843354944, guid: 1b22e51ef6d67f1469b3499d2a524bcf, type: 3}
       propertyPath: m_RootOrder
