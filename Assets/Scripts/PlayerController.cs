@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
             float speed;
 
             // Sprint
-            if (Input.GetButton("Run") && sprintActive)
+            if (Input.GetButton("Run") && sprintActive) //default l shift
             {
                 speed = moveSpeed * speedMultiplier;
             }
