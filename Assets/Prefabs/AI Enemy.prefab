@@ -17,10 +17,9 @@ GameObject:
   - component: {fileID: 2733080880956921490}
   - component: {fileID: 2733080880956921491}
   - component: {fileID: 2733080880956921500}
-  - component: {fileID: 2211663123213422875}
   m_Layer: 0
   m_Name: AI Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +98,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2
+  m_Radius: 1.5
   m_Height: 6.4
   m_Direction: 1
   m_Center: {x: 0.046211004, y: 2.2, z: -0.017492533}
@@ -131,10 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9375248b757f554ea098f6c202d4107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fieldOfView: 150
+  fieldOfView: 120
   viewOffest: 1
   viewMaxDistance: 10
-  searchingTime: 0.2
+  searchingTime: 0.5
   repeatRate: 0.5
   isPlayerDetected: 0
 --- !u!114 &2733080880956921490
@@ -158,18 +157,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  patrolPause: 3
+  patrolPause: 5
   patrolSpeed: 3
   attackPause: 1.5
   attackSpeed: 7
   attackDistance: 3
   distanceToThePatrolPoint: 0.1
   distanceToThePlayer: 3
-  currentAngle: 0
-  angle: 0
-  lookValue: 45
-  lookSpeed: 50
-  isRight: 0
+  leftLookAroundLimit: 75
+  rightLookAroundLimit: 75
+  lookSpeed: 60
 --- !u!114 &2733080880956921491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +189,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2733080880956921501}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2
+  m_Radius: 1.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -205,25 +202,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!95 &2211663123213422875
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2733080880956921501}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f435de0571c47b418f4e363bd505c76, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2733080881820006299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010723399292, guid: 11db918338e063f4b86b6024c791e5a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.43
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4000010723399292, guid: 11db918338e063f4b86b6024c791e5a8, type: 3}
       propertyPath: m_LocalPosition.z

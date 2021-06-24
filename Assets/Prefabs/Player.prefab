@@ -112,7 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phealth: 100
-  edamageObject: {fileID: 0}
+  pdamage: 0
+  enemy: {fileID: 0}
 --- !u!1 &7470416358754093750
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +333,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 50
+  far clip plane: 500
   field of view: 60
   orthographic: 0
   orthographic size: 5

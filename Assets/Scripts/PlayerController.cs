@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool rotatePlayerWithButtons = false;
     [SerializeField]
-
     private float maxVerticalCameraAngle = 45f;
     private float cameraAngle = 0f;
     public float moveSpeed = 5f;

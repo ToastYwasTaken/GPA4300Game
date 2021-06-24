@@ -19,11 +19,15 @@ using UnityEngine.UI;
  * ChangeLog
  * ----------------------------
  *  14.06.2021  RK  Created
+ *  18.06.2021  RK  Added function          Patrol()
+ *  22.06.2021  RK  Added function          AttackPlayer()
+ *  24.06.2021  RK  Added function          LookAround() 
+ *                  Added function          CalcCurrentAngle()
+ *                  Added SectorManager
  *  
  *****************************************************************************/
 
 /*TODO
-    - Gegner soll sich am Zielpunkt umsehen
     - Animation Übergänge verbessern
     - Dynamic verbessern
  */
@@ -42,7 +46,7 @@ public class EnemyAI : MonoBehaviour
     public Text destText;
 
     [Header("AI Controls")]
-    public Transform[] patrolPoints;
+    public Waypoint[] patrolPoints;
     public float patrolPause = 3f;
     public float patrolSpeed = 4f;
     public float attackPause = 1.5f;
@@ -50,18 +54,19 @@ public class EnemyAI : MonoBehaviour
     public float attackDistance = 3f;
     public float distanceToThePatrolPoint = 0.1f;
     public float distanceToThePlayer = 2.7f;
-   
-    public float currentAngle;
-    public float angle;
-    public float lookValue = 45f;
-    public float lookSpeed = 10f;
-    public bool isRight = false;
+    public float leftLookAroundLimit = 75f;
+    public float rightLookAroundLimit = 75f;
+    public float lookSpeed = 60f;
+
+    private float currentAngle;
+    private float angle;
+    private bool lookAround = false;
+    private bool isRight = false;
 
     SearchPlayerAI searchAI;
     Pathfinding pathfinding;
     EnemyAnimator enemyAnim;
-
-
+    SectorManager sectorManager;
 
     private void Awake()
     {
@@ -69,6 +74,7 @@ public class EnemyAI : MonoBehaviour
         searchAI = GetComponent<SearchPlayerAI>();
         pathfinding = GetComponent<Pathfinding>();
         enemyAnim = FindObjectOfType<EnemyAnimator>();
+        sectorManager = FindObjectOfType<SectorManager>();
 
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -76,46 +82,48 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //if (agent)
-        //{
-        //    agent.speed = patrolSpeed;
-        //    agent.updatePosition = true;
-        //    SetDestination(NextDestination(), distanceToThePatrolPoint);
-        //    enemyAnim.PlayIdleAnimation(true);
-        //}
-
-        currentAngle = agent.transform.rotation.eulerAngles.y;
+        if (agent)
+        {
+            agent.speed = patrolSpeed;
+            agent.updatePosition = true;
+            SetDestination(NextDestination(), distanceToThePatrolPoint);
+            enemyAnim.PlayIdleAnimation(true);
+        }
     }
 
     private void FixedUpdate()
     {
-        LookAround();
-
         if (useMouseDest)
         {
             MouseDestination();
         }
+        else
+        {
+            if (!searchAI.isPlayerDetected)
+            {
+                agent.speed = patrolSpeed;
+                StopCoroutine(nameof(AttackPlayer));
+                StartCoroutine(nameof(Patrol));
+            }
+            else
+            {
+                agent.speed = attackSpeed;
+                StopCoroutine(nameof(Patrol));
+                StartCoroutine(nameof(AttackPlayer));
+                SetDestination(player.transform, distanceToThePlayer);
 
-        //if (!searchAI.isPlayerDetected)
-        //{
-        //    agent.speed = patrolSpeed;
-        //    StopCoroutine(nameof(AttackPlayer));
-        //    StartCoroutine(nameof(Patrol));
-        //}
-        //else
-        //{
-        //    agent.speed = attackSpeed;
-        //    StopCoroutine(nameof(Patrol));
-        //    StartCoroutine(nameof(AttackPlayer));
-        //    SetDestination(player.transform, distanceToThePlayer);
-            
-        //}
-    }
+            }
 
-    public void TestFunction()
-    {
-        // Zum testen von Methoden
-    
+            // Schaut sich am Wegpunkt um
+            if (lookAround)
+            {
+                LookAround(leftLookAroundLimit, rightLookAroundLimit);
+            }
+
+            // Gibt die Wegpunkte von dem Sektor zurück,
+            // indem sich der Spieler am längsten aufhält
+            patrolPoints = sectorManager.GetWaypointsFromSector();
+        }
     }
 
     /// <summary>
@@ -125,19 +133,25 @@ public class EnemyAI : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            Debug.Log("Ziel erreicht!");
+            Debug.Log("Wegpunkt: " + agent.destination);
 
             enemyAnim.PlayMoveAnimation(false);
             enemyAnim.PlayRunAnimation(false);
             enemyAnim.PlayIdleAnimation(true);
 
-            AgentStop();      
-            
+            AgentStop();
+
+            // Sieh dich um
+            currentAngle = CalcCurrentAngle();
+            isRight = false;
+            lookAround = true;
+
             // Lege neues Ziel fest
             SetDestination(NextDestination(), distanceToThePatrolPoint);
 
             yield return new WaitForSeconds(patrolPause);
 
+            lookAround = false;
             AgentResume();
             enemyAnim.PlayIdleAnimation(false);
             enemyAnim.PlayMoveAnimation(true);
@@ -148,6 +162,10 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Greif den Spieler an, wenn er in Reichweite ist
+    /// </summary>
+    /// <returns></returns>
     IEnumerator AttackPlayer()
     {
         if (agent.remainingDistance <= attackDistance)
@@ -157,7 +175,7 @@ public class EnemyAI : MonoBehaviour
             AgentStop();
 
             // Angriff durchführen
-            enemyAnim.TriggerAttack(); 
+            enemyAnim.TriggerAttack();
             yield return new WaitForSeconds(attackPause);
 
             AgentResume();
@@ -169,46 +187,88 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Berechnet den aktuellen Sichtwinkel
+    /// </summary>
+    /// <returns>aktueller Sichtwinkel</returns>
+    private float CalcCurrentAngle()
+    {
+        angle = agent.transform.rotation.eulerAngles.y;
+
+        if (angle > 180f)
+        {
+            angle -= 360f;
+        }
+
+        return angle;
+    }
 
     /// <summary>
-    /// IN ARBEIT
     /// Umsehen
     /// </summary>
-    private void LookAround()
+    private void LookAround(float _leftLimit, float _rightLimit)
     {
-        float rightValue = currentAngle + lookValue;
-        float leftValue = currentAngle - lookValue;
+        float rightValue = currentAngle + _rightLimit;
+        float leftValue = currentAngle - _leftLimit;
 
-        //Debug.Log("Right value: " + rightValue);
-        //Debug.Log("Left value: " + leftValue);
+        angle = agent.transform.rotation.eulerAngles.y;
 
+        // Übersteigt der Winkelwert 180° Grad,
+        // dann subtrahiere davon 360, um einen negativen Wert zu erhalten
+        if (angle > 180f)
+        {
+            angle -= 360f;
+        }
 
-     
+        // Verhindert die Unter- / Überschreitung des Winkels
+        angle = Mathf.Clamp(angle, leftValue, rightValue);
 
-        angle = Mathf.Clamp(agent.transform.rotation.eulerAngles.y, leftValue, rightValue);
-
-
-        Debug.Log(Mathf.Abs( agent.transform.rotation.eulerAngles.y));
         if (angle >= rightValue)
         {
-           isRight = true;  
+            isRight = true;
         }
-       // Debug.Log(angle + " : " + leftValue);
 
         if (angle <= leftValue)
         {
-           isRight = false;
+            isRight = false;
         }
 
         if (!isRight)
         {
-            // angle = Mathf.Clamp(Vector3.up.y * lookSpeed * Time.deltaTime, leftValue, rightValue);
             agent.transform.Rotate(Vector3.up * lookSpeed * Time.deltaTime);
         }
         else
         {
-            // angle = Mathf.Clamp(Vector3.up.y * lookSpeed * Time.deltaTime, leftValue, rightValue);
             agent.transform.Rotate(-Vector3.up * lookSpeed * Time.deltaTime);
+        }
+    }
+
+    /// <summary>
+    /// Wird ausgeführt, wenn der Feind einen Wegpunkt erreicht
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Waypoint"))
+        {
+            Waypoint waypoint = other.gameObject.GetComponent<Waypoint>();
+
+            leftLookAroundLimit = waypoint.enemyLeftLookAroundAngle;
+            rightLookAroundLimit = waypoint.enemyRightLookAroundAngle;
+            lookSpeed = waypoint.lookSpeed;
+            patrolPause = waypoint.waitForSeconds;
+        }
+    }
+
+    /// <summary>
+    /// Spieler erkennen, wenn er zu nahe kommt
+    /// </summary>
+    /// <param name="collision"></param>
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            searchAI.isPlayerDetected = true;
         }
     }
 
@@ -219,7 +279,7 @@ public class EnemyAI : MonoBehaviour
     public Transform NextDestination()
     {
         int rnd = Random.Range(0, patrolPoints.Length);
-        return patrolPoints[rnd];
+        return patrolPoints[rnd].transform;
     }
 
     /// <summary>
