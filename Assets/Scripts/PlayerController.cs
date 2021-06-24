@@ -17,7 +17,8 @@ using UnityEngine;
  * ----------------------------
  *  11.06.2021  RK  Created
  *  15.06.2021  RK  Added max vertical Camera angle
- *  22.06.2021  FM  added check if the game is paused
+ *  22.06.2021  FM  Added check if the game is paused
+ *  24.06.2021  FM  Added changing sensitivity in option menu, therefore this script was adjusted
  *  
  *****************************************************************************/
 
@@ -49,6 +50,8 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -5f;
 
+    public float sensitivityMultiplier;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +64,8 @@ public class PlayerController : MonoBehaviour
     {
         if (!GUIOptionMenu.isPaused) //verhindert movement wenn das Spiel pausiert ist
         {
+            sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
+            //Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
             // Verhindert das der Player unendlich fällt
             FallingDownCheck();
             // Springen
@@ -132,7 +137,7 @@ public class PlayerController : MonoBehaviour
         Vector3 mouseInput = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 
         // Spieler sieht nach oben oder unten
-        cameraAngle += -mouseInput.y * rotationSpeed * Time.deltaTime;
+        cameraAngle += -mouseInput.y * rotationSpeed * sensitivityMultiplier * Time.deltaTime;
 
         // Winkel der Kamera auf min und max begrenzen
         cameraAngle = Mathf.Clamp(cameraAngle, -maxVerticalCameraAngle, maxVerticalCameraAngle);
@@ -142,7 +147,7 @@ public class PlayerController : MonoBehaviour
         camTransform.transform.localEulerAngles = new Vector3(cameraAngle, 0, 0);
 
         // Spieler dreht sich nach links oder rechts
-        Quaternion deltaRotationX = Quaternion.Euler(0, rotationSpeed * Time.deltaTime * mouseInput.x, 0);
+        Quaternion deltaRotationX = Quaternion.Euler(0, rotationSpeed * sensitivityMultiplier * Time.deltaTime * mouseInput.x, 0);
         playerBody.MoveRotation(playerBody.rotation * deltaRotationX);
     }
 
@@ -165,5 +170,6 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
     }
+
 
 }

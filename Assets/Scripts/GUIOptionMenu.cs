@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 /******************************************************************************
  * Project: GPA4300Game
  * File: GUIHealth.cs
@@ -20,17 +19,20 @@ using UnityEngine.SceneManagement;
  * ChangeLog
  * ----------------------------
  *  22.06.2021  FM  Created
+ *  24.06.2021  FM  Fixed stuff
  *  
  *****************************************************************************/
 
 /// <summary>
 /// Opens the pause / options menu
 /// </summary>
- //TODO
+
 public class GUIOptionMenu : MonoBehaviour
 {
 
     public static bool isPaused = false;
+    //private float volumeValue;
+    //private float sensitivityValue;
 
     [SerializeField]
     private TextMeshProUGUI textPaused;
@@ -51,40 +53,49 @@ public class GUIOptionMenu : MonoBehaviour
     [SerializeField]
     private Button buttonExitToDesktop;
 
+    public PlayerController playerController;
+
+    private bool flag = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         DeactivateOptionMenuGUI();
+        sliderSensitivity.value = 1f;
+        sliderVolume.value = 1f;
+        changeVolume(1f);
+        changeSensitivity(1f);
+        
     }
 
     // Update is called once per frame
-    void Update()   
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)&& !isPaused)   //PAUSING
+        if (flag)
+        { 
+            changeVolume(sliderVolume.value);
+            changeSensitivity(sliderSensitivity.value);
+            Debug.Log("sensitivity: " + sliderSensitivity.value);
+            Debug.Log("volume: " + sliderVolume.value);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)   //PAUSING
         {
+            flag = true;
             ActivateOptionMenuGUI();
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x,
                 transform.rotation.eulerAngles.y, transform.eulerAngles.z); //freezing rotation
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-            Debug.Log("In Pause");
-        } else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)    //RESUMING
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)    //RESUMING
         {
+            flag = false;
             DeactivateOptionMenuGUI();
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            Debug.Log("Exited Pause");
         }
-    }
-
-    void LoadMainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
-    }
-
-    private void Quit()
-    {
-        Application.Quit();
     }
 
     private void DeactivateOptionMenuGUI()
@@ -117,6 +128,20 @@ public class GUIOptionMenu : MonoBehaviour
         isPaused = true;    //flag
 
         Time.timeScale = 0; //makes every time based function stop //Update is still called every frame
+    }
+
+    public void changeVolume(float _sliderVolumeValue)
+    {
+        PlayerPrefs.SetFloat("volume", _sliderVolumeValue);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
+        PlayerPrefs.Save();
+    }
+
+    public void changeSensitivity(float _sliderSensitivityValue)
+    {
+        PlayerPrefs.SetFloat("sensitivity", _sliderSensitivityValue);
+        playerController.sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
+        PlayerPrefs.Save();
     }
 
 }

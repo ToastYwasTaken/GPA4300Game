@@ -19,6 +19,7 @@ using UnityEngine.SceneManagement;
  * ----------------------------
  *  11.06.2021  FM  Created
  *  22.06.2021  FM  Edited health mechanic
+ *  24.06.2021  FM  Deleted Debuglog
  *  
  *****************************************************************************/
 
@@ -39,7 +40,6 @@ public class PlayerHealth : MonoBehaviour
     {
         enemyHealth = enemy.GetComponent<EnemyHealth>();
         edamage = enemyHealth.edamage;
-        Debug.Log("Edamage: " + edamage);
     }
 
     // Update is called once per frame
@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(phealth < 0)
         {
-            SceneManager.LoadScene(1);  //loading death screen
+            SceneManager.LoadScene(2);  //loading death screen
         }
     }
 

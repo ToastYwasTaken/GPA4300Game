@@ -65,7 +65,7 @@ public class GUIHealth : MonoBehaviour
     {
         for (float i = 0f; i <= 1f; i += 0.4f)            //TODO doesnt work yet
         {
-            Debug.Log(healthImage.transform.localScale);
+            //Debug.Log(healthImage.transform.localScale);
             healthImage.transform.localScale = new Vector3(
                 (Mathf.Lerp(healthImage.transform.localScale.x,
                 healthImage.transform.localScale.x + 0.03f,

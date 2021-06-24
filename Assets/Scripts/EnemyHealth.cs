@@ -18,6 +18,7 @@ using UnityEngine;
  * ----------------------------
  *  11.06.2021  FM  Created
  *  22.06.2021  FM  Edited health mechanic
+ *  24.06.2021  FM  Deleted Debuglog
  *  
  *****************************************************************************/
 
@@ -38,7 +39,6 @@ public class EnemyHealth : MonoBehaviour
     {
         playerHealth = player.GetComponent<PlayerHealth>();
         pdamage = playerHealth.pdamage;
-        Debug.Log("Pdamage: " + pdamage);
     }
 
     // Update is called once per frame
