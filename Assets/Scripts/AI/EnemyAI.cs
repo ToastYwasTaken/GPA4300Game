@@ -42,8 +42,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private bool useMouseDest = false;
 
-    [Header("UI Controls")]
-    public Text destText;
+    //[Header("UI Controls")]
+    //public Text destText;
 
     [Header("AI Controls")]
     public Waypoint[] patrolPoints;
@@ -292,7 +292,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(_destPoint.position);
 
         pathfinding.SetTarget(_destPoint);
-        destText.text = $"Destination: {_destPoint.name}";
+        //destText.text = $"Destination: {_destPoint.name}";
     }
 
     /// <summary>

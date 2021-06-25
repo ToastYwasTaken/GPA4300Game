@@ -26,9 +26,9 @@ public class SectorManager : MonoBehaviour
 
     public Sector[] sectors;
 
-    public Text sectorA;
-    public Text sectorB;
-    public Text sectorC;
+    //public Text sectorA;
+    //public Text sectorB;
+    //public Text sectorC;
 
 
 
@@ -39,9 +39,9 @@ public class SectorManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        sectorA.text = $"Sector A Stay Time: {sectors[0].playerStayTime}";
-        sectorB.text = $"Sector B Stay Time: {sectors[1].playerStayTime}";
-        sectorC.text = $"Sector C Stay Time: {sectors[2].playerStayTime}";
+        //sectorA.text = $"Sector A Stay Time: {sectors[0].playerStayTime}";
+        //sectorB.text = $"Sector B Stay Time: {sectors[1].playerStayTime}";
+        //sectorC.text = $"Sector C Stay Time: {sectors[2].playerStayTime}";
     }
 
     public Waypoint[] GetWaypointsFromSector()
