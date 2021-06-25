@@ -15,9 +15,13 @@ public class GUIDeath : MonoBehaviour
 
     IEnumerator FadeIn()
     {
+        Color textColor;
+        textColor = new Color(textOnDeath.color.r, textOnDeath.color.g, textOnDeath.color.b, 0f);
+        textOnDeath.color = textColor;
+        yield return new WaitForSeconds(2.5f);
         for (float i = 0f; i < 1f; i+= 0.05f)
         {
-            Color textColor = new Color
+            textColor = new Color
                 (textOnDeath.color.r, textOnDeath.color.g, textOnDeath.color.b, i);
             textOnDeath.color = textColor;
             yield return new WaitForSeconds(0.05f);
