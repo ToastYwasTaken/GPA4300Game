@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637599684553919365
+      ticks: 637603141535521937
     m_Hash: 248146433
   m_LockFileStatus:
     m_FilePath: C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637599684553929338
+      ticks: 637603141535521937
     m_Hash: 2564801494
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
