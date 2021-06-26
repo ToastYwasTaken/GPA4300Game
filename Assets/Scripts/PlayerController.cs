@@ -19,6 +19,7 @@ using UnityEngine;
  *  15.06.2021  RK  Added max vertical Camera angle
  *  22.06.2021  FM  Added check if the game is paused
  *  24.06.2021  FM  Added changing sensitivity in option menu, therefore this script was adjusted
+ *  26.06.2021  RK  Modified PlayerMovement -> don't sprint backwards 
  *  
  *****************************************************************************/
 
@@ -104,7 +105,7 @@ public class PlayerController : MonoBehaviour
             float speed;
 
             // Sprint
-            if (Input.GetButton("Run") && sprintActive) //default l shift
+            if (Input.GetButton("Run") && sprintActive && keyInput.z > 0) //default l shift
             {
                 speed = moveSpeed * speedMultiplier;
             }

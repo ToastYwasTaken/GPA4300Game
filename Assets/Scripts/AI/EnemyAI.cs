@@ -24,12 +24,17 @@ using UnityEngine.UI;
  *  24.06.2021  RK  Added function          LookAround() 
  *                  Added function          CalcCurrentAngle()
  *                  Added SectorManager
+ *  26.06.2021  RK  Changed if instruction lookAround     
+ *              RK  Set lookAround to false, if Player Detected
  *  
  *****************************************************************************/
 
 /*TODO
     - Animation Übergänge verbessern
     - Dynamic verbessern
+    - Fehler: Animation wird nicht korrekt ausgeführt, 
+              wenn sich der Enemy am Waypoint befindet und dabei auf den Player trifft
+    - Fehler: AI reagiert teilweise verzögert auf den Player
  */
 
 
@@ -42,17 +47,17 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private bool useMouseDest = false;
 
-    //[Header("UI Controls")]
-    //public Text destText;
+    [Header("UI Controls")]
+    public Text destText;
 
     [Header("AI Controls")]
-    public Waypoint[] patrolPoints;
+    public Waypoint[] Waypoints;
     public float patrolPause = 3f;
     public float patrolSpeed = 4f;
     public float attackPause = 1.5f;
     public float attackSpeed = 7f;
     public float attackDistance = 3f;
-    public float distanceToThePatrolPoint = 0.1f;
+    public float distanceToTheWaypoint = 0.1f;
     public float distanceToThePlayer = 2.7f;
     public float leftLookAroundLimit = 75f;
     public float rightLookAroundLimit = 75f;
@@ -77,6 +82,8 @@ public class EnemyAI : MonoBehaviour
         sectorManager = FindObjectOfType<SectorManager>();
 
         player = GameObject.FindGameObjectWithTag("Player");
+
+
     }
 
     // Start is called before the first frame update
@@ -86,7 +93,7 @@ public class EnemyAI : MonoBehaviour
         {
             agent.speed = patrolSpeed;
             agent.updatePosition = true;
-            SetDestination(NextDestination(), distanceToThePatrolPoint);
+            SetDestination(NextDestination(), distanceToTheWaypoint);
             enemyAnim.PlayIdleAnimation(true);
         }
     }
@@ -101,6 +108,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (!searchAI.isPlayerDetected)
             {
+                agent.stoppingDistance = distanceToTheWaypoint;
                 agent.speed = patrolSpeed;
                 StopCoroutine(nameof(AttackPlayer));
                 StartCoroutine(nameof(Patrol));
@@ -109,20 +117,18 @@ public class EnemyAI : MonoBehaviour
             {
                 agent.speed = attackSpeed;
                 StopCoroutine(nameof(Patrol));
+                lookAround = false;
+
                 StartCoroutine(nameof(AttackPlayer));
                 SetDestination(player.transform, distanceToThePlayer);
 
             }
 
             // Schaut sich am Wegpunkt um
-            if (lookAround)
+            if (lookAround && !searchAI.isPlayerDetected)
             {
                 LookAround(leftLookAroundLimit, rightLookAroundLimit);
-            }
-
-            // Gibt die Wegpunkte von dem Sektor zurück,
-            // indem sich der Spieler am längsten aufhält
-            patrolPoints = sectorManager.GetWaypointsFromSector();
+            }           
         }
     }
 
@@ -131,9 +137,13 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     IEnumerator Patrol()
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        // Gibt die Wegpunkte von dem Sektor zurück,
+        // indem sich der Spieler am längsten aufhält
+        Waypoints = sectorManager.GetWaypointsFromSector();
+
+        if (agent.remainingDistance <= agent.stoppingDistance && !searchAI.isPlayerDetected)
         {
-            Debug.Log("Wegpunkt: " + agent.destination);
+          Debug.Log("Wegpunkt: " + agent.destination);
 
             enemyAnim.PlayMoveAnimation(false);
             enemyAnim.PlayRunAnimation(false);
@@ -147,7 +157,7 @@ public class EnemyAI : MonoBehaviour
             lookAround = true;
 
             // Lege neues Ziel fest
-            SetDestination(NextDestination(), distanceToThePatrolPoint);
+            SetDestination(NextDestination(), distanceToTheWaypoint);
 
             yield return new WaitForSeconds(patrolPause);
 
@@ -249,7 +259,7 @@ public class EnemyAI : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Waypoint"))
+        if (other.gameObject.CompareTag("Waypoint") && !searchAI.isPlayerDetected)
         {
             Waypoint waypoint = other.gameObject.GetComponent<Waypoint>();
 
@@ -278,8 +288,8 @@ public class EnemyAI : MonoBehaviour
     /// <returns></returns>
     public Transform NextDestination()
     {
-        int rnd = Random.Range(0, patrolPoints.Length);
-        return patrolPoints[rnd].transform;
+        int rnd = Random.Range(0, Waypoints.Length);
+        return Waypoints[rnd].transform;
     }
 
     /// <summary>
@@ -292,7 +302,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(_destPoint.position);
 
         pathfinding.SetTarget(_destPoint);
-        //destText.text = $"Destination: {_destPoint.name}";
+        destText.text = $"AI Destination: {_destPoint.name}";
     }
 
     /// <summary>
@@ -317,7 +327,7 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     public void SetNextPatrolPoint()
     {
-        SetDestination(NextDestination(), distanceToThePatrolPoint);
+        SetDestination(NextDestination(), distanceToTheWaypoint);
     }
 
     /// <summary>

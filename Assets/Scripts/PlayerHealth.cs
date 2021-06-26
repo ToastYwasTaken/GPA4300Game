@@ -20,6 +20,7 @@ using UnityEngine.SceneManagement;
  *  11.06.2021  FM  Created
  *  22.06.2021  FM  Edited health mechanic
  *  24.06.2021  FM  Deleted Debuglog
+ *  26.06.2021  RK  Changed LoadScene to LoadSceneAsync
  *  
  *****************************************************************************/
 
@@ -47,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(phealth < 0)
         {
-            SceneManager.LoadScene(2);  //loading death screen
+            SceneManager.LoadSceneAsync(2);  //loading death screen
         }
     }
 
