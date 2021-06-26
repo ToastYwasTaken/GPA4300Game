@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3c527c490707964fb7bb510335cbdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rockPrefab: {fileID: 0}
+  rockPrefab: {fileID: 5786306800450730375, guid: 9e3d5bbe4ae14c54bb3917d07322e0de, type: 3}
   numberOfRocks: 6
   spawnPoints:
   - {fileID: 5362910955152086234}
