@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerBody = GetComponent<Rigidbody>();
-        playerBody.transform.position = startPosition;
+        playerBody.transform.position = new Vector3(90, 2, 42)/*startPosition*/;
     }
 
     // Update is called once per frame
