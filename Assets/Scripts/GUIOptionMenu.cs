@@ -79,8 +79,8 @@ public class GUIOptionMenu : MonoBehaviour
         { 
             changeVolume(sliderVolume.value);
             changeSensitivity(sliderSensitivity.value);
-            Debug.Log("sensitivity: " + sliderSensitivity.value);
-            Debug.Log("volume: " + sliderVolume.value);
+            //Debug.Log("sensitivity: " + sliderSensitivity.value);
+            //Debug.Log("volume: " + sliderVolume.value);
         }
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)   //PAUSING
         {

@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\LoadPrefs.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\AI\EnemyAI.cs" />
+    <Compile Include="Assets\JP\Scripts\HiddenDoor_Behavior.cs" />
     <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
     <Compile Include="Assets\JP\Scripts\TrapRocks_Behavior.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -111,7 +112,10 @@
     <Compile Include="Assets\Scripts\GUIOptionMenu.cs" />
     <Compile Include="Assets\Scripts\WizardInDeathScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\JP\Scripts\Portal_Behavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\Cartoon Heroes\Scripts\SetCharacter\SetCharacter.cs" />
+    <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6697399877379761307}
   - component: {fileID: 6697399877376346897}
   - component: {fileID: 6697399877377429231}
-  - component: {fileID: 6697399877373172515}
+  - component: {fileID: 2063081378621221738}
   m_Layer: 0
   m_Name: box.002 (1)
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373172515
-MeshCollider:
+--- !u!65 &2063081378621221738
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,10 +92,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 47f09045d6a8b0241880ac12a1b794fe, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.501421, z: 0}
 --- !u!1 &6697399877379395461
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +106,7 @@ GameObject:
   - component: {fileID: 6697399877379761247}
   - component: {fileID: 6697399877376339749}
   - component: {fileID: 6697399877377470563}
-  - component: {fileID: 6697399877373226831}
+  - component: {fileID: 5753667167041349440}
   m_Layer: 0
   m_Name: box.004
   m_TagString: Untagged
@@ -179,8 +178,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373226831
-MeshCollider:
+--- !u!65 &5753667167041349440
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -189,10 +188,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 337acceb6f764c1449484718d6c8391c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.501421, z: 0}
 --- !u!1 &6697399877379399131
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +202,7 @@ GameObject:
   - component: {fileID: 6697399877379722801}
   - component: {fileID: 6697399877376359175}
   - component: {fileID: 6697399877377441689}
-  - component: {fileID: 6697399877373174643}
+  - component: {fileID: 3061694665175399322}
   m_Layer: 0
   m_Name: box.001
   m_TagString: Untagged
@@ -276,8 +274,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373174643
-MeshCollider:
+--- !u!65 &3061694665175399322
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -286,10 +284,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: cd316120dd0d2244198bb0790501243a, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.501421, z: 0}
 --- !u!1 &6697399877379408777
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +298,7 @@ GameObject:
   - component: {fileID: 6697399877379687475}
   - component: {fileID: 6697399877376385997}
   - component: {fileID: 6697399877377466303}
-  - component: {fileID: 6697399877373105629}
+  - component: {fileID: 7806036691393451426}
   m_Layer: 0
   m_Name: box.005
   m_TagString: Untagged
@@ -373,8 +370,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373105629
-MeshCollider:
+--- !u!65 &7806036691393451426
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -383,10 +380,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: a6ecdd39a95d03c488f94bcc3d9105bf, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 1, z: 1}
+  m_Center: {x: -0.19999999, y: 0.501421, z: 0}
 --- !u!1 &6697399877379412947
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +394,7 @@ GameObject:
   - component: {fileID: 6697399877379764443}
   - component: {fileID: 6697399877376372861}
   - component: {fileID: 6697399877377481283}
-  - component: {fileID: 6697399877373124263}
+  - component: {fileID: 4927172755653589328}
   m_Layer: 0
   m_Name: box.004 (1)
   m_TagString: Untagged
@@ -470,8 +466,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373124263
-MeshCollider:
+--- !u!65 &4927172755653589328
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -480,10 +476,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 337acceb6f764c1449484718d6c8391c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.00000011920929, y: 0.501421, z: 0}
 --- !u!1 &6697399877379441067
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +490,7 @@ GameObject:
   - component: {fileID: 6697399877379735635}
   - component: {fileID: 6697399877376340883}
   - component: {fileID: 6697399877377438305}
-  - component: {fileID: 6697399877373161335}
+  - component: {fileID: 1609523336573454060}
   m_Layer: 0
   m_Name: box
   m_TagString: Untagged
@@ -567,8 +562,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373161335
-MeshCollider:
+--- !u!65 &1609523336573454060
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -577,10 +572,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 2f5a755278514ef4db4bc7864409d4a8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 1, z: 1}
+  m_Center: {x: -0.20000046, y: 0.501421, z: 0.00000011920929}
 --- !u!1 &6697399877379472741
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +586,7 @@ GameObject:
   - component: {fileID: 6697399877379703119}
   - component: {fileID: 6697399877376311483}
   - component: {fileID: 6697399877377489371}
-  - component: {fileID: 6697399877373160837}
+  - component: {fileID: 5619065177712848989}
   m_Layer: 0
   m_Name: box.004 (2)
   m_TagString: Untagged
@@ -664,8 +658,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373160837
-MeshCollider:
+--- !u!65 &5619065177712848989
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -674,10 +668,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 337acceb6f764c1449484718d6c8391c, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.501421, z: 0}
 --- !u!1 &6697399877379474055
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +720,7 @@ GameObject:
   - component: {fileID: 6697399877379742573}
   - component: {fileID: 6697399877376363279}
   - component: {fileID: 6697399877377459787}
-  - component: {fileID: 6697399877373195249}
+  - component: {fileID: 739090521996320181}
   m_Layer: 0
   m_Name: box.002
   m_TagString: Untagged
@@ -798,8 +791,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6697399877373195249
-MeshCollider:
+--- !u!65 &739090521996320181
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -808,7 +801,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 47f09045d6a8b0241880ac12a1b794fe, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.501421, z: -0.00000047683716}

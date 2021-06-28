@@ -20,14 +20,18 @@ using UnityEngine;
  *  22.06.2021  FM  Added check if the game is paused
  *  24.06.2021  FM  Added changing sensitivity in option menu, therefore this script was adjusted
  *  26.06.2021  RK  Modified PlayerMovement -> don't sprint backwards 
+ *  28.06.2021  RK  Added PlayerAnimator (Animations)
  *  
  *****************************************************************************/
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerBody;
+    private PlayerAnimator playerAnimator;
 
     public Vector3 startPosition;
+    private Vector3 positionIdleCam = new Vector3(0f, 0.63f, 0.175f);
+    private Vector3 positionSprintCam = new Vector3(0f, 0.175f, 0.53f);
     public Transform camTransform;
 
     [SerializeField]
@@ -57,7 +61,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerBody = GetComponent<Rigidbody>();
+        playerAnimator = FindObjectOfType<PlayerAnimator>();
         playerBody.transform.position = new Vector3(90, 2, 42)/*startPosition*/;
+        playerAnimator.PlayIdleAnimation(true);
+       
+        //camTransform.localPosition = positionIdleCam;
     }
 
     // Update is called once per frame
@@ -69,6 +77,7 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
             // Verhindert das der Player unendlich fällt
             FallingDownCheck();
+
             // Springen
             Jump();
         }
@@ -77,10 +86,11 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         if (!GUIOptionMenu.isPaused) //verhindert movement wenn das Spiel pausiert ist
-        { 
+        {
             PlayerRotating();
             PlayerMovement();
         }
+       // Debug.Log(camTransform.position);
     }
 
     /// <summary>
@@ -99,7 +109,17 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void PlayerMovement()
     {
-            Vector3 keyInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 keyInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+        if (keyInput == Vector3.zero)
+        {
+           // camTransform.position = positionIdleCam;
+            playerAnimator.PlaySprintAnimation(false);
+            playerAnimator.PlayWalkAnimation(false);
+            playerAnimator.PlayIdleAnimation(true);
+        }
+        else
+        {
 
             // Bewegungsgeschwindigkeit
             float speed;
@@ -107,10 +127,18 @@ public class PlayerController : MonoBehaviour
             // Sprint
             if (Input.GetButton("Run") && sprintActive && keyInput.z > 0) //default l shift
             {
+               // camTransform.position = positionSprintCam;
+                playerAnimator.PlayWalkAnimation(false);
+                playerAnimator.PlayIdleAnimation(false);
+                playerAnimator.PlaySprintAnimation(true);
                 speed = moveSpeed * speedMultiplier;
             }
             else
             {
+               // camTransform.position = positionIdleCam;
+                playerAnimator.PlayWalkAnimation(true);
+                playerAnimator.PlayIdleAnimation(false);
+                playerAnimator.PlaySprintAnimation(false);
                 speed = moveSpeed;
             }
 
@@ -128,6 +156,7 @@ public class PlayerController : MonoBehaviour
 
             // Nach vorne gehen
             playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.z * transform.forward);
+        }
     }
 
     /// <summary>
@@ -159,6 +188,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded && jumpActive)
         {
+            playerAnimator.TriggerPlayerJump();
             playerBody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
@@ -168,6 +198,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            // Ladung
             isGrounded = true;
         }
     }
