@@ -21,16 +21,15 @@ using UnityEngine;
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private Transform[] exits;
+    [SerializeField]
+    private GameObject RockPilePrefab;
     void Start()
     {
+        int randomExit = Random.Range(0, exits.Length);
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
