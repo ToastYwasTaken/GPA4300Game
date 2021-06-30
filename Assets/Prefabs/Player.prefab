@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc0917942dfd4042993cc6f74f4ac98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: 2, z: 0}
+  startPosition: {x: 108, y: 2, z: 60}
   camTransform: {fileID: 1314761338233513067}
   sprintActive: 1
   speedMultiplier: 2
@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 1314761338233513067}
   - component: {fileID: 2664535315288060243}
   - component: {fileID: 1919303048403383543}
+  - component: {fileID: 1957814357}
   m_Layer: 0
   m_Name: CamHead
   m_TagString: Untagged
@@ -364,7 +365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7470416358754093750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6789999, z: 0.131}
+  m_LocalPosition: {x: 0, y: 0.611, z: 0.235}
   m_LocalScale: {x: 0.7088001, y: 0.22500004, z: 0.3787259}
   m_Children:
   - {fileID: 6036042379516515263}
@@ -420,6 +421,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &1957814357
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470416358754093750}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4df32a68d875d646b43c4fb108121ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8433340340981265543
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +628,10 @@ PrefabInstance:
       value: Female A
       objectReference: {fileID: 0}
     - target: {fileID: 1341145729094354, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450112240837540, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

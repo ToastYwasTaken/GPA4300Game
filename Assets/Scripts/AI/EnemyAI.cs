@@ -302,7 +302,12 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(_destPoint.position);
 
         pathfinding.SetTarget(_destPoint);
-        destText.text = $"AI Destination: {_destPoint.name}";
+
+        if (destText)
+        {
+            destText.text = $"AI Destination: {_destPoint.name}";
+        }
+        
     }
 
     /// <summary>

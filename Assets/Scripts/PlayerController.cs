@@ -24,14 +24,21 @@ using UnityEngine;
  *  
  *****************************************************************************/
 
+/*NOTES
+ * Idle     0,  0.611,  0.235
+ * Walk     0,  0.560,  0.280
+ * Sprint   0,  0.210,  0.470
+ */
+
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerBody;
     private PlayerAnimator playerAnimator;
 
     public Vector3 startPosition;
-    private Vector3 positionIdleCam = new Vector3(0f, 0.63f, 0.175f);
-    private Vector3 positionSprintCam = new Vector3(0f, 0.175f, 0.53f);
+    private Vector3 positionIdleCam = new Vector3(0f, 0.611f, 0.235f);
+    //private Vector3 positionWalkCam = new Vector3(0f, 0.560f, 0.235f);
+    //private Vector3 positionSprintCam = new Vector3(0f, 0.175f, 0.53f);
     public Transform camTransform;
 
     [SerializeField]
@@ -62,10 +69,10 @@ public class PlayerController : MonoBehaviour
     {
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
-        playerBody.transform.position = new Vector3(108, 2, 60)/*startPosition*/;
+        playerBody.transform.position = startPosition; //new Vector3(108, 2, 60)
         playerAnimator.PlayIdleAnimation(true);
        
-        //camTransform.localPosition = positionIdleCam;
+        camTransform.transform.localPosition = positionIdleCam;
     }
 
     // Update is called once per frame
@@ -113,10 +120,11 @@ public class PlayerController : MonoBehaviour
 
         if (keyInput == Vector3.zero)
         {
-           // camTransform.position = positionIdleCam;
+           
             playerAnimator.PlaySprintAnimation(false);
             playerAnimator.PlayWalkAnimation(false);
             playerAnimator.PlayIdleAnimation(true);
+            camTransform.transform.localPosition = positionIdleCam.normalized;
         }
         else
         {
@@ -127,18 +135,18 @@ public class PlayerController : MonoBehaviour
             // Sprint
             if (Input.GetButton("Run") && sprintActive && keyInput.z > 0) //default l shift
             {
-               // camTransform.position = positionSprintCam;
                 playerAnimator.PlayWalkAnimation(false);
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(true);
+                //camTransform.transform.localPosition = positionSprintCam.normalized;
                 speed = moveSpeed * speedMultiplier;
             }
             else
-            {
-               // camTransform.position = positionIdleCam;
+            {            
                 playerAnimator.PlayWalkAnimation(true);
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(false);
+                //camTransform.transform.localPosition = positionIdleCam.normalized;
                 speed = moveSpeed;
             }
 
