@@ -21,6 +21,7 @@ using UnityEngine;
  *  24.06.2021  FM  Added changing sensitivity in option menu, therefore this script was adjusted
  *  26.06.2021  RK  Modified PlayerMovement -> don't sprint backwards 
  *  28.06.2021  RK  Added PlayerAnimator (Animations)
+ *  30.06.2021  RK  Added Collision Check Wall
  *  
  *****************************************************************************/
 
@@ -37,8 +38,8 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 startPosition;
     private Vector3 positionIdleCam = new Vector3(0f, 0.611f, 0.235f);
-    //private Vector3 positionWalkCam = new Vector3(0f, 0.560f, 0.235f);
-    //private Vector3 positionSprintCam = new Vector3(0f, 0.175f, 0.53f);
+    private Vector3 positionWalkCam = new Vector3(0f, 0.560f, 0.235f);
+    private Vector3 positionSprintCam = new Vector3(0f, 0.175f, 0.53f);
     public Transform camTransform;
 
     [SerializeField]
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private bool isGrounded;
+    private bool hitWall;
     [SerializeField]
     private bool rotatePlayerWithButtons = false;
     [SerializeField]
@@ -72,7 +74,7 @@ public class PlayerController : MonoBehaviour
         playerBody.transform.position = startPosition; //new Vector3(108, 2, 60)
         playerAnimator.PlayIdleAnimation(true);
        
-        camTransform.transform.localPosition = positionIdleCam;
+       // camTransform.transform.localPosition = positionIdleCam;
     }
 
     // Update is called once per frame
@@ -124,7 +126,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.PlaySprintAnimation(false);
             playerAnimator.PlayWalkAnimation(false);
             playerAnimator.PlayIdleAnimation(true);
-            camTransform.transform.localPosition = positionIdleCam.normalized;
+            camTransform.transform.localPosition = positionIdleCam;
         }
         else
         {
@@ -133,12 +135,12 @@ public class PlayerController : MonoBehaviour
             float speed;
 
             // Sprint
-            if (Input.GetButton("Run") && sprintActive && keyInput.z > 0) //default l shift
+            if (Input.GetButton("Run") && sprintActive && keyInput.z > 0 && !hitWall) //default l shift
             {
                 playerAnimator.PlayWalkAnimation(false);
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(true);
-                //camTransform.transform.localPosition = positionSprintCam.normalized;
+                camTransform.transform.localPosition = positionSprintCam;
                 speed = moveSpeed * speedMultiplier;
             }
             else
@@ -146,7 +148,7 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.PlayWalkAnimation(true);
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(false);
-                //camTransform.transform.localPosition = positionIdleCam.normalized;
+                camTransform.transform.localPosition = positionWalkCam;
                 speed = moveSpeed;
             }
 
@@ -211,5 +213,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+            hitWall = true;
+        else
+            hitWall = false;
+    }
 }

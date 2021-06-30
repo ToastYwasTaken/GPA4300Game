@@ -20,11 +20,14 @@ using UnityEngine;
  *****************************************************************************/
 public class EnemyAnimator : MonoBehaviour
 {
-    Animator mAnim;
+    public Animator mAnim;
 
     private void Awake()
     {
-        mAnim = GetComponent<Animator>();
+        if (!mAnim)
+        {
+            mAnim = GetComponent<Animator>();
+        }       
     }
 
     public void PlayIdleAnimation(bool _value)
