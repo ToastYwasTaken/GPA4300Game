@@ -17,6 +17,7 @@ using UnityEngine;
  * ----------------------------
  *  11.06.2021  RK  Created
  *  15.06.2021  RK  Modified -> void Start()
+ *  01.07.2021  JP  added RandomExit()
  *  
  *****************************************************************************/
 public class GameController : MonoBehaviour
@@ -25,9 +26,26 @@ public class GameController : MonoBehaviour
     private Transform[] exits;
     [SerializeField]
     private GameObject RockPilePrefab;
-    void Start()
+
+    private void RandomExit()
     {
         int randomExit = Random.Range(0, exits.Length);
+        for(int _i = 0; _i < exits.Length; _i++)
+        {
+            if (_i == randomExit)
+            {
+                continue;
+            }
+            else
+            {
+                /*GameObject RockPile = */Instantiate(RockPilePrefab, exits[_i].position, exits[_i].rotation);
+            }
+        }
+    }
+
+    void Start()
+    {
+        RandomExit();
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
     }
