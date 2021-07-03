@@ -44,7 +44,6 @@ public class TrapRocks_Behavior : MonoBehaviour
                     break;
             }
 
-
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }

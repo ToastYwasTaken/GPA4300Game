@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                /*GameObject RockPile = */Instantiate(RockPilePrefab, exits[_i].position, exits[_i].rotation);
+                /*GameObject RockPile = */Instantiate(RockPilePrefab, exits[_i]);
             }
         }
     }
