@@ -29,6 +29,11 @@ using UnityEngine;
  * Idle     0,  0.611,  0.235
  * Walk     0,  0.560,  0.280
  * Sprint   0,  0.210,  0.470
+ * 
+ * Fehler: Spieler läuft weiter nach vorne obwohl keine Taste gedrückt wird 
+ * - Animation bereits ausgeschlossen
+ * - Das Drehen mit den Tasten ist davon nicht betroffen
+ *
  */
 
 public class PlayerController : MonoBehaviour
@@ -63,7 +68,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -5f;
-
     public float sensitivityMultiplier;
 
     // Start is called before the first frame update
@@ -90,6 +94,7 @@ public class PlayerController : MonoBehaviour
             // Springen
             Jump();
         }
+
     }
 
     private void FixedUpdate()
@@ -122,15 +127,14 @@ public class PlayerController : MonoBehaviour
 
         if (keyInput == Vector3.zero)
         {
-           
             playerAnimator.PlaySprintAnimation(false);
             playerAnimator.PlayWalkAnimation(false);
             playerAnimator.PlayIdleAnimation(true);
             camTransform.transform.localPosition = positionIdleCam;
+   
         }
-        else
+        else 
         {
-
             // Bewegungsgeschwindigkeit
             float speed;
 
@@ -139,17 +143,20 @@ public class PlayerController : MonoBehaviour
             {
                 playerAnimator.PlayWalkAnimation(false);
                 playerAnimator.PlayIdleAnimation(false);
-                playerAnimator.PlaySprintAnimation(true);
+                playerAnimator.PlaySprintAnimation(true); // true
                 camTransform.transform.localPosition = positionSprintCam;
                 speed = moveSpeed * speedMultiplier;
+
+                
             }
-            else
-            {            
-                playerAnimator.PlayWalkAnimation(true);
+            else 
+            {
+                playerAnimator.PlayWalkAnimation(true); // true
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(false);
                 camTransform.transform.localPosition = positionWalkCam;
                 speed = moveSpeed;
+            
             }
 
             // Mit der Tastatur drehen

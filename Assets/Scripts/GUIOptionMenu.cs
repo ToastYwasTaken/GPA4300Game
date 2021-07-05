@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
+
 /******************************************************************************
  * Project: GPA4300Game
  * File: GUIHealth.cs
@@ -21,7 +21,6 @@ using UnityEngine.SceneManagement;
  * ----------------------------
  *  22.06.2021  FM  Created
  *  24.06.2021  FM  Fixed stuff
- *  24.06.2021  RK  Added function UnloadScene
  *  
  *****************************************************************************/
 
@@ -59,7 +58,6 @@ public class GUIOptionMenu : MonoBehaviour
 
     private bool flag = false;
 
-    private GUIMainMenu mainMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -147,16 +145,7 @@ public class GUIOptionMenu : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void UnloadScene(int _unloadSceneIndex)
-    {
-        SceneManager.UnloadSceneAsync(_unloadSceneIndex);
-        mainMenu = FindObjectOfType<GUIMainMenu>();
-
-        if (mainMenu)
-        {
-            mainMenu.canvas.enabled = true;
-        }
-    }
+   
 
 
 }

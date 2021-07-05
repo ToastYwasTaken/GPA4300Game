@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc0917942dfd4042993cc6f74f4ac98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 108, y: 2, z: 60}
+  startPosition: {x: 0, y: 2, z: 0}
   camTransform: {fileID: 1314761338233513067}
   sprintActive: 1
   speedMultiplier: 2
@@ -365,7 +365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7470416358754093750}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.611, z: 0.235}
+  m_LocalPosition: {x: 0, y: 0.636, z: 0.185}
   m_LocalScale: {x: 0.7088001, y: 0.22500004, z: 0.3787259}
   m_Children:
   - {fileID: 6036042379516515263}
@@ -584,7 +584,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 53
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -636,12 +636,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549066669007572, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549066669007572, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1572268804671438, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4807772044541664, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_RootOrder
