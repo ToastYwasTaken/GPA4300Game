@@ -4,7 +4,7 @@ using UnityEngine;
  * Project: GPA4300Game
  * File: PlayerController.cs
  * Version: 1.01
- * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
+ * Autor: Renï¿½ Kraus (RK); Franz Mï¿½rike (FM); Jan Pagel (JP)
  * 
  * 
  * These coded instructions, statements, and computer programs contain
@@ -30,7 +30,7 @@ using UnityEngine;
  * Walk     0,  0.560,  0.280
  * Sprint   0,  0.210,  0.470
  * 
- * Fehler: Spieler läuft weiter nach vorne obwohl keine Taste gedrückt wird 
+ * Fehler: Spieler lï¿½uft weiter nach vorne obwohl keine Taste gedrï¿½ckt wird 
  * - Animation bereits ausgeschlossen
  * - Das Drehen mit den Tasten ist davon nicht betroffen
  *
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
         {
             sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
             //Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
-            // Verhindert das der Player unendlich fällt
+            // Verhindert das der Player unendlich fï¿½llt
             FallingDownCheck();
 
             // Springen
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
     }
 
     /// <summary>
-    /// Setzt den Spieler zu Startposition zurück, wenn er fällt
+    /// Setzt den Spieler zu Startposition zurï¿½ck, wenn er fï¿½llt
     /// </summary>
     void FallingDownCheck()
     {
@@ -154,7 +154,8 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.PlayWalkAnimation(true); // true
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(false);
-                camTransform.transform.localPosition = positionWalkCam;
+                camTransform.transform.localPosition = positionIdleCam;
+               // camTransform.transform.localPosition = positionWalkCam;
                 speed = moveSpeed;
             
             }

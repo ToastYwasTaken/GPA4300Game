@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319035769565289317}
-  m_LocalRotation: {x: -0, y: 0.2253067, z: -0, w: 0.9742879}
+  m_LocalRotation: {x: 0, y: 0.22530814, z: 0, w: 0.9742876}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -623,6 +623,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5585813076002531385}
     m_Modifications:
+    - target: {fileID: 1219472450798792, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1253013051146282, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_Name
       value: Female A
@@ -648,7 +652,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1572268804671438, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572268804671438, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904309036687012, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: m_Layer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4807772044541664, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}

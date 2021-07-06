@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\Scripts\LoadingController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\AI\EnemyAnimator.cs" />
     <Compile Include="Assets\Fantasy Monster\Environment\Scripts\CamCTRLDemo.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\LoadPrefs.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\JP\Scripts\SwitchBehavior_Skript.cs" />
     <Compile Include="Assets\Scripts\AI\EnemyAI.cs" />
     <Compile Include="Assets\JP\Scripts\HiddenDoor_Behavior.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
@@ -75,9 +77,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\GUISettingsMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\AI\SectorManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\Scripts\Preferences.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\JP\Scripts\TrapDoor_Behavior.cs" />
     <Compile Include="Assets\Cartoon Heroes\Scripts\SetCharacter\SetCharacter.cs" />
