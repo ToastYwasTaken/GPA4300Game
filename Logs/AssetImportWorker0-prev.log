@@ -1,0 +1,1672 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'de' Physical Memory: 16168 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50728
+Successfully changed project path to: C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
+C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 34.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.11f1 (99c7afb366b3)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.6275
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001501 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 31.97 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.352 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002404 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.728 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1462 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 145.0 MB.
+System memory in use after: 145.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1908.
+Total: 1.490100 ms (FindLiveObjects: 0.126600 ms CreateObjectMapping: 0.040400 ms MarkObjects: 1.237300 ms  DeleteObjects: 0.085100 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Default Level (DONT DELETE).unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE).unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86a6058ac153e647c718df5481ca477') in 0.015104 seconds
+  Import took 0.017812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1061.516028 seconds.
+  path: Assets/Scenes/Main Menu.unity
+  artifactKey: Guid(b6b78ff5fe9314d43899a8474aab02ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main Menu.unity using Guid(b6b78ff5fe9314d43899a8474aab02ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d85c72414d6185218765ac09567321') in 0.007114 seconds
+  Import took 0.010043 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002507 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.704 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 143.6 MB.
+System memory in use after: 143.7 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1911.
+Total: 1.473600 ms (FindLiveObjects: 0.123000 ms CreateObjectMapping: 0.039500 ms MarkObjects: 1.257000 ms  DeleteObjects: 0.053400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 289.235994 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(df6a207f216ab214d9100f7380ff92fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(df6a207f216ab214d9100f7380ff92fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef3f9a354335741c1e93d6dd3e12fa97') in 0.277653 seconds
+  Import took 0.283298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.972774 seconds.
+  path: Assets/JP/Prefabs/Traps/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Traps/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5b138592fa7d8e110e42174c1546746') in 0.027030 seconds
+  Import took 0.030686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/JP/Prefabs/Traps/TrapDoor_Prefab.prefab
+  artifactKey: Guid(77a0356c5f3b63949a6eb341009b840b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Traps/TrapDoor_Prefab.prefab using Guid(77a0356c5f3b63949a6eb341009b840b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95868e78e18c454cb45e25395e66e071') in 0.036447 seconds
+  Import took 0.039262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/JP/Prefabs/Traps/TrapRocks_Prefab.prefab
+  artifactKey: Guid(0d12f6a1eaf86d74d8f0a393dd5fb93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Traps/TrapRocks_Prefab.prefab using Guid(0d12f6a1eaf86d74d8f0a393dd5fb93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64203ee1e9b101ef7b54c2be2118b651') in 0.013905 seconds
+  Import took 0.016811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 229.886678 seconds.
+  path: Assets/JP/Prefabs/Rooms/Arsenal_Prefab.prefab
+  artifactKey: Guid(3ddda4c1ce74a1f40a7071d2b82b655e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Rooms/Arsenal_Prefab.prefab using Guid(3ddda4c1ce74a1f40a7071d2b82b655e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac919b22ed8cd2729328e3ba47c8217a') in 0.072278 seconds
+  Import took 0.080051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/JP/Prefabs/Rooms/SlimRoom_Prefab.prefab
+  artifactKey: Guid(cf5478912ac48254aac3a50fd3dd0343) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Rooms/SlimRoom_Prefab.prefab using Guid(cf5478912ac48254aac3a50fd3dd0343) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4606a792951f6fc1d723982c38b9834c') in 0.046002 seconds
+  Import took 0.050086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/JP/Prefabs/Rooms/PreLabyrinth_Prefab.prefab
+  artifactKey: Guid(1b7cf9cbaf106024bba6b9a1b1b81ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Rooms/PreLabyrinth_Prefab.prefab using Guid(1b7cf9cbaf106024bba6b9a1b1b81ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b18979e965bf53f9adb943bf9479c2') in 0.050005 seconds
+  Import took 0.057260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/JP/Prefabs/Rooms/FirstRoom_Prefab.prefab
+  artifactKey: Guid(7eb2bf8ad5bb95044992fbc2d9791fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Rooms/FirstRoom_Prefab.prefab using Guid(7eb2bf8ad5bb95044992fbc2d9791fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32955fb0d0c57c3883f250f34a6480f8') in 0.049987 seconds
+  Import took 0.055371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/JP/Prefabs/Rooms/CrewRoom_Prefab.prefab
+  artifactKey: Guid(a082fdbe459d15445a4b30d271afb1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Rooms/CrewRoom_Prefab.prefab using Guid(a082fdbe459d15445a4b30d271afb1a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99cb0926146b401ded787e1f14064dbc') in 0.054824 seconds
+  Import took 0.060496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/JP/Prefabs/Rooms/PortalRoom_Prefab 1.prefab
+  artifactKey: Guid(b402188983ad52f4d858d4a3e464473b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Rooms/PortalRoom_Prefab 1.prefab using Guid(b402188983ad52f4d858d4a3e464473b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cae27fcc73fcc3f86f71869c2517f628') in 0.047703 seconds
+  Import took 0.052761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.670639 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/Rock_Prefab.prefab
+  artifactKey: Guid(9e3d5bbe4ae14c54bb3917d07322e0de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/Rock_Prefab.prefab using Guid(9e3d5bbe4ae14c54bb3917d07322e0de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c57bdcaf9eedae3353c4b166d9b60a') in 0.015990 seconds
+  Import took 0.019200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/spike_prefab.prefab
+  artifactKey: Guid(ca6c7bab683779f46a5958904fb4dba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/spike_prefab.prefab using Guid(ca6c7bab683779f46a5958904fb4dba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec97191abc2aaf5feb233f34e67bb59') in 0.021391 seconds
+  Import took 0.024748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/RockPile_Prefab.prefab
+  artifactKey: Guid(f52464c93b8ca5b44925bb9fbcfc84d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/RockPile_Prefab.prefab using Guid(f52464c93b8ca5b44925bb9fbcfc84d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bef4dbe95d30dd97ec8e161689652fdc') in 0.020027 seconds
+  Import took 0.022718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/Rock_Prefab.prefab
+  artifactKey: Guid(9e3d5bbe4ae14c54bb3917d07322e0de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/Rock_Prefab.prefab using Guid(9e3d5bbe4ae14c54bb3917d07322e0de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c57bdcaf9eedae3353c4b166d9b60a') in 0.009083 seconds
+  Import took 0.011357 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.359484 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/Mud
+  artifactKey: Guid(376aac73bf04b0b4eba82950c5435baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/Mud using Guid(376aac73bf04b0b4eba82950c5435baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf5e7716b64bfb95fd09fdf09acb7c7') in 0.005380 seconds
+  Import took 0.007777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.042699 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/Mud/Drop_Prefab.prefab
+  artifactKey: Guid(33f15a6e4de60e5498e897b808af47d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/Mud/Drop_Prefab.prefab using Guid(33f15a6e4de60e5498e897b808af47d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44ef89b721b30c0bb452fb5ce4e552d3') in 0.015111 seconds
+  Import took 0.017699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/Mud/Mud_Prefab.prefab
+  artifactKey: Guid(bf7950e364edfa54eac098346f54feca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/Mud/Mud_Prefab.prefab using Guid(bf7950e364edfa54eac098346f54feca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72e5fd0a8af5d142ae36c5ba36031907') in 0.014482 seconds
+  Import took 0.016874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/JP/Prefabs/Elements/Basic/Mud/Mud.prefab
+  artifactKey: Guid(e7f290547a63f8b4ba8bafbf594d54f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Elements/Basic/Mud/Mud.prefab using Guid(e7f290547a63f8b4ba8bafbf594d54f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c24a3057a72c94544270f4dcc0f2091') in 0.011569 seconds
+  Import took 0.014227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.995871 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack
+  artifactKey: Guid(d336a7b200232474e871c8e99a44c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack using Guid(d336a7b200232474e871c8e99a44c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a73e113f3c8bac3485b069b34b40bb') in 0.007891 seconds
+  Import took 0.010573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.065247 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_stair_wood.fbx
+  artifactKey: Guid(8f768462890fd564f9f7ddc084b418a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_stair_wood.fbx using Guid(8f768462890fd564f9f7ddc084b418a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93b43af72a81ce22dec95a1eed812dcc') in 0.071386 seconds
+  Import took 0.074893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.001.fbx
+  artifactKey: Guid(65b667a0189be3c489a37c11777e6c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.001.fbx using Guid(65b667a0189be3c489a37c11777e6c0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd39f4feb85a4e8ef21492e48506ee5f9') in 0.051790 seconds
+  Import took 0.054298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.000.fbx
+  artifactKey: Guid(1560dff051510ec42aec30514022295e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.000.fbx using Guid(1560dff051510ec42aec30514022295e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36174a85d510432e85ef580ab72489b9') in 0.026698 seconds
+  Import took 0.029522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.002.fbx
+  artifactKey: Guid(3414325881054f34887c70d5f6104a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.002.fbx using Guid(3414325881054f34887c70d5f6104a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fa8cd1c8512e0a0bc932652e2f1b3bf') in 0.030454 seconds
+  Import took 0.033228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.145273 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.003.fbx
+  artifactKey: Guid(b80aaed3af693c74d9a66ecc1530bc3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.003.fbx using Guid(b80aaed3af693c74d9a66ecc1530bc3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df682eef48fe00f63bc92a9210efc36') in 0.047321 seconds
+  Import took 0.052510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/wall_passage.001.fbx
+  artifactKey: Guid(18ec0187061ee31419a804e157067c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/wall_passage.001.fbx using Guid(18ec0187061ee31419a804e157067c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989f07d2785434a4e1c29c74ae8fff20') in 0.058047 seconds
+  Import took 0.060322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/trunk.fbx
+  artifactKey: Guid(268b970db8fdf0c4a9bec9d1df53b6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/trunk.fbx using Guid(268b970db8fdf0c4a9bec9d1df53b6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e37174f082a3d4de028b04c31ee28775') in 0.072160 seconds
+  Import took 0.074489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.005.fbx
+  artifactKey: Guid(5b45f3e9210dc9b4a8ee050936d55107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.005.fbx using Guid(5b45f3e9210dc9b4a8ee050936d55107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3986866cbf02dda89130a921479f6847') in 0.043595 seconds
+  Import took 0.046314 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000119 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/vase.fbx
+  artifactKey: Guid(23cd3c3400c33734288b53d8ddb79846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/vase.fbx using Guid(23cd3c3400c33734288b53d8ddb79846) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1ed480b119276d3d6d2bbe8a4fb1a7f') in 0.056780 seconds
+  Import took 0.059291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tree.fbx
+  artifactKey: Guid(5e8fe6e9b49d874468321529c49ea8ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tree.fbx using Guid(5e8fe6e9b49d874468321529c49ea8ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf9311f487bfded671ec037593553a7a') in 0.024661 seconds
+  Import took 0.027500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.004.fbx
+  artifactKey: Guid(fe0083228423edf4cb481e2804ab7c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/tower_window.004.fbx using Guid(fe0083228423edf4cb481e2804ab7c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2a9988f52039aeeb5b0c901fdd930e6') in 0.023469 seconds
+  Import took 0.026939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/wagon.fbx
+  artifactKey: Guid(af63b0ab3cf00dd4da21fb3f09e419e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/wagon.fbx using Guid(af63b0ab3cf00dd4da21fb3f09e419e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1446186cb12b416e35f56ae93e88ad2') in 0.036751 seconds
+  Import took 0.039129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/vase.002.fbx
+  artifactKey: Guid(f477ea474e1cd4d40af24243669f82d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/vase.002.fbx using Guid(f477ea474e1cd4d40af24243669f82d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49974edcfd2d8689c319669b2b71cdf2') in 0.038128 seconds
+  Import took 0.040639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/FBX/vase.001.fbx
+  artifactKey: Guid(5d3afa9b95e7efe4b96367de291eba7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/FBX/vase.001.fbx using Guid(5d3afa9b95e7efe4b96367de291eba7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa91b3f99b89c6083d8cb291cdc6e92') in 0.037911 seconds
+  Import took 0.040346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.121721 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls
+  artifactKey: Guid(fb19044f80698ca42bff604e8e99318c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls using Guid(fb19044f80698ca42bff604e8e99318c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '242275330696a37cae07b7e35e68a4e1') in 0.007126 seconds
+  Import took 0.009891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.042310 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.009.prefab
+  artifactKey: Guid(d24cbc466424f71408559463ee47e0cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.009.prefab using Guid(d24cbc466424f71408559463ee47e0cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e9cfd04cafd26f1047ab119f554e851') in 0.030312 seconds
+  Import took 0.032816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.013.prefab
+  artifactKey: Guid(faff629fb8eb81f4ea40f416bcf9bc10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.013.prefab using Guid(faff629fb8eb81f4ea40f416bcf9bc10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '637e8ad5235795b84453b61f84db08c8') in 0.029539 seconds
+  Import took 0.032059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.021.prefab
+  artifactKey: Guid(037edc94c4d25ab49a143371268aee98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.021.prefab using Guid(037edc94c4d25ab49a143371268aee98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4eaaa1edc483f0d910c590d297e99b3') in 0.029297 seconds
+  Import took 0.032547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.017.prefab
+  artifactKey: Guid(03a3404dccc8da44da7eeb75bea469a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.017.prefab using Guid(03a3404dccc8da44da7eeb75bea469a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f278edc9c8251c1a6709f6b9d26fb2') in 0.038736 seconds
+  Import took 0.041296 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.016.prefab
+  artifactKey: Guid(cd55e245d3cf33c4dab2e9577a37bbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.016.prefab using Guid(cd55e245d3cf33c4dab2e9577a37bbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fee6f277b58e8dbe37093ea091a3297') in 0.036562 seconds
+  Import took 0.039273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.015.prefab
+  artifactKey: Guid(36a2c2928411717458d4316611ed4870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.015.prefab using Guid(36a2c2928411717458d4316611ed4870) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f66c0b8e261e4f109ed57aa566bc1d') in 0.036253 seconds
+  Import took 0.039130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.019.prefab
+  artifactKey: Guid(3791ad93542e723428db28d79398aef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.019.prefab using Guid(3791ad93542e723428db28d79398aef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d0611447461afc6fcaaf6b094e8672f') in 0.035437 seconds
+  Import took 0.038213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000136 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.014.prefab
+  artifactKey: Guid(ed256d5359ce3224b9ec662aec78a093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.014.prefab using Guid(ed256d5359ce3224b9ec662aec78a093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b1daad64a532168828941fbe3b3a63') in 0.029805 seconds
+  Import took 0.032292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.010.prefab
+  artifactKey: Guid(2352ad4bffcb10147a353d0e0712853a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.010.prefab using Guid(2352ad4bffcb10147a353d0e0712853a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f49030302a2c43557e994e78f8d660') in 0.028945 seconds
+  Import took 0.031412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.012.prefab
+  artifactKey: Guid(344e4116cf98b4643a88a1d956cf10e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.012.prefab using Guid(344e4116cf98b4643a88a1d956cf10e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af5dbf90c42c3b87007a6207434b24f') in 0.026487 seconds
+  Import took 0.029275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.011.prefab
+  artifactKey: Guid(744e4859e3fd9f243a573e8037e26374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Walls/wood_wall.011.prefab using Guid(744e4859e3fd9f243a573e8037e26374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c42e0cce32936a4f32b900512cbc235') in 0.026532 seconds
+  Import took 0.029213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.921085 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls
+  artifactKey: Guid(fbba9b10abbf8fa47bceda07b01229ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls using Guid(fbba9b10abbf8fa47bceda07b01229ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d28212dcedfa242288fc56842a200f8') in 0.005701 seconds
+  Import took 0.008522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047150 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_gate.001.prefab
+  artifactKey: Guid(03396297ca39f2a49bf02b6a413cc9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_gate.001.prefab using Guid(03396297ca39f2a49bf02b6a413cc9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '960f512e8b1e4afc419b1fda7dfcdf95') in 0.023757 seconds
+  Import took 0.026522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_wall.prefab
+  artifactKey: Guid(fb0c0b748de48f948978dd8dc3b53aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_wall.prefab using Guid(fb0c0b748de48f948978dd8dc3b53aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c3b1926cf2d7eed9f2388a66544d24b') in 0.026740 seconds
+  Import took 0.029223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_quarter_wall.prefab
+  artifactKey: Guid(3191a5244fe759c449c1f17f8f3c794c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_quarter_wall.prefab using Guid(3191a5244fe759c449c1f17f8f3c794c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14a5891cfd864b1ad9f657adce8a9849') in 0.033153 seconds
+  Import took 0.035879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall_detailed_corner.prefab
+  artifactKey: Guid(5081fa4ee7ae4fd47b77c904b7ec80af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall_detailed_corner.prefab using Guid(5081fa4ee7ae4fd47b77c904b7ec80af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2853d54cae2ef80ef234e1743bbd013b') in 0.034977 seconds
+  Import took 0.037410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_gate.prefab
+  artifactKey: Guid(57abdd11cedcad8478c764228178c11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_gate.prefab using Guid(57abdd11cedcad8478c764228178c11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8cb44f7a6dc3a2f76d1501c7d9ffec8') in 0.034115 seconds
+  Import took 0.036721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall_detailed_corner.001.prefab
+  artifactKey: Guid(71cd35efe3659a74a97461a422e3357a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall_detailed_corner.001.prefab using Guid(71cd35efe3659a74a97461a422e3357a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e66cb74bb27847b697f00f15b1e164') in 0.029209 seconds
+  Import took 0.031687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_wall_corner.prefab
+  artifactKey: Guid(2476d9b069a4759428a3345111f25de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_wall_corner.prefab using Guid(2476d9b069a4759428a3345111f25de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b97bf1017d208eb6255a34399800179') in 0.030696 seconds
+  Import took 0.033147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall.prefab
+  artifactKey: Guid(d2522dcf0fb8d6b4aa4ddd10c405746a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall.prefab using Guid(d2522dcf0fb8d6b4aa4ddd10c405746a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88d152278623461d8f249f718f132570') in 0.029049 seconds
+  Import took 0.031853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall_detailed.prefab
+  artifactKey: Guid(564e49f56923de148b581d811733f251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_wall_detailed.prefab using Guid(564e49f56923de148b581d811733f251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e46d69e744f1c7f8a5d7f08ead79ec8') in 0.030984 seconds
+  Import took 0.033471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_wall_bottom.001.prefab
+  artifactKey: Guid(7ab4f1759c4498a44ae5e8bd46e7e4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack/Prefabs/Castle walls/stone_half_wall_bottom.001.prefab using Guid(7ab4f1759c4498a44ae5e8bd46e7e4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e45b466a1d835e42381372d045c80261') in 0.029898 seconds
+  Import took 0.032323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 75.152010 seconds.
+  path: Assets/JP/Prefabs/Interactive
+  artifactKey: Guid(38189c2f4d3e99449adee9a062180596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive using Guid(38189c2f4d3e99449adee9a062180596) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5a2476f1243a06c5e6d15acc5412ada') in 0.005340 seconds
+  Import took 0.007811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.754013 seconds.
+  path: Assets/JP/Prefabs/Interactive/GameObject.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/GameObject.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f9aef492ac2f7f6159e199e6f08235f') in 0.007685 seconds
+  Import took 0.010459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.502956 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13ba5bb518f79f7dbdb71fee36709082') in 0.005865 seconds
+  Import took 0.009255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.715711 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch_prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch_prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70b68ffec5086227efc58e04d6f36891') in 0.005919 seconds
+  Import took 0.009032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.728583 seconds.
+  path: Assets/JP/Prefabs/Interactive/stone_half_gate.001.prefab
+  artifactKey: Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/stone_half_gate.001.prefab using Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13584a15e488f898ec51b96f7a6b2f24') in 0.023499 seconds
+  Import took 0.026605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.312737 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch
+  artifactKey: Guid(ce8e930bdf3667e44928096e5c0ef66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch using Guid(ce8e930bdf3667e44928096e5c0ef66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e40759eb6199e1c9d381f7e5bc1de2f4') in 0.002085 seconds
+  Import took 0.004475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.235101 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/stone_half_gate.001.prefab
+  artifactKey: Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/stone_half_gate.001.prefab using Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '406c1703af7236102d9f47582abbe3d1') in 0.019205 seconds
+  Import took 0.022538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.795222 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/switchCase_prefab.prefab
+  artifactKey: Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/switchCase_prefab.prefab using Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff2c997bd8d12318b15dc953be480ec1') in 0.022795 seconds
+  Import took 0.025616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.464278 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f2966d5fab2e7ed965739d16c4703e8') in 0.005840 seconds
+  Import took 0.009013 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.926456 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/SwitchCase_prefab.prefab
+  artifactKey: Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/SwitchCase_prefab.prefab using Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9df18f8cdce91b99f1846d193d5add80') in 0.023690 seconds
+  Import took 0.026169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.334203 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10a924215c9884a795a9bbb4f322b76e') in 0.005984 seconds
+  Import took 0.008688 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.198174 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/SwitchCase_Prefab.prefab
+  artifactKey: Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/SwitchCase_Prefab.prefab using Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c131c92583007df831cb8d96893f6554') in 0.022751 seconds
+  Import took 0.025858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.653261 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85afb7529d25a1f208bb8b12ac653d0a') in 0.021784 seconds
+  Import took 0.024569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.816357 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '012dea32cf24a4210c779606f7225772') in 0.024773 seconds
+  Import took 0.027702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.488607 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca58c0f04442b13863906d748c39f6c') in 0.022128 seconds
+  Import took 0.024942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.037979 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b43da6134ff88a1b4f34ee3e24fc5920') in 0.019654 seconds
+  Import took 0.022604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.141084 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '521057b2951e3e99f0a82f8f6d1f01f5') in 0.018982 seconds
+  Import took 0.021734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.219082 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c845657f6fe6308aa34990d869361d0d') in 0.026246 seconds
+  Import took 0.029379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.961292 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9109fcd1e2fb34973def6600bddfb8a9') in 0.022423 seconds
+  Import took 0.025144 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.663075 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f014cbaac0eb0d1c850da52369ffeeac') in 0.029257 seconds
+  Import took 0.032075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.524730 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68eb21872470ca2b27acde010bc20575') in 0.023734 seconds
+  Import took 0.026653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.985854 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab3f7e3a49170ae29fb4e9e8e6852669') in 0.022392 seconds
+  Import took 0.025113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.009953 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56e17fd4e11f0500525dee51a11d53a9') in 0.017169 seconds
+  Import took 0.019912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.593712 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab6bcc7116edf79780d6af71f7be69cc') in 0.020803 seconds
+  Import took 0.023637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.870101 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '561837915662f7847cd8af0e85fcaddb') in 0.020358 seconds
+  Import took 0.023022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.999839 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bcf17206ed69d9e9bedd011e906572a') in 0.026651 seconds
+  Import took 0.029604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/SwitchCaseElement_Prefab.prefab
+  artifactKey: Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/SwitchCaseElement_Prefab.prefab using Guid(92955618de063d64695f70e36e330559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc6db8c0e72938d75a1ba8c2a330846d') in 0.030828 seconds
+  Import took 0.033780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.093352 seconds.
+  path: Assets/JP
+  artifactKey: Guid(bc8413b3cffad4645b250b48dfde0c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP using Guid(bc8413b3cffad4645b250b48dfde0c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dfdb319e9525764f7fd21c01ca44a67') in 0.005898 seconds
+  Import took 0.009938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.090640 seconds.
+  path: Assets/JP/Prefabs/Interactive/TrapDoor
+  artifactKey: Guid(8125958db4ad14f4eb3885083b6f9bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/TrapDoor using Guid(8125958db4ad14f4eb3885083b6f9bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f553b85b554a5df37854b2239e76efc1') in 0.006746 seconds
+  Import took 0.009497 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.160702 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5085716eb17c253e28fdabb0f43ac2') in 0.030192 seconds
+  Import took 0.033240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.811988 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/spike_prefab.prefab
+  artifactKey: Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/spike_prefab.prefab using Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4c2080be4aa1d093baa2a073aae635e') in 0.021318 seconds
+  Import took 0.024333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000128 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb083b4631ca5395e3e028c31312ea0') in 0.030024 seconds
+  Import took 0.032688 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.838287 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab
+  artifactKey: Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab using Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67aa916ea4ed8e38a9642105f1419912') in 0.027480 seconds
+  Import took 0.030330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.182965 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4fdb2d850a065dc3ebda1cc31e4fc3') in 0.028434 seconds
+  Import took 0.031360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.790652 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a89891000d7d2efe4a1149b913c928f') in 0.028168 seconds
+  Import took 0.030941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.389250 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f4e95cba0a402c8acc1d5681f93e248') in 0.029910 seconds
+  Import took 0.032742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.792047 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7554989cc43516afc1eaefc785cc4c7d') in 0.030708 seconds
+  Import took 0.033694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.530694 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6bea71648255645f1e94c2fd0cb3d76') in 0.027741 seconds
+  Import took 0.030336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.998613 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d33e82b2bb185d8512b9152953d23d3') in 0.033244 seconds
+  Import took 0.036205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.386059 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d5fb2762e203b8af82198fcff081a7') in 0.028599 seconds
+  Import took 0.031532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.872431 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f81e1cc991af35e8b8677d936b945189') in 0.028020 seconds
+  Import took 0.030808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.321503 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a71ec2d2c42bab4183ba60f0877fb8fb') in 0.030043 seconds
+  Import took 0.032811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.738161 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab
+  artifactKey: Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab using Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7837683e7bed8b1cb62c5172e5ce234c') in 0.025104 seconds
+  Import took 0.028037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f993ae13c8e9d11c01da74cc5b40b3cc') in 0.027948 seconds
+  Import took 0.030649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005626 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f993ae13c8e9d11c01da74cc5b40b3cc') in 0.034368 seconds
+  Import took 0.037005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.403620 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab
+  artifactKey: Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab using Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe1c7a72aebdb106f30b1751867d3aa6') in 0.024314 seconds
+  Import took 0.027192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090a0c44d93be93f92db0b9714eeae69') in 0.034185 seconds
+  Import took 0.037470 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.395629 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab
+  artifactKey: Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Lever_Prefab.prefab using Guid(f57b0e062afda764e8b16b2cf8859ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '365e891d8b99ac257c18caff0a7b3cf3') in 0.019319 seconds
+  Import took 0.022041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000110 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eca5925ff10e776e0da611ffe661da61') in 0.026870 seconds
+  Import took 0.029414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000746 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eca5925ff10e776e0da611ffe661da61') in 0.022877 seconds
+  Import took 0.025426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.546352 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d8ecdd080842fca57bf601e76073ea1') in 0.029251 seconds
+  Import took 0.032390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.878714 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e41f4a6e8c7673441e66a36569597f0d') in 0.029919 seconds
+  Import took 0.032540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.042687 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca0636b7f8a64bdb449b7157223ebee6') in 0.032188 seconds
+  Import took 0.035046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.907118 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29f2c70d2c054a94fa56d8a6cfd105ab') in 0.030438 seconds
+  Import took 0.033174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.873422 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd77de39db5df4bda9d2b25480d4529d') in 0.029640 seconds
+  Import took 0.032256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.029160 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3ebab949bde41b857dabeecb18a324c') in 0.027212 seconds
+  Import took 0.030395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.898999 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e2af07de744058e30c48f07775161e0') in 0.030577 seconds
+  Import took 0.033425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 286.155803 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The Animator Controller (Switch_Prefab) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 333]
+
+The Animator Controller (Switch_Prefab) you have used is not valid. Animations will not play
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:InitInstantiatedPreviewRecursive (UnityEngine.GameObject)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Modules/Animation/Director/AnimatorControllerPlayable.cpp line 333]
+
+ -> (artifact id: '101b255c7f14b55c0a1decb9cb0c44db') in 0.034722 seconds
+  Import took 0.037917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.690072 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.controller
+  artifactKey: Guid(c0287af86cc565c48819fe3220a87cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.controller using Guid(c0287af86cc565c48819fe3220a87cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d3e0e6aeba02860348f06dfd5c509a') in 0.003537 seconds
+  Import took 0.006427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.017205 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/SwitchIdle_Animation.anim
+  artifactKey: Guid(23bb77f5ce5c7b9418205a3125bce665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/SwitchIdle_Animation.anim using Guid(23bb77f5ce5c7b9418205a3125bce665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36efebedc76d077979814f6ebbddb591') in 0.005880 seconds
+  Import took 0.008386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001084 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/SwitchIdle_Animation.anim
+  artifactKey: Guid(23bb77f5ce5c7b9418205a3125bce665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/SwitchIdle_Animation.anim using Guid(23bb77f5ce5c7b9418205a3125bce665) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36efebedc76d077979814f6ebbddb591') in 0.001879 seconds
+  Import took 0.003883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 193.484862 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000304 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006088 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000242 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.001955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.034755 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000259 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.046538 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000256 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017650 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000251 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013742 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000255 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012165 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000249 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012068 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000246 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015198 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000256 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012459 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000250 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012532 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000243 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013127 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000248 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014575 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000244 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012443 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000240 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013300 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000238 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012116 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000492 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013897 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000254 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015090 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000251 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012488 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000244 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012427 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000275 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014114 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000256 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012867 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000253 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012550 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000246 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012451 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000250 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014082 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000262 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012636 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000248 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012666 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000248 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012639 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000245 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014080 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000253 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012936 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000331 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014299 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000256 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014459 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000258 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002141 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016746 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000251 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012664 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000253 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012250 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000258 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012387 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000256 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014378 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000254 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012530 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000260 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012389 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000246 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012900 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000247 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013747 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000251 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002103 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012500 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000269 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012475 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000242 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012134 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000246 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002047 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014187 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000245 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002052 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012291 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000240 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013084 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000247 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012220 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000241 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013896 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000244 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012505 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000241 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012143 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000250 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002086 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012171 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000253 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014122 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000255 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012040 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000249 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011946 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000241 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002031 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012096 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000251 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013890 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000263 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011977 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000245 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012350 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000250 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012255 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000268 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015807 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000278 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011987 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000257 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.012115 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000244 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011998 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000243 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014169 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000251 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011932 seconds.
+  path: Assets/JP/Animations/HiddenDoor.anim
+  artifactKey: Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor.anim using Guid(afbc80fbe5cc1ec48a4b5c3f32cb2247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00000000000000000000000000000000') in 0.000244 seconds
+  ERROR: Build asset version error: assets/jp/animations/hiddendoor.anim in SourceAssetDB has modification time of '2021-07-03T08:04:36.8799945Z' while content on disk has modification time of '0001-01-01T00:00:00Z'
+  Import took 0.002030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.022856 seconds.
+  path: Assets/JP/Animations/HiddenDoor_Prefab.controller
+  artifactKey: Guid(ba51497d0c102684e81055c7e3a39c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/HiddenDoor_Prefab.controller using Guid(ba51497d0c102684e81055c7e3a39c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be2e60e648b69dd846e0aeb59fdcc047') in 0.003208 seconds
+  Import took 0.007585 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
