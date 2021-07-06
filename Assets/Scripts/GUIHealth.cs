@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 /******************************************************************************
  * Project: GPA4300Game
  * File: GUIHealth.cs
@@ -37,14 +38,21 @@ public class GUIHealth : MonoBehaviour
     [SerializeField]
     private Image healthImage;
 
+    [SerializeField]
+    ParticleSystem blood;
+
+    [SerializeField]
+    Image flashImage;
+
     private sbyte phealth;
     private byte defaultHealthColorRed = 95;
     private byte changeGradientRed;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        var emission = blood.emission;
+        emission.enabled = false;
+        flashImage.enabled = false;
     }
 
     // Update is called once per frame
@@ -55,15 +63,26 @@ public class GUIHealth : MonoBehaviour
         changeGradientRed = (byte)(defaultHealthColorRed + (100 - phealth));
         healthText.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
         healthImage.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
-        if(phealth < 30)
+        if(phealth < 50)
+        {
+            LightBleeding();
+        }
+        else if(phealth < 30)
         {
             StartCoroutine("PulseHeart");
+            StartCoroutine("Flash");
+            StrongBleeding();
+        } else if(phealth < 0)
+        {
+            var emission = blood.emission;
+            emission.enabled = false;
+            SceneManager.LoadSceneAsync(2);
         }
     }
 
     private IEnumerator PulseHeart()
     {
-        for (float i = 0f; i <= 1f; i += 0.4f)            //TODO doesnt work yet
+        for (float i = 0f; i <= 1f; i += 0.4f)            //TODO
         {
             //Debug.Log(healthImage.transform.localScale);
             healthImage.transform.localScale = new Vector3(
@@ -91,4 +110,32 @@ public class GUIHealth : MonoBehaviour
 
         }
     }
+    
+    private void LightBleeding()
+    {
+        var emission = blood.emission;
+        emission.enabled = true;
+        emission.rateOverTime = 10f;
+    }
+
+    private void StrongBleeding()
+    {
+        var emission = blood.emission;
+        emission.enabled = true;
+        emission.rateOverTime = 20f;
+    }
+
+    IEnumerator Flash() //TODO
+    {
+        float iterationAmount = 10f;
+        for(float i = 0; i <= iterationAmount; i+= Time.deltaTime)
+        {
+            Color currentColor = flashImage.color;
+            currentColor.a = Mathf.Lerp(0, 1, i/iterationAmount);
+            flashImage.color = currentColor;
+
+            yield return null;
+        }
+    }
+
 }
