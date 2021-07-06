@@ -15,11 +15,11 @@ C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53831
+49940
 Successfully changed project path to: C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
 C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 34.74 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 35.14 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -35,28 +35,28 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56016
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001566 seconds.
+Registered in 0.001425 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 31.42 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 31.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.372 seconds
+- Completed reload, in  1.358 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 Registered in 0.002480 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.758 seconds
+- Completed reload, in  0.746 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -68,248 +68,484 @@ System memory in use before: 144.9 MB.
 System memory in use after: 145.0 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1908.
-Total: 1.606100 ms (FindLiveObjects: 0.178900 ms CreateObjectMapping: 0.037200 ms MarkObjects: 1.322400 ms  DeleteObjects: 0.066700 ms)
+Total: 1.446600 ms (FindLiveObjects: 0.125900 ms CreateObjectMapping: 0.039400 ms MarkObjects: 1.212600 ms  DeleteObjects: 0.068000 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/JP/Animations/HiddenDoor
-  artifactKey: Guid(16d44c6d59611014fa39feeb7db59236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/HiddenDoor using Guid(16d44c6d59611014fa39feeb7db59236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20b4e79f64bfd1adb57087a58ef64656') in 0.007799 seconds
-  Import took 0.010094 seconds .
+  path: Assets/JP/Animations/SwitchIdle_Animation.anim
+  artifactKey: Guid(bfe8507d610476345b6e4a5c09f06c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/SwitchIdle_Animation.anim using Guid(bfe8507d610476345b6e4a5c09f06c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5492f0c58dc878172ac4b8d80e5a635f') in 0.025350 seconds
+  Import took 0.027343 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.658317 seconds.
-  path: Assets/JP/Animations
-  artifactKey: Guid(f279d4002366f1f4da063879b16f7879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations using Guid(f279d4002366f1f4da063879b16f7879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10255c587687d3d2d311a09988eb71b6') in 0.006805 seconds
-  Import took 0.009751 seconds .
+  Time since last request: 48.013976 seconds.
+  path: Assets/JP/Animations/Switch
+  artifactKey: Guid(f4b13957cc2363844aa9564b12aaa309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch using Guid(f4b13957cc2363844aa9564b12aaa309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '270f0386d4e7837d91d48c18342275b6') in 0.010500 seconds
+  Import took 0.013359 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 38.785334 seconds.
-  path: Assets/Scripts/GameController.cs
-  artifactKey: Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameController.cs using Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334fa7986e0cc85bdba311a231dde210') in 0.022239 seconds
-  Import took 0.024465 seconds .
+  Time since last request: 11.321111 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Prefab 1.controller
+  artifactKey: Guid(ca6b6fedc2174c3428c7ce20574c452b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Prefab 1.controller using Guid(ca6b6fedc2174c3428c7ce20574c452b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd94f53652b73d58d45fee94e2e1fcce9') in 0.008475 seconds
+  Import took 0.010634 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.422639 seconds.
-  path: Assets/Scripts/GameController.cs
-  artifactKey: Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GameController.cs using Guid(4e36ecf00e96fa444a271d70aaddff48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334fa7986e0cc85bdba311a231dde210') in 0.001804 seconds
-  Import took 0.003696 seconds .
+  Time since last request: 6.015213 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(ca6b6fedc2174c3428c7ce20574c452b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(ca6b6fedc2174c3428c7ce20574c452b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d261050fd7f8bb9b8c8a3d2ec9d02e7') in 0.007559 seconds
+  Import took 0.009904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.207219 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fdf780a45fd0135c5c0487bd9bc0813') in 0.001966 seconds
+  Import took 0.004825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.857796 seconds.
+  path: Assets/JP/Animations/Switch/SwitchOff_Animation.anim
+  artifactKey: Guid(e9f201a2b544ebd46977024d3798f810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/SwitchOff_Animation.anim using Guid(e9f201a2b544ebd46977024d3798f810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f5e56640795e6b333e387d921b4e40') in 0.007153 seconds
+  Import took 0.009524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007648 seconds.
+  path: Assets/JP/Animations/Switch/SwitchOff_Animation.anim
+  artifactKey: Guid(e9f201a2b544ebd46977024d3798f810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/SwitchOff_Animation.anim using Guid(e9f201a2b544ebd46977024d3798f810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f5e56640795e6b333e387d921b4e40') in 0.001843 seconds
+  Import took 0.004334 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002714 seconds.
+Registered in 0.002478 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.744 seconds
+- Completed reload, in  0.706 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 143.6 MB.
 System memory in use after: 143.7 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1911.
-Total: 1.491400 ms (FindLiveObjects: 0.126500 ms CreateObjectMapping: 0.039100 ms MarkObjects: 1.271200 ms  DeleteObjects: 0.053900 ms)
+Total: 1.522800 ms (FindLiveObjects: 0.136100 ms CreateObjectMapping: 0.044400 ms MarkObjects: 1.287700 ms  DeleteObjects: 0.053800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 615.659724 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7585e9d606e58d59cf6c6988489b2bfa') in 0.034457 seconds
+  Import took 0.036878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.798711 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe66632750168e4dc754979e74933716') in 0.003975 seconds
+  Import took 0.006207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 180.649282 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05bbd43f49a352bbbcb654aff9ad0087') in 0.003335 seconds
+  Import took 0.005292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 197.335517 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '223d57900eba798c5133a860bfd5b6fb') in 0.249088 seconds
+  Import took 0.252609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 220.153962 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f227927eccc1a5df6f99e9c52bcc2ba') in 0.038828 seconds
+  Import took 0.042342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.745241 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81f154e3cd1d0b761e0c6235af19da6b') in 0.035995 seconds
+  Import took 0.039350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.209725 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53e94ca2bdac1c67a32eafb6480a9fcc') in 0.033287 seconds
+  Import took 0.037048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.341697 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e56c87588f1184b62bf805bf23b04af6') in 0.032359 seconds
+  Import took 0.035831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.772027 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '212a865aaef05c436e031b93d24fb737') in 0.032916 seconds
+  Import took 0.036224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.739942 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5ebc561e1fe9ec343034231fa3061b') in 0.033980 seconds
+  Import took 0.037259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.531349 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0044cc765762b9cfbb7f79b6a97263cf') in 0.033136 seconds
+  Import took 0.036485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.493459 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea9ecd8cb478febcdab3914037c19a5a') in 0.031160 seconds
+  Import took 0.034608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.152874 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f33b20d0d253b96bf29c6b0a70f262') in 0.031229 seconds
+  Import took 0.034373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.383077 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952507fc2d3dc77d7b9a27b9115edc44') in 0.033469 seconds
+  Import took 0.036707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 111.451915 seconds.
+  path: Assets/JP/Scripts/SwitchBehavior_Skript.cs
+  artifactKey: Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/SwitchBehavior_Skript.cs using Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b8d4d58e4bbfc4a00afa050f17ba3c') in 0.033320 seconds
+  Import took 0.035643 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002800 seconds.
+Registered in 0.066124 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.743 seconds
+- Completed reload, in  1.088 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.6 MB.
-System memory in use after: 143.7 MB.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 146.9 MB.
+System memory in use after: 147.0 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1914.
-Total: 1.615100 ms (FindLiveObjects: 0.131000 ms CreateObjectMapping: 0.044800 ms MarkObjects: 1.322000 ms  DeleteObjects: 0.116400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 46.769328 seconds.
-  path: Assets/Scripts/PlayerController.cs
-  artifactKey: Guid(6fc0917942dfd4042993cc6f74f4ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/PlayerController.cs using Guid(6fc0917942dfd4042993cc6f74f4ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a70d7e3fa5961c7a17a98680cb464ecf') in 0.007051 seconds
-  Import took 0.009344 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 38.611592 seconds.
-  path: Assets/JP/Animations/HiddenDoor/HiddenDoor.anim
-  artifactKey: Guid(d790f95318b45e94890f50b5dc4704e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/HiddenDoor/HiddenDoor.anim using Guid(d790f95318b45e94890f50b5dc4704e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd5fb1375b46141681427df711c8593') in 0.030732 seconds
-  Import took 0.032869 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.017405 seconds.
-  path: Assets/JP/Animations/HiddenDoor/HiddenDoor.anim
-  artifactKey: Guid(d790f95318b45e94890f50b5dc4704e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/HiddenDoor/HiddenDoor.anim using Guid(d790f95318b45e94890f50b5dc4704e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bd5fb1375b46141681427df711c8593') in 0.002460 seconds
-  Import took 0.004941 seconds .
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1922.
+Total: 1.573100 ms (FindLiveObjects: 0.119100 ms CreateObjectMapping: 0.037800 ms MarkObjects: 1.327100 ms  DeleteObjects: 0.088400 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002537 seconds.
+Registered in 0.002360 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.777 seconds
+- Completed reload, in  0.725 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.7 MB.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 146.9 MB.
+System memory in use after: 147.0 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1917.
-Total: 1.454700 ms (FindLiveObjects: 0.117300 ms CreateObjectMapping: 0.037100 ms MarkObjects: 1.251300 ms  DeleteObjects: 0.048400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.490698 seconds.
-  path: Assets/JP/Animations/Switch
-  artifactKey: Guid(364416ac915dfa6478c693108085d9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/Switch using Guid(364416ac915dfa6478c693108085d9b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dadeff5d077d343a07387ed3a98c8de9') in 0.009064 seconds
-  Import took 0.011443 seconds .
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1925.
+Total: 1.774600 ms (FindLiveObjects: 0.153500 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.506400 ms  DeleteObjects: 0.064600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 22.964230 seconds.
-  path: Assets/JP/Animations/Switch/Switch_Prefab.controller
-  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/Switch/Switch_Prefab.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afd3562e50c19b5570a5c407b36670e4') in 0.016693 seconds
-  Import took 0.018757 seconds .
+  Time since last request: 25.827244 seconds.
+  path: Assets/JP/Scripts/SwitchBehavior_Skript.cs
+  artifactKey: Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/SwitchBehavior_Skript.cs using Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49364ad11e9fb0734a5fd8aeaeb97a0b') in 0.003135 seconds
+  Import took 0.005208 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.878155 seconds.
-  path: Assets/JP/Animations/TrapDoor
-  artifactKey: Guid(afd8f3ab2cf737540af736a24aa9ad42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/TrapDoor using Guid(afd8f3ab2cf737540af736a24aa9ad42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe030f55726a23daafb02f992d792869') in 0.002619 seconds
-  Import took 0.005405 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.974666 seconds.
-  path: Assets/JP/Animations/TrapDoor/TrapDoor_Animation.anim
-  artifactKey: Guid(cefb39991e3745a4d814f66bedc7b56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/TrapDoor/TrapDoor_Animation.anim using Guid(cefb39991e3745a4d814f66bedc7b56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51e4ee8bc97aae568e1aa3b5a744c1cd') in 0.008624 seconds
-  Import took 0.010951 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015530 seconds.
-  path: Assets/JP/Animations/TrapDoor/TrapDoor_Animation.anim
-  artifactKey: Guid(cefb39991e3745a4d814f66bedc7b56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JP/Animations/TrapDoor/TrapDoor_Animation.anim using Guid(cefb39991e3745a4d814f66bedc7b56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51e4ee8bc97aae568e1aa3b5a744c1cd') in 0.002373 seconds
-  Import took 0.004702 seconds .
+  Time since last request: 18.843540 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '440a7b745354ba677871a37f05f1fecf') in 0.089148 seconds
+  Import took 0.092829 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002649 seconds.
+Registered in 0.002726 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.732 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.0 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1929.
+Total: 1.569500 ms (FindLiveObjects: 0.129900 ms CreateObjectMapping: 0.040500 ms MarkObjects: 1.345600 ms  DeleteObjects: 0.052800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.943134 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bec6bb0869f2bf4caf2719a53cc35880') in 0.080067 seconds
+  Import took 0.083867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.608867 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af2c788d10b851fe32ab3c370a10aec') in 0.037540 seconds
+  Import took 0.041624 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002390 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.718 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.0 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1933.
+Total: 1.618200 ms (FindLiveObjects: 0.124700 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.372100 ms  DeleteObjects: 0.071600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002602 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.752 seconds
+- Completed reload, in  0.703 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.8 MB.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.1 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1920.
-Total: 1.511900 ms (FindLiveObjects: 0.127800 ms CreateObjectMapping: 0.041200 ms MarkObjects: 1.290500 ms  DeleteObjects: 0.051500 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1936.
+Total: 1.499500 ms (FindLiveObjects: 0.121600 ms CreateObjectMapping: 0.038600 ms MarkObjects: 1.287500 ms  DeleteObjects: 0.051000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002867 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.737 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.8 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1923.
-Total: 1.594900 ms (FindLiveObjects: 0.127100 ms CreateObjectMapping: 0.040400 ms MarkObjects: 1.366400 ms  DeleteObjects: 0.060300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003149 seconds.
+Registered in 0.002659 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.704 seconds
+- Completed reload, in  0.741 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1939.
+Total: 1.775700 ms (FindLiveObjects: 0.200700 ms CreateObjectMapping: 0.054000 ms MarkObjects: 1.458200 ms  DeleteObjects: 0.061900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002850 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.714 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.8 MB.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.1 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1926.
-Total: 1.463900 ms (FindLiveObjects: 0.116400 ms CreateObjectMapping: 0.035400 ms MarkObjects: 1.258400 ms  DeleteObjects: 0.052800 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1942.
+Total: 1.450600 ms (FindLiveObjects: 0.118700 ms CreateObjectMapping: 0.036400 ms MarkObjects: 1.247100 ms  DeleteObjects: 0.047700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002734 seconds.
+Registered in 0.003057 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.711 seconds
+- Completed reload, in  0.717 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1444 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 143.7 MB.
-System memory in use after: 143.8 MB.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.1 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1929.
-Total: 1.450200 ms (FindLiveObjects: 0.122100 ms CreateObjectMapping: 0.038100 ms MarkObjects: 1.235600 ms  DeleteObjects: 0.053700 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1945.
+Total: 1.644600 ms (FindLiveObjects: 0.144400 ms CreateObjectMapping: 0.044900 ms MarkObjects: 1.395500 ms  DeleteObjects: 0.059200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1125.247124 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c070f992870e9879003387df5a012895') in 0.074031 seconds
+  Import took 0.077428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 370.878964 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c0f0faa2fabad6c325d5a6e7b2f1e1') in 0.003882 seconds
+  Import took 0.007180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000565 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c0f0faa2fabad6c325d5a6e7b2f1e1') in 0.003512 seconds
+  Import took 0.005970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.229097 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e01f5bb000f90ad784929673cf84355b') in 0.003430 seconds
+  Import took 0.006068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001360 seconds.
+  path: Assets/JP/Animations/Switch/Switch_Animator.controller
+  artifactKey: Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Animations/Switch/Switch_Animator.controller using Guid(5342bc447eea3b04d9c4e2f75c33527e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e01f5bb000f90ad784929673cf84355b') in 0.002976 seconds
+  Import took 0.005512 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002577 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.760 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1948.
+Total: 1.453000 ms (FindLiveObjects: 0.116800 ms CreateObjectMapping: 0.036500 ms MarkObjects: 1.248100 ms  DeleteObjects: 0.050900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002590 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.736 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1445 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1951.
+Total: 1.502900 ms (FindLiveObjects: 0.118400 ms CreateObjectMapping: 0.038000 ms MarkObjects: 1.280700 ms  DeleteObjects: 0.064900 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

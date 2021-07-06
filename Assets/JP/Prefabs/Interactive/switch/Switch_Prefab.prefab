@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3010810416836250888}
   - component: {fileID: 2567605898410524448}
+  - component: {fileID: 2235821204328076225}
+  - component: {fileID: -3581449507410604113}
   m_Layer: 0
   m_Name: Switch_Prefab
   m_TagString: Untagged
@@ -44,7 +46,7 @@ Animator:
   m_GameObject: {fileID: 5847590067621124646}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c0287af86cc565c48819fe3220a87cf6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5342bc447eea3b04d9c4e2f75c33527e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -53,6 +55,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2235821204328076225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5847590067621124646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 2, z: 1.5}
+  m_Center: {x: -0.3, y: 0, z: -1}
+--- !u!114 &-3581449507410604113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5847590067621124646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bdb21e5025e684d82c153131042217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchAnimator: {fileID: 2567605898410524448}
 --- !u!1001 &2487290340361343528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232987546117203133, guid: f57b0e062afda764e8b16b2cf8859ae7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.566
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 232987546117203133, guid: f57b0e062afda764e8b16b2cf8859ae7, type: 3}
       propertyPath: m_LocalRotation.w
