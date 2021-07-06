@@ -11,9 +11,9 @@ public class SwitchBehavior_Skript : MonoBehaviour
     {
         if (_other.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.KeypadEnter))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                //switchAnimator.
+                switchAnimator.SetBool("switchOn", !switchAnimator.GetBool("switchOn"));
             }
         }
     }

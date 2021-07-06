@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 129662078329327970}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ba51497d0c102684e81055c7e3a39c83, type: 2}
+  m_Controller: {fileID: 9100000, guid: a3fb5dfe45d80e14b83ac1557b8afe96, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -32,6 +32,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hiddenDoorAnimator: {fileID: 27697934084884343}
+  switchAnimator: {fileID: 0}
 --- !u!1 &8013726271086281221
 GameObject:
   m_ObjectHideFlags: 0
