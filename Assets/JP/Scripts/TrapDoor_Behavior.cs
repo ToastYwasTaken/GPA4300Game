@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Regelt das Verhalten der Falle TrapDoor
+ * Author: JP
+ */
 public class TrapDoor_Behavior : MonoBehaviour
 {
     [SerializeField]

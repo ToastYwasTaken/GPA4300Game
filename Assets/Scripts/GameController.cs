@@ -34,11 +34,11 @@ public class GameController : MonoBehaviour
         {
             if (_i == randomExit)
             {
-                continue;
+                continue;                                   //Lässt nur einen Ausgang offen,...
             }
             else
             {
-                /*GameObject RockPile = */Instantiate(RockPilePrefab, exits[_i]);
+                Instantiate(RockPilePrefab, exits[_i]);     //...alle anderen werden zugeschüttet.
             }
         }
     }
@@ -46,6 +46,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         RandomExit();
+
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
     }

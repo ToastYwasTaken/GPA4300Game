@@ -2,14 +2,18 @@ using System.Collections;
 //using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Regelt das Verhalten der Falle TrapRocks und lässt Steine von der Decke fallen
+ * Author: JP
+ */
 public class TrapRocks_Behavior : MonoBehaviour
 {
     [SerializeField]
     private GameObject rockPrefab;
     [SerializeField]
     private int numberOfRocks;
-    //[SerializeField]
-    public Transform[] spawnPoints;
+    [SerializeField]
+    private Transform[] spawnPoints;
     [SerializeField]
     private float deflectionForce;
     [SerializeField]
@@ -19,13 +23,14 @@ public class TrapRocks_Behavior : MonoBehaviour
     {
         for (int i = 0; i < numberOfRocks; i++)
         {
+            // Lässt einen Stein an einem zufälligen Spawnpoint entstehen
             int spawnPosition = Random.Range(0, spawnPoints.Length);
-            int deflection = Random.Range(0, 4);
-
             GameObject rock = Instantiate(rockPrefab);
             rock.transform.Translate(spawnPoints[spawnPosition].position);
 
+            //Gibt den Steinen eine Ablenkung, damit sie sich nicht stapeln
             Rigidbody rockRB = rock.GetComponent<Rigidbody>();
+            int deflection = Random.Range(0, 4);
             switch (deflection)
             {
                 case 0:
