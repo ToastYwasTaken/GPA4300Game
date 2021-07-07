@@ -989,8 +989,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1403384153}
         m_TargetAssemblyTypeName: GUIMainMenu, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 3
+        m_MethodName: LoadGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1201,6 +1201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  wizardAnim: {fileID: 1587667463}
 --- !u!4 &1403384154
 Transform:
   m_ObjectHideFlags: 0
@@ -1281,6 +1282,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &1587667463 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 111000010891536458, guid: cebe9eaf887c5944f95c8c1382cd119d, type: 3}
+  m_PrefabInstance: {fileID: 456756075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1615357097
 GameObject:
   m_ObjectHideFlags: 0

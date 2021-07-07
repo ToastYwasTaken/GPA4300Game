@@ -24,6 +24,7 @@ using UnityEngine.SceneManagement;
 public class GUIMainMenu : MonoBehaviour
 {
     public Canvas canvas;
+    public Animation wizardAnim;
 
     private void Awake()
     {
@@ -34,6 +35,14 @@ public class GUIMainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(_sceneIndex);
     }
+
+    public void LoadGame()
+    {
+        wizardAnim.Stop();
+        canvas.enabled = false;
+        SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
+    }
+
 
     public void LoadSettingScene()
     {

@@ -3,6 +3,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/******************************************************************************
+ * Project: GPA4300Game
+ * File: LoadingController.cs
+ * Version: 1.0
+ * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
+ * 
+ * 
+ * These coded instructions, statements, and computer programs contain
+ * proprietary information of the author and are protected by Federal
+ * copyright law. They may not be disclosed to third parties or copied
+ * or duplicated in any form, in whole or in part, without the prior
+ * written consent of the author.
+ * 
+ * ChangeLog
+ * ----------------------------
+ *  06.07.2021  RK  Created
+ *  
+ *****************************************************************************/
+
 public class LoadingController : MonoBehaviour
 {
 
@@ -12,55 +31,37 @@ public class LoadingController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-
+        ProgressText.text = $"Loading: {0} %";
+        StartCoroutine(LoadingGame());
     }
 
     private void Operation_completed(AsyncOperation obj)
     {
+        Debug.Log(obj.isDone);
         Debug.Log("loading completed");
+       // obj.allowSceneActivation = true;
     }
 
     public void LoadGame()
     {
-
-        StartCoroutine(LoadingGame());
+       // StartCoroutine(LoadingGame());
     }
 
     IEnumerator LoadingGame()
     {
         yield return null;
         AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+
         operation.completed += Operation_completed;
 
-        operation.allowSceneActivation = false;
-        //ProgressText.text = $"Fortschritt: {operation.progress * 100} %";
+       // operation.allowSceneActivation = false;
 
         while (!operation.isDone)
         {
-            ProgressText.text = $"Fortschritt: {operation.progress * 100:##0} %";
+            ProgressText.text = $"Loading: {operation.progress * 100:##0} %";
 
-            if (operation.progress >= 0.9f)
-            {
-                ProgressText.text = "Press the space bar to continue!";
-                break;
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    operation.allowSceneActivation = true;
- 
-                }
-                yield return null;
-            }
+            yield return new WaitForEndOfFrame();
         }
-
-
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
