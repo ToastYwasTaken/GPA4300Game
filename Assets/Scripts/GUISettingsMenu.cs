@@ -65,15 +65,15 @@ public class GUISettingsMenu : MonoBehaviour
         soundsToggle.isOn = soundsMute;
     }
 
-    public void ChangeSensitivityValue()
+    public void ChangeSensitivityValue(float _value)
     {
-        sensitivityValue = sensitivitySlider.value;
+        sensitivityValue = _value;
         sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";
     }
 
-    public void ChangeVolumeValue()
+    public void ChangeVolumeValue(float _value)
     {
-        volumeValue = volumeSlider.value;
+        volumeValue = _value;
         volumeText.text = $"Volume: {volumeValue * 100:0}";
     }
 

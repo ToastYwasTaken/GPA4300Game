@@ -3,7 +3,7 @@ using UnityEngine;
 /******************************************************************************
  * Project: GPA4300Game
  * File: PlayerController.cs
- * Version: 1.01
+ * Version: 1.02
  * Autor: Ren� Kraus (RK); Franz M�rike (FM); Jan Pagel (JP)
  * 
  * 
@@ -33,7 +33,7 @@ using UnityEngine;
  * Fehler: Spieler l�uft weiter nach vorne obwohl keine Taste gedr�ckt wird 
  * - Animation bereits ausgeschlossen
  * - Das Drehen mit den Tasten ist davon nicht betroffen
- *
+ * Ursache: Leistungsbedingt
  */
 
 public class PlayerController : MonoBehaviour
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.PlaySprintAnimation(false);
             playerAnimator.PlayWalkAnimation(false);
             playerAnimator.PlayIdleAnimation(true);
-            camTransform.transform.localPosition = positionIdleCam;
+           // camTransform.transform.localPosition = positionIdleCam;
    
         }
         else 
@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.PlayWalkAnimation(false);
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(true); // true
-                camTransform.transform.localPosition = positionSprintCam;
+               // camTransform.transform.localPosition = positionSprintCam;
                 speed = moveSpeed * speedMultiplier;
 
                 
@@ -207,6 +207,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded && jumpActive)
         {
             playerAnimator.TriggerPlayerJump();
+            // Spring
             playerBody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
@@ -216,11 +217,15 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            // Ladung
+            // Player befindet sich auf den Boden
             isGrounded = true;
         }
     }
 
+    /// <summary>
+    /// Verhindert das der Player durch Wände laufen kann
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
