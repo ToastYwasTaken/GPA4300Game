@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /******************************************************************************
@@ -22,6 +23,7 @@ using UnityEngine;
  *  26.06.2021  RK  Modified PlayerMovement -> don't sprint backwards 
  *  28.06.2021  RK  Added PlayerAnimator (Animations)
  *  30.06.2021  RK  Added Collision Check Wall
+ *  09.07.2021  RK  Added Delegate for Sounds
  *  
  *****************************************************************************/
 
@@ -40,6 +42,9 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerBody;
     private PlayerAnimator playerAnimator;
+
+    private Action OnPlayerMove;
+    private Action OnPlayerMoveRun;
 
     public Vector3 startPosition;
     private Vector3 positionIdleCam = new Vector3(0f, 0.611f, 0.235f);
@@ -77,8 +82,8 @@ public class PlayerController : MonoBehaviour
         playerAnimator = FindObjectOfType<PlayerAnimator>();
         playerBody.transform.position = /*startPosition*/ new Vector3(-6, 2, 120);
         playerAnimator.PlayIdleAnimation(true);
-       
-       // camTransform.transform.localPosition = positionIdleCam;
+
+        // camTransform.transform.localPosition = positionIdleCam;
     }
 
     // Update is called once per frame
@@ -104,7 +109,7 @@ public class PlayerController : MonoBehaviour
             PlayerRotating();
             PlayerMovement();
         }
-       // Debug.Log(camTransform.position);
+        // Debug.Log(camTransform.position);
     }
 
     /// <summary>
@@ -130,10 +135,9 @@ public class PlayerController : MonoBehaviour
             playerAnimator.PlaySprintAnimation(false);
             playerAnimator.PlayWalkAnimation(false);
             playerAnimator.PlayIdleAnimation(true);
-           // camTransform.transform.localPosition = positionIdleCam;
-   
+            // camTransform.transform.localPosition = positionIdleCam;
         }
-        else 
+        else
         {
             // Bewegungsgeschwindigkeit
             float speed;
@@ -144,20 +148,26 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.PlayWalkAnimation(false);
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(true); // true
-               // camTransform.transform.localPosition = positionSprintCam;
+                // camTransform.transform.localPosition = positionSprintCam;
                 speed = moveSpeed * speedMultiplier;
 
-                
+                if (OnPlayerMoveRun != null)
+                {
+                    OnPlayerMoveRun.Invoke();
+                }
             }
-            else 
+            else
             {
                 playerAnimator.PlayWalkAnimation(true); // true
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(false);
                 camTransform.transform.localPosition = positionIdleCam;
-               // camTransform.transform.localPosition = positionWalkCam;
+                // camTransform.transform.localPosition = positionWalkCam;
                 speed = moveSpeed;
-            
+                if (OnPlayerMove != null)
+                {
+                    OnPlayerMove.Invoke();
+                }
             }
 
             // Mit der Tastatur drehen
@@ -232,5 +242,14 @@ public class PlayerController : MonoBehaviour
             hitWall = true;
         else
             hitWall = false;
+    }
+
+    public void SetOnPlayerMove(Action _newFunc)
+    {
+        OnPlayerMove += _newFunc;
+    }
+    public void SetOnPlayerMoveRun(Action _newFunc)
+    {
+        OnPlayerMoveRun += _newFunc;
     }
 }
