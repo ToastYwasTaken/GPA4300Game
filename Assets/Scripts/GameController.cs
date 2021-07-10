@@ -22,30 +22,30 @@ using UnityEngine;
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
-    [SerializeField]
-    private Transform[] exits;
-    [SerializeField]
-    private GameObject RockPilePrefab;
+    //[SerializeField]
+    //private Transform[] exits;
+    //[SerializeField]
+    //private GameObject RockPilePrefab;
 
-    private void RandomExit()
-    {
-        int randomExit = Random.Range(0, exits.Length);
-        for(int _i = 0; _i < exits.Length; _i++)
-        {
-            if (_i == randomExit)
-            {
-                continue;                                   //Lässt nur einen Ausgang offen,...
-            }
-            else
-            {
-                Instantiate(RockPilePrefab, exits[_i]);     //...alle anderen werden zugeschüttet.
-            }
-        }
-    }
+    //private void RandomExit()
+    //{
+    //    int randomExit = Random.Range(0, exits.Length);
+    //    for(int _i = 0; _i < exits.Length; _i++)
+    //    {
+    //        if (_i == randomExit)
+    //        {
+    //            continue;                                   //Lässt nur einen Ausgang offen,...
+    //        }
+    //        else
+    //        {
+    //            Instantiate(RockPilePrefab, exits[_i]);     //...alle anderen werden zugeschüttet.
+    //        }
+    //    }
+    //}
 
     void Start()
     {
-        RandomExit();
+        //RandomExit();
 
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;

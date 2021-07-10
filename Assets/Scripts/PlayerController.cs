@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
     {
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
-        playerBody.transform.position = /*startPosition*/ new Vector3(-6, 2, 120);
+        playerBody.transform.position = startPosition /*new Vector3(-6, 2, 120)*/;
         playerAnimator.PlayIdleAnimation(true);
 
         // camTransform.transform.localPosition = positionIdleCam;
