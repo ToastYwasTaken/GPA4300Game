@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -18,13 +19,18 @@ using UnityEngine;
  *  11.06.2021  RK  Created
  *  15.06.2021  RK  Modified -> void Start()
  *  01.07.2021  JP  added RandomExit()
- *  
+ *  15.07.2021  RK  added NewGame()
+ *                  added ContinueGame()
+ *                  added PauseGame()
+ *                  added LoadingSettingScene()
+ *                  added ExitGame()
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
     [SerializeField]
     private bool isGamePaused = false;
 
+    public AudioSource audioSource = null;
 
     //[SerializeField]
     //private Transform[] exits;
@@ -53,6 +59,8 @@ public class GameController : MonoBehaviour
 
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
+
+        audioSource.volume = FindObjectOfType<Preferences>().Load_AudioVolume();
     }
 
     private void Update()
@@ -60,26 +68,73 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isGamePaused = !isGamePaused;
-           PauseGame(isGamePaused);
+            PauseGame(isGamePaused);
         }
     }
 
+    /// <summary>
+    /// Beginnt eines neues Spiel
+    /// </summary>
+    public void NewGame()
+    {
+        // Neues Spiel starten
+    }
+
+    /// <summary>
+    /// Spiel fortsetzen
+    /// </summary>
+    public void ContinueGame()
+    {
+        isGamePaused = false;
+        PauseGame(isGamePaused);
+    }
+
+    /// <summary>
+    /// Pausiert das Spiel
+    /// </summary>
+    /// <param name="_pause"></param>
     private void PauseGame(bool _pause)
     {
+        UIManager uIManager = FindObjectOfType<UIManager>();
+
         if (_pause)
-        {     
+        {
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
+            if (uIManager)
+            {
+                uIManager.ShowUIPause(true);
+            }
             Debug.Log("Game paused");
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
+            if (uIManager)
+            {
+                uIManager.ShowUIPause(false);
+            }
             Debug.Log("Game run");
         }
-       
+
     }
-        
+
+    /// <summary>
+    /// Lädt die Settings Scene in die Game Scene
+    /// </summary>
+    public void LoadSettingScene()
+    {
+        SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
+    }
+
+    /// <summary>
+    /// Beendet das Spiel und lädt das Hauptmenü
+    /// </summary>
+    public void ExitGame()
+    {
+        SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+    }
+
 
 }

@@ -21,14 +21,21 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+    public AudioClip audioClipMainMenu = null;
+    public AudioClip audioClipGameScene = null;
+
+    [SerializeField]
+    private AudioSource audioSource = null;
+
+
 
     private void Awake()
     {
-        if (AudioManager.instance == null)
+        if (instance == null)
         {
-            AudioManager.instance = this;
+            instance = this;
         }
-        else if (AudioManager.instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -39,6 +46,14 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+
+        audioSource = FindObjectOfType<AudioSource>();
+        if (audioSource)
+        {
+            audioSource.volume = FindObjectOfType<Preferences>().Load_AudioVolume();
+        }
+        else
+            Debug.LogError("Kein AudioSource gefunden!");
     }
 
     // Update is called once per frame

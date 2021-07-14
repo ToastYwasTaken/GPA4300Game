@@ -24,6 +24,7 @@ using UnityEngine;
  *  28.06.2021  RK  Added PlayerAnimator (Animations)
  *  30.06.2021  RK  Added Collision Check Wall
  *  09.07.2021  RK  Added Delegate for Sounds
+ *  14.07.2021  RK  Added Variable playerCanMove
  *  
  *****************************************************************************/
 
@@ -32,10 +33,6 @@ using UnityEngine;
  * Walk     0,  0.560,  0.280
  * Sprint   0,  0.210,  0.470
  * 
- * Fehler: Spieler l�uft weiter nach vorne obwohl keine Taste gedr�ckt wird 
- * - Animation bereits ausgeschlossen
- * - Das Drehen mit den Tasten ist davon nicht betroffen
- * Ursache: Leistungsbedingt
  */
 
 public class PlayerController : MonoBehaviour
@@ -73,7 +70,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -5f;
-    public float sensitivityMultiplier;
+
+    public bool playerCanMove { get; set; }
+    public float sensitivityMultiplier { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -83,6 +82,8 @@ public class PlayerController : MonoBehaviour
         playerBody.transform.position = /*startPosition*/ new Vector3(90, 2, 44);
         playerAnimator.PlayIdleAnimation(true);
 
+        playerCanMove = true;
+        sensitivityMultiplier = FindObjectOfType<Preferences>().Load_Sensitivity();
         // camTransform.transform.localPosition = positionIdleCam;
     }
 
@@ -107,7 +108,8 @@ public class PlayerController : MonoBehaviour
         if (!GUIOptionMenu.pauseFlag) //verhindert movement wenn das Spiel pausiert ist
         {
             PlayerRotating();
-            PlayerMovement();
+            if (playerCanMove)
+                PlayerMovement();
         }
         // Debug.Log(camTransform.position);
     }

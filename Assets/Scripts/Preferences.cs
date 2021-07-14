@@ -20,6 +20,24 @@ using UnityEngine;
  *****************************************************************************/
 public class Preferences : MonoBehaviour
 {
+    public static Preferences instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void SavePrefs()
     {

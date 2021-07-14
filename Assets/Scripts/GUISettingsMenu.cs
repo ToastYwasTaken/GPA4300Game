@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,8 @@ using UnityEngine.UI;
  * ----------------------------
  *  05.07.2021  RK  Created
  *  14.07.2021  FM  Added functionality for pausing / accessing settings when game is running // added changing flag for option menu
+ *  15.07.2021  RK  Added AudioSource
+ *              RK  Added PlayerController
  *  
  *  
  *****************************************************************************/
@@ -27,7 +30,10 @@ public class GUISettingsMenu : MonoBehaviour
 {
     private GUIMainMenu mainMenu;
     private Preferences preferences;
+    private PlayerController playerController;
 
+    public AudioSource audioSource;
+    public Camera mainCamera;
 
     private float sensitivityValue = 1;
     private float volumeValue = 1;
@@ -43,7 +49,8 @@ public class GUISettingsMenu : MonoBehaviour
 
     private void Start()
     {
-        preferences = GetComponent<Preferences>();
+        audioSource = FindObjectOfType<AudioSource>();
+        preferences = FindObjectOfType<Preferences>();
 
         sensitivityValue = preferences.Load_Sensitivity();
         volumeValue = preferences.Load_AudioVolume();
@@ -52,6 +59,20 @@ public class GUISettingsMenu : MonoBehaviour
         soundsMute = preferences.Load_SoundsMute();
 
         SetUIValue();
+
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.buildIndex == 0)
+        {
+            Debug.Log("Scene: " + scene.name);
+            mainCamera.transform.position = new Vector3(0f, 0f, 0f);
+        }
+        else if (scene.buildIndex == 1)
+        {
+            Debug.Log("Scene: " + scene.name);
+            playerController = FindObjectOfType<PlayerController>();
+            mainCamera.transform.position = new Vector3(19f, 5f, 10f);
+        }
 
     }
 
@@ -81,13 +102,24 @@ public class GUISettingsMenu : MonoBehaviour
     public void ChangeSensitivityValue(float _value)
     {
         sensitivityValue = _value;
-        sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";
+        sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";     
+
+        if (playerController)
+        {
+            playerController.sensitivityMultiplier = _value;
+        }
+
     }
 
     public void ChangeVolumeValue(float _value)
     {
         volumeValue = _value;
         volumeText.text = $"Volume: {volumeValue * 100:0}";
+
+        if (audioSource)
+        {
+            audioSource.volume = _value;
+        }
     }
 
     /// <summary>
@@ -105,6 +137,7 @@ public class GUISettingsMenu : MonoBehaviour
         preferences.SavePrefs();
     }
 
+
     public void UnloadScene(int _unloadSceneIndex)
     {
         SaveAll();
@@ -116,9 +149,9 @@ public class GUISettingsMenu : MonoBehaviour
         {
             mainMenu.canvas.enabled = true;
         } 
-        else if (GUIOptionMenu.pauseFlag) //changes pause flag when unloading settings menu scene
-        {
-            GUIOptionMenu.pauseFlag = false;
-        }
+        //else if (GUIOptionMenu.pauseFlag) //changes pause flag when unloading settings menu scene
+        //{
+        //    GUIOptionMenu.pauseFlag = false;
+        //}
     }
 }
