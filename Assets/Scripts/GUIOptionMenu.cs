@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -21,6 +22,7 @@ using TMPro;
  * ----------------------------
  *  22.06.2021  FM  Created
  *  24.06.2021  FM  Fixed stuff
+ *  14.07.2021  FM  minimized script, managing option menu in GUISettingsMenu.cs now
  *  
  *****************************************************************************/
 
@@ -30,122 +32,36 @@ using TMPro;
 
 public class GUIOptionMenu : MonoBehaviour
 {
-
-    public static bool isPaused = false;
-    //private float volumeValue;
-    //private float sensitivityValue;
-
-    [SerializeField]
-    private TextMeshProUGUI textPaused;
-
-    [SerializeField]
-    private TextMeshProUGUI textSettingVolume;
-    [SerializeField]
-    private Slider sliderVolume;
-
-    [SerializeField]
-    private TextMeshProUGUI textSettingSensitivity;
-    [SerializeField]
-    private Slider sliderSensitivity;
-
-    [SerializeField]
-    private Button buttonExitToMainMenu;
-
-    [SerializeField]
-    private Button buttonExitToDesktop;
-
-    public PlayerController playerController;
-
-    private bool flag = false;
-
+    public static bool pauseFlag = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        DeactivateOptionMenuGUI();
-        sliderSensitivity.value = 1f;
-        sliderVolume.value = 1f;
-        changeVolume(1f);
-        changeSensitivity(1f);
-        
+        pauseFlag = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (flag)
-        { 
-            changeVolume(sliderVolume.value);
-            changeSensitivity(sliderSensitivity.value);
-            //Debug.Log("sensitivity: " + sliderSensitivity.value);
-            //Debug.Log("volume: " + sliderVolume.value);
-        }
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)   //PAUSING
+
+        if (Input.GetKeyDown(KeyCode.Escape) && !pauseFlag)   //PAUSING
         {
-            flag = true;
-            ActivateOptionMenuGUI();
-            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x,
-                transform.rotation.eulerAngles.y, transform.eulerAngles.z); //freezing rotation
+            pauseFlag = true;
+            //transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.eulerAngles.z); //freezing rotation
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+            SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
 
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)    //RESUMING
-        {
-            flag = false;
-            DeactivateOptionMenuGUI();
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
     }
 
-    private void DeactivateOptionMenuGUI()
+    public static void SetPauseFlag(bool _value)
     {
-        //deactivate the elements of the pause menu
-        textPaused.enabled = false;
-        textSettingVolume.enabled = false;
-        sliderVolume.gameObject.SetActive(false);
-        textSettingSensitivity.enabled = false;
-        sliderSensitivity.gameObject.SetActive(false);
-        buttonExitToDesktop.gameObject.SetActive(false);
-        buttonExitToMainMenu.gameObject.SetActive(false);
-
-        isPaused = false;    //flag
-
-        Time.timeScale = 1; //continues every time based function
+        pauseFlag = _value;
     }
 
-    private void ActivateOptionMenuGUI()
-    {
-        //activate the elements of the pause menu
-        textPaused.enabled = true;
-        textSettingVolume.enabled = true;
-        sliderVolume.gameObject.SetActive(true);
-        textSettingSensitivity.enabled = true;
-        sliderSensitivity.gameObject.SetActive(true);
-        buttonExitToDesktop.gameObject.SetActive(true);
-        buttonExitToMainMenu.gameObject.SetActive(true);
 
-        isPaused = true;    //flag
-
-        Time.timeScale = 0; //makes every time based function stop //Update is still called every frame
-    }
-
-    public void changeVolume(float _sliderVolumeValue)
-    {
-        PlayerPrefs.SetFloat("volume", _sliderVolumeValue);
-        AudioListener.volume = PlayerPrefs.GetFloat("volume");
-        PlayerPrefs.Save();
-    }
-
-    public void changeSensitivity(float _sliderSensitivityValue)
-    {
-        PlayerPrefs.SetFloat("sensitivity", _sliderSensitivityValue);
-        playerController.sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
-        PlayerPrefs.Save();
-    }
-
-   
 
 
 }

@@ -19,6 +19,8 @@ using UnityEngine.UI;
  * ChangeLog
  * ----------------------------
  *  05.07.2021  RK  Created
+ *  14.07.2021  FM  Added functionality for pausing / accessing settings when game is running // added changing flag for option menu
+ *  
  *  
  *****************************************************************************/
 public class GUISettingsMenu : MonoBehaviour
@@ -51,6 +53,17 @@ public class GUISettingsMenu : MonoBehaviour
 
         SetUIValue();
 
+    }
+
+    private void Update()
+    {
+    if (Input.GetKeyDown(KeyCode.Escape) && GUIOptionMenu.pauseFlag)    //RESUMING
+       {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+            UnloadScene(3);
+       }
     }
 
     private void SetUIValue()
@@ -102,6 +115,9 @@ public class GUISettingsMenu : MonoBehaviour
         if (mainMenu)
         {
             mainMenu.canvas.enabled = true;
+        } else if (GUIOptionMenu.pauseFlag) //changes pause flag when unloading settings menu scene
+        {
+            GUIOptionMenu.pauseFlag = false;
         }
     }
 }

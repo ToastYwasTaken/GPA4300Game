@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GUIOptionMenu.isPaused) //verhindert movement wenn das Spiel pausiert ist
+        if (!GUIOptionMenu.pauseFlag) //verhindert movement wenn das Spiel pausiert ist
         {
             sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
             //Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!GUIOptionMenu.isPaused) //verhindert movement wenn das Spiel pausiert ist
+        if (!GUIOptionMenu.pauseFlag) //verhindert movement wenn das Spiel pausiert ist
         {
             PlayerRotating();
             PlayerMovement();
