@@ -57,13 +57,13 @@ public class GUISettingsMenu : MonoBehaviour
 
     private void Update()
     {
-    if (Input.GetKeyDown(KeyCode.Escape) && GUIOptionMenu.pauseFlag)    //RESUMING
-       {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1;
-            UnloadScene(3);
-       }
+    //if (Input.GetKeyDown(KeyCode.Escape) && GUIOptionMenu.pauseFlag)    //RESUMING
+    //   {
+    //        Cursor.visible = false;
+    //        Cursor.lockState = CursorLockMode.Locked;
+    //        Time.timeScale = 1;
+    //        UnloadScene(3);
+    //   }
     }
 
     private void SetUIValue()
@@ -115,7 +115,8 @@ public class GUISettingsMenu : MonoBehaviour
         if (mainMenu)
         {
             mainMenu.canvas.enabled = true;
-        } else if (GUIOptionMenu.pauseFlag) //changes pause flag when unloading settings menu scene
+        } 
+        else if (GUIOptionMenu.pauseFlag) //changes pause flag when unloading settings menu scene
         {
             GUIOptionMenu.pauseFlag = false;
         }

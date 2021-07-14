@@ -22,6 +22,10 @@ using UnityEngine;
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
+    [SerializeField]
+    private bool isGamePaused = false;
+
+
     //[SerializeField]
     //private Transform[] exits;
     //[SerializeField]
@@ -50,5 +54,32 @@ public class GameController : MonoBehaviour
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isGamePaused = !isGamePaused;
+           PauseGame(isGamePaused);
+        }
+    }
+
+    private void PauseGame(bool _pause)
+    {
+        if (_pause)
+        {     
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
+            Debug.Log("Game paused");
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+            Debug.Log("Game run");
+        }
+       
+    }
+        
 
 }
