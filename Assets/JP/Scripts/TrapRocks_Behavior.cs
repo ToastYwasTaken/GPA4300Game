@@ -23,6 +23,8 @@ public class TrapRocks_Behavior : MonoBehaviour
     {
         for (int i = 0; i < numberOfRocks; i++)
         {
+            PlayerController.SprintActive = false;      //Damit der Spieler nicht über die Falle "hinwegsprinten" kann
+
             // Lässt einen Stein an einem zufälligen Spawnpoint entstehen
             int spawnPosition = Random.Range(0, spawnPoints.Length);
             GameObject rock = Instantiate(rockPrefab);

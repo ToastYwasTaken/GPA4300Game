@@ -16,6 +16,8 @@ public class TrapDoor_Behavior : MonoBehaviour
     {
         if (_other.gameObject.tag == "Player")
         {
+            PlayerController.SprintActive = false;      //Damit der Spieler nicht über die Falle "hinwegsprinten" kann
+
             trapDoorAnimator.SetTrigger("triggered");
         }
     }

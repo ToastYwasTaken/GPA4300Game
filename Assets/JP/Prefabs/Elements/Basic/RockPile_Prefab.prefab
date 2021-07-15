@@ -1681,6 +1681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_Prefab (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5786306800450730375, guid: 9e3d5bbe4ae14c54bb3917d07322e0de, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e3d5bbe4ae14c54bb3917d07322e0de, type: 3}
 --- !u!4 &8628169667768837001 stripped
@@ -1754,6 +1758,10 @@ PrefabInstance:
     - target: {fileID: 5786306800450730375, guid: 9e3d5bbe4ae14c54bb3917d07322e0de, type: 3}
       propertyPath: m_Name
       value: Rock_Prefab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786306800450730375, guid: 9e3d5bbe4ae14c54bb3917d07322e0de, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e3d5bbe4ae14c54bb3917d07322e0de, type: 3}

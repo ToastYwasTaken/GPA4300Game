@@ -50,7 +50,11 @@ public class PlayerController : MonoBehaviour
     public Transform camTransform;
 
     [SerializeField]
-    private bool sprintActive = true;
+    private static bool sprintActive = true;
+    public static bool SprintActive
+    {
+        set { sprintActive = value; }
+    }
 
     [Tooltip("Sprint Speed")]
     public float speedMultiplier = 2f;
@@ -79,7 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
-        playerBody.transform.position = /*startPosition*/ new Vector3(90, 2, 44);
+        playerBody.transform.position = startPosition /*new Vector3(90, 2, 44)*/;
         playerAnimator.PlayIdleAnimation(true);
 
         playerCanMove = true;
