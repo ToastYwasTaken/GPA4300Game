@@ -29,9 +29,12 @@ using UnityEngine.UI;
 public class InventoryGUI : MonoBehaviour
 {
     public Image[] guiInventoryImages;
-    public Dictionary<int, Item> inventory = new Dictionary<int, Item>();
+    public List<Item> inventory;
+
     private int inventoryMaxSize = 10;
     private int itemCount = 0;
+
+    int scrollCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -40,18 +43,15 @@ public class InventoryGUI : MonoBehaviour
     }
     private void Update()
     {
-        //geht nur in UseItem, wenn das Inventar überhaupt min 1 item hat
-        if (inventory.Count != 0)
-        {
+            SelectItem();
             UseItem();
-        }
     }
 
     public void AddItem(Item _itemToAdd)
     {
         if (itemCount < inventoryMaxSize)
         {
-            inventory.Add(itemCount, _itemToAdd);
+            inventory.Add(_itemToAdd);
             itemCount++;
         }
         UpdateGUI();
@@ -59,32 +59,44 @@ public class InventoryGUI : MonoBehaviour
 
     public void RemoveItem(Item _itemToRemove)
     {
-        int idToRemove = inventory.FirstOrDefault(x => x.Value == _itemToRemove).Key;
         if (itemCount > 0)
         {
-            inventory.Remove(idToRemove);
+            inventory.Remove(_itemToRemove);
             itemCount--;
         }
         UpdateGUI();
     }
 
+    private void SelectItem()
+    {
+        float mouseScroll = Input.GetAxis("Mouse ScrollWheel");
+
+            if (mouseScroll > 0f && scrollCount < inventoryMaxSize-1)
+            {
+                UpdateGUI();
+                //TODO: Anzeige + highlighten von dem Item bei scrollCount / Animation
+                scrollCount++;
+            }
+            else if (mouseScroll < 0f && scrollCount > 0)
+            {
+                UpdateGUI();
+                //TODO: Anzeige + highlighten von dem Item bei scrollCount / Animation
+                scrollCount--;
+            }
+    }
+
     private void UseItem()
     {
-        throw new System.NotImplementedException();
-        ////Heal Item benutzen mit H
-        //if (Input.GetKeyDown(KeyCode.H) && inventory.ContainsKey(){
-
-        //    RemoveItem();
-        //}
-        //// Quest Item benutzen mit LeftMouse
-        //else if (Input.GetKeyDown(KeyCode.Mouse0) && inventory.ContainsKey()){
-        //    CheckIfYouCanApplyQuestItem();
-        //    RemoveItem();
-        ////Power Up benutzen mit P
-        //} else if (Input.GetKeyDown(KeyCode.P) && inventory.ContainsKey()){
-
-        //    RemoveItem();
-        //}
+        if (inventory[itemCount].itemType.Equals(IItemTypes.ItemType.Heal)){
+            //TODO: Spieler heilen
+            RemoveItem(inventory[itemCount]);
+        }else if (inventory[itemCount].itemType.Equals(IItemTypes.ItemType.PowerUp)){
+            //TODO: PowerUp aktivieren
+            RemoveItem(inventory[itemCount]);
+        }else if (inventory[itemCount].itemType.Equals(IItemTypes.ItemType.Quest)){
+            //TODO: Hinzufügen von Quest Mechanics
+            RemoveItem(inventory[itemCount]);
+        }
     }
 
 
@@ -98,10 +110,10 @@ public class InventoryGUI : MonoBehaviour
             guiInventoryImages[itemCount].enabled = false;
         }
         int secondItemCount = 0;
-        foreach (KeyValuePair<Item, int> item in inventory)
+        foreach (Item item in inventory)
         {
             guiInventoryImages[secondItemCount].enabled = true;
-            guiInventoryImages[secondItemCount].sprite = item.Key.sprite;
+            guiInventoryImages[secondItemCount].sprite = item.sprite;
         }
     } 
 }

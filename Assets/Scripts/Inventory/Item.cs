@@ -31,5 +31,5 @@ public class Item : ScriptableObject
     public string itemName;
     public GameObject ItemGameobjectPrefab;
     public Sprite sprite;   //Das Sprite, das im Inventar angezeigt werden soll
-    public enum ItemType { Quest, Heal, PowerUp }
+    public IItemTypes itemType;
 }
