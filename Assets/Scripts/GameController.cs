@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
  * Project: GPA4300Game
  * File: PlayerController.cs
  * Version: 1.01
- * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
+ * Autor: Renï¿½ Kraus (RK); Franz Mï¿½rike (FM); Jan Pagel (JP)
  * 
  * 
  * These coded instructions, statements, and computer programs contain
@@ -24,11 +24,14 @@ using UnityEngine.SceneManagement;
  *                  added PauseGame()
  *                  added LoadingSettingScene()
  *                  added ExitGame()
+ *  22.07.2021  RK  Bugfix Preferences NullReferenceExpection
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
     [SerializeField]
     private bool isGamePaused = false;
+
+    private Preferences preferences = null;
 
     public AudioSource audioSource = null;
 
@@ -44,11 +47,11 @@ public class GameController : MonoBehaviour
     //    {
     //        if (_i == randomExit)
     //        {
-    //            continue;                                   //Lässt nur einen Ausgang offen,...
+    //            continue;                                   //Lï¿½sst nur einen Ausgang offen,...
     //        }
     //        else
     //        {
-    //            Instantiate(RockPilePrefab, exits[_i]);     //...alle anderen werden zugeschüttet.
+    //            Instantiate(RockPilePrefab, exits[_i]);     //...alle anderen werden zugeschï¿½ttet.
     //        }
     //    }
     //}
@@ -56,19 +59,34 @@ public class GameController : MonoBehaviour
     void Start()
     {
         //RandomExit();
+        isGamePaused = false;
 
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
 
-        audioSource.volume = FindObjectOfType<Preferences>().Load_AudioVolume();
+        preferences = FindObjectOfType<Preferences>();
+
+        if (preferences)
+        {
+            audioSource.volume = preferences.Load_AudioVolume();
+        }
+        else
+        {
+            audioSource.volume = 1f;
+        }
+
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isGamePaused = !isGamePaused;
-            PauseGame(isGamePaused);
+            int scenes = SceneManager.sceneCount;
+            if (scenes == 1)
+            {
+                isGamePaused = !isGamePaused;
+                PauseGame(isGamePaused);
+            }
         }
     }
 
@@ -121,7 +139,7 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// Lädt die Settings Scene in die Game Scene
+    /// Lï¿½dt die Settings Scene in die Game Scene
     /// </summary>
     public void LoadSettingScene()
     {
@@ -129,7 +147,7 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// Beendet das Spiel und lädt das Hauptmenü
+    /// Beendet das Spiel und lï¿½dt das Hauptmenï¿½
     /// </summary>
     public void ExitGame()
     {

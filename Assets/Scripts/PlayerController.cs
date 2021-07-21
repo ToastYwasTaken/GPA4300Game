@@ -25,6 +25,8 @@ using UnityEngine;
  *  30.06.2021  RK  Added Collision Check Wall
  *  09.07.2021  RK  Added Delegate for Sounds
  *  14.07.2021  RK  Added Variable playerCanMove
+ *  22.07.2021  RK  Removed pauseFlag
+ *              RK  Bugfix Preferences NullReferenceExpection
  *  
  *****************************************************************************/
 
@@ -39,6 +41,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerBody;
     private PlayerAnimator playerAnimator;
+    private Preferences preferences;
 
     private Action OnPlayerMove;
     private Action OnPlayerMoveRun;
@@ -87,15 +90,22 @@ public class PlayerController : MonoBehaviour
         playerAnimator.PlayIdleAnimation(true);
 
         playerCanMove = true;
-        sensitivityMultiplier = FindObjectOfType<Preferences>().Load_Sensitivity();
+
+        preferences = FindObjectOfType<Preferences>();
+        if (preferences)
+        {
+            sensitivityMultiplier = preferences.Load_Sensitivity();
+        }
+        else
+        {
+            sensitivityMultiplier = 1f;
+        }
         // camTransform.transform.localPosition = positionIdleCam;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!GUIOptionMenu.pauseFlag) //verhindert movement wenn das Spiel pausiert ist
-        {
             sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
             //Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
             // Verhindert das der Player unendlich f�llt
@@ -103,18 +113,15 @@ public class PlayerController : MonoBehaviour
 
             // Springen
             Jump();
-        }
 
     }
 
     private void FixedUpdate()
     {
-        if (!GUIOptionMenu.pauseFlag) //verhindert movement wenn das Spiel pausiert ist
-        {
+
             PlayerRotating();
             if (playerCanMove)
-                PlayerMovement();
-        }
+                PlayerMovement();      
         // Debug.Log(camTransform.position);
     }
 

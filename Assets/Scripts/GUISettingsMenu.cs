@@ -8,7 +8,7 @@ using UnityEngine.UI;
  * Project: GPA4300Game
  * File: GUISettingsMenu.cs
  * Version: 1.0
- * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
+ * Autor: Renï¿½ Kraus (RK); Franz Mï¿½rike (FM); Jan Pagel (JP)
  * 
  * 
  * These coded instructions, statements, and computer programs contain
@@ -23,11 +23,14 @@ using UnityEngine.UI;
  *  14.07.2021  FM  Added functionality for pausing / accessing settings when game is running // added changing flag for option menu
  *  15.07.2021  RK  Added AudioSource
  *              RK  Added PlayerController
+ *  22.07.2021  RK  Bugdfix NullReferenceExpection
  *  
  *  
  *****************************************************************************/
 public class GUISettingsMenu : MonoBehaviour
 {
+    private int sceneBuildIndex = 3;
+
     private GUIMainMenu mainMenu;
     private Preferences preferences;
     private PlayerController playerController;
@@ -52,14 +55,19 @@ public class GUISettingsMenu : MonoBehaviour
         audioSource = FindObjectOfType<AudioSource>();
         preferences = FindObjectOfType<Preferences>();
 
+        // Wenn prefernces oder audioSource nicht gefunden, keine Einstellungen laden
+        if (!preferences || !audioSource) return;
+
         sensitivityValue = preferences.Load_Sensitivity();
         volumeValue = preferences.Load_AudioVolume();
 
         audioMute = preferences.Load_AudioMute();
         soundsMute = preferences.Load_SoundsMute();
 
+        // Zeigt die eingestellten Werte im User Interface an
         SetUIValue();
 
+        // Gibt die ative Scene zurÃ¼ck
         Scene scene = SceneManager.GetActiveScene();
 
         if (scene.buildIndex == 0)
@@ -78,13 +86,19 @@ public class GUISettingsMenu : MonoBehaviour
 
     private void Update()
     {
-    //if (Input.GetKeyDown(KeyCode.Escape) && GUIOptionMenu.pauseFlag)    //RESUMING
-    //   {
-    //        Cursor.visible = false;
-    //        Cursor.lockState = CursorLockMode.Locked;
-    //        Time.timeScale = 1;
-    //        UnloadScene(3);
-    //   }
+        //if (Input.GetKeyDown(KeyCode.Escape) && GUIOptionMenu.pauseFlag)    //RESUMING
+        //   {
+        //        Cursor.visible = false;
+        //        Cursor.lockState = CursorLockMode.Locked;
+        //        Time.timeScale = 1;
+        //        UnloadScene(3);
+        //   }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UnloadScene(sceneBuildIndex);
+        }
+
     }
 
     private void SetUIValue()
@@ -122,6 +136,15 @@ public class GUISettingsMenu : MonoBehaviour
         }
     }
 
+    public void MuteMusic(bool _value)
+    {
+        audioMute = _value;
+        if (audioSource)
+        {
+            audioSource.mute = audioMute;
+        }
+    }
+
     /// <summary>
     /// Speichert alle Einstellungen
     /// </summary>
@@ -137,10 +160,13 @@ public class GUISettingsMenu : MonoBehaviour
         preferences.SavePrefs();
     }
 
-
     public void UnloadScene(int _unloadSceneIndex)
     {
-        SaveAll();
+        // Wenn prefernces nicht NULL ist, speicher alle Einstellungen
+        if (preferences)
+        {
+            SaveAll();
+        }
 
         SceneManager.UnloadSceneAsync(_unloadSceneIndex);
         mainMenu = FindObjectOfType<GUIMainMenu>();
