@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
     private Action OnPlayerMoveRun;
 
     public Vector3 startPosition;
+
+    [SerializeField]
+    private Vector3 playerCurrentPosition;
     private Vector3 positionIdleCam = new Vector3(0f, 0.611f, 0.235f);
     private Vector3 positionWalkCam = new Vector3(0f, 0.560f, 0.235f);
     private Vector3 positionSprintCam = new Vector3(0f, 0.175f, 0.53f);
@@ -106,10 +109,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
-            //Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
+            // sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
+            // Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
+
             // Verhindert das der Player unendlich f�llt
             FallingDownCheck();
+
+            
 
             // Springen
             Jump();
@@ -133,6 +139,8 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y <= fallingDownLimit)
         {
             playerBody.transform.position = startPosition;
+            playerCanMove = true;
+            sprintActive = true;
         }
     }
 
@@ -233,6 +241,15 @@ public class PlayerController : MonoBehaviour
             // Spring
             playerBody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            // TODO: Play Hit Animation
+            Debug.Log("Player Hit!");
         }
     }
 

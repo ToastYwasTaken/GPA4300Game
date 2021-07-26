@@ -4,7 +4,7 @@ using UnityEngine;
  * Project: GPA4300Game
  * File: Preferences.cs
  * Version: 1.01
- * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
+ * Autor: Renï¿½ Kraus (RK); Franz Mï¿½rike (FM); Jan Pagel (JP)
  * 
  * 
  * These coded instructions, statements, and computer programs contain
@@ -16,6 +16,7 @@ using UnityEngine;
  * ChangeLog
  * ----------------------------
  *  05.07.2021  RK  Created
+ *  26.07.2021  RK  Added Save_PlayerPosition()
  *  
  *****************************************************************************/
 public class Preferences : MonoBehaviour
@@ -84,4 +85,17 @@ public class Preferences : MonoBehaviour
         PlayerPrefs.SetInt("sounds", _value ? 1 : 0);
     }
 
+    public void Save_PlayerPostion(Vector3 _value)
+    {
+        float x, y, z;
+        x = _value.x;
+        y = _value.y;
+        z = _value.z;
+
+        string str = _value.ToString();
+
+        // TODO
+
+        Debug.Log(str);
+    }
 }

@@ -25,11 +25,13 @@ using UnityEngine.SceneManagement;
  *                  added LoadingSettingScene()
  *                  added ExitGame()
  *  22.07.2021  RK  Bugfix Preferences NullReferenceExpection
+ *  26.07.2021  RK  added SavePlayerPosition()
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
     [SerializeField]
     private bool isGamePaused = false;
+    private Vector3 currentPlayerPosition;
 
     private Preferences preferences = null;
 
@@ -81,12 +83,36 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+
             int scenes = SceneManager.sceneCount;
             if (scenes == 1)
             {
+                SavePlayerPosition();
                 isGamePaused = !isGamePaused;
                 PauseGame(isGamePaused);
             }
+        }
+    }
+
+    /// <summary>
+    /// Speichert die aktuelle Posistion des Spielers im Level
+    ///  </sammary>
+    private void SavePlayerPosition()
+    {
+        PlayerController player = FindObjectOfType<PlayerController>();
+
+        if (player)
+        {
+            currentPlayerPosition = player.transform.position;
+            if (preferences)
+            {
+                preferences.Save_PlayerPostion(currentPlayerPosition);
+            }
+            Debug.Log($"Current Player Position: {currentPlayerPosition}");
+        }
+        else
+        {
+            Debug.LogError("Current Player Positions not found!");
         }
     }
 

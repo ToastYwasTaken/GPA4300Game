@@ -21,6 +21,7 @@ using UnityEngine.SceneManagement;
  *  22.06.2021  FM  Edited health mechanic
  *  24.06.2021  FM  Deleted Debuglog
  *  26.06.2021  RK  Changed LoadScene to LoadSceneAsync
+ *  26.07.2021  RK  Added OnTriggerEnter Event
  *  
  *****************************************************************************/
 
@@ -55,6 +56,16 @@ public class PlayerHealth : MonoBehaviour
     private void OnCollisionEnter(Collision collision)  
     {
         if (collision.gameObject.tag.Equals("Enemy"))   //tag = "Enemy"
+        {
+            phealth -= edamage;
+            Debug.Log(phealth);
+            Debug.Log(edamage);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
         {
             phealth -= edamage;
             Debug.Log(phealth);

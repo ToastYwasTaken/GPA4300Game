@@ -121,7 +121,7 @@ public class EnemyAI : MonoBehaviour
 
                 StartCoroutine(nameof(AttackPlayer));
                 SetDestination(player.transform, distanceToThePlayer);
-
+                AgentResume();
             }
 
             // Schaut sich am Wegpunkt um
@@ -182,7 +182,7 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.Log("Attack");
 
-            AgentStop();
+           // AgentStop();
 
             // Angriff durchführen
             enemyAnim.TriggerAttack();
