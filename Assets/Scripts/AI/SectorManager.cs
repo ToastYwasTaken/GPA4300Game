@@ -29,6 +29,8 @@ public class SectorManager : MonoBehaviour
     public Text sectorA;
     public Text sectorB;
     public Text sectorC;
+    public Text sectorD;
+    public Text sectorE;
 
     private void Start()
     {
@@ -37,15 +39,32 @@ public class SectorManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        sectorA.text = $"Sector A Time: {sectors[0].playerStayTime}";
-        sectorB.text = $"Sector B Time: {sectors[1].playerStayTime}";
-        //sectorC.text = $"Sector C Stay Time: {sectors[2].playerStayTime}";
+        sectorA.text = $"Sector A Time: {sectors[0].playerStayTime} is Player: {sectors[0].isPlayerDetected}";
+        sectorB.text = $"Sector B Time: {sectors[1].playerStayTime} is Player: {sectors[1].isPlayerDetected}";
+        sectorC.text = $"Sector C Time: {sectors[2].playerStayTime} is Player: {sectors[2].isPlayerDetected}";
+        sectorD.text = $"Sector D Time: {sectors[3].playerStayTime} is Player: {sectors[3].isPlayerDetected}";
+        sectorE.text = $"Sector E Time: {sectors[4].playerStayTime} is Player: {sectors[4].isPlayerDetected}";
     }
 
     public Waypoint[] GetWaypointsFromSector()
     {
-        if (sectors == null)
-            return null;
+        if (sectors == null) return null;
+
+        foreach (Sector item in sectors)
+        {
+            if (item.isPlayerDetected)
+            {
+                return item.Waypoints;
+            }
+        }
+
+        return sectors[0].Waypoints;
+
+    }
+
+    public Waypoint[] GetWaypointsFromSectorByTime()
+    {
+        if (sectors == null) return null;
 
         float longestStandingTime = sectors[0].playerStayTime;
         Sector sector = sectors[0];

@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     [Tooltip("Sprint Speed")]
     public float speedMultiplier = 2f;
+    public bool playerSprints = false;
 
     [SerializeField]
     private bool jumpActive = false;
@@ -171,6 +172,7 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.PlaySprintAnimation(true); // true
                 // camTransform.transform.localPosition = positionSprintCam;
                 speed = moveSpeed * speedMultiplier;
+                playerSprints = true;
 
                 if (OnPlayerMoveRun != null)
                 {
@@ -185,6 +187,8 @@ public class PlayerController : MonoBehaviour
                 camTransform.transform.localPosition = positionIdleCam;
                 // camTransform.transform.localPosition = positionWalkCam;
                 speed = moveSpeed;
+                playerSprints = false;
+
                 if (OnPlayerMove != null)
                 {
                     OnPlayerMove.Invoke();

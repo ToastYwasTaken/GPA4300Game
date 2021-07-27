@@ -114,14 +114,15 @@ public class EnemyAI : MonoBehaviour
                 StartCoroutine(nameof(Patrol));
             }
             else
-            {
-                agent.speed = attackSpeed;
-                StopCoroutine(nameof(Patrol));
-                lookAround = false;
-
-                StartCoroutine(nameof(AttackPlayer));
-                SetDestination(player.transform, distanceToThePlayer);
+            { 
                 AgentResume();
+                agent.speed = attackSpeed;
+                lookAround = false;   
+                
+                SetDestination(player.transform, distanceToThePlayer);
+                
+                StopCoroutine(nameof(Patrol));   
+                StartCoroutine(nameof(AttackPlayer));        
             }
 
             // Schaut sich am Wegpunkt um
@@ -139,6 +140,7 @@ public class EnemyAI : MonoBehaviour
     {
         // Gibt die Wegpunkte von dem Sektor zurück,
         // indem sich der Spieler am längsten aufhält
+        // Waypoints = sectorManager.GetWaypointsFromSectorByTime();
         Waypoints = sectorManager.GetWaypointsFromSector();
 
         if (agent.remainingDistance <= agent.stoppingDistance && !searchAI.isPlayerDetected)
@@ -178,17 +180,13 @@ public class EnemyAI : MonoBehaviour
     /// <returns></returns>
     IEnumerator AttackPlayer()
     {
-        if (agent.remainingDistance <= attackDistance)
+        if (agent.remainingDistance <= attackDistance && searchAI.isPlayerDetected)
         {
             Debug.Log("Attack");
 
-           // AgentStop();
-
             // Angriff durchführen
             enemyAnim.TriggerAttack();
-            yield return new WaitForSeconds(attackPause);
-
-            AgentResume();
+            yield return null;
         }
         else
         {
@@ -279,6 +277,7 @@ public class EnemyAI : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             searchAI.isPlayerDetected = true;
+            enemyAnim.TriggerAttack();
         }
     }
 

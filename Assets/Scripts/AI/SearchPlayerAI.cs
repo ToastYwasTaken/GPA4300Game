@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /******************************************************************************
@@ -21,6 +22,7 @@ using UnityEngine;
 public class SearchPlayerAI : MonoBehaviour
 {
     private GameObject player;
+    private PlayerController playerController;
     [SerializeField]
     private float fieldOfView = 120f;
     [SerializeField]
@@ -32,12 +34,20 @@ public class SearchPlayerAI : MonoBehaviour
     [SerializeField]
     private float repeatRate = 0.5f;
 
+    [SerializeField]
+    private float WaitTimeBeforeStopSearching = 5f;
+
+    public bool isPlayerSprints = false;
     public bool isPlayerDetected = false;
 
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        if (player)
+        {
+            playerController = player.GetComponent<PlayerController>();
+        }
     }
 
     private void Start()
@@ -65,6 +75,9 @@ public class SearchPlayerAI : MonoBehaviour
 
         Debug.DrawRay(transform.position, direction, Color.green);
 
+        // Prüfen ob, der Spieler gerade sprintet
+        isPlayerSprints = playerController.playerSprints;
+
         if (Physics.Raycast(ray, out RaycastHit raycast, viewMaxDistance))
         {
             if (raycast.collider.gameObject == player)
@@ -75,16 +88,27 @@ public class SearchPlayerAI : MonoBehaviour
                 if (angle < fieldOfView * viewOffest)
                 {
                     isPlayerDetected = true;
-                    // StopSearchingPlayer();
+                }
+
+                if (isPlayerSprints)
+                {
+                    isPlayerDetected = true;
                 }
             }
             else
             {
-                isPlayerDetected = false;
+                //isPlayerDetected = false;
+                // StartCoroutine(PlayerNotVisible());
             }
 
-           
         }
+    }
+
+    IEnumerator PlayerNotVisible()
+    {
+        yield return new WaitForSecondsRealtime(WaitTimeBeforeStopSearching);
+        isPlayerDetected = false;
+        StopCoroutine(PlayerNotVisible());
     }
 
     public void StopSearchingPlayer()
