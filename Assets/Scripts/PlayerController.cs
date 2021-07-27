@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     {
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
-        playerBody.transform.position = /*startPosition*/ new Vector3(60, 2, 18);
+        playerBody.transform.position = startPosition /*new Vector3(126, 2, 72)*/;
         playerAnimator.PlayIdleAnimation(true);
 
         playerCanMove = true;
