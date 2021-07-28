@@ -27,7 +27,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Inventory Item")]
 public class Item : ScriptableObject
     {
-
     public string itemName;
     public GameObject ItemGameobjectPrefab;
     public Sprite sprite;   //Das Sprite, das im Inventar angezeigt werden soll

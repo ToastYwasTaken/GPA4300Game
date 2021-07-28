@@ -29,23 +29,84 @@ using UnityEngine.UI;
 public class InventoryGUI : MonoBehaviour
 {
     public Image[] guiInventoryImages;
-    public List<Item> inventory;
+    public List<Item> itemList; // 0 : Key, 1: HealPotion, 2: SprintPotion, 3: MapPart1, 4: MapPart2, 5: MapPart3
+    private List<Item> inventory;
 
-    private int inventoryMaxSize = 10;
+    private int inventoryMaxSize = 5;
     private int itemCount = 0;
 
-    int scrollCount = 0;
+    PlayerHealth healthRef;
 
-    // Start is called before the first frame update
-    void Start()
+    sbyte healValue = 20;
+
+    private void Start()
     {
-        UpdateGUI();
+           
     }
+
     private void Update()
     {
-            SelectItem();
-            UseItem();
+        UpdateInventory();
+        GetInput();
+
     }
+
+    private void GetInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1)){
+            UseItem(1);
+        }else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            UseItem(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            UseItem(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            UseItem(4);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            UseItem(5);
+        }
+    }
+
+    private void UpdateInventory()
+    {
+
+    }
+
+    private void UseItem(int _index)
+    {
+        if (inventory[_index].itemType.Equals(IItemTypes.ItemType.HealPotion))
+        {
+
+        }
+        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.SprintPotion))
+        {
+
+        }
+        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.Key))
+        {
+
+        }
+        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart1))
+        {
+
+        }
+        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart2))
+        {
+
+        }
+        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart3))
+        {
+
+        }
+
+    }
+
 
     public void AddItem(Item _itemToAdd)
     {
@@ -67,53 +128,20 @@ public class InventoryGUI : MonoBehaviour
         UpdateGUI();
     }
 
-    private void SelectItem()
+    private void UpdateGUI()
     {
-        float mouseScroll = Input.GetAxis("Mouse ScrollWheel");
-
-            if (mouseScroll > 0f && scrollCount < inventoryMaxSize-1)
-            {
-                UpdateGUI();
-                //TODO: Anzeige + highlighten von dem Item bei scrollCount / Animation
-                scrollCount++;
-            }
-            else if (mouseScroll < 0f && scrollCount > 0)
-            {
-                UpdateGUI();
-                //TODO: Anzeige + highlighten von dem Item bei scrollCount / Animation
-                scrollCount--;
-            }
-    }
-
-    private void UseItem()
-    {
-        if (inventory[itemCount].itemType.Equals(IItemTypes.ItemType.Heal)){
-            //TODO: Spieler heilen
-            RemoveItem(inventory[itemCount]);
-        }else if (inventory[itemCount].itemType.Equals(IItemTypes.ItemType.PowerUp)){
-            //TODO: PowerUp aktivieren
-            RemoveItem(inventory[itemCount]);
-        }else if (inventory[itemCount].itemType.Equals(IItemTypes.ItemType.Quest)){
-            //TODO: Hinzufügen von Quest Mechanics
-            RemoveItem(inventory[itemCount]);
-        }
-    }
-
-
-
-    public void UpdateGUI()
-    {
-        int itemCount = guiInventoryImages.Length;
-
-        foreach (Image item in guiInventoryImages)
+        int tempCount = 0;
+        foreach(Image image in guiInventoryImages)
         {
-            guiInventoryImages[itemCount].enabled = false;
+            guiInventoryImages[tempCount++].enabled = false;
         }
-        int secondItemCount = 0;
+        tempCount = 0;
         foreach (Item item in inventory)
         {
-            guiInventoryImages[secondItemCount].enabled = true;
-            guiInventoryImages[secondItemCount].sprite = item.sprite;
+            guiInventoryImages[tempCount++].enabled = true;
+            guiInventoryImages[tempCount++].sprite = item.sprite;
         }
-    } 
+
+        
+    }
 }

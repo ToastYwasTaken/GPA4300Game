@@ -22,6 +22,7 @@ using UnityEngine.SceneManagement;
  *  24.06.2021  FM  Deleted Debuglog
  *  26.06.2021  RK  Changed LoadScene to LoadSceneAsync
  *  26.07.2021  RK  Added OnTriggerEnter Event
+ *  28/07.2021  FM  Added maxVal for health
  *  
  *****************************************************************************/
 
@@ -50,6 +51,9 @@ public class PlayerHealth : MonoBehaviour
         if(phealth < 0)
         {
             SceneManager.LoadSceneAsync(2);  //loading death screen
+        }else if(phealth >= 100)
+        {
+            phealth = 100;
         }
     }
 
