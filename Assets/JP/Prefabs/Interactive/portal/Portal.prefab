@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9410936083d2e74583e90a95b3e6a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPortalAnimator: {fileID: 0}
+  otherPortalAnimator: {fileID: 0}
   otherPortalSpawner: {fileID: 0}
 --- !u!95 &6088842283187299528
 Animator:
@@ -198,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2260666065699781661, guid: ad0d190169c01be46982f655bfe66c2f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2260666065699781661, guid: ad0d190169c01be46982f655bfe66c2f, type: 3}
       propertyPath: m_LocalPosition.x

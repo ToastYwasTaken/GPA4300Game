@@ -6,7 +6,7 @@ public class Rat_Behavior : MonoBehaviour
 {
     [SerializeField]
     private Animator RatAnimator;
-
+    
     private void OnTriggerEnter(Collider _other)
     {
         if (_other.gameObject.tag == "Player")

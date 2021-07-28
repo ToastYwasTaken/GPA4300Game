@@ -61,6 +61,11 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log(phealth);
             Debug.Log(edamage);
         }
+
+        if (collision.gameObject.tag == "Trap")
+        {
+            phealth = -1;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
     private float cameraAngle = 0f;
     public float moveSpeed = 5f;
     public float rotationSpeed = 200f;
-    public float fallingDownLimit = -5f;
+    public float fallingDownLimit = -10f;
 
     public bool playerCanMove { get; set; }
     public float sensitivityMultiplier { get; set; }
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     {
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
-        playerBody.transform.position = startPosition /*new Vector3(126, 2, 72)*/;
+        playerBody.transform.position = startPosition /*new Vector3(102, 2, 44)*/;
         playerAnimator.PlayIdleAnimation(true);
 
         playerCanMove = true;
