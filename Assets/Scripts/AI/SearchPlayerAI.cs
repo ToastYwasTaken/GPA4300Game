@@ -41,6 +41,8 @@ public class SearchPlayerAI : MonoBehaviour
     public bool isPlayerDetected = false;
 
 
+    private bool coroutineIsActive = false;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -87,27 +89,33 @@ public class SearchPlayerAI : MonoBehaviour
 
                 if (angle < fieldOfView * viewOffest)
                 {
+                    coroutineIsActive = false;
+                    isPlayerDetected = true;
+                }
+                else if (isPlayerSprints && !isPlayerDetected)
+                {
+                    coroutineIsActive = false;
                     isPlayerDetected = true;
                 }
 
-                if (isPlayerSprints)
-                {
-                    isPlayerDetected = true;
-                }
             }
             else
             {
+                if (!coroutineIsActive && isPlayerDetected)
+                {
+                    StartCoroutine(PlayerNotVisible());
+                }
                 //isPlayerDetected = false;
-                // StartCoroutine(PlayerNotVisible());
             }
-
         }
     }
 
     IEnumerator PlayerNotVisible()
     {
+        coroutineIsActive = true;
         yield return new WaitForSecondsRealtime(WaitTimeBeforeStopSearching);
         isPlayerDetected = false;
+        coroutineIsActive = false;
         StopCoroutine(PlayerNotVisible());
     }
 

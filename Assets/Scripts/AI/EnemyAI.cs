@@ -157,16 +157,15 @@ public class EnemyAI : MonoBehaviour
             currentAngle = CalcCurrentAngle();
             isRight = false;
             lookAround = true;
-
             // Lege neues Ziel fest
             SetDestination(NextDestination(), distanceToTheWaypoint);
 
             yield return new WaitForSeconds(patrolPause);
-
             lookAround = false;
-            AgentResume();
+      
             enemyAnim.PlayIdleAnimation(false);
             enemyAnim.PlayMoveAnimation(true);
+            AgentResume();
         }
         else
         {
@@ -182,7 +181,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (agent.remainingDistance <= attackDistance && searchAI.isPlayerDetected)
         {
-            Debug.Log("Attack");
+            Debug.Log("AI: Attack");
 
             // Angriff durchführen
             enemyAnim.TriggerAttack();
@@ -191,6 +190,7 @@ public class EnemyAI : MonoBehaviour
         else
         {
             enemyAnim.PlayMoveAnimation(false);
+            enemyAnim.PlayIdleAnimation(false);
             enemyAnim.PlayRunAnimation(true);
         }
     }
@@ -243,11 +243,11 @@ public class EnemyAI : MonoBehaviour
 
         if (!isRight)
         {
-            agent.transform.Rotate(Vector3.up * lookSpeed * Time.deltaTime);
+            agent.transform.Rotate(lookSpeed * Time.deltaTime * Vector3.up);
         }
         else
         {
-            agent.transform.Rotate(-Vector3.up * lookSpeed * Time.deltaTime);
+            agent.transform.Rotate(lookSpeed * Time.deltaTime * -Vector3.up);
         }
     }
 
@@ -276,8 +276,9 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            searchAI.isPlayerDetected = true;
+            // searchAI.isPlayerDetected = true;
             enemyAnim.TriggerAttack();
+            Debug.Log("AI: Close Attack");
         }
     }
 
