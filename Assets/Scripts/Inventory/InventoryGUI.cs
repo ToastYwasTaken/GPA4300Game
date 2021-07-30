@@ -19,6 +19,7 @@ using UnityEngine.UI;
  * ChangeLog
  * ----------------------------
  *  09.07.2021  FM  Created
+ *  30.07.2021  FM  Changed inventory structure
  *  
  *****************************************************************************/
 
@@ -29,8 +30,8 @@ using UnityEngine.UI;
 public class InventoryGUI : MonoBehaviour
 {
     public Image[] guiInventoryImages;
-    public List<Item> itemList; // 0 : Key, 1: HealPotion, 2: SprintPotion, 3: MapPart1, 4: MapPart2, 5: MapPart3
-    private List<Item> inventory;
+    //public List<Item> itemList; // 0 : Key, 1: HealPotion, 2: SprintPotion, 3: MapPart1, 4: MapPart2, 5: MapPart3
+    private List<Item> inventory = new List<Item>();
 
     private int inventoryMaxSize = 5;
     private int itemCount = 0;
@@ -46,7 +47,7 @@ public class InventoryGUI : MonoBehaviour
 
     private void Update()
     {
-        UpdateInventory();
+        UpdateGUI();
         GetInput();
 
     }
@@ -54,59 +55,66 @@ public class InventoryGUI : MonoBehaviour
     private void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)){
-            UseItem(1);
+            UseItem(0);
         }else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            UseItem(2);
+            UseItem(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            UseItem(3);
+            UseItem(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            UseItem(4);
+            UseItem(3);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            UseItem(5);
+            UseItem(4);
         }
     }
 
-    private void UpdateInventory()
-    {
 
-    }
 
     private void UseItem(int _index)
     {
+        if(inventory[_index] = null)
+        {
+            return;
+        }
+
         if (inventory[_index].itemType.Equals(IItemTypes.ItemType.HealPotion))
         {
-
+            healthRef.pHealthProperty += healValue;
+            RemoveItem(inventory[_index]);
         }
         else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.SprintPotion))
         {
 
+            RemoveItem(inventory[_index]);
         }
         else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.Key))
         {
 
+            RemoveItem(inventory[_index]);
         }
         else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart1))
         {
 
+            RemoveItem(inventory[_index]);
         }
         else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart2))
         {
 
+            RemoveItem(inventory[_index]);
         }
         else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart3))
         {
 
+            RemoveItem(inventory[_index]);
         }
 
     }
-
 
     public void AddItem(Item _itemToAdd)
     {
@@ -136,12 +144,13 @@ public class InventoryGUI : MonoBehaviour
             guiInventoryImages[tempCount++].enabled = false;
         }
         tempCount = 0;
-        foreach (Item item in inventory)
-        {
-            guiInventoryImages[tempCount++].enabled = true;
-            guiInventoryImages[tempCount++].sprite = item.sprite;
-        }
-
-        
+        //foreach (Item item in inventory)
+        //{
+        //    guiInventoryImages[tempCount++].enabled = true;
+        //    guiInventoryImages[tempCount++].sprite = item.sprite;
+        //}
     }
+
+    public List<Item> PGetInventory { get => inventory; }
+
 }

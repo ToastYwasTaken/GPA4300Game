@@ -50,6 +50,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(phealth < 0)
         {
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadSceneAsync(2);  //loading death screen
         }else if(phealth >= 100)
         {

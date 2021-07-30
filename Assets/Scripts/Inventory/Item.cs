@@ -17,15 +17,14 @@ using UnityEngine;
  * ChangeLog
  * ----------------------------
  *  09.07.2021  FM  Created
+ *  30.07.2021  FM  Changed to Monobehaviour, no ScriptableObject anymore
  *  
  *****************************************************************************/
 
 /// <summary>
-/// ScriptableObject Item-Template für das Inventar
-/// Neue Items können nun im Inspector instanziiert werden
+/// Items
 /// </summary>
-[CreateAssetMenu(fileName = "new Inventory Item")]
-public class Item : ScriptableObject
+public class Item : MonoBehaviour
     {
     public string itemName;
     public GameObject ItemGameobjectPrefab;
