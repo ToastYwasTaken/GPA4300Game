@@ -20,6 +20,7 @@ using UnityEngine.UI;
  * ----------------------------
  *  09.07.2021  FM  Created
  *  30.07.2021  FM  Changed inventory structure
+ *  01.08.2021  FM  Added Prop, fixed issues
  *  
  *****************************************************************************/
 
@@ -83,32 +84,32 @@ public class InventoryGUI : MonoBehaviour
             return;
         }
 
-        if (inventory[_index].itemType.Equals(IItemTypes.ItemType.HealPotion))
+        if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.HealPotion))
         {
             healthRef.pHealthProperty += healValue;
             RemoveItem(inventory[_index]);
         }
-        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.SprintPotion))
+        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.SprintPotion))
         {
 
             RemoveItem(inventory[_index]);
         }
-        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.Key))
+        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.Key))
         {
 
             RemoveItem(inventory[_index]);
         }
-        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart1))
+        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.MapPart1))
         {
 
             RemoveItem(inventory[_index]);
         }
-        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart2))
+        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.MapPart2))
         {
 
             RemoveItem(inventory[_index]);
         }
-        else if (inventory[_index].itemType.Equals(IItemTypes.ItemType.MapPart3))
+        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.MapPart3))
         {
 
             RemoveItem(inventory[_index]);
@@ -136,19 +137,19 @@ public class InventoryGUI : MonoBehaviour
         UpdateGUI();
     }
 
-    private void UpdateGUI()
+    private void UpdateGUI()    //TODO: Make items show up in GUI
     {
         int tempCount = 0;
         foreach(Image image in guiInventoryImages)
         {
-            guiInventoryImages[tempCount++].enabled = false;
+            guiInventoryImages[tempCount].enabled = false;
         }
         tempCount = 0;
-        //foreach (Item item in inventory)
-        //{
-        //    guiInventoryImages[tempCount++].enabled = true;
-        //    guiInventoryImages[tempCount++].sprite = item.sprite;
-        //}
+        foreach (Item item in inventory)
+        {
+            guiInventoryImages[tempCount].enabled = true;
+            guiInventoryImages[tempCount].sprite = item.PItemSprite;
+        }
     }
 
     public List<Item> PGetInventory { get => inventory; }

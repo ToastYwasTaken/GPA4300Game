@@ -60,6 +60,7 @@ public class InteractableItem : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, colliderSize);
     }
 
+    
     private void OnTriggerStay(Collider other)
     {
         if (other.tag.Equals("Player"))
