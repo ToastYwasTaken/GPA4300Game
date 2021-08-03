@@ -5,13 +5,18 @@ using UnityEngine;
 public class Rat_Behavior : MonoBehaviour
 {
     [SerializeField]
-    private Animator RatAnimator;
-    
+    private Animator ratAnimator;
+    [SerializeField]
+    private AudioSource ratAudio;
+
     private void OnTriggerEnter(Collider _other)
     {
         if (_other.gameObject.tag == "Player")
         {
-            RatAnimator.SetTrigger("triggered");
+            ratAnimator.SetTrigger("triggered");
+            ratAudio.Play();
+            //ratAudio.enabled = false;
+            
         }
     }
 }

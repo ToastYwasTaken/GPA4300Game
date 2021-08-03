@@ -10,6 +10,8 @@ public class SwitchBehavior_Skript : MonoBehaviour
 {
     [SerializeField]
     private Animator switchAnimator;
+    [SerializeField]
+    private AudioSource switchAudio;
 
     private void OnTriggerStay(Collider _other)
     {
@@ -18,6 +20,7 @@ public class SwitchBehavior_Skript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 switchAnimator.SetBool("switchOn", !switchAnimator.GetBool("switchOn"));
+                switchAudio.Play();
             }
         }
     }

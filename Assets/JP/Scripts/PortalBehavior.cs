@@ -10,6 +10,8 @@ public class PortalBehavior : MonoBehaviour
     private Animator otherPortalAnimator;
     [SerializeField]
     private Transform otherPortalSpawner;
+    [SerializeField]
+    private AudioSource portalAudio;
 
     private static bool portalReady = true;
     private int portalRefreshTime = 10;
@@ -31,6 +33,7 @@ public class PortalBehavior : MonoBehaviour
     {
         if (_other.gameObject.tag == "Player" && portalReady == true)
         {
+            portalAudio.Play();
             _other.transform.rotation = otherPortalSpawner.transform.rotation;
             _other.transform.position = otherPortalSpawner.transform.position;
 
