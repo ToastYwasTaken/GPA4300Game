@@ -1,0 +1,1978 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1110; Version 2009; 64bit' Language: 'de' Physical Memory: 16168 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+57130
+Successfully changed project path to: C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
+C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 39.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.11f1 (99c7afb366b3)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/YinJan/SAE/Projekte/eigen/GPA4300Game/GPA4300Game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f15)
+    Vendor:   
+    VRAM:     5980 MB
+    Driver:   27.21.14.6275
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001529 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 36.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.363 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002485 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.759 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1473 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 146.4 MB.
+System memory in use after: 146.4 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1921.
+Total: 1.562200 ms (FindLiveObjects: 0.135100 ms CreateObjectMapping: 0.043300 ms MarkObjects: 1.298700 ms  DeleteObjects: 0.084200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/JP/Imports/rat.blend
+  artifactKey: Guid(35aa2f123ee7a934d9c22951e5fe8bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/rat.blend using Guid(35aa2f123ee7a934d9c22951e5fe8bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97cb39dff26860dd86dccf1513d03823') in 0.179138 seconds
+  Import took 0.181595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/JP/Imports
+  artifactKey: Guid(bfa14fbf460c7624c955cb2d8c4f0aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports using Guid(bfa14fbf460c7624c955cb2d8c4f0aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dcf765bb6751877b6da930f9ed00de4') in 0.004334 seconds
+  Import took 0.006691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/JP/Imports/spider.blend
+  artifactKey: Guid(7903b1ba5ca0faf4b990b2e939c9203d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/spider.blend using Guid(7903b1ba5ca0faf4b990b2e939c9203d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95d3756479bbe01ba7f4e8b53a550f73') in 0.064703 seconds
+  Import took 0.067206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 141.222946 seconds.
+  path: Assets/JP/Imports/LowPolyDungeonsLite (UnityAssetStore)
+  artifactKey: Guid(d4a8522a887f6f04e95a57f98d676f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/LowPolyDungeonsLite (UnityAssetStore) using Guid(d4a8522a887f6f04e95a57f98d676f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10a4a56fd190834a90c829dc8350eca7') in 0.006840 seconds
+  Import took 0.009759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.385265 seconds.
+  path: Assets/JP/Imports/Mega Fantasy Props Pack (UnityAssetStore)
+  artifactKey: Guid(d336a7b200232474e871c8e99a44c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Mega Fantasy Props Pack (UnityAssetStore) using Guid(d336a7b200232474e871c8e99a44c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fb268e631a03c00965a3b8269756d07') in 0.006975 seconds
+  Import took 0.009262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.691750 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack
+  artifactKey: Guid(c69ec8b9a72135e48a3211776fbb4d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack using Guid(c69ec8b9a72135e48a3211776fbb4d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cf0b7092de76c3089725810b09b489b') in 0.006972 seconds
+  Import took 0.009153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.892027 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)
+  artifactKey: Guid(c69ec8b9a72135e48a3211776fbb4d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart) using Guid(c69ec8b9a72135e48a3211776fbb4d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bf489a501b6f8294f6044052c6a3506') in 0.006284 seconds
+  Import took 0.008426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.122000 seconds.
+  path: Assets/JP/Imports/rat (opengameart).blend
+  artifactKey: Guid(35aa2f123ee7a934d9c22951e5fe8bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/rat (opengameart).blend using Guid(35aa2f123ee7a934d9c22951e5fe8bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc3774def89a82e0adac565c882e74b1') in 0.137109 seconds
+  Import took 0.140662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.546102 seconds.
+  path: Assets/JP/Imports/spider (opengameart).blend
+  artifactKey: Guid(7903b1ba5ca0faf4b990b2e939c9203d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/spider (opengameart).blend using Guid(7903b1ba5ca0faf4b990b2e939c9203d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '137ee1809b370acd43a0128f74de6210') in 0.036369 seconds
+  Import took 0.039121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 130.441684 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle
+  artifactKey: Guid(e46c4e736fe499a4bb98f354adc69726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle using Guid(e46c4e736fe499a4bb98f354adc69726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7df528f16f0385ff1ada6eb8b84a4479') in 0.006656 seconds
+  Import took 0.008870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047392 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/magic1.wav
+  artifactKey: Guid(a3ce949ee788a7544bf81374449624e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/magic1.wav using Guid(a3ce949ee788a7544bf81374449624e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75025ea6ffd3e34a7d90b7eef7c8cf49') in 0.036386 seconds
+  Import took 0.038507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe5.wav
+  artifactKey: Guid(72ba519672952994ba6a691a404abdf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe5.wav using Guid(72ba519672952994ba6a691a404abdf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7328ed7e0f4062b953f687bb6335e3e') in 0.010081 seconds
+  Import took 0.012108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe.wav
+  artifactKey: Guid(57bc5fe444045ae418398d6719a61a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe.wav using Guid(57bc5fe444045ae418398d6719a61a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eff54d076a7e6b6001f04b2e3634b5ec') in 0.013560 seconds
+  Import took 0.016000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/swing2.wav
+  artifactKey: Guid(e91079d060d64ce4fb7ddabdd1893f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/swing2.wav using Guid(e91079d060d64ce4fb7ddabdd1893f15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ce58c3380295afff5b728a25a9ec902') in 0.019612 seconds
+  Import took 0.022258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe4.wav
+  artifactKey: Guid(0bbce28176dd7534db108f79c5a2abdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe4.wav using Guid(0bbce28176dd7534db108f79c5a2abdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '408e2d3934e51c87e785c12a34785bfd') in 0.012937 seconds
+  Import took 0.015637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe3.wav
+  artifactKey: Guid(06561e11402e4714fa33b4785227f722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe3.wav using Guid(06561e11402e4714fa33b4785227f722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bfb181a64e35e62ee1dd26ab769fe45') in 0.022196 seconds
+  Import took 0.024515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/spell.wav
+  artifactKey: Guid(e8ecd4d6d64672648a32c1843df780a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/spell.wav using Guid(e8ecd4d6d64672648a32c1843df780a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ee57be999d6977ee88e94814495dc7') in 0.013465 seconds
+  Import took 0.015757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/swing3.wav
+  artifactKey: Guid(2b81dddc0dba8264090895f93924e4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/swing3.wav using Guid(2b81dddc0dba8264090895f93924e4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5bb80b008960c8c56624a1573ef1ae2') in 0.024231 seconds
+  Import took 0.026377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe2.wav
+  artifactKey: Guid(6efab99b800e4634f9842108eb4bfc67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/sword-unsheathe2.wav using Guid(6efab99b800e4634f9842108eb4bfc67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aedfc0dc4c9b363c1da70a8feb7fb0ee') in 0.011803 seconds
+  Import took 0.014235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/swing.wav
+  artifactKey: Guid(e18eabbd5c7e80741bf286015afd2860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/battle/swing.wav using Guid(e18eabbd5c7e80741bf286015afd2860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f3e5e9b679673439ad11ea88e72375a') in 0.024652 seconds
+  Import took 0.027554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.682611 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface1.wav
+  artifactKey: Guid(bea2c8e2ee43ad746b6aa264ea0d870a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface1.wav using Guid(bea2c8e2ee43ad746b6aa264ea0d870a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f078aecc48fe0c2c7e05ce88be28ffc4') in 0.009628 seconds
+  Import took 0.011977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface6.wav
+  artifactKey: Guid(27fea8962a1659244986b8af70e660a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface6.wav using Guid(27fea8962a1659244986b8af70e660a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a28bb1d9a53b5305e551459302779fa9') in 0.009560 seconds
+  Import took 0.011627 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface3.wav
+  artifactKey: Guid(ab215363c4607634784a6f273be5f5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface3.wav using Guid(ab215363c4607634784a6f273be5f5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '459dc74f7aad4db6ae6bf4011285dcad') in 0.014298 seconds
+  Import took 0.016604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface5.wav
+  artifactKey: Guid(88731a1434c44b341b1852c72ec7f92a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface5.wav using Guid(88731a1434c44b341b1852c72ec7f92a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e52520ab12857b82caa1b32e221a78') in 0.014686 seconds
+  Import took 0.017210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface4.wav
+  artifactKey: Guid(661b0a36a4b197e44b2462723a0857b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface4.wav using Guid(661b0a36a4b197e44b2462723a0857b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e505e15a68a0ab20b6c5121b9f110534') in 0.010584 seconds
+  Import took 0.012768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface2.wav
+  artifactKey: Guid(e89f37559309ff14eb412ab255264647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/interface/interface2.wav using Guid(e89f37559309ff14eb412ab255264647) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5050c055f06ebb1c71ec225b58e42bfa') in 0.011382 seconds
+  Import took 0.013765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.777733 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/armor-light.wav
+  artifactKey: Guid(694d85e922db28b4a9b1f46471ed5a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/armor-light.wav using Guid(694d85e922db28b4a9b1f46471ed5a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd6accc168e99b9c48a55464bac37fe8') in 0.009603 seconds
+  Import took 0.011859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bubble2.wav
+  artifactKey: Guid(0d5db8482646c1542a0cedd5734f23c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bubble2.wav using Guid(0d5db8482646c1542a0cedd5734f23c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f839c3f307f081df1702a1d0835daac') in 0.010231 seconds
+  Import took 0.012264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-small3.wav
+  artifactKey: Guid(a98868fd31e167f478c3a047fad81ee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-small3.wav using Guid(a98868fd31e167f478c3a047fad81ee0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bd561deb91c1ed478cea1c31a5bb552') in 0.012859 seconds
+  Import took 0.014982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/chainmail2.wav
+  artifactKey: Guid(bf07810afc408e14497da89d76f97941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/chainmail2.wav using Guid(bf07810afc408e14497da89d76f97941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1fc4a00b44ea4dc62ec91c805af289') in 0.014501 seconds
+  Import took 0.016629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/coin3.wav
+  artifactKey: Guid(fd2887ff43c10b043abb97eb5809add1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/coin3.wav using Guid(fd2887ff43c10b043abb97eb5809add1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cfbfc88d681671e27487fdd72b2e653') in 0.015088 seconds
+  Import took 0.017221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/wood-small.wav
+  artifactKey: Guid(7a5585ffdb3318541a71bc107f6ea498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/wood-small.wav using Guid(7a5585ffdb3318541a71bc107f6ea498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0916ba4a9976b180b278901edb4904e') in 0.009350 seconds
+  Import took 0.011525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bubble.wav
+  artifactKey: Guid(05fd15ec722afc4448148c13fe778c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bubble.wav using Guid(05fd15ec722afc4448148c13fe778c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f71c520dfee944e7c604c1d9c179d007') in 0.015688 seconds
+  Import took 0.017875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-small1.wav
+  artifactKey: Guid(0a4933ef5f3a1944c870274884e1a6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-small1.wav using Guid(0a4933ef5f3a1944c870274884e1a6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab7a8312f5e808ea145b794a44e3926') in 0.008571 seconds
+  Import took 0.010834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/cloth.wav
+  artifactKey: Guid(05df6ca5eca15d64890484a04c05cb15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/cloth.wav using Guid(05df6ca5eca15d64890484a04c05cb15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e68450c262a28b202403b2b0e86f24a') in 0.009948 seconds
+  Import took 0.012179 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bubble3.wav
+  artifactKey: Guid(acbc8a58a77f79e43a6ce1655b39cc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bubble3.wav using Guid(acbc8a58a77f79e43a6ce1655b39cc57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '830314b7865052f7ef497f070cebcef6') in 0.017171 seconds
+  Import took 0.019411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-small2.wav
+  artifactKey: Guid(6a53e98921537934580512d7a1aed4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-small2.wav using Guid(6a53e98921537934580512d7a1aed4f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72b2727ced10f09f7fcdea77671a13da') in 0.009633 seconds
+  Import took 0.011845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/coin.wav
+  artifactKey: Guid(c84b34198e6705e49bb111144997233b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/coin.wav using Guid(c84b34198e6705e49bb111144997233b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '115b63bbc61853ef4c9e7ba708b0adab') in 0.010624 seconds
+  Import took 0.012897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/coin2.wav
+  artifactKey: Guid(7b69d60027a43794cba890a96e613ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/coin2.wav using Guid(7b69d60027a43794cba890a96e613ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40dfe5aa4a89409795b46bf3fb584c8b') in 0.011295 seconds
+  Import took 0.013460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/cloth-heavy.wav
+  artifactKey: Guid(03aa76f09456ef247a6fa608d68dff08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/cloth-heavy.wav using Guid(03aa76f09456ef247a6fa608d68dff08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ea786a0d6dcae3cb618b9c2410811ad') in 0.009384 seconds
+  Import took 0.011854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/beads.wav
+  artifactKey: Guid(644eec59ff3f8db4ba32b86dc2bea98f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/beads.wav using Guid(644eec59ff3f8db4ba32b86dc2bea98f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '959ff73522842390f1a285ded98a906a') in 0.010204 seconds
+  Import took 0.012485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/chainmail1.wav
+  artifactKey: Guid(986f079c1e928b34996235e680879044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/chainmail1.wav using Guid(986f079c1e928b34996235e680879044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57f62b23ab7786fa5ff489b958c51e08') in 0.016140 seconds
+  Import took 0.018440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-ringing.wav
+  artifactKey: Guid(e0fda166b7fbe104d80f2f6ff5b810fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/metal-ringing.wav using Guid(e0fda166b7fbe104d80f2f6ff5b810fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e297d65182fce9454a09b8aef0b8381') in 0.012384 seconds
+  Import took 0.014613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bottle.wav
+  artifactKey: Guid(12f4ef25e31328246b22757fa1170844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/inventory/bottle.wav using Guid(12f4ef25e31328246b22757fa1170844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86fefa7bd3edd23a74118ec8e72294cb') in 0.017426 seconds
+  Import took 0.019635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 44.511207 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/burp.wav
+  artifactKey: Guid(c9b86a7a8c7956541b59cac10d61ddb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/burp.wav using Guid(c9b86a7a8c7956541b59cac10d61ddb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d83589ed4125761f00ccebd6ee49bfd') in 0.011074 seconds
+  Import took 0.013355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random3.wav
+  artifactKey: Guid(cf6f6f2e004ec3c498e9482ae52d9218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random3.wav using Guid(cf6f6f2e004ec3c498e9482ae52d9218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b00dcb9b63d1e1d06a7335c6c588952') in 0.010585 seconds
+  Import took 0.012601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random1.wav
+  artifactKey: Guid(f88b34600c801e64e8ebb1996efb594f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random1.wav using Guid(f88b34600c801e64e8ebb1996efb594f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a9c646f51d25e0ce326f3bcc2b7806b') in 0.011549 seconds
+  Import took 0.014456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random6.wav
+  artifactKey: Guid(4baff3dc4b2dd034a8cc4c5a6722a97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random6.wav using Guid(4baff3dc4b2dd034a8cc4c5a6722a97b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6c08db9088446377bd1372eb16cfb66') in 0.013350 seconds
+  Import took 0.015654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random4.wav
+  artifactKey: Guid(a38d566c43759df479c9ccd59c2a27ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random4.wav using Guid(a38d566c43759df479c9ccd59c2a27ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b9da20f1c77f94f446b1cf35870c6c') in 0.010342 seconds
+  Import took 0.012593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random5.wav
+  artifactKey: Guid(4f6e1a6ee59ce514b84b98ad7e6b9c09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random5.wav using Guid(4f6e1a6ee59ce514b84b98ad7e6b9c09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae9687e325ae2d278a681f9651bfef2') in 0.010234 seconds
+  Import took 0.014142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random2.wav
+  artifactKey: Guid(2d2cf7bcb9a0ca1478bbe1026f00a890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc/random2.wav using Guid(2d2cf7bcb9a0ca1478bbe1026f00a890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a7281114afd8e70c4a721f273dceb2a') in 0.017788 seconds
+  Import took 0.020020 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.263338 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/world/door.wav
+  artifactKey: Guid(dde21bc7f945edf41b102e1dd4f728b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/world/door.wav using Guid(dde21bc7f945edf41b102e1dd4f728b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04accf6b91e3fcf1e5181e8e47d5bc4d') in 0.009722 seconds
+  Import took 0.011812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.862078 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle
+  artifactKey: Guid(90e2c9e0896961841a956cb0cb02e2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle using Guid(90e2c9e0896961841a956cb0cb02e2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73dbb85b3dcf06626f667526dbc4136d') in 0.005435 seconds
+  Import took 0.007890 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029705 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle/bite-small.wav
+  artifactKey: Guid(ceac729039c02ff418e8734f28aacbab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle/bite-small.wav using Guid(ceac729039c02ff418e8734f28aacbab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '618520f1e6d2002d81dcfc7b0805369d') in 0.016840 seconds
+  Import took 0.019222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle/bite-small2.wav
+  artifactKey: Guid(45d892e8c15fa2f49aa7047046a7d7ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle/bite-small2.wav using Guid(45d892e8c15fa2f49aa7047046a7d7ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1592343d58ea6a625f2487afd496655a') in 0.010152 seconds
+  Import took 0.012252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle/bite-small3.wav
+  artifactKey: Guid(347670f87454e2743810f3d97abe9206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/beetle/bite-small3.wav using Guid(347670f87454e2743810f3d97abe9206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7db87ced619fe520ab0654f4d9e55575') in 0.011260 seconds
+  Import took 0.013445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.892182 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant1.wav
+  artifactKey: Guid(818e9be8da4a3034185638a859a61586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant1.wav using Guid(818e9be8da4a3034185638a859a61586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b99b4a96a2c09d2942db56a2b4f80d42') in 0.009829 seconds
+  Import took 0.012130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant2.wav
+  artifactKey: Guid(24f6caf25be274142b1e827afed8ef8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant2.wav using Guid(24f6caf25be274142b1e827afed8ef8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa571e6f3b48cc2846edc7075ec30dd0') in 0.011329 seconds
+  Import took 0.015124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant5.wav
+  artifactKey: Guid(72e4613cb60c009439a08fbd18324270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant5.wav using Guid(72e4613cb60c009439a08fbd18324270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5256ceb5f592df09a1ebe75595300f6c') in 0.012873 seconds
+  Import took 0.015427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant1.wav
+  artifactKey: Guid(818e9be8da4a3034185638a859a61586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant1.wav using Guid(818e9be8da4a3034185638a859a61586) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b99b4a96a2c09d2942db56a2b4f80d42') in 0.018340 seconds
+  Import took 0.020583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant2.wav
+  artifactKey: Guid(24f6caf25be274142b1e827afed8ef8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant2.wav using Guid(24f6caf25be274142b1e827afed8ef8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa571e6f3b48cc2846edc7075ec30dd0') in 0.008102 seconds
+  Import took 0.010403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant4.wav
+  artifactKey: Guid(c66d3abffe618944484e906e3e3d9726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant4.wav using Guid(c66d3abffe618944484e906e3e3d9726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8414b5a0e4c605295177e870e84eb8f6') in 0.031753 seconds
+  Import took 0.034475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant3.wav
+  artifactKey: Guid(f07d3e57d0dfc0b46886bd4753b5bc93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant3.wav using Guid(f07d3e57d0dfc0b46886bd4753b5bc93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fff6f710b9d5509823bbff964821c50') in 0.012962 seconds
+  Import took 0.015599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009447 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant4.wav
+  artifactKey: Guid(c66d3abffe618944484e906e3e3d9726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/giant/giant4.wav using Guid(c66d3abffe618944484e906e3e3d9726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8414b5a0e4c605295177e870e84eb8f6') in 0.007629 seconds
+  Import took 0.010152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.285548 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr1.wav
+  artifactKey: Guid(a370d896d4864534a9b04a656dc5c97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr1.wav using Guid(a370d896d4864534a9b04a656dc5c97e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b99dded0fe3d8c0056b9d2522a6e7d2') in 0.010098 seconds
+  Import took 0.012327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr9.wav
+  artifactKey: Guid(742a35427a2226a4dab91ce8f8455f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr9.wav using Guid(742a35427a2226a4dab91ce8f8455f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c20ee747747eca7af5acb097830e877') in 0.011790 seconds
+  Import took 0.013861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr6.wav
+  artifactKey: Guid(30d0f07312299c24dab6932404414fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr6.wav using Guid(30d0f07312299c24dab6932404414fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ccf7ff4595d4099153235431a2c85c') in 0.031815 seconds
+  Import took 0.034229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr7.wav
+  artifactKey: Guid(42f7d13301bcdbc489563acb2fa317d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr7.wav using Guid(42f7d13301bcdbc489563acb2fa317d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e6018461a875df0dce5164a685adb2') in 0.009913 seconds
+  Import took 0.012014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr15.wav
+  artifactKey: Guid(2f0d90545dcead842ae113820170bbac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr15.wav using Guid(2f0d90545dcead842ae113820170bbac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6403d1f7c9d5b5d4f4f0bd2bc08b06c2') in 0.011094 seconds
+  Import took 0.013576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr2.wav
+  artifactKey: Guid(0f581167e17101d4fb010bb0e31d8fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr2.wav using Guid(0f581167e17101d4fb010bb0e31d8fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5925eddbe30bfbd7b143fc2c87ae981c') in 0.016732 seconds
+  Import took 0.018948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr5.wav
+  artifactKey: Guid(a318f924581a12a439e8cb184a88290d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr5.wav using Guid(a318f924581a12a439e8cb184a88290d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3c44c6782034ac035ad79a0e17fe77') in 0.013229 seconds
+  Import took 0.015338 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr14.wav
+  artifactKey: Guid(35c983ed6011ad345963af65530b4cb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr14.wav using Guid(35c983ed6011ad345963af65530b4cb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c322abd64b5f56c905a82fcec5b67493') in 0.025688 seconds
+  Import took 0.028094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr10.wav
+  artifactKey: Guid(51f7ba0cf7cf9a04ba36c65e3eb39832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr10.wav using Guid(51f7ba0cf7cf9a04ba36c65e3eb39832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69d4ae42a319839b47f2d6016763d02c') in 0.008997 seconds
+  Import took 0.011142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr8.wav
+  artifactKey: Guid(0fc8cc8465104c443aa42ee7b3a235fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr8.wav using Guid(0fc8cc8465104c443aa42ee7b3a235fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0022e01a97ac62f7a7e7d0ae0076a0b0') in 0.009476 seconds
+  Import took 0.011700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr12.wav
+  artifactKey: Guid(c4657af8c06902443aa10b7d5706a871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr12.wav using Guid(c4657af8c06902443aa10b7d5706a871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e36ef2124e93278a20c43a16500550f') in 0.013954 seconds
+  Import took 0.016313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000124 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr3.wav
+  artifactKey: Guid(2024eeb060734ef44b3b2ab50dee6799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr3.wav using Guid(2024eeb060734ef44b3b2ab50dee6799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238e084442a21e8f14e0e152dc61a9a7') in 0.009678 seconds
+  Import took 0.011808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr11.wav
+  artifactKey: Guid(1e59834fa94beec4d89f64b5b0d3c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr11.wav using Guid(1e59834fa94beec4d89f64b5b0d3c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad3cb86f06b864ee7375dfd7c4cb16b') in 0.024049 seconds
+  Import took 0.026272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr4.wav
+  artifactKey: Guid(0ec1f3455b784a240ac2ed1daad36e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr4.wav using Guid(0ec1f3455b784a240ac2ed1daad36e09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cadb0836a050820ae168403fcd2fa74') in 0.008977 seconds
+  Import took 0.011112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr13.wav
+  artifactKey: Guid(eedc0643bbc9e5e498f5c9162cc73ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr13.wav using Guid(eedc0643bbc9e5e498f5c9162cc73ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3abeb56178f2f53521a92622e57ed55c') in 0.009594 seconds
+  Import took 0.011801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004574 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr11.wav
+  artifactKey: Guid(1e59834fa94beec4d89f64b5b0d3c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/gutteral beast/mnstr11.wav using Guid(1e59834fa94beec4d89f64b5b0d3c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ad3cb86f06b864ee7375dfd7c4cb16b') in 0.005656 seconds
+  Import took 0.007922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.775318 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/misc/wolfman.wav
+  artifactKey: Guid(9fb4408d8618db344bced49bb42e5475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/misc/wolfman.wav using Guid(9fb4408d8618db344bced49bb42e5475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b7995ca6de092838317ca938816d589') in 0.013217 seconds
+  Import took 0.016043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.887910 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre1.wav
+  artifactKey: Guid(aadb197cb7e8ce44a8e86157d2d2f7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre1.wav using Guid(aadb197cb7e8ce44a8e86157d2d2f7be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33a13365f150dfa59adbb6cc7034becd') in 0.010606 seconds
+  Import took 0.013833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre5.wav
+  artifactKey: Guid(ff896d542d7f7744ebe8e34c3e15440f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre5.wav using Guid(ff896d542d7f7744ebe8e34c3e15440f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb499d023288d0865dc120bc66bb64f8') in 0.011970 seconds
+  Import took 0.014660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre4.wav
+  artifactKey: Guid(7cc365c7d54ca2547b33c4e3be69019e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre4.wav using Guid(7cc365c7d54ca2547b33c4e3be69019e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f809f713601fd8f8e1ebc40140601970') in 0.015606 seconds
+  Import took 0.018299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre3.wav
+  artifactKey: Guid(9b0c98d052cc6794dad1579d02a934f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre3.wav using Guid(9b0c98d052cc6794dad1579d02a934f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '163691e337c5bbf7ee3db5c5dc4415ed') in 0.016956 seconds
+  Import took 0.020175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000147 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre2.wav
+  artifactKey: Guid(66fe2116fe881ea4aa0aff3f53d15c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/ogre/ogre2.wav using Guid(66fe2116fe881ea4aa0aff3f53d15c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2fda6a3dd4a532587adf8817a5b1d5') in 0.010165 seconds
+  Import took 0.012839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.550839 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade1.wav
+  artifactKey: Guid(95b2ae05e00c2fa44b2313af4568ef67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade1.wav using Guid(95b2ae05e00c2fa44b2313af4568ef67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd524ff7c4efe17d3f86f547a73cbd46') in 0.010456 seconds
+  Import took 0.013211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade9.wav
+  artifactKey: Guid(7ffda4d0984c72a438aaee3060ccdf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade9.wav using Guid(7ffda4d0984c72a438aaee3060ccdf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4302cc337e6c8695c0b9de5c5b879865') in 0.013826 seconds
+  Import took 0.016313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade11.wav
+  artifactKey: Guid(0e0ebfd2f99a0d74ab76f6ef75f31eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade11.wav using Guid(0e0ebfd2f99a0d74ab76f6ef75f31eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '989f0cb3badc3ad18b67a6b2b79cacd1') in 0.012291 seconds
+  Import took 0.014425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade2.wav
+  artifactKey: Guid(677f0e3fd67f6cf47a92a295de85991a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade2.wav using Guid(677f0e3fd67f6cf47a92a295de85991a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4263f9555f463b91f3be286fef22fe7') in 0.013680 seconds
+  Import took 0.016023 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade5.wav
+  artifactKey: Guid(bc93f3f1615121e42a981ea3967924e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade5.wav using Guid(bc93f3f1615121e42a981ea3967924e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce06a4c3465d6d0c3bbcecb1e6819707') in 0.014874 seconds
+  Import took 0.017383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade10.wav
+  artifactKey: Guid(a602b35bcfb5ca24199888809511ecae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade10.wav using Guid(a602b35bcfb5ca24199888809511ecae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4ea5005630ec274ef585b6d9fe935b') in 0.020990 seconds
+  Import took 0.023190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade13.wav
+  artifactKey: Guid(86d5b5e3c04e52543955300ab847ac4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade13.wav using Guid(86d5b5e3c04e52543955300ab847ac4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e9de72bab4a0bc840588ac6e0ee8435') in 0.011282 seconds
+  Import took 0.014078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade7.wav
+  artifactKey: Guid(15727dfaff05d3d43b0c97f495dd4e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade7.wav using Guid(15727dfaff05d3d43b0c97f495dd4e3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe3387addfb0c13d5fd0780599fbcd26') in 0.009815 seconds
+  Import took 0.011974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade12.wav
+  artifactKey: Guid(3878a313f3ad6164a9bca669cf003dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade12.wav using Guid(3878a313f3ad6164a9bca669cf003dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3001d60597fe1c7e953f9113be22c67d') in 0.016902 seconds
+  Import took 0.019110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade15.wav
+  artifactKey: Guid(ba139958907c19d4f8ba371a0bd13a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade15.wav using Guid(ba139958907c19d4f8ba371a0bd13a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b2fb4e4d3db0b417bbb0618351ee56d') in 0.012739 seconds
+  Import took 0.014900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade6.wav
+  artifactKey: Guid(0fd4bdf609dce2346a92ad3e0a3d172f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade6.wav using Guid(0fd4bdf609dce2346a92ad3e0a3d172f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f016f2ae8ca8c9bab8219e04030b28c9') in 0.018344 seconds
+  Import took 0.020621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000138 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade8.wav
+  artifactKey: Guid(cdec424484a00bc428849a378ec28d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade8.wav using Guid(cdec424484a00bc428849a378ec28d0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9afd3e8a5ae7ffb888dd28b104042590') in 0.010523 seconds
+  Import took 0.012800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade3.wav
+  artifactKey: Guid(f417ce142c1cc804caae191453f1bfe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade3.wav using Guid(f417ce142c1cc804caae191453f1bfe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed2d55cbe7d22eba6599be465f2b9745') in 0.010145 seconds
+  Import took 0.012311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade4.wav
+  artifactKey: Guid(f1d04b4291ec89d4c948cec4525d444c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade4.wav using Guid(f1d04b4291ec89d4c948cec4525d444c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '573efab7870d6d83319c4e0cf8bf8fc4') in 0.012233 seconds
+  Import took 0.014354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade14.wav
+  artifactKey: Guid(5215e8a707176f546a5dc0597adf3d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/shade/shade14.wav using Guid(5215e8a707176f546a5dc0597adf3d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2ca4ccac971845b7741a5d4ef22218d') in 0.009226 seconds
+  Import took 0.011411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.197127 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime1.wav
+  artifactKey: Guid(e797fff961039cc429d69bd3d42dd8fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime1.wav using Guid(e797fff961039cc429d69bd3d42dd8fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af2d21115e5bc39b926b2702b9456873') in 0.013204 seconds
+  Import took 0.015769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime5.wav
+  artifactKey: Guid(fc3df6348ac12a646b9743e99e6288ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime5.wav using Guid(fc3df6348ac12a646b9743e99e6288ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6eef3752b74a38d1dc00e67042e240e') in 0.012213 seconds
+  Import took 0.014604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime6.wav
+  artifactKey: Guid(e0e2942931837ae40951b2aa66831aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime6.wav using Guid(e0e2942931837ae40951b2aa66831aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17acbd48286513cdb7bc04ec8136bb1b') in 0.013255 seconds
+  Import took 0.016139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime8.wav
+  artifactKey: Guid(2566d4b2150dde340ab2ba89d97f4267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime8.wav using Guid(2566d4b2150dde340ab2ba89d97f4267) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad9eaf5b9c3cbc9d6d9d7d74cef42884') in 0.022662 seconds
+  Import took 0.025075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime9.wav
+  artifactKey: Guid(c32f76615a05aa84c871eaa5885ed8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime9.wav using Guid(c32f76615a05aa84c871eaa5885ed8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c7ff82ad258e76aa7631696efad170') in 0.009411 seconds
+  Import took 0.011883 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime10.wav
+  artifactKey: Guid(322bf1db3771e0c418e059e8b664a634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime10.wav using Guid(322bf1db3771e0c418e059e8b664a634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50dfc58a02ee85f02baeec06cc4f7ce1') in 0.009928 seconds
+  Import took 0.012135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime2.wav
+  artifactKey: Guid(0377ff5f3cefc1445bf369596fe090a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime2.wav using Guid(0377ff5f3cefc1445bf369596fe090a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27880cedb75b06a59c9b4acd9a43517d') in 0.008432 seconds
+  Import took 0.010831 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime4.wav
+  artifactKey: Guid(3f9df5f39e7e0cf42a79b673143cf533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime4.wav using Guid(3f9df5f39e7e0cf42a79b673143cf533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '937ee165321a0edcd8b3ce3155b5e60c') in 0.007811 seconds
+  Import took 0.009929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime7.wav
+  artifactKey: Guid(2c78dccc6e4a3644aba5255b1592eb8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime7.wav using Guid(2c78dccc6e4a3644aba5255b1592eb8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c4006a640729eac1eb421d2729447ea') in 0.008133 seconds
+  Import took 0.010387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime3.wav
+  artifactKey: Guid(e3f94e8e35ebae849ac353b290a23147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/NPC/slime/slime3.wav using Guid(e3f94e8e35ebae849ac353b290a23147) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '446835f84e977eccef81461147901cff') in 0.010163 seconds
+  Import took 0.012323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52.793086 seconds.
+  path: Assets/JP/Prefabs/cage.prefab
+  artifactKey: Guid(62c6058051362bf46b92f893d331c321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/cage.prefab using Guid(62c6058051362bf46b92f893d331c321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c91f723281595c48220f1a035d68120') in 0.026697 seconds
+  Import took 0.029044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.989027 seconds.
+  path: Assets/JP/Prefabs/Interactive/SlidingWall_Prefab.prefab
+  artifactKey: Guid(3e2270b0d1300f049a56385f4d4f0013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/SlidingWall_Prefab.prefab using Guid(3e2270b0d1300f049a56385f4d4f0013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5d1607210520b720212330e2da6caa') in 0.066634 seconds
+  Import took 0.070657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.050410 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d72fa7cbb5f1d27282a52ed5da20c8') in 0.034225 seconds
+  Import took 0.037688 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.041446 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa8070d2bd97fbdd6618e9b319f3924') in 0.040525 seconds
+  Import took 0.044170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.500530 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '118542cc35def250644d1f36881b94f9') in 0.037615 seconds
+  Import took 0.041268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 101.331381 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22069c3cab99762d770e916d8183bd44') in 0.034006 seconds
+  Import took 0.037567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 98.596712 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b5164198af437820df7304bba809a13') in 0.038135 seconds
+  Import took 0.041738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1420.539349 seconds.
+  path: Assets/JP/Prefabs/Interactive/TrapDoor/spike_prefab.prefab
+  artifactKey: Guid(ca6c7bab683779f46a5958904fb4dba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/TrapDoor/spike_prefab.prefab using Guid(ca6c7bab683779f46a5958904fb4dba6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccde8418c178d5e8e6008d4cf9e35c13') in 0.023857 seconds
+  Import took 0.026682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/JP/Prefabs/Interactive/TrapDoor/TrapDoor_Prefab.prefab
+  artifactKey: Guid(77a0356c5f3b63949a6eb341009b840b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/TrapDoor/TrapDoor_Prefab.prefab using Guid(77a0356c5f3b63949a6eb341009b840b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e381b57dd6c714ae95d033029d133f3f') in 0.039612 seconds
+  Import took 0.043126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.363250 seconds.
+  path: Assets/JP/Scripts/SwitchBehavior_Skript.cs
+  artifactKey: Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/SwitchBehavior_Skript.cs using Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80be5309541e0447c4197e79cc387323') in 0.010570 seconds
+  Import took 0.013139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044216 seconds.
+  path: Assets/JP/Scripts/SwitchBehavior_Skript.cs
+  artifactKey: Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/SwitchBehavior_Skript.cs using Guid(92bdb21e5025e684d82c153131042217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80be5309541e0447c4197e79cc387323') in 0.001559 seconds
+  Import took 0.004033 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002617 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.856 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.6 MB.
+System memory in use after: 162.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1970.
+Total: 1.623100 ms (FindLiveObjects: 0.147100 ms CreateObjectMapping: 0.052300 ms MarkObjects: 1.357000 ms  DeleteObjects: 0.065900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.680558 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69cfaeac2c94ad388c1f0ccdd9b5df5c') in 0.076005 seconds
+  Import took 0.080585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.973011 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b8ebc035f7766bc85001ed15bd5f60') in 0.035666 seconds
+  Import took 0.039536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.221656 seconds.
+  path: Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab
+  artifactKey: Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/switch/Switch_Prefab.prefab using Guid(6b82eebc7729f1047b8b4896c07bcecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45efce3a1dc398ee020436c82c4f485d') in 0.043002 seconds
+  Import took 0.047604 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002825 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.806 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.6 MB.
+System memory in use after: 162.7 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1974.
+Total: 1.523400 ms (FindLiveObjects: 0.129800 ms CreateObjectMapping: 0.040200 ms MarkObjects: 1.291500 ms  DeleteObjects: 0.061100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 326.162334 seconds.
+  path: Assets/JP/Prefabs/Interactive/portal/Portal.prefab
+  artifactKey: Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/portal/Portal.prefab using Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b444d732216a268aa19da04a693d713') in 0.078762 seconds
+  Import took 0.082638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/JP/Prefabs/Interactive/portal/PortalGlow_Prefab.prefab
+  artifactKey: Guid(ad0d190169c01be46982f655bfe66c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/portal/PortalGlow_Prefab.prefab using Guid(ad0d190169c01be46982f655bfe66c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a33c36da0ad7a77482780cbc8af35b') in 0.009657 seconds
+  Import took 0.012333 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003335 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.772 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.6 MB.
+System memory in use after: 162.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1978.
+Total: 1.887700 ms (FindLiveObjects: 0.148500 ms CreateObjectMapping: 0.053500 ms MarkObjects: 1.599000 ms  DeleteObjects: 0.085900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.188581 seconds.
+  path: Assets/JP/Prefabs/Interactive/portal/Portal.prefab
+  artifactKey: Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/portal/Portal.prefab using Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67e0ccf6d71572b21b90edb6e2056e2d') in 0.076168 seconds
+  Import took 0.078955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.785887 seconds.
+  path: Assets/JP/Prefabs/Interactive/portal/Portal.prefab
+  artifactKey: Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/portal/Portal.prefab using Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a6bedee6c16fef4ca21b838631405a') in 0.021833 seconds
+  Import took 0.024458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.444170 seconds.
+  path: Assets/JP/Prefabs/Interactive/portal/Portal.prefab
+  artifactKey: Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/portal/Portal.prefab using Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '984120fa8a4a05c56f5d9777803a8510') in 0.020704 seconds
+  Import took 0.023271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.079988 seconds.
+  path: Assets/JP/Scripts/PortalBehavior.cs
+  artifactKey: Guid(c9410936083d2e74583e90a95b3e6a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/PortalBehavior.cs using Guid(c9410936083d2e74583e90a95b3e6a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '113e4f9c777631f69637a52d25124cad') in 0.005351 seconds
+  Import took 0.008186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001435 seconds.
+  path: Assets/JP/Scripts/PortalBehavior.cs
+  artifactKey: Guid(c9410936083d2e74583e90a95b3e6a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/PortalBehavior.cs using Guid(c9410936083d2e74583e90a95b3e6a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '113e4f9c777631f69637a52d25124cad') in 0.002117 seconds
+  Import took 0.004138 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002978 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.843 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.6 MB.
+System memory in use after: 162.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1982.
+Total: 1.561300 ms (FindLiveObjects: 0.136500 ms CreateObjectMapping: 0.041700 ms MarkObjects: 1.308200 ms  DeleteObjects: 0.074000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.221889 seconds.
+  path: Assets/JP/Scripts/PortalBehavior.cs
+  artifactKey: Guid(c9410936083d2e74583e90a95b3e6a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/PortalBehavior.cs using Guid(c9410936083d2e74583e90a95b3e6a35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e34283685c2d9290d34b8c25516eb20') in 0.003518 seconds
+  Import took 0.005666 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.609798 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/misc
+  artifactKey: Guid(7f1bf84863afb9f4a803d32064a0a6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/misc using Guid(7f1bf84863afb9f4a803d32064a0a6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eef41f406904a812fae7fcbb32020693') in 0.011325 seconds
+  Import took 0.014086 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002906 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.810 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.7 MB.
+System memory in use after: 162.7 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1985.
+Total: 1.542200 ms (FindLiveObjects: 0.129300 ms CreateObjectMapping: 0.041800 ms MarkObjects: 1.301600 ms  DeleteObjects: 0.068700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 164.398034 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(6fc0917942dfd4042993cc6f74f4ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(6fc0917942dfd4042993cc6f74f4ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '892b02253ef91810abb958a3c6b9a870') in 0.011618 seconds
+  Import took 0.014881 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002574 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.790 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.7 MB.
+System memory in use after: 162.7 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1988.
+Total: 1.574400 ms (FindLiveObjects: 0.126500 ms CreateObjectMapping: 0.043400 ms MarkObjects: 1.269300 ms  DeleteObjects: 0.134500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.100686 seconds.
+  path: Assets/Prefabs/AI Enemy with Weapon.prefab
+  artifactKey: Guid(ca1615da33128904dac1e774c254cd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Enemy with Weapon.prefab using Guid(ca1615da33128904dac1e774c254cd62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4523e17b4624fe455d23af1a7e4acfbe') in 1.077846 seconds
+  Import took 1.090769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(db38d0b120885c549bf6a09030f97646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(db38d0b120885c549bf6a09030f97646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f88b669f9dfc4bff9f34cd9240e3e9') in 0.192208 seconds
+  Import took 0.198029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/Prefabs/AI Enemy.prefab
+  artifactKey: Guid(7c733c212a674844a8f0ab10c3d21da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AI Enemy.prefab using Guid(7c733c212a674844a8f0ab10c3d21da3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a1688b80f02c1e322dd43e99cd7dda3') in 0.935592 seconds
+  Import took 0.944221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.141921 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f556c8d3e849dceee4309cec23671a') in 0.017432 seconds
+  Import took 0.020560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.455097 seconds.
+  path: Assets/JP/Prefabs/Interactive/portal/Portal.prefab
+  artifactKey: Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/portal/Portal.prefab using Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2407ff713fbe125b8a86611f512d45f') in 0.022031 seconds
+  Import took 0.024787 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004304 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.765 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.1 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1995.
+Total: 1.788900 ms (FindLiveObjects: 0.164900 ms CreateObjectMapping: 0.054200 ms MarkObjects: 1.481900 ms  DeleteObjects: 0.086600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.627012 seconds.
+  path: Assets/JP/Prefabs/Interactive/portal/Portal.prefab
+  artifactKey: Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/portal/Portal.prefab using Guid(2bc18069822ee01409a91f88660debc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd376f6566d21f8a838e726861cf23496') in 0.072072 seconds
+  Import took 0.074783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.230802 seconds.
+  path: Assets/JP/Imports/RPG Sound Pack (opengameart)/interface
+  artifactKey: Guid(00a282eef61646c44bb956875558090d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/RPG Sound Pack (opengameart)/interface using Guid(00a282eef61646c44bb956875558090d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58fdb93466079dcb49c3e732190cf278') in 0.006926 seconds
+  Import took 0.009424 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003210 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.796 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.1 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1999.
+Total: 1.584400 ms (FindLiveObjects: 0.141100 ms CreateObjectMapping: 0.041500 ms MarkObjects: 1.322600 ms  DeleteObjects: 0.078600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002738 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.786 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.1 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2002.
+Total: 1.567300 ms (FindLiveObjects: 0.135200 ms CreateObjectMapping: 0.042400 ms MarkObjects: 1.325900 ms  DeleteObjects: 0.063200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 584.201466 seconds.
+  path: Assets/JP/Imports/Sounds
+  artifactKey: Guid(c1de3ff8094983342acdfd274b5a3b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Sounds using Guid(c1de3ff8094983342acdfd274b5a3b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae9c9eb8ee3bfdca22cd1169417b5e0') in 0.007247 seconds
+  Import took 0.009860 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001491 seconds.
+  path: Assets/JP/Imports/Sounds
+  artifactKey: Guid(c1de3ff8094983342acdfd274b5a3b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Sounds using Guid(c1de3ff8094983342acdfd274b5a3b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae9c9eb8ee3bfdca22cd1169417b5e0') in 0.001844 seconds
+  Import took 0.004416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.400144 seconds.
+  path: Assets/JP/Imports/Sounds/143250__zabuhailo__rat-gnawing-a-rusk.wav
+  artifactKey: Guid(155a439b7b3e6f14a934e19a6dcd13a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Sounds/143250__zabuhailo__rat-gnawing-a-rusk.wav using Guid(155a439b7b3e6f14a934e19a6dcd13a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35f155bffb552d7b29c71235b85741c5') in 0.058159 seconds
+  Import took 0.060436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 133.085548 seconds.
+  path: Assets/JP/Imports/Sounds/288941__toefur__rat-squeak.wav
+  artifactKey: Guid(1ff96730f587bd442a572e2491cfb1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Sounds/288941__toefur__rat-squeak.wav using Guid(1ff96730f587bd442a572e2491cfb1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd8653d7309a17e8df40ee8d50d9436') in 0.010362 seconds
+  Import took 0.013062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003836 seconds.
+  path: Assets/JP/Imports/Sounds/288941__toefur__rat-squeak.wav
+  artifactKey: Guid(1ff96730f587bd442a572e2491cfb1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Sounds/288941__toefur__rat-squeak.wav using Guid(1ff96730f587bd442a572e2491cfb1bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fd8653d7309a17e8df40ee8d50d9436') in 0.007581 seconds
+  Import took 0.010235 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.584270 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat
+  artifactKey: Guid(cdaf5e5f18e191c48b7e8ad6fd43606f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat using Guid(cdaf5e5f18e191c48b7e8ad6fd43606f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc6bf231d592de5b0f725e4591233ca') in 0.007076 seconds
+  Import took 0.009492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.075276 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/rat 1.prefab
+  artifactKey: Guid(9551a793adeb3ef4a870897d7ebdf241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/rat 1.prefab using Guid(9551a793adeb3ef4a870897d7ebdf241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56a02d69a9ff71811ace3d83548a3218') in 0.032656 seconds
+  Import took 0.036735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/RatHole.prefab
+  artifactKey: Guid(6582ee31c3a723042834b1978707e075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/RatHole.prefab using Guid(6582ee31c3a723042834b1978707e075) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e74b849b60a71fbcaaac9149451257') in 0.010252 seconds
+  Import took 0.012457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab
+  artifactKey: Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab using Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ee44e4ac58db28e5d4293103e7dfbbf') in 0.040977 seconds
+  Import took 0.043846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.048106 seconds.
+  path: Assets/JP/Scripts/Rat_Behavior.cs
+  artifactKey: Guid(4440ba638113c274a8d0d4f404670966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/Rat_Behavior.cs using Guid(4440ba638113c274a8d0d4f404670966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80247ae68b885a9398e27f1cbe20cd39') in 0.009696 seconds
+  Import took 0.012714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001479 seconds.
+  path: Assets/JP/Scripts/Rat_Behavior.cs
+  artifactKey: Guid(4440ba638113c274a8d0d4f404670966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/Rat_Behavior.cs using Guid(4440ba638113c274a8d0d4f404670966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80247ae68b885a9398e27f1cbe20cd39') in 0.001780 seconds
+  Import took 0.004360 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002732 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.735 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.1 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2007.
+Total: 1.494900 ms (FindLiveObjects: 0.128500 ms CreateObjectMapping: 0.040100 ms MarkObjects: 1.268100 ms  DeleteObjects: 0.057500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 117.297793 seconds.
+  path: Assets/JP/Scripts/Rat_Behavior.cs
+  artifactKey: Guid(4440ba638113c274a8d0d4f404670966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/Rat_Behavior.cs using Guid(4440ba638113c274a8d0d4f404670966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed73d9347693b9dffe00a60df6891b6') in 0.003769 seconds
+  Import took 0.005876 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.443924 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab
+  artifactKey: Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab using Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed6e728aeaf9fb1c179377cb2d390fa6') in 0.055437 seconds
+  Import took 0.058826 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002853 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.761 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.1 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2011.
+Total: 2.050500 ms (FindLiveObjects: 0.130900 ms CreateObjectMapping: 0.043900 ms MarkObjects: 1.728500 ms  DeleteObjects: 0.146400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.446741 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab
+  artifactKey: Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab using Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61687df3c39a553e07d058bfa195d8f8') in 0.058219 seconds
+  Import took 0.060651 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.212023 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab
+  artifactKey: Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab using Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e326710c881e2dfbe9cf6d932017e577') in 0.013594 seconds
+  Import took 0.016928 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002886 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.749 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2015.
+Total: 2.056700 ms (FindLiveObjects: 0.179200 ms CreateObjectMapping: 0.047600 ms MarkObjects: 1.756200 ms  DeleteObjects: 0.072700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002818 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.757 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2018.
+Total: 1.576900 ms (FindLiveObjects: 0.151900 ms CreateObjectMapping: 0.045000 ms MarkObjects: 1.314600 ms  DeleteObjects: 0.064600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003939 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.757 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2021.
+Total: 1.605800 ms (FindLiveObjects: 0.151800 ms CreateObjectMapping: 0.045000 ms MarkObjects: 1.333400 ms  DeleteObjects: 0.074800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 223.343588 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab
+  artifactKey: Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab using Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e841cc96c21ecd4caab5b96af30e8b78') in 0.082691 seconds
+  Import took 0.085515 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.030124 seconds.
+  path: Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab
+  artifactKey: Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Alive/Rat/Rat_Prefab.prefab using Guid(1d2548f58c0e03347b18184dc7fe2e4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc7fab41db8645c32b372eb2da970dba') in 0.013837 seconds
+  Import took 0.016471 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002846 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.770 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2025.
+Total: 1.658700 ms (FindLiveObjects: 0.152600 ms CreateObjectMapping: 0.045800 ms MarkObjects: 1.393000 ms  DeleteObjects: 0.066600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002876 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.755 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2028.
+Total: 1.590700 ms (FindLiveObjects: 0.138800 ms CreateObjectMapping: 0.049400 ms MarkObjects: 1.334300 ms  DeleteObjects: 0.067400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002862 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.830 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2031.
+Total: 2.792200 ms (FindLiveObjects: 0.266600 ms CreateObjectMapping: 0.120700 ms MarkObjects: 2.330600 ms  DeleteObjects: 0.073100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1021.037310 seconds.
+  path: Assets/JP/Imports/Sounds/243699__ertfelda__hidden-wall-opening.wav
+  artifactKey: Guid(54fc53b6e953cc34a83e852262ed4ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Imports/Sounds/243699__ertfelda__hidden-wall-opening.wav using Guid(54fc53b6e953cc34a83e852262ed4ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e344e87b16edc38ddea16dc2fe5680b4') in 0.073678 seconds
+  Import took 0.076084 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.000192 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0c05f1bfe00273f87bb32a4c4fcddf4') in 0.032115 seconds
+  Import took 0.034893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.476322 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84d9e2b4b854e34ab7d6c99a03ccd66a') in 0.014129 seconds
+  Import took 0.017614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.225803 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddc05994bcf8af161aa0a29392f9c65c') in 0.016240 seconds
+  Import took 0.019106 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.625043 seconds.
+  path: Assets/JP/Scripts/HiddenDoor_Behavior.cs
+  artifactKey: Guid(357da205b50aa5c48894421bbdb3925c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/HiddenDoor_Behavior.cs using Guid(357da205b50aa5c48894421bbdb3925c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02e8563f8ebfe3d9aebe1e23be4298a1') in 0.007629 seconds
+  Import took 0.010664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025613 seconds.
+  path: Assets/JP/Scripts/HiddenDoor_Behavior.cs
+  artifactKey: Guid(357da205b50aa5c48894421bbdb3925c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Scripts/HiddenDoor_Behavior.cs using Guid(357da205b50aa5c48894421bbdb3925c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02e8563f8ebfe3d9aebe1e23be4298a1') in 0.027984 seconds
+  Import took 0.054442 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003172 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.807 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2035.
+Total: 1.678300 ms (FindLiveObjects: 0.137200 ms CreateObjectMapping: 0.046200 ms MarkObjects: 1.428800 ms  DeleteObjects: 0.065400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002599 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.748 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2038.
+Total: 1.717400 ms (FindLiveObjects: 0.146400 ms CreateObjectMapping: 0.049900 ms MarkObjects: 1.450700 ms  DeleteObjects: 0.069700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002673 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.777 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2041.
+Total: 1.612500 ms (FindLiveObjects: 0.137400 ms CreateObjectMapping: 0.046600 ms MarkObjects: 1.363900 ms  DeleteObjects: 0.063800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 313.372859 seconds.
+  path: Assets/JP/Prefabs/Interactive/SlidingWall_Prefab.prefab
+  artifactKey: Guid(3e2270b0d1300f049a56385f4d4f0013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/SlidingWall_Prefab.prefab using Guid(3e2270b0d1300f049a56385f4d4f0013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3de515c26bec9e49825fce567dcaaf11') in 0.110573 seconds
+  Import took 0.115817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.668869 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor
+  artifactKey: Guid(95338f10aa922784595baee3de43dece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor using Guid(95338f10aa922784595baee3de43dece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61c085d4d5d7bd9d8a5c791f05b91e8') in 0.007738 seconds
+  Import took 0.010126 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.212022 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '123842aebea1a8eb855e464ddbaf29ea') in 0.016158 seconds
+  Import took 0.019055 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002750 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.751 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2045.
+Total: 1.749700 ms (FindLiveObjects: 0.153500 ms CreateObjectMapping: 0.045000 ms MarkObjects: 1.484800 ms  DeleteObjects: 0.065300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002828 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.760 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2048.
+Total: 1.786000 ms (FindLiveObjects: 0.172400 ms CreateObjectMapping: 0.046600 ms MarkObjects: 1.498200 ms  DeleteObjects: 0.067700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 171.519179 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b05e2b1be4863f1430b7cfb03f1982') in 0.068870 seconds
+  Import took 0.071672 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002809 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.751 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2052.
+Total: 1.654300 ms (FindLiveObjects: 0.139500 ms CreateObjectMapping: 0.046100 ms MarkObjects: 1.399900 ms  DeleteObjects: 0.068200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 66.089180 seconds.
+  path: Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab
+  artifactKey: Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Interactive/HiddenDoor/HiddenDoor_Prefab.prefab using Guid(1b8f8a03aefcd4b49a0a8483d94a74f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ac85ef504e265f92158aafd29cd8313') in 0.053461 seconds
+  Import took 0.056222 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003161 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.959 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2056.
+Total: 2.475500 ms (FindLiveObjects: 0.263600 ms CreateObjectMapping: 0.102800 ms MarkObjects: 1.997200 ms  DeleteObjects: 0.110900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002642 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.791 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.2 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2059.
+Total: 1.581900 ms (FindLiveObjects: 0.137800 ms CreateObjectMapping: 0.042500 ms MarkObjects: 1.338700 ms  DeleteObjects: 0.062200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003080 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.796 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1455 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.3 MB.
+System memory in use after: 166.3 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2062.
+Total: 1.962800 ms (FindLiveObjects: 0.195800 ms CreateObjectMapping: 0.057800 ms MarkObjects: 1.620300 ms  DeleteObjects: 0.088200 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
