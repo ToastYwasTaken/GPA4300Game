@@ -21,6 +21,7 @@ using UnityEngine.UI;
  *  09.07.2021  FM  Created
  *  30.07.2021  FM  Changed inventory structure
  *  01.08.2021  FM  Added Prop, fixed issues
+ *  08.08.2021  FM  Fixed GUI displaying correct items, still having an issue causing items to appear twice
  *  
  *****************************************************************************/
 
@@ -53,6 +54,9 @@ public class InventoryGUI : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Translates the users input number so he can use the item he wants to apply
+    /// </summary>
     private void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)){
@@ -76,7 +80,10 @@ public class InventoryGUI : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// User can apply an Item by pressing the number of the slot where that item is located
+    /// </summary>
+    /// <param name="_index">index in inventory of the item to use</param>
     private void UseItem(int _index)
     {
         if(inventory[_index] = null)
@@ -137,18 +144,22 @@ public class InventoryGUI : MonoBehaviour
         UpdateGUI();
     }
 
-    private void UpdateGUI()    //TODO: Make items show up in GUI
+
+    /// <summary>
+    /// Shows items accordingly in GUI
+    /// </summary>
+    private void UpdateGUI()    
     {
-        int tempCount = 0;
-        foreach(Image image in guiInventoryImages)
-        {
-            guiInventoryImages[tempCount].enabled = false;
+
+        for (int i = 0; i < guiInventoryImages.Count(); i++) 
+        { 
+        guiInventoryImages[i].enabled = false;
         }
-        tempCount = 0;
-        foreach (Item item in inventory)
+        
+        for(int i = 0; i < inventory.Count(); i++)
         {
-            guiInventoryImages[tempCount].enabled = true;
-            guiInventoryImages[tempCount].sprite = item.PItemSprite;
+            guiInventoryImages[i].enabled = true;
+            guiInventoryImages[i].sprite = inventory[i].PItemSprite;
         }
     }
 
