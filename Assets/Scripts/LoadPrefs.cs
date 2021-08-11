@@ -31,7 +31,7 @@ public class LoadPrefs : MonoBehaviour
         AudioListener.volume = PlayerPrefs.GetFloat("volume");
         if (playerController != null)
         {
-            playerController.sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
+            //playerController.sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
         }
 
         //Debug.Log("volume Pref: " + PlayerPrefs.GetFloat("volume"));

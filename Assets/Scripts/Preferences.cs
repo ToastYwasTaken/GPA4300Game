@@ -1,4 +1,5 @@
 using UnityEngine;
+using CustomExtensions;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -16,7 +17,12 @@ using UnityEngine;
  * ChangeLog
  * ----------------------------
  *  05.07.2021  RK  Created
- *  26.07.2021  RK  Added Save_PlayerPosition()
+ *  11.08.2021  RK  Added Save_PlayerPosition()
+ *                  Added Load_PlayerPosition()
+ *                  Added Save_PlayerHealth()
+ *                  Added Load_PlayerHealth()
+ *                  Added Save_EnemyPosition()
+ *                  Added Load_EnemyPosition()
  *  
  *****************************************************************************/
 public class Preferences : MonoBehaviour
@@ -45,6 +51,8 @@ public class Preferences : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    //-----------------LOAD----------------------------
+
     public float Load_AudioVolume()
     {
         return PlayerPrefs.GetFloat("volume");
@@ -64,6 +72,23 @@ public class Preferences : MonoBehaviour
     {
         return PlayerPrefs.GetInt("sounds") == 1;
     }
+
+    public Vector3 Load_PlayerPosition()
+    {
+       return PlayerPrefs.GetString("PlayerPos").ToVector3();
+    }
+
+    public int Load_PlayerHealth()
+    {
+        return PlayerPrefs.GetInt("PlayerHealth");
+    }
+
+    public Vector3 Load_EnemyPosition()
+    {
+        return PlayerPrefs.GetString("EnemyPos").ToVector3();
+    }
+
+    //---------------------SAVE------------------------
 
     public void Save_AudioVolume(float _value)
     {
@@ -85,17 +110,18 @@ public class Preferences : MonoBehaviour
         PlayerPrefs.SetInt("sounds", _value ? 1 : 0);
     }
 
-    public void Save_PlayerPostion(Vector3 _value)
+    public void Save_PlayerPosition(Vector3 _value)
     {
-        float x, y, z;
-        x = _value.x;
-        y = _value.y;
-        z = _value.z;
+        PlayerPrefs.SetString("PlayerPos", _value.ToString());
+    }
 
-        string str = _value.ToString();
+    public void Save_PlayerHealth(int _value)
+    {
+        PlayerPrefs.SetInt("PlayerHealth", _value);
+    }
 
-        // TODO
-
-        Debug.Log(str);
+    public void Save_EnemyPosition(Vector3 _value)
+    {
+        PlayerPrefs.SetString("EnemyPos", _value.ToString());
     }
 }

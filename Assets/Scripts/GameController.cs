@@ -26,16 +26,20 @@ using UnityEngine.SceneManagement;
  *                  added ExitGame()
  *  22.07.2021  RK  Bugfix Preferences NullReferenceExpection
  *  26.07.2021  RK  added SavePlayerPosition()
+ *  11.08.2021  RK  added SaveEnemyPosition()
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
     [SerializeField]
     private bool isGamePaused = false;
     private Vector3 currentPlayerPosition;
+    private Vector3 currentEnemyPosition;
 
-    private Preferences preferences = null;
 
-    public AudioSource audioSource = null;
+    [SerializeField]
+    GameObject player;
+    [SerializeField]
+    GameObject enemy;
 
     //[SerializeField]
     //private Transform[] exits;
@@ -66,18 +70,27 @@ public class GameController : MonoBehaviour
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
 
-        preferences = FindObjectOfType<Preferences>();
 
-        if (preferences)
-        {
-            audioSource.volume = preferences.Load_AudioVolume();
-        }
-        else
-        {
-            audioSource.volume = 1f;
-        }
+        
+
+        
+        
+
+
+
+        //preferences = FindObjectOfType<Preferences>();
+
+        //if (preferences)
+        //{
+        //    audioSource.volume = preferences.Load_AudioVolume();
+        //}
+        //else
+        //{
+        //    audioSource.volume = 1f;
+        //}
 
     }
+    
 
     private void Update()
     {
@@ -87,7 +100,7 @@ public class GameController : MonoBehaviour
             int scenes = SceneManager.sceneCount;
             if (scenes == 1)
             {
-                SavePlayerPosition();
+                
                 isGamePaused = !isGamePaused;
                 PauseGame(isGamePaused);
             }
@@ -104,15 +117,35 @@ public class GameController : MonoBehaviour
         if (player)
         {
             currentPlayerPosition = player.transform.position;
-            if (preferences)
-            {
-                preferences.Save_PlayerPostion(currentPlayerPosition);
-            }
+
+            Preferences.instance.Save_PlayerPosition(currentPlayerPosition);
+
             Debug.Log($"Current Player Position: {currentPlayerPosition}");
         }
         else
         {
             Debug.LogError("Current Player Positions not found!");
+        }
+    }
+
+    /// <summary>
+    /// Speichert die aktuelle Posistion des Feindes im Level
+    ///  </sammary>
+    private void SaveEnemyPosition()
+    {
+        EnemyAI enemy = FindObjectOfType<EnemyAI>();
+
+        if (enemy)
+        {
+            currentEnemyPosition = enemy.transform.position;
+
+            Preferences.instance.Save_PlayerPosition(currentEnemyPosition);
+
+            Debug.Log($"Current Enemy Position: {currentEnemyPosition}");
+        }
+        else
+        {
+            Debug.LogError("Current Enemy Positions not found!");
         }
     }
 
@@ -177,6 +210,9 @@ public class GameController : MonoBehaviour
     /// </summary>
     public void ExitGame()
     {
+        SavePlayerPosition();
+        SaveEnemyPosition();
+
         SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
     }
 

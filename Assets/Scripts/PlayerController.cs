@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerBody;
     private PlayerAnimator playerAnimator;
-    private Preferences preferences;
+    //private Preferences preferences;
 
     private Action OnPlayerMove;
     private Action OnPlayerMoveRun;
@@ -50,9 +50,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private Vector3 playerCurrentPosition;
-    private Vector3 positionIdleCam = new Vector3(0f, 0.611f, 0.235f);
-    private Vector3 positionWalkCam = new Vector3(0f, 0.560f, 0.235f);
-    private Vector3 positionSprintCam = new Vector3(0f, 0.175f, 0.53f);
     public Transform camTransform;
 
     [SerializeField]
@@ -82,54 +79,40 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -10f;
 
-    public bool playerCanMove { get; set; }
-    public float sensitivityMultiplier { get; set; }
+    public bool PlayerCanMove { get; set; }
+    public float Sensitivity { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
-        playerBody.transform.position = startPosition /*new Vector3(102, 2, 44)*/;
+        playerBody.transform.position = GameData.instance.PlayerPosition;
         playerAnimator.PlayIdleAnimation(true);
 
-        playerCanMove = true;
+        PlayerCanMove = true;
+        Sensitivity = GameData.instance.Sensitivity;
 
-        preferences = FindObjectOfType<Preferences>();
-        if (preferences)
-        {
-            sensitivityMultiplier = preferences.Load_Sensitivity();
-        }
-        else
-        {
-            sensitivityMultiplier = 1f;
-        }
-        // camTransform.transform.localPosition = positionIdleCam;
     }
 
     // Update is called once per frame
     void Update()
     {
-            // sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
-            // Debug.Log("sensitivity Mult: " + sensitivityMultiplier);
+        // Verhindert das der Player unendlich f�llt
+        FallingDownCheck();
 
-            // Verhindert das der Player unendlich f�llt
-            FallingDownCheck();
-
-            
-
-            // Springen
-            Jump();
+        // Springen
+        Jump();
 
     }
 
     private void FixedUpdate()
     {
 
-            PlayerRotating();
-            if (playerCanMove)
-                PlayerMovement();      
-        // Debug.Log(camTransform.position);
+        PlayerRotating();
+        if (PlayerCanMove)
+            PlayerMovement();
+
     }
 
     /// <summary>
@@ -139,8 +122,8 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y <= fallingDownLimit)
         {
-            playerBody.transform.position = startPosition;
-            playerCanMove = true;
+            playerBody.transform.position = GameData.instance.PlayerStartPosition;
+            PlayerCanMove = true;
             sprintActive = true;
         }
     }
@@ -157,7 +140,7 @@ public class PlayerController : MonoBehaviour
             playerAnimator.PlaySprintAnimation(false);
             playerAnimator.PlayWalkAnimation(false);
             playerAnimator.PlayIdleAnimation(true);
-            // camTransform.transform.localPosition = positionIdleCam;
+
         }
         else
         {
@@ -170,7 +153,7 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.PlayWalkAnimation(false);
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(true); // true
-                // camTransform.transform.localPosition = positionSprintCam;
+
                 speed = moveSpeed * speedMultiplier;
                 playerSprints = true;
 
@@ -184,8 +167,7 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.PlayWalkAnimation(true); // true
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(false);
-                camTransform.transform.localPosition = positionIdleCam;
-                // camTransform.transform.localPosition = positionWalkCam;
+
                 speed = moveSpeed;
                 playerSprints = false;
 
@@ -220,7 +202,7 @@ public class PlayerController : MonoBehaviour
         Vector3 mouseInput = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 
         // Spieler sieht nach oben oder unten
-        cameraAngle += -mouseInput.y * rotationSpeed * sensitivityMultiplier * Time.deltaTime;
+        cameraAngle += -mouseInput.y * rotationSpeed * Sensitivity * Time.deltaTime;
 
         // Winkel der Kamera auf min und max begrenzen
         cameraAngle = Mathf.Clamp(cameraAngle, -maxVerticalCameraAngle, maxVerticalCameraAngle);
@@ -230,7 +212,7 @@ public class PlayerController : MonoBehaviour
         camTransform.transform.localEulerAngles = new Vector3(cameraAngle, 0, 0);
 
         // Spieler dreht sich nach links oder rechts
-        Quaternion deltaRotationX = Quaternion.Euler(0, rotationSpeed * sensitivityMultiplier * Time.deltaTime * mouseInput.x, 0);
+        Quaternion deltaRotationX = Quaternion.Euler(0, rotationSpeed * Sensitivity * Time.deltaTime * mouseInput.x, 0);
         playerBody.MoveRotation(playerBody.rotation * deltaRotationX);
     }
 

@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(phealth < 0)
+        if(phealth <= 0)
         {
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadSceneAsync(2);  //loading death screen

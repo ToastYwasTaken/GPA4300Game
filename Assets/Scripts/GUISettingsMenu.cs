@@ -116,11 +116,11 @@ public class GUISettingsMenu : MonoBehaviour
     public void ChangeSensitivityValue(float _value)
     {
         sensitivityValue = _value;
-        sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";     
+        sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";
 
         if (playerController)
         {
-            playerController.sensitivityMultiplier = _value;
+            playerController.Sensitivity = _value;
         }
 
     }
@@ -134,6 +134,7 @@ public class GUISettingsMenu : MonoBehaviour
         {
             audioSource.volume = _value;
         }
+
     }
 
     public void MuteMusic(bool _value)
@@ -143,6 +144,7 @@ public class GUISettingsMenu : MonoBehaviour
         {
             audioSource.mute = audioMute;
         }
+
     }
 
     /// <summary>

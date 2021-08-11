@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GUIDeath : MonoBehaviour
 {
@@ -28,9 +29,10 @@ public class GUIDeath : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
-    // Update is called once per frame
-    void Update()
+   
+    public void LoadScene(int _sceneIndex)
     {
-        
+        SceneManager.LoadSceneAsync(_sceneIndex);
     }
+
 }
