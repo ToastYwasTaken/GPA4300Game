@@ -17,6 +17,7 @@ using UnityEngine;
  * ----------------------------
  *  28.07.2021  FM  Created
  *  30.07.2021  FM  Added handling Items on Collision
+ *  12.08.2021  FM  fixed bug causing items to be pickable even though inventory is full
  *  
  *****************************************************************************/
 
@@ -52,6 +53,7 @@ public class InteractableItem : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        triggerFlag = false;
     }
     //Draws a box equal to the size of the future collider
     private void OnDrawGizmos()
@@ -63,6 +65,11 @@ public class InteractableItem : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
+        //Can't pick up items when inventory is full
+        if (inventoryGUIRef.PGetInventory.Count >= inventoryGUIRef.inventoryMaxSize)
+        {
+            return;
+        }
         if (other.tag.Equals("Player"))
         {
             //Picks up item on left mouse press
@@ -71,7 +78,7 @@ public class InteractableItem : MonoBehaviour
                 //Add item to inventory / show in GUI
                 Debug.Log("In trigger");
                 Item item = this.gameObject.GetComponent<Item>();
-                if (item)
+                if (item && !triggerFlag)
                 {
                     inventoryGUIRef.AddItem(item);
                     triggerFlag = true;

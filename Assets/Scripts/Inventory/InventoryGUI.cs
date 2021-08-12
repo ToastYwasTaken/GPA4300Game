@@ -22,6 +22,7 @@ using UnityEngine.UI;
  *  30.07.2021  FM  Changed inventory structure
  *  01.08.2021  FM  Added Prop, fixed issues
  *  08.08.2021  FM  Fixed GUI displaying correct items, still having an issue causing items to appear twice
+ *  12.08.2021  FM  Fixed previous issue
  *  
  *****************************************************************************/
 
@@ -32,10 +33,9 @@ using UnityEngine.UI;
 public class InventoryGUI : MonoBehaviour
 {
     public Image[] guiInventoryImages;
-    //public List<Item> itemList; // 0 : Key, 1: HealPotion, 2: SprintPotion, 3: MapPart1, 4: MapPart2, 5: MapPart3
     private List<Item> inventory = new List<Item>();
 
-    private int inventoryMaxSize = 5;
+    public int inventoryMaxSize = 5;
     private int itemCount = 0;
 
     PlayerHealth healthRef;
@@ -161,6 +161,12 @@ public class InventoryGUI : MonoBehaviour
             guiInventoryImages[i].enabled = true;
             guiInventoryImages[i].sprite = inventory[i].PItemSprite;
         }
+        int index = 0;
+        //foreach(Item item in inventory)
+        //{
+        //    Debug.Log("Item at index " + index + ", name: " + item.itemName);
+        //    index++;
+        //}
     }
 
     public List<Item> PGetInventory { get => inventory; }
