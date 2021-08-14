@@ -16,17 +16,18 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  11.06.2021  RK  Created
- *  15.06.2021  RK  Added max vertical Camera angle
- *  22.06.2021  FM  Added check if the game is paused
- *  24.06.2021  FM  Added changing sensitivity in option menu, therefore this script was adjusted
- *  26.06.2021  RK  Modified PlayerMovement -> don't sprint backwards 
- *  28.06.2021  RK  Added PlayerAnimator (Animations)
- *  30.06.2021  RK  Added Collision Check Wall
- *  09.07.2021  RK  Added Delegate for Sounds
- *  14.07.2021  RK  Added Variable playerCanMove
- *  22.07.2021  RK  Removed pauseFlag
- *              RK  Bugfix Preferences NullReferenceExpection
+ *  11.06.2021  RK  erstellt
+ *  15.06.2021  RK  maximalen vertikalen Kamerawinkel hinzugefügt
+ *  22.06.2021  FM  bool flag hinzugefügt
+ *  24.06.2021  FM  Anpassungen
+ *  26.06.2021  RK  Bug behoben, dass man rückwärts Sprinten konnte
+ *  28.06.2021  RK  PlayerAnimator (Animations) hinzugefügt
+ *  30.06.2021  RK  Collision Überprüfungen hinzugefügt
+ *  09.07.2021  RK  Delegate für Sounds hinzugefügt
+ *  14.07.2021  RK  Variable playerCanMove hinzugefügt
+ *  22.07.2021  RK  bool flag entfernt
+ *              RK  NullReferenceExpection Bug in Preferences behoben
+ *  14.08.2021  FM  Kommentare angepasst
  *  
  *****************************************************************************/
 
@@ -234,7 +235,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            // TODO: Play Hit Animation
+            // TODO: Hit Animation abspielen
             Debug.Log("Player Hit!");
         }
     }

@@ -15,16 +15,19 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  28.07.2021  FM  Created
- *  30.07.2021  FM  Added handling Items on Collision
- *  12.08.2021  FM  fixed bug causing items to be pickable even though inventory is full
+ *  28.07.2021  FM  Erstellt
+ *  30.07.2021  FM  Collision-detection hinzugefügt und Mechanik zum 
+ *                  Items hinzufügen erstellt
+ *  12.08.2021  FM  Bug behoben, der verursacht hat, dass der Spieler
+ *                  ein Item aufheben konnte obwohl das Inventar voll war
  *  
  *****************************************************************************/
 
 
 /// <summary>
-/// Adds a collider to the Item to make it Interactable
-/// Add this script on all Pickable items
+/// Fügt dem Item einen eigenen Collider hinzu, damit es mit anderen 
+/// Objekten interagieren kann
+/// Dieses Skript muss auf alle Items
 /// </summary>
 public class InteractableItem : MonoBehaviour
 {
@@ -33,10 +36,10 @@ public class InteractableItem : MonoBehaviour
     public InventoryGUI inventoryGUIRef;
     private bool triggerFlag = false;
 
-    //Adds the collider
+    
     private void Start()
     {
-        //Initializing Collider for each Item
+        //Iniialisieren des neuen Colliders
         colliderSize = new Vector3(colliderLength, colliderLength, colliderLength);
         if (this.gameObject.GetComponent<Collider>() == null)
         {
@@ -49,13 +52,15 @@ public class InteractableItem : MonoBehaviour
     }
     private void Update()
     {
+        //Zerstört das GO nur, wenn es vorher auch dem Inventar
+        //hinzugefügt werden konnte
         if(triggerFlag == true)
         {
             Destroy(gameObject);
         }
         triggerFlag = false;
     }
-    //Draws a box equal to the size of the future collider
+    //Zeichnet den Collider
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -65,7 +70,7 @@ public class InteractableItem : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
-        //Can't pick up items when inventory is full
+        //Item nicht aufnehmbar, wenn das Inventar voll ist
         if (inventoryGUIRef.PGetInventory.Count >= inventoryGUIRef.inventoryMaxSize)
         {
             return;

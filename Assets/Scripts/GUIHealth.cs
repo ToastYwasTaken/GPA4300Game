@@ -19,8 +19,8 @@ using UnityEngine.SceneManagement;
  * 
  * ChangeLog
  * ----------------------------
- *  11.06.2021  FM  Created
- *  22.06.2021  FM  fixed issue that caused not displaying the healthCount
+ *  11.06.2021  FM  erstellt
+ *  22.06.2021  FM  Bug behoben, dass healthCount nicht angezeigt wurde
  *  
  *****************************************************************************/
 

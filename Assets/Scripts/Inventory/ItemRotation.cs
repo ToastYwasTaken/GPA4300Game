@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 /******************************************************************************
  * Project: GPA4300Game
@@ -16,11 +14,11 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  08.08.2021  FM  Created
+ *  08.08.2021  FM  erstellt
  *  
  *****************************************************************************/
 /// <summary>
-/// The class makes all Items rotate to make them easier to spot for the player
+/// Simples Rotationsskript für die Items
 /// </summary>
 public class ItemRotation : MonoBehaviour
 {

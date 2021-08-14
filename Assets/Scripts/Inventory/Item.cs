@@ -16,15 +16,18 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  09.07.2021  FM  Created
- *  30.07.2021  FM  Changed to Monobehaviour, no ScriptableObject anymore
- *  01.08.2021  FM  Added Properties, changed access modifiers, added default automatic setup for name and prefabs
+ *  09.07.2021  FM  erstellt
+ *  30.07.2021  FM  von ScriptableObject zu MonoBehaviour erbende Klasse verändert
+ *                  für bessere Funktionalität
+ *  01.08.2021  FM  Properties hinzugefügt, Zugriffsmodifizierer angepasst, 
+ *                  automatisches Initialisieren für GO und Name hinzugefügt
+ *  14.08.2021  FM  Kommentare hinzugefügt
  *  
  *****************************************************************************/
 
 /// <summary>
 /// Items
-/// Sprites shouldn't be null in inspector
+/// Sprites sollten im Inspektor gesetzt werden
 /// </summary>
 public class Item : MonoBehaviour
     {
@@ -32,7 +35,7 @@ public class Item : MonoBehaviour
     [SerializeField]
     private GameObject itemGameobjectPrefab;
     [SerializeField]
-    private Sprite sprite;   //Das Sprite, das im Inventar angezeigt werden soll
+    private Sprite sprite;  //Das Sprite, das in der GUI angezeigt werden soll
     [SerializeField]
     private IItemTypes itemType;
 
@@ -42,6 +45,10 @@ public class Item : MonoBehaviour
         SetDefaultGameobject();
     }
 
+    /// <summary>
+    /// Setzt standartisierte Werte für das Gameobjekt, falls es nicht im 
+    /// Inspektor initialisiert wurde
+    /// </summary>
     private void SetDefaultGameobject()
     {
         if(this.itemGameobjectPrefab == null)
@@ -50,6 +57,10 @@ public class Item : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Setzt standartisierte Werte für den Item-Namen, falls es nicht im 
+    /// Inspektor initialisiert wurde
+    /// </summary>
     private void SetDefaultItemName()
     {
         if (this.itemName == null)

@@ -18,17 +18,20 @@ using UnityEngine.UI;
  * 
  * ChangeLog
  * ----------------------------
- *  09.07.2021  FM  Created
- *  30.07.2021  FM  Changed inventory structure
- *  01.08.2021  FM  Added Prop, fixed issues
- *  08.08.2021  FM  Fixed GUI displaying correct items, still having an issue causing items to appear twice
- *  12.08.2021  FM  Fixed previous issue
+ *  09.07.2021  FM  erstellt
+ *  30.07.2021  FM  Inventarstruktur überarbeitet
+ *  01.08.2021  FM  Properties hinzugefügt, bugs behoben
+ *  08.08.2021  FM  GUI zeigt jetzt die richtigen Items an 
+ *                  Problem: Manchmal wird ein Item öfter als 1 mal hinzugefügt
+ *  12.08.2021  FM  Problem gefixed
+ *  14.08.2021  FM  Kommentare hinzugefügt
  *  
  *****************************************************************************/
 
 /// <summary>
 /// Kümmert sich um die visuelle Anzeige des Inventars
-/// Inventar besteht aus einer ID (Key) und einem Item (Value)
+/// und die Verwaltung der Inventarstruktur
+/// Inventar besteht aus Items
 /// </summary>
 public class InventoryGUI : MonoBehaviour
 {
@@ -55,7 +58,7 @@ public class InventoryGUI : MonoBehaviour
     }
 
     /// <summary>
-    /// Translates the users input number so he can use the item he wants to apply
+    /// Übersetzt den UserInput, damit das dementsprechende Item benutzt werden kann
     /// </summary>
     private void GetInput()
     {
@@ -81,9 +84,10 @@ public class InventoryGUI : MonoBehaviour
 
 
     /// <summary>
-    /// User can apply an Item by pressing the number of the slot where that item is located
+    /// Der Spieler setzt das Item ein indem er die Taste drückt, an dessen Index das
+    /// gewünschte Item liegt. Der Index wird auch in der UI angezeigt
     /// </summary>
-    /// <param name="_index">index in inventory of the item to use</param>
+    /// <param name="_index">index im Inventar des Items</param>
     private void UseItem(int _index)
     {
         if(inventory[_index] = null)
@@ -124,6 +128,12 @@ public class InventoryGUI : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// Fügt Item zum Inventar hinzu
+    /// Beachtet die maximale Größe
+    /// </summary>
+    /// <param name="_itemToAdd">Das Item welches hinzugefügt wird</param>
     public void AddItem(Item _itemToAdd)
     {
         if (itemCount < inventoryMaxSize)
@@ -134,6 +144,11 @@ public class InventoryGUI : MonoBehaviour
         UpdateGUI();
     }
 
+    /// <summary>
+    /// Löscht das Item aus dem Inventar
+    /// Wenn das Inventar leer ist, passiert nichts.
+    /// </summary>
+    /// <param name="_itemToRemove">Das Item welches entfernt wird</param>
     public void RemoveItem(Item _itemToRemove)
     {
         if (itemCount > 0)
@@ -146,7 +161,7 @@ public class InventoryGUI : MonoBehaviour
 
 
     /// <summary>
-    /// Shows items accordingly in GUI
+    /// Zeigt die Items in der GUI am unteren Bildschirmrand an
     /// </summary>
     private void UpdateGUI()    
     {
@@ -161,7 +176,7 @@ public class InventoryGUI : MonoBehaviour
             guiInventoryImages[i].enabled = true;
             guiInventoryImages[i].sprite = inventory[i].PItemSprite;
         }
-        int index = 0;
+        //int index = 0;
         //foreach(Item item in inventory)
         //{
         //    Debug.Log("Item at index " + index + ", name: " + item.itemName);

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /******************************************************************************
@@ -17,8 +15,8 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  09.07.2021  FM  Created
- *  28.07.2021  FM  Updated types
+ *  09.07.2021  FM  erstellt
+ *  28.07.2021  FM  Typen aktualisiert
  *  
  *****************************************************************************/
 public interface IItemTypes

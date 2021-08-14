@@ -19,11 +19,13 @@ using UnityEngine.UI;
  * 
  * ChangeLog
  * ----------------------------
- *  05.07.2021  RK  Created
- *  14.07.2021  FM  Added functionality for pausing / accessing settings when game is running // added changing flag for option menu
- *  15.07.2021  RK  Added AudioSource
- *              RK  Added PlayerController
- *  22.07.2021  RK  Bugdfix NullReferenceExpection
+ *  05.07.2021  RK  erstellt
+ *  14.07.2021  FM  Funktionalität zum Pausieren hinzugefügt 
+ *                  + bool flag für Optionsmenu
+ *  15.07.2021  RK  AudioSource hinzugefügt
+ *              RK  PlayerController hinzugefügt
+ *  22.07.2021  RK  NullReferenceExpection behoben
+ *  14.08.2021  FM  auskommentierten Code und bool flag entfernt
  *  
  *  
  *****************************************************************************/
@@ -86,14 +88,6 @@ public class GUISettingsMenu : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape) && GUIOptionMenu.pauseFlag)    //RESUMING
-        //   {
-        //        Cursor.visible = false;
-        //        Cursor.lockState = CursorLockMode.Locked;
-        //        Time.timeScale = 1;
-        //        UnloadScene(3);
-        //   }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             UnloadScene(sceneBuildIndex);
@@ -101,6 +95,10 @@ public class GUISettingsMenu : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// Setzt die Lautstärke / Empfindlichkeit auf den vom User im Optionsmenu eingestellten Wert
+    /// </summary>
     private void SetUIValue()
     {
         sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";
@@ -113,6 +111,10 @@ public class GUISettingsMenu : MonoBehaviour
         soundsToggle.isOn = soundsMute;
     }
 
+    /// <summary>
+    /// Ändert die Empfindlichkeit der Steuerung
+    /// </summary>
+    /// <param name="_value">Wert der Empfindlichkeit</param>
     public void ChangeSensitivityValue(float _value)
     {
         sensitivityValue = _value;
@@ -125,6 +127,11 @@ public class GUISettingsMenu : MonoBehaviour
 
     }
 
+
+    /// <summary>
+    /// Ändert die Lautstärke
+    /// </summary>
+    /// <param name="_value">Wert der Lautstärke</param>
     public void ChangeVolumeValue(float _value)
     {
         volumeValue = _value;
@@ -137,6 +144,10 @@ public class GUISettingsMenu : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// schaltet die Musik / Sound stumm
+    /// </summary>
+    /// <param name="_value"></param>
     public void MuteMusic(bool _value)
     {
         audioMute = _value;
@@ -177,9 +188,5 @@ public class GUISettingsMenu : MonoBehaviour
         {
             mainMenu.canvas.enabled = true;
         } 
-        //else if (GUIOptionMenu.pauseFlag) //changes pause flag when unloading settings menu scene
-        //{
-        //    GUIOptionMenu.pauseFlag = false;
-        //}
     }
 }
