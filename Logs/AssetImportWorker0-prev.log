@@ -15,11 +15,11 @@ E:/GitHub/GPA4300Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50162
+54966
 Successfully changed project path to: E:/GitHub/GPA4300Game
 E:/GitHub/GPA4300Game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 55.65 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 53.92 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -35,130 +35,1479 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001896 seconds.
+Registered in 0.002012 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.54 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 48.14 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.327 seconds
+- Completed reload, in  2.216 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.008659 seconds.
+Registered in 0.002645 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.074 seconds
+- Completed reload, in  1.265 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1836 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 163.8 MB.
 System memory in use after: 163.8 MB.
 
 Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2284.
-Total: 1.933700 ms (FindLiveObjects: 0.180300 ms CreateObjectMapping: 0.079000 ms MarkObjects: 1.552100 ms  DeleteObjects: 0.120900 ms)
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.42 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 124.9 MB.
-System memory in use after: 124.9 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2284.
-Total: 1.705900 ms (FindLiveObjects: 0.146700 ms CreateObjectMapping: 0.058800 ms MarkObjects: 1.419300 ms  DeleteObjects: 0.080000 ms)
+Total: 2.239000 ms (FindLiveObjects: 0.195100 ms CreateObjectMapping: 0.078900 ms MarkObjects: 1.832500 ms  DeleteObjects: 0.131100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Main Menu.unity
-  artifactKey: Guid(b6b78ff5fe9314d43899a8474aab02ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Menu.unity using Guid(b6b78ff5fe9314d43899a8474aab02ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3fcd83d7e2a5aa5f3134f50b8bae6d') in 0.028724 seconds
-  Import took 0.031314 seconds .
+  path: Assets/Scripts/ButtonBehaviour.cs
+  artifactKey: Guid(26d919041d7da7b45a7f46d39d517a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ButtonBehaviour.cs using Guid(26d919041d7da7b45a7f46d39d517a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c339b7c20714e8a936e03f723e87248b') in 0.081577 seconds
+  Import took 0.084878 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 490.193247 seconds.
-  path: Assets/Scripts/GUIDeath.cs
-  artifactKey: Guid(146cc5955e3f37d429f26c14a92ee199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/GUIDeath.cs using Guid(146cc5955e3f37d429f26c14a92ee199) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd20eeaad61e808478da8c957ae37ab5') in 0.037912 seconds
-  Import took 0.042176 seconds .
+  Time since last request: 16.689818 seconds.
+  path: Assets/Scripts/AudioManager.cs
+  artifactKey: Guid(617ab805fb61146498a299b5353077c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AudioManager.cs using Guid(617ab805fb61146498a299b5353077c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72f6cc49f5f9a237bbffdc36f60c8507') in 0.010100 seconds
+  Import took 0.021230 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003500 seconds.
+Registered in 0.002492 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.469 seconds
+- Completed reload, in  1.041 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1796 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.3 MB.
-System memory in use after: 160.3 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2287.
-Total: 2.230000 ms (FindLiveObjects: 0.165100 ms CreateObjectMapping: 0.058300 ms MarkObjects: 1.887600 ms  DeleteObjects: 0.117600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.474878 seconds.
-  path: Assets/Scenes/Death Scene.unity
-  artifactKey: Guid(c6eb67afcc33004449d4ba76c179694a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Death Scene.unity using Guid(c6eb67afcc33004449d4ba76c179694a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d790a24da711d2a20e3145fdfe3b2ea') in 0.105898 seconds
-  Import took 0.169090 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002675 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.375 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1796 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 160.3 MB.
 System memory in use after: 160.4 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2290.
-Total: 2.346300 ms (FindLiveObjects: 0.340700 ms CreateObjectMapping: 0.135600 ms MarkObjects: 1.769000 ms  DeleteObjects: 0.100200 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2287.
+Total: 1.758200 ms (FindLiveObjects: 0.158900 ms CreateObjectMapping: 0.057700 ms MarkObjects: 1.440200 ms  DeleteObjects: 0.100600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 726.264395 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/LightingData.asset
+  artifactKey: Guid(48bac0f4c904801439ecbe3ef55a28d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/LightingData.asset using Guid(48bac0f4c904801439ecbe3ef55a28d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90738459461f2ffc14e3645f0b256e3f') in 0.371678 seconds
+  Import took 0.396449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-64_comp_light.exr
+  artifactKey: Guid(674f9129c56056543b819ec1342eb2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-64_comp_light.exr using Guid(674f9129c56056543b819ec1342eb2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc0c5ba83ef3dc366917d39ea19952a0') in 0.077392 seconds
+  Import took 0.080333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-33_comp_light.exr
+  artifactKey: Guid(77e5423fd0c3c114eacf2bf3aad7cc5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-33_comp_light.exr using Guid(77e5423fd0c3c114eacf2bf3aad7cc5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc3a93701533b84b9bd67d5c6d04e1bc') in 0.013319 seconds
+  Import took 0.017328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-19_comp_light.exr
+  artifactKey: Guid(036d2e6b45c5c124d85a96f0e708a85c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-19_comp_light.exr using Guid(036d2e6b45c5c124d85a96f0e708a85c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13a482009c453d114faa87439ba4d75f') in 0.016827 seconds
+  Import took 0.020588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-57_comp_light.exr
+  artifactKey: Guid(727a3bb0cdc148f4cb6df52c44b5e4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-57_comp_light.exr using Guid(727a3bb0cdc148f4cb6df52c44b5e4c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e06d4b3e12bc108c6eccde0f92b8299') in 0.013728 seconds
+  Import took 0.016910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-44_comp_light.exr
+  artifactKey: Guid(dae52b0bed8998942a41a39e18d36d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-44_comp_light.exr using Guid(dae52b0bed8998942a41a39e18d36d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4afadb73bbcacded785569a84e8e252f') in 0.010301 seconds
+  Import took 0.014288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001527 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-37_comp_light.exr
+  artifactKey: Guid(ad7a39ee535036f42992007b3fd4136e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-37_comp_light.exr using Guid(ad7a39ee535036f42992007b3fd4136e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad19a451a77a3a4e43dc82cbf75d4ab3') in 0.010540 seconds
+  Import took 0.013692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-20_comp_light.exr
+  artifactKey: Guid(e5c2cdba2cff6734cbb7d581b2fa7087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-20_comp_light.exr using Guid(e5c2cdba2cff6734cbb7d581b2fa7087) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '499cbb9367ae414d103432d3c744d34b') in 0.011085 seconds
+  Import took 0.013942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-16_comp_light.exr
+  artifactKey: Guid(188dfa7d0c1722b40b5739ea573a5d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-16_comp_light.exr using Guid(188dfa7d0c1722b40b5739ea573a5d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7725d7d76f2ad69c240bb5d113f3aae3') in 0.018065 seconds
+  Import took 0.021184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001241 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-24_comp_light.exr
+  artifactKey: Guid(6bf24ca5253bab543a5f07937fa2fced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-24_comp_light.exr using Guid(6bf24ca5253bab543a5f07937fa2fced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a561f938ba36f4e91c01285c2f2a7797') in 0.010895 seconds
+  Import took 0.015269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-22_comp_light.exr
+  artifactKey: Guid(f82ace624c7bcad4e9f7c50a7bb73a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-22_comp_light.exr using Guid(f82ace624c7bcad4e9f7c50a7bb73a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33fb5e947844aa194e2f45d11ed3f386') in 0.018344 seconds
+  Import took 0.022252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-41_comp_light.exr
+  artifactKey: Guid(ae1590bfb8dc903479ed5eeb385c3a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-41_comp_light.exr using Guid(ae1590bfb8dc903479ed5eeb385c3a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dd1f6e1a5b837a957601d6675eaea5f') in 0.014242 seconds
+  Import took 0.018293 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-26_comp_light.exr
+  artifactKey: Guid(a646ad14d0916914aaacc5c8156ea7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-26_comp_light.exr using Guid(a646ad14d0916914aaacc5c8156ea7ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20f0d691ffab7ad55e0b164cbae9471') in 0.008929 seconds
+  Import took 0.011663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-28_comp_light.exr
+  artifactKey: Guid(ff86aa522f5757444995b40fc59d86e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-28_comp_light.exr using Guid(ff86aa522f5757444995b40fc59d86e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19815ced36b3e5647937de697c7bc335') in 0.008987 seconds
+  Import took 0.012208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-43_comp_light.exr
+  artifactKey: Guid(20d0d5272b088df4e9fda752b2b2ab2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-43_comp_light.exr using Guid(20d0d5272b088df4e9fda752b2b2ab2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f54268dc5965dfcee08766b6b6d1d21') in 0.008194 seconds
+  Import took 0.011265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-56_comp_light.exr
+  artifactKey: Guid(f2c88d321dc41d6459b5c3c257881b77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-56_comp_light.exr using Guid(f2c88d321dc41d6459b5c3c257881b77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ef0328cab58a299371a19259c772430') in 0.007723 seconds
+  Import took 0.010807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-42_comp_light.exr
+  artifactKey: Guid(41ff2c0ce826c7a4a8dc0e3d65c9d1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-42_comp_light.exr using Guid(41ff2c0ce826c7a4a8dc0e3d65c9d1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e87291b892e91ccf0a2f648c955c4f') in 0.009882 seconds
+  Import took 0.012532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-32_comp_light.exr
+  artifactKey: Guid(d2eb7d647aeb6d04492770b9d58f00d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-32_comp_light.exr using Guid(d2eb7d647aeb6d04492770b9d58f00d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ff94a93ab3684c40e3af4e4da50a09') in 0.008908 seconds
+  Import took 0.011656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-15_comp_light.exr
+  artifactKey: Guid(ce32af82108cc1f43a2d663b5a3c04bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-15_comp_light.exr using Guid(ce32af82108cc1f43a2d663b5a3c04bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fad425539927a3eade4915a04357b1e') in 0.008153 seconds
+  Import took 0.011097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-71_comp_light.exr
+  artifactKey: Guid(aadd243d53926b541b28bdddba180cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-71_comp_light.exr using Guid(aadd243d53926b541b28bdddba180cc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a0e9d314979c639d28384c0472c5b31') in 0.008778 seconds
+  Import took 0.011854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-55_comp_light.exr
+  artifactKey: Guid(25ded94a09a7418408e480bd433e7d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-55_comp_light.exr using Guid(25ded94a09a7418408e480bd433e7d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40743e334b458bb9acf6c6ac32efd78d') in 0.008339 seconds
+  Import took 0.011201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000510 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-29_comp_light.exr
+  artifactKey: Guid(77f879342066df8448aa7d447bf44fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-29_comp_light.exr using Guid(77f879342066df8448aa7d447bf44fec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3a908ce644e9459366dc465141687cd') in 0.008993 seconds
+  Import took 0.011727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-25_comp_light.exr
+  artifactKey: Guid(620dfb0f6edaa064cbf98828a85e100d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-25_comp_light.exr using Guid(620dfb0f6edaa064cbf98828a85e100d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32b1f5ea62ff05a0c3f069bc3a485868') in 0.007893 seconds
+  Import took 0.010493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-38_comp_light.exr
+  artifactKey: Guid(1b1c8877a7b175f46abb4a1d62cbd621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-38_comp_light.exr using Guid(1b1c8877a7b175f46abb4a1d62cbd621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4000f4b6bee8949573c3d13588ee633') in 0.009761 seconds
+  Import took 0.013033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-48_comp_light.exr
+  artifactKey: Guid(1e59fc607073fac4ba8bb176f822b1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-48_comp_light.exr using Guid(1e59fc607073fac4ba8bb176f822b1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9131ef316b6400f0512d9210c0c21a9') in 0.008720 seconds
+  Import took 0.011686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-66_comp_light.exr
+  artifactKey: Guid(4c59853fab90c5646ab2299632e7c84b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-66_comp_light.exr using Guid(4c59853fab90c5646ab2299632e7c84b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb89a8062651dce8218b4548d55375e') in 0.007360 seconds
+  Import took 0.010053 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-60_comp_light.exr
+  artifactKey: Guid(de39daaa3a467d640849be2a2fe7bc98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-60_comp_light.exr using Guid(de39daaa3a467d640849be2a2fe7bc98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21fc8c8ae123c38737aa27105c1cf20') in 0.007310 seconds
+  Import took 0.010398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-47_comp_light.exr
+  artifactKey: Guid(5a53c75e7e79cae4d97049f66bbddcd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-47_comp_light.exr using Guid(5a53c75e7e79cae4d97049f66bbddcd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df349a9a35a559d1bf26398a6650a08a') in 0.008259 seconds
+  Import took 0.011786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-34_comp_light.exr
+  artifactKey: Guid(31c9339f162b33342a4790865f4294ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-34_comp_light.exr using Guid(31c9339f162b33342a4790865f4294ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e71efac3ee2ff7c0f32711a14cae13') in 0.007893 seconds
+  Import took 0.010494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-61_comp_light.exr
+  artifactKey: Guid(cd9e3aaf4e82fbc4ba3a63dd3f3d2e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-61_comp_light.exr using Guid(cd9e3aaf4e82fbc4ba3a63dd3f3d2e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '775ac80dcfaf4afc3e48823f55cba1cf') in 0.008441 seconds
+  Import took 0.011066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-70_comp_light.exr
+  artifactKey: Guid(8764596531f557d40a21707e2470db88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-70_comp_light.exr using Guid(8764596531f557d40a21707e2470db88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f00fbd759b6b45103e1ad9d45f60f8e0') in 0.008957 seconds
+  Import took 0.011484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-65_comp_light.exr
+  artifactKey: Guid(ce9a39193d49c7546908429375440f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-65_comp_light.exr using Guid(ce9a39193d49c7546908429375440f1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6939abba16d092407d925f9eabdd9c42') in 0.007994 seconds
+  Import took 0.010655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-17_comp_light.exr
+  artifactKey: Guid(94c82d574079ce04385b253be54512b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-17_comp_light.exr using Guid(94c82d574079ce04385b253be54512b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbab07ed8f2ee30b48eb0af1a77d5e55') in 0.008158 seconds
+  Import took 0.010933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-31_comp_light.exr
+  artifactKey: Guid(d4e6f24ae47789e4081ec3013dd9d94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-31_comp_light.exr using Guid(d4e6f24ae47789e4081ec3013dd9d94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96de0f45c0b06035e1ecf3373ad6eec8') in 0.008195 seconds
+  Import took 0.011318 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-50_comp_light.exr
+  artifactKey: Guid(21de6146579cea247a165b5510df24e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-50_comp_light.exr using Guid(21de6146579cea247a165b5510df24e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7d5d1c15506bcb591885d3480d162e9') in 0.007588 seconds
+  Import took 0.010243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-21_comp_light.exr
+  artifactKey: Guid(24a30bd11bc76864290b96db0f754d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-21_comp_light.exr using Guid(24a30bd11bc76864290b96db0f754d5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aed2cd182a0fc504abe0ade9bba8d317') in 0.008156 seconds
+  Import took 0.010971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-62_comp_light.exr
+  artifactKey: Guid(8f120d25637d61a498f6f58c8960f307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-62_comp_light.exr using Guid(8f120d25637d61a498f6f58c8960f307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dea801c4472189eab8d766f3850d18f') in 0.007826 seconds
+  Import took 0.010463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-63_comp_light.exr
+  artifactKey: Guid(e28c765381b85b0428b0f30eeb5bd330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-63_comp_light.exr using Guid(e28c765381b85b0428b0f30eeb5bd330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc455f1d17484aaf12608ad0a3ae38c4') in 0.007674 seconds
+  Import took 0.010251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-52_comp_light.exr
+  artifactKey: Guid(8d222f357211bfd45b8b231daa4ff959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-52_comp_light.exr using Guid(8d222f357211bfd45b8b231daa4ff959) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '838bd60e5ab8baf8f1af26a986f54fe0') in 0.009022 seconds
+  Import took 0.011636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-40_comp_light.exr
+  artifactKey: Guid(0cff0cb2d35a0394e97fdb4b724ae46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-40_comp_light.exr using Guid(0cff0cb2d35a0394e97fdb4b724ae46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff88df6fcf2706e8b00183c2f0d742b4') in 0.009906 seconds
+  Import took 0.012711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-49_comp_light.exr
+  artifactKey: Guid(d1e01eb7c53c9d94bbb0450f5f53d0d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-49_comp_light.exr using Guid(d1e01eb7c53c9d94bbb0450f5f53d0d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f51580654e673af845e899cc6ff56cb') in 0.009848 seconds
+  Import took 0.012676 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-18_comp_light.exr
+  artifactKey: Guid(1edc3c50e9673bf4f9b6f23af7d863f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-18_comp_light.exr using Guid(1edc3c50e9673bf4f9b6f23af7d863f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d455b78ea5b93f415e912a72c80b3d4') in 0.011080 seconds
+  Import took 0.014549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-27_comp_light.exr
+  artifactKey: Guid(27f7e65e22dc374488022f4410f7c37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-27_comp_light.exr using Guid(27f7e65e22dc374488022f4410f7c37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86a9a1598a9c3d78a09e120145994fab') in 0.007960 seconds
+  Import took 0.011133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-54_comp_light.exr
+  artifactKey: Guid(87adfada51e0f3d429677ba73809096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-54_comp_light.exr using Guid(87adfada51e0f3d429677ba73809096f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54dba56855d97dbbf5cb494bb92b6476') in 0.013069 seconds
+  Import took 0.016531 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-14_comp_light.exr
+  artifactKey: Guid(13c6b5c487d6d8345803487082d14e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-14_comp_light.exr using Guid(13c6b5c487d6d8345803487082d14e6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '912ba84725c591c167e6fa86635eaf03') in 0.007800 seconds
+  Import took 0.011229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-45_comp_light.exr
+  artifactKey: Guid(a6374ccbb977d72408d95ac6b12322d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-45_comp_light.exr using Guid(a6374ccbb977d72408d95ac6b12322d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2687ada38c5a255ccdccea24ee3cbeea') in 0.010622 seconds
+  Import took 0.013448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000697 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-59_comp_light.exr
+  artifactKey: Guid(15b9febfba320424ca4d50892679ec4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-59_comp_light.exr using Guid(15b9febfba320424ca4d50892679ec4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e8b0635d79bf0e30449997a376b1a2a') in 0.010492 seconds
+  Import took 0.013782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-67_comp_light.exr
+  artifactKey: Guid(67e225f5986bb444482f390af1698a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-67_comp_light.exr using Guid(67e225f5986bb444482f390af1698a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aba1c43bc7e331eb94d386d0db068a8') in 0.009206 seconds
+  Import took 0.012430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-30_comp_light.exr
+  artifactKey: Guid(4ec80988c6461764cb9836d7463c14fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-30_comp_light.exr using Guid(4ec80988c6461764cb9836d7463c14fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6be873bbbef91bcec1f76aa6dac1bad7') in 0.011829 seconds
+  Import took 0.015018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001095 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-46_comp_light.exr
+  artifactKey: Guid(b1455c4cd206b5249b9bac4aea447327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-46_comp_light.exr using Guid(b1455c4cd206b5249b9bac4aea447327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '702fa0d7d343dc1e83ef73376aa6950e') in 0.009663 seconds
+  Import took 0.012907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-53_comp_light.exr
+  artifactKey: Guid(f7983a03f7581524d92cdda882c329dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-53_comp_light.exr using Guid(f7983a03f7581524d92cdda882c329dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bb2e1618410bccb2ea2e3afea8f22a8') in 0.010224 seconds
+  Import took 0.013584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-69_comp_light.exr
+  artifactKey: Guid(d7bc33556b13b1541b848e0ca688f886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-69_comp_light.exr using Guid(d7bc33556b13b1541b848e0ca688f886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c605fb3e205b8dd8e63364fabe4c44e') in 0.009138 seconds
+  Import took 0.012614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-68_comp_light.exr
+  artifactKey: Guid(75069dce339a4e4459db06ac8e1e0a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-68_comp_light.exr using Guid(75069dce339a4e4459db06ac8e1e0a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0666b25e1d4f5b1ca1284cc0d2d5badb') in 0.008970 seconds
+  Import took 0.011834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-39_comp_light.exr
+  artifactKey: Guid(31c3da230c2b9674e86aa640747cd2b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-39_comp_light.exr using Guid(31c3da230c2b9674e86aa640747cd2b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '236171c2b3c5a89f44d9ed11d983115e') in 0.007885 seconds
+  Import took 0.011149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000142 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-35_comp_light.exr
+  artifactKey: Guid(9675c0ff4c555354c95b6eba730f234b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-35_comp_light.exr using Guid(9675c0ff4c555354c95b6eba730f234b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9174e40fde5b5dfe795482487bd072') in 0.009588 seconds
+  Import took 0.012323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-23_comp_light.exr
+  artifactKey: Guid(1dd1ea6e151c58842a4bc16ac961d5f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-23_comp_light.exr using Guid(1dd1ea6e151c58842a4bc16ac961d5f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6121ca509237f9901945ce3d91ef02fe') in 0.009017 seconds
+  Import took 0.012110 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-51_comp_light.exr
+  artifactKey: Guid(c30360a3c1c5ff048a2c61ce3bc8fae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-51_comp_light.exr using Guid(c30360a3c1c5ff048a2c61ce3bc8fae6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed987471c904046e517602cd749b8815') in 0.013999 seconds
+  Import took 0.017189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-58_comp_light.exr
+  artifactKey: Guid(19e2cfd0159da684facf3f416b1c1c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-58_comp_light.exr using Guid(19e2cfd0159da684facf3f416b1c1c8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30195076ebbafda4474e08dcfeb4ad42') in 0.009775 seconds
+  Import took 0.012672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-36_comp_light.exr
+  artifactKey: Guid(33465edbcd5743f4e947058220e4a16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-36_comp_light.exr using Guid(33465edbcd5743f4e947058220e4a16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44379ea4a4c6d185895ea7953bbf4fd7') in 0.009319 seconds
+  Import took 0.012120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000517 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-76_comp_light.exr
+  artifactKey: Guid(26e1af0e4ae1abe43a2a242af4fffd01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-76_comp_light.exr using Guid(26e1af0e4ae1abe43a2a242af4fffd01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '762001f566af3242345997701ddfd979') in 0.008238 seconds
+  Import took 0.011255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-75_comp_light.exr
+  artifactKey: Guid(1115429bb3be3df47a146ceb7c5c6481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-75_comp_light.exr using Guid(1115429bb3be3df47a146ceb7c5c6481) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b15caad3edc65dd43978e7c3abc0e41e') in 0.008645 seconds
+  Import took 0.011410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-85_comp_light.exr
+  artifactKey: Guid(2875f70439621154b997e349f444ab1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-85_comp_light.exr using Guid(2875f70439621154b997e349f444ab1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7af22dc02639843641dbfdcf1a94d4ad') in 0.008717 seconds
+  Import took 0.013005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-95_comp_light.exr
+  artifactKey: Guid(2658d2ee067d2024ab2fe1ecf195b0bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-95_comp_light.exr using Guid(2658d2ee067d2024ab2fe1ecf195b0bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27509e7e5cfea758665da8d8854f32da') in 0.010422 seconds
+  Import took 0.013782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-81_comp_light.exr
+  artifactKey: Guid(63ac8c9bbc31dcb44a146f068b7794d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-81_comp_light.exr using Guid(63ac8c9bbc31dcb44a146f068b7794d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2df6cc71899b14ad7c09a0d1989d549d') in 0.007878 seconds
+  Import took 0.011278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-94_comp_light.exr
+  artifactKey: Guid(8cee0c6d17e114444954678f9b6a45d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-94_comp_light.exr using Guid(8cee0c6d17e114444954678f9b6a45d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e5e21478802a5309591fcdfa704a00b') in 0.007982 seconds
+  Import took 0.010731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-77_comp_light.exr
+  artifactKey: Guid(38d6aea1f98f02c4bbf2391455eb0a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-77_comp_light.exr using Guid(38d6aea1f98f02c4bbf2391455eb0a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31d779a92d0e37e809276ddd7a5e3fb') in 0.009715 seconds
+  Import took 0.012522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-86_comp_light.exr
+  artifactKey: Guid(2e29a4c7021013b40868ee9d519ff027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-86_comp_light.exr using Guid(2e29a4c7021013b40868ee9d519ff027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a26252d404a258d03d76bde0dc8f6cf') in 0.008981 seconds
+  Import took 0.011852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-118_comp_light.exr
+  artifactKey: Guid(07c4b10369b28f542bf32e407634c741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-118_comp_light.exr using Guid(07c4b10369b28f542bf32e407634c741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc83b482fc7406f2accaa84dbe2b97f3') in 0.009481 seconds
+  Import took 0.012210 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-110_comp_light.exr
+  artifactKey: Guid(f4e0002564276094eb21a1673e50f992) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-110_comp_light.exr using Guid(f4e0002564276094eb21a1673e50f992) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd339cdfa5a26202e89cf1348c723a574') in 0.008603 seconds
+  Import took 0.011439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-91_comp_light.exr
+  artifactKey: Guid(840a010e23a046b469b478f92014ace6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-91_comp_light.exr using Guid(840a010e23a046b469b478f92014ace6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a1710c1b003b44ee96fee21bbe62f3f') in 0.008608 seconds
+  Import took 0.011814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-112_comp_light.exr
+  artifactKey: Guid(92243ce917222944e9e72c3964aa2b6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-112_comp_light.exr using Guid(92243ce917222944e9e72c3964aa2b6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07def167a6836a184646298dab99cf32') in 0.009433 seconds
+  Import took 0.012192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-100_comp_light.exr
+  artifactKey: Guid(2aaeb0b09306a064ea4397084385856e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-100_comp_light.exr using Guid(2aaeb0b09306a064ea4397084385856e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d19d6cf2262f6e6edcc7fb0d0a53884') in 0.011016 seconds
+  Import took 0.014035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-80_comp_light.exr
+  artifactKey: Guid(ffe209ef33854b1409d0a44a95a1d90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-80_comp_light.exr using Guid(ffe209ef33854b1409d0a44a95a1d90e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a327109d66abf6710f3fd34614f33667') in 0.008666 seconds
+  Import took 0.012029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-113_comp_light.exr
+  artifactKey: Guid(15c8c1146a292304c83e95c84827c0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-113_comp_light.exr using Guid(15c8c1146a292304c83e95c84827c0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e88aa8519e7cc3828b024fa66f72d038') in 0.008743 seconds
+  Import took 0.011520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-105_comp_light.exr
+  artifactKey: Guid(ec8cd90ad2f8d5b4d9f440cac8231eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-105_comp_light.exr using Guid(ec8cd90ad2f8d5b4d9f440cac8231eca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bfdcc7f9396e133f4ba2b131b8a1d9e') in 0.008240 seconds
+  Import took 0.011185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-102_comp_light.exr
+  artifactKey: Guid(c40b5682db978424db95e4f07da69641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-102_comp_light.exr using Guid(c40b5682db978424db95e4f07da69641) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc7e975e45667efd84268908aba2136') in 0.009318 seconds
+  Import took 0.012164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-73_comp_light.exr
+  artifactKey: Guid(03bc6d45da62e9a4884094f45383b680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-73_comp_light.exr using Guid(03bc6d45da62e9a4884094f45383b680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ae6de647e9c1f39f29eda4ef8d85e8') in 0.009187 seconds
+  Import took 0.012134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-119_comp_light.exr
+  artifactKey: Guid(7600b45d36b280b4ab77f778f9f49941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-119_comp_light.exr using Guid(7600b45d36b280b4ab77f778f9f49941) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a58b0b749a98b9da61b1da1c7f435a0c') in 0.008856 seconds
+  Import took 0.011700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-97_comp_light.exr
+  artifactKey: Guid(58749c7bb063b6f47b4aa645cd4b9046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-97_comp_light.exr using Guid(58749c7bb063b6f47b4aa645cd4b9046) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05fe56f13eda7fc968745d1b19eec92b') in 0.007917 seconds
+  Import took 0.010686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-93_comp_light.exr
+  artifactKey: Guid(671d2b7be9b39dd4bbca2f6396c97127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-93_comp_light.exr using Guid(671d2b7be9b39dd4bbca2f6396c97127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eb2f512b8954bef362932b28ee06c13') in 0.008403 seconds
+  Import took 0.011278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-83_comp_light.exr
+  artifactKey: Guid(d203686b696b4f24785830b3f0546be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-83_comp_light.exr using Guid(d203686b696b4f24785830b3f0546be5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0622285951fd8d01279a3aa0a140c0ed') in 0.009792 seconds
+  Import took 0.012556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-107_comp_light.exr
+  artifactKey: Guid(5df95dc2d86b4f74894a81acc4e64cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-107_comp_light.exr using Guid(5df95dc2d86b4f74894a81acc4e64cb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '731f01903206b49386f188601dd9cb26') in 0.008526 seconds
+  Import took 0.011385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-111_comp_light.exr
+  artifactKey: Guid(df32dbcd4aa24264198c570f1cb1f8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-111_comp_light.exr using Guid(df32dbcd4aa24264198c570f1cb1f8e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d28c49685c193b6abc711d66c1dd10c') in 0.009494 seconds
+  Import took 0.012792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000465 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-117_comp_light.exr
+  artifactKey: Guid(01b3e193d0ff7f14bbca5b65dfb5b09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-117_comp_light.exr using Guid(01b3e193d0ff7f14bbca5b65dfb5b09f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd32c4609ec8ab024d06b9e6c27fa12c') in 0.009260 seconds
+  Import took 0.012102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-116_comp_light.exr
+  artifactKey: Guid(577887c6d9d65544cbfb9ace8f6952f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-116_comp_light.exr using Guid(577887c6d9d65544cbfb9ace8f6952f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5487967c1f86d8419bb5e0df44a55a4e') in 0.010027 seconds
+  Import took 0.012776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-109_comp_light.exr
+  artifactKey: Guid(0eba42d92ed2f344caa200201b9a8a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-109_comp_light.exr using Guid(0eba42d92ed2f344caa200201b9a8a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3035feb736b70641c4e7cbfb62b79a9f') in 0.009280 seconds
+  Import took 0.012128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-74_comp_light.exr
+  artifactKey: Guid(2092943c417ec674c8707e6c53f5f770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-74_comp_light.exr using Guid(2092943c417ec674c8707e6c53f5f770) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ceb2d2ae940ed275d34cbb3a76f9495') in 0.010129 seconds
+  Import took 0.013041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-87_comp_light.exr
+  artifactKey: Guid(03fdf66efb68f81469108102ca11760c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-87_comp_light.exr using Guid(03fdf66efb68f81469108102ca11760c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed46d829f5dc9d391cb215bcb6449c2a') in 0.009199 seconds
+  Import took 0.011929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-98_comp_light.exr
+  artifactKey: Guid(fab1235237ce015438c8503bafdc9a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-98_comp_light.exr using Guid(fab1235237ce015438c8503bafdc9a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef59ef50b0bba34030cccee038da3c25') in 0.008816 seconds
+  Import took 0.011541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-84_comp_light.exr
+  artifactKey: Guid(14bff4870b8d3c24db8d2075f479afef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-84_comp_light.exr using Guid(14bff4870b8d3c24db8d2075f479afef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7464a52eb378eebc0684e3d5014cd05') in 0.009051 seconds
+  Import took 0.013007 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-72_comp_light.exr
+  artifactKey: Guid(f97759b5f24cd4644b9684f0c4979122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-72_comp_light.exr using Guid(f97759b5f24cd4644b9684f0c4979122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db991b5c2afae75ba73611d20c49e841') in 0.008899 seconds
+  Import took 0.011778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-106_comp_light.exr
+  artifactKey: Guid(4046ce7b48f195f429ac4d4b047791cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-106_comp_light.exr using Guid(4046ce7b48f195f429ac4d4b047791cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd685fd9cb13bd2ecda098c8a3705e2b') in 0.009023 seconds
+  Import took 0.012037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-89_comp_light.exr
+  artifactKey: Guid(eb50a402068fede49ad0badd732b6c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-89_comp_light.exr using Guid(eb50a402068fede49ad0badd732b6c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd5b7f7c65815018680d7f1f4d2da92') in 0.049724 seconds
+  Import took 0.052586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-101_comp_light.exr
+  artifactKey: Guid(9c47eb351d275c94cb0e33e6ec1a8f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-101_comp_light.exr using Guid(9c47eb351d275c94cb0e33e6ec1a8f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30ab4ee589ae8aa0ebf8c07f9ee1edfa') in 0.009173 seconds
+  Import took 0.012212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000139 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-78_comp_light.exr
+  artifactKey: Guid(e8942ad9709fff54e9e941bcf3006ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-78_comp_light.exr using Guid(e8942ad9709fff54e9e941bcf3006ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b2f4fb65b598036d90e41d73a786d17') in 0.008574 seconds
+  Import took 0.011547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-82_comp_light.exr
+  artifactKey: Guid(814c43455deb55e4aa3f9968c1482116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-82_comp_light.exr using Guid(814c43455deb55e4aa3f9968c1482116) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15a9a10e7440fa3ec93c13d99d8642ef') in 0.009457 seconds
+  Import took 0.013171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-90_comp_light.exr
+  artifactKey: Guid(7e5ef6b09447b6b49a8b2aaea129da4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-90_comp_light.exr using Guid(7e5ef6b09447b6b49a8b2aaea129da4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e53dc9324cedb3821246f5e598123ca2') in 0.009116 seconds
+  Import took 0.012143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-99_comp_light.exr
+  artifactKey: Guid(4293e35877fb47342baf4e60d6782dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-99_comp_light.exr using Guid(4293e35877fb47342baf4e60d6782dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc2fc041b3cf72fcc94cae3d9d3beff2') in 0.011516 seconds
+  Import took 0.014593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-79_comp_light.exr
+  artifactKey: Guid(96fe7150c8231b840bb6786bd75f2acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-79_comp_light.exr using Guid(96fe7150c8231b840bb6786bd75f2acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97881351f428f17456ee27d16028ed79') in 0.009005 seconds
+  Import took 0.012806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-96_comp_light.exr
+  artifactKey: Guid(5d0b12d4235779749a5f2d3db39e6786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-96_comp_light.exr using Guid(5d0b12d4235779749a5f2d3db39e6786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10cdb165e25061d41fb4a8ade5943a38') in 0.009557 seconds
+  Import took 0.012425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-108_comp_light.exr
+  artifactKey: Guid(51d79ba5d313df947a5b84097a911d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-108_comp_light.exr using Guid(51d79ba5d313df947a5b84097a911d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab107af2f208621f79e37f119cf6450e') in 0.010028 seconds
+  Import took 0.012996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-114_comp_light.exr
+  artifactKey: Guid(7370113abbf4793439158091a3ff5b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-114_comp_light.exr using Guid(7370113abbf4793439158091a3ff5b15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e9a954a7f737480eeeab4e804bcc3c6') in 0.015417 seconds
+  Import took 0.018629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-104_comp_light.exr
+  artifactKey: Guid(964b3d2f452998a4489e772b0ee5b2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-104_comp_light.exr using Guid(964b3d2f452998a4489e772b0ee5b2f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dbd375565db66ca0e0813eedc51ab84') in 0.031217 seconds
+  Import took 0.035191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-88_comp_light.exr
+  artifactKey: Guid(7a2e6838db76ecd4a902c53174b29e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-88_comp_light.exr using Guid(7a2e6838db76ecd4a902c53174b29e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4c4d9077b37be36f6c43051172107c') in 0.009989 seconds
+  Import took 0.013404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000400 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-115_comp_light.exr
+  artifactKey: Guid(5350b8dc0c3a9c240b09a21784c728df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-115_comp_light.exr using Guid(5350b8dc0c3a9c240b09a21784c728df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc358214edfac9a157a8845bf9686fc4') in 0.009378 seconds
+  Import took 0.012765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-92_comp_light.exr
+  artifactKey: Guid(2abc04865ac8f254581eb599afff7934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-92_comp_light.exr using Guid(2abc04865ac8f254581eb599afff7934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d7f42e23f824ab0e3b29904aacb4b45') in 0.010200 seconds
+  Import took 0.013553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE)/Lightmap-103_comp_light.exr
+  artifactKey: Guid(db4094f45e0da71408b63dff567db43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE)/Lightmap-103_comp_light.exr using Guid(db4094f45e0da71408b63dff567db43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7ed6e6b119f551624a08bff3013ce25') in 0.009344 seconds
+  Import took 0.012286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.820997 seconds.
+  path: Assets/Scenes/Setting Menu.unity
+  artifactKey: Guid(a97dc0551690e334783ed6fc7ab960a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Setting Menu.unity using Guid(a97dc0551690e334783ed6fc7ab960a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0992af53d3bc3f37c7a988505390e928') in 0.005892 seconds
+  Import took 0.008559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.059402 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE).unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE).unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4339131367ab4d3ba0c239a9d6db9bcd') in 0.004548 seconds
+  Import took 0.007385 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003665 seconds.
+Registered in 0.003122 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.988 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1796 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.0 MB.
+System memory in use after: 164.0 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2294.
+Total: 1.736700 ms (FindLiveObjects: 0.148900 ms CreateObjectMapping: 0.053600 ms MarkObjects: 1.440400 ms  DeleteObjects: 0.092800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002543 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.985 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1796 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.0 MB.
+System memory in use after: 164.0 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2297.
+Total: 1.702500 ms (FindLiveObjects: 0.157100 ms CreateObjectMapping: 0.059500 ms MarkObjects: 1.398500 ms  DeleteObjects: 0.086500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 517.848364 seconds.
+  path: Assets/Scripts/AI/EnemyAI.cs
+  artifactKey: Guid(93e17cf89c9e10e40bf4a5d217ff7c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/EnemyAI.cs using Guid(93e17cf89c9e10e40bf4a5d217ff7c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b3fa384c3bad02c5fdf6371cf438cce') in 0.006690 seconds
+  Import took 0.009804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000955 seconds.
+  path: Assets/Scripts/AI/EnemyAI.cs
+  artifactKey: Guid(93e17cf89c9e10e40bf4a5d217ff7c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/EnemyAI.cs using Guid(93e17cf89c9e10e40bf4a5d217ff7c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b3fa384c3bad02c5fdf6371cf438cce') in 0.001089 seconds
+  Import took 0.004481 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002607 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.093 seconds
+- Completed reload, in  1.128 seconds
 Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.0 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2301.
+Total: 1.760400 ms (FindLiveObjects: 0.160500 ms CreateObjectMapping: 0.059900 ms MarkObjects: 1.444400 ms  DeleteObjects: 0.094200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.029280 seconds.
+  path: Assets/Scripts/AI/SwitchEyes.cs
+  artifactKey: Guid(cebb5e8f6b0827644b6250005458d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/SwitchEyes.cs using Guid(cebb5e8f6b0827644b6250005458d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f0c2d4440b679b41f9caf7594284896') in 0.006129 seconds
+  Import took 0.008792 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002750 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.283 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.93 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2304.
+Total: 3.882800 ms (FindLiveObjects: 0.172500 ms CreateObjectMapping: 0.064400 ms MarkObjects: 3.533300 ms  DeleteObjects: 0.110900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003962 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.030 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2307.
+Total: 1.818000 ms (FindLiveObjects: 0.174700 ms CreateObjectMapping: 0.066400 ms MarkObjects: 1.483000 ms  DeleteObjects: 0.092500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.123205 seconds.
+  path: Assets/Scripts/AI/SwitchEyes.cs
+  artifactKey: Guid(cebb5e8f6b0827644b6250005458d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/AI/SwitchEyes.cs using Guid(cebb5e8f6b0827644b6250005458d1b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7354f6e1c68f4791fb7a2b8e89e31e9d') in 0.003137 seconds
+  Import took 0.006013 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002528 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.952 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2310.
+Total: 1.983000 ms (FindLiveObjects: 0.157900 ms CreateObjectMapping: 0.058800 ms MarkObjects: 1.660600 ms  DeleteObjects: 0.104300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.610117 seconds.
+  path: Assets/JP/Prefabs/Gate.prefab
+  artifactKey: Guid(fec631a4bbe0e7e4985485f083cdd84c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JP/Prefabs/Gate.prefab using Guid(fec631a4bbe0e7e4985485f083cdd84c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6adaeef64c5f2878544a4f27bae97850') in 0.160658 seconds
+  Import took 0.163819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 59.735499 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(78b9f3175146a1a45ab50b8906337e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(78b9f3175146a1a45ab50b8906337e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '530224215623ef71b9d2d23fc1727e12') in 0.005575 seconds
+  Import took 0.009114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000886 seconds.
+  path: Assets/Textures
+  artifactKey: Guid(78b9f3175146a1a45ab50b8906337e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures using Guid(78b9f3175146a1a45ab50b8906337e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '530224215623ef71b9d2d23fc1727e12') in 0.001742 seconds
+  Import took 0.004595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.410775 seconds.
+  path: Assets/Textures/gate_01_diff.png
+  artifactKey: Guid(06a5edf9f3d040b49b47da8a1d61fccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/gate_01_diff.png using Guid(06a5edf9f3d040b49b47da8a1d61fccc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f8fab1aed156fe12e85fccc1a656316') in 0.058215 seconds
+  Import took 0.060982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Textures/gate_01_spec.png
+  artifactKey: Guid(07fe042b29fefbf44bd49f3d52fdcfb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/gate_01_spec.png using Guid(07fe042b29fefbf44bd49f3d52fdcfb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1739bc338df14e73b6b66fec2b0c8be1') in 0.008135 seconds
+  Import took 0.010653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Textures/gate_01_norm.png
+  artifactKey: Guid(dbea92c55da4bde40a37177e5a94ef90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Textures/gate_01_norm.png using Guid(dbea92c55da4bde40a37177e5a94ef90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38868d4cc087f52ec840020e6a4d9407') in 0.008432 seconds
+  Import took 0.010893 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003786 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.126 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.1 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2314.
+Total: 2.751500 ms (FindLiveObjects: 0.259800 ms CreateObjectMapping: 0.118100 ms MarkObjects: 2.266800 ms  DeleteObjects: 0.105500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002800 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.030 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2317.
+Total: 1.977200 ms (FindLiveObjects: 0.165700 ms CreateObjectMapping: 0.062500 ms MarkObjects: 1.625200 ms  DeleteObjects: 0.122300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012259 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1796 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.4 MB.
-System memory in use after: 160.4 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.026 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2293.
-Total: 1.823800 ms (FindLiveObjects: 0.155000 ms CreateObjectMapping: 0.057100 ms MarkObjects: 1.504400 ms  DeleteObjects: 0.106200 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2320.
+Total: 3.979500 ms (FindLiveObjects: 1.390100 ms CreateObjectMapping: 0.089300 ms MarkObjects: 2.382700 ms  DeleteObjects: 0.116100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002529 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.221 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2323.
+Total: 2.017200 ms (FindLiveObjects: 0.171800 ms CreateObjectMapping: 0.065700 ms MarkObjects: 1.676700 ms  DeleteObjects: 0.101700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 967.045587 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE).unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE).unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f04f72ae8253bad95f83c006cdb308ec') in 0.095927 seconds
+  Import took 0.099195 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002523 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.990 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2326.
+Total: 1.953100 ms (FindLiveObjects: 0.155000 ms CreateObjectMapping: 0.057100 ms MarkObjects: 1.638900 ms  DeleteObjects: 0.100700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002514 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.217 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2329.
+Total: 2.503500 ms (FindLiveObjects: 0.262200 ms CreateObjectMapping: 0.103100 ms MarkObjects: 2.019000 ms  DeleteObjects: 0.117100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003135 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.174 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2332.
+Total: 1.922500 ms (FindLiveObjects: 0.166300 ms CreateObjectMapping: 0.067600 ms MarkObjects: 1.583900 ms  DeleteObjects: 0.103700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002967 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.154 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2335.
+Total: 2.734700 ms (FindLiveObjects: 0.193900 ms CreateObjectMapping: 0.102700 ms MarkObjects: 2.326800 ms  DeleteObjects: 0.110100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003780 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.087 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2338.
+Total: 1.967000 ms (FindLiveObjects: 0.185300 ms CreateObjectMapping: 0.088600 ms MarkObjects: 1.584800 ms  DeleteObjects: 0.107000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002518 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.996 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2341.
+Total: 2.061100 ms (FindLiveObjects: 0.153100 ms CreateObjectMapping: 0.062300 ms MarkObjects: 1.747700 ms  DeleteObjects: 0.097100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006429 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.375 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2344.
+Total: 1.890500 ms (FindLiveObjects: 0.157700 ms CreateObjectMapping: 0.058900 ms MarkObjects: 1.578500 ms  DeleteObjects: 0.094400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002865 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.978 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2347.
+Total: 1.904300 ms (FindLiveObjects: 0.204600 ms CreateObjectMapping: 0.073500 ms MarkObjects: 1.532800 ms  DeleteObjects: 0.092500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002589 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.973 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2350.
+Total: 1.799000 ms (FindLiveObjects: 0.162100 ms CreateObjectMapping: 0.068400 ms MarkObjects: 1.472100 ms  DeleteObjects: 0.095300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002927 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.967 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2353.
+Total: 1.954000 ms (FindLiveObjects: 0.154800 ms CreateObjectMapping: 0.058700 ms MarkObjects: 1.641700 ms  DeleteObjects: 0.097400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003436 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.614 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2356.
+Total: 2.049400 ms (FindLiveObjects: 0.195200 ms CreateObjectMapping: 0.086500 ms MarkObjects: 1.666900 ms  DeleteObjects: 0.099100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1197.323539 seconds.
+  path: Assets/Scenes/Default Level (DONT DELETE).unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Default Level (DONT DELETE).unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49fec2c68234122a2fd6d2954545146e') in 0.237441 seconds
+  Import took 0.240217 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002498 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.945 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.2 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2359.
+Total: 2.055500 ms (FindLiveObjects: 0.156800 ms CreateObjectMapping: 0.060800 ms MarkObjects: 1.737900 ms  DeleteObjects: 0.098700 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
