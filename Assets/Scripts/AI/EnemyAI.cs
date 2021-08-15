@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,14 +19,15 @@ using UnityEngine.UI;
  * 
  * ChangeLog
  * ----------------------------
- *  14.06.2021  RK  Created
- *  18.06.2021  RK  Added function          Patrol()
- *  22.06.2021  RK  Added function          AttackPlayer()
- *  24.06.2021  RK  Added function          LookAround() 
- *                  Added function          CalcCurrentAngle()
- *                  Added SectorManager
- *  26.06.2021  RK  Changed if instruction lookAround     
- *              RK  Set lookAround to false, if Player Detected
+ *  14.06.2021  RK  erstellt
+ *  18.06.2021  RK  Patrol() hinzugeügt
+ *  22.06.2021  RK  AttackPlayer() hinzugefügt
+ *  24.06.2021  RK  LookAround()  hinzugefügt
+ *                  CalcCurrentAngle() hinzugefügt
+ *                  SectorManager hinzugefügt
+ *  26.06.2021  RK  LookAround() überarbeitet     
+ *              RK  Setze lookAroundFlag auf false, wenn der Spieler erkannt wurde
+ *  15.08.2021  RK  coroutineRunning Flag hinzugefügt            
  *  
  *****************************************************************************/
 
@@ -42,6 +44,9 @@ public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent agent;
     private GameObject player;
+
+    private Action OnPatrol;
+    private Action OnAttack;
 
     [Header("Dev Mode")]
     [SerializeField]
@@ -65,8 +70,9 @@ public class EnemyAI : MonoBehaviour
 
     private float currentAngle;
     private float angle;
-    private bool lookAround = false;
+    private bool lookAroundFlag = false;
     private bool isRight = false;
+    private bool coroutineRunning = false;
 
     SearchPlayerAI searchAI;
     Pathfinding pathfinding;
@@ -110,23 +116,33 @@ public class EnemyAI : MonoBehaviour
             {
                 agent.stoppingDistance = distanceToTheWaypoint;
                 agent.speed = patrolSpeed;
-                StopCoroutine(nameof(AttackPlayer));
-                StartCoroutine(nameof(Patrol));
+
+                
+                if (!coroutineRunning)
+                {
+                    StopCoroutine(nameof(AttackPlayer));
+                    StartCoroutine(nameof(Patrol));
+                }
+               
             }
             else
             { 
                 AgentResume();
                 agent.speed = attackSpeed;
-                lookAround = false;   
+                lookAroundFlag = false;   
                 
                 SetDestination(player.transform, distanceToThePlayer);
                 
-                StopCoroutine(nameof(Patrol));   
-                StartCoroutine(nameof(AttackPlayer));        
+                if (!coroutineRunning)
+                {
+                    StopCoroutine(nameof(Patrol));
+                    StartCoroutine(nameof(AttackPlayer));
+                }
+             
             }
 
             // Schaut sich am Wegpunkt um
-            if (lookAround && !searchAI.isPlayerDetected)
+            if (lookAroundFlag && !searchAI.isPlayerDetected)
             {
                 LookAround(leftLookAroundLimit, rightLookAroundLimit);
             }           
@@ -143,6 +159,9 @@ public class EnemyAI : MonoBehaviour
         // Waypoints = sectorManager.GetWaypointsFromSectorByTime();
         Waypoints = sectorManager.GetWaypointsFromSector();
 
+        coroutineRunning = true;
+        OnPatrol.Invoke();
+
         if (agent.remainingDistance <= agent.stoppingDistance && !searchAI.isPlayerDetected)
         {
           Debug.Log("Wegpunkt: " + agent.destination);
@@ -156,12 +175,12 @@ public class EnemyAI : MonoBehaviour
             // Sieh dich um
             currentAngle = CalcCurrentAngle();
             isRight = false;
-            lookAround = true;
+            lookAroundFlag = true;
             // Lege neues Ziel fest
             SetDestination(NextDestination(), distanceToTheWaypoint);
 
             yield return new WaitForSeconds(patrolPause);
-            lookAround = false;
+            lookAroundFlag = false;
       
             enemyAnim.PlayIdleAnimation(false);
             enemyAnim.PlayMoveAnimation(true);
@@ -171,6 +190,8 @@ public class EnemyAI : MonoBehaviour
         {
             enemyAnim.PlayRunAnimation(false);
         }
+
+        coroutineRunning = false;
     }
 
     /// <summary>
@@ -179,6 +200,9 @@ public class EnemyAI : MonoBehaviour
     /// <returns></returns>
     IEnumerator AttackPlayer()
     {
+        coroutineRunning = true;
+        OnAttack.Invoke();
+
         if (agent.remainingDistance <= attackDistance && searchAI.isPlayerDetected)
         {
             Debug.Log("AI: Attack");
@@ -193,6 +217,8 @@ public class EnemyAI : MonoBehaviour
             enemyAnim.PlayIdleAnimation(false);
             enemyAnim.PlayRunAnimation(true);
         }
+
+        coroutineRunning = false;
     }
 
     /// <summary>
@@ -288,7 +314,7 @@ public class EnemyAI : MonoBehaviour
     /// <returns></returns>
     public Transform NextDestination()
     {
-        int rnd = Random.Range(0, Waypoints.Length);
+        int rnd = UnityEngine.Random.Range(0, Waypoints.Length);
         return Waypoints[rnd].transform;
     }
 
@@ -349,6 +375,15 @@ public class EnemyAI : MonoBehaviour
                 agent.SetDestination(raycast.point);
             }
         }
+    }
+
+    public void SetOnPatrol(Action _newFunc)
+    {
+        OnPatrol += _newFunc;
+    }
+    public void SetOnAttack(Action _newFunc)
+    {
+        OnAttack += _newFunc;
     }
 
 }

@@ -15,7 +15,7 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  09.07.2021  RK  Created
+ *  09.07.2021  RK  erstellt
  *  
  *****************************************************************************/
 public class AudioManager : MonoBehaviour

@@ -14,7 +14,7 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  28.06.2021  RK  Created
+ *  28.06.2021  RK  erstellt
  *  
  *****************************************************************************/
 public class PlayerAnimator : MonoBehaviour

@@ -21,7 +21,7 @@ namespace CustomExtensions
     * 
     * ChangeLog
     * ----------------------------
-    *  11.08.2021  RK  Created
+    *  11.08.2021  RK  erstellt
     *  
     *****************************************************************************/
     public static class StringExtensions
@@ -33,11 +33,11 @@ namespace CustomExtensions
         /// <returns>Vector3</returns>
         public static Vector3 ToVector3(this string str)
         {
-            /// erwartetes Format: z. B. (35.0, 21.0, 432.0) von Vector3.ToString()
+            /// erwartetes Format: (35.0, 21.0, 432.0) von Vector3.ToString()
 
             // String Argument prüfen
             if (!str.StartsWith("(") && !str.EndsWith(")") && !str.Contains(","))
-                throw new ArgumentException("Format invaild!");
+                throw new ArgumentException("Format invalid!");
 
             // Klammern entfernen
             string strVector = str.Remove(str.Length - 1, 1).Remove(0, 1);

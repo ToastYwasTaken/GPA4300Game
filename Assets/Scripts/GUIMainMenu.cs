@@ -18,7 +18,7 @@ using UnityEngine.SceneManagement;
  * 
  * ChangeLog
  * ----------------------------
- *  24.06.2021  RK  Created
+ *  24.06.2021  RK  erstellt
  *  
  *****************************************************************************/
 public class GUIMainMenu : MonoBehaviour

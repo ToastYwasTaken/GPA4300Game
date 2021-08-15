@@ -19,7 +19,7 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  11.08.2021  
+ *  11.08.2021  RK erstellt
  *  
  *****************************************************************************/
 public class GameData : MonoBehaviour

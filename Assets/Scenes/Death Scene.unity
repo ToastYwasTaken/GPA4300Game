@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textOnDeath: {fileID: 1999796353}
+  mainMenuButton: {fileID: 2137826869}
 --- !u!1 &1999796350
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +974,7 @@ GameObject:
   - component: {fileID: 2137826872}
   - component: {fileID: 2137826871}
   m_Layer: 5
-  m_Name: Main Menu
+  m_Name: MainMenuBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -997,7 +998,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -283}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137826871
 MonoBehaviour:

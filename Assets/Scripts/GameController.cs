@@ -16,17 +16,17 @@ using UnityEngine.SceneManagement;
  * 
  * ChangeLog
  * ----------------------------
- *  11.06.2021  RK  Created
- *  15.06.2021  RK  Modified -> void Start()
- *  01.07.2021  JP  added RandomExit()
- *  15.07.2021  RK  added NewGame()
- *                  added ContinueGame()
- *                  added PauseGame()
- *                  added LoadingSettingScene()
- *                  added ExitGame()
- *  22.07.2021  RK  Bugfix Preferences NullReferenceExpection
- *  26.07.2021  RK  added SavePlayerPosition()
- *  11.08.2021  RK  added SaveEnemyPosition()
+ *  11.06.2021  RK  erstellt
+ *  15.06.2021  RK  Start() überarbeitet
+ *  01.07.2021  JP  RandomExit() hinzugefügt
+ *  15.07.2021  RK  NewGame() hinzugefügt
+ *                  ContinueGame() hinzugefügt
+ *                  PauseGame() hinzugefügt
+ *                  LoadingSettingScene() hinzugefügt
+ *                  ExitGame() hinzugefügt
+ *  22.07.2021  RK  fehlerbehoben in Preferences -> NullReferenceExpection
+ *  26.07.2021  RK  SavePlayerPosition() hinzugefügt
+ *  11.08.2021  RK  SaveEnemyPosition() hinzugefügt
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
@@ -41,26 +41,6 @@ public class GameController : MonoBehaviour
     [SerializeField]
     GameObject enemy;
 
-    //[SerializeField]
-    //private Transform[] exits;
-    //[SerializeField]
-    //private GameObject RockPilePrefab;
-
-    //private void RandomExit()
-    //{
-    //    int randomExit = Random.Range(0, exits.Length);
-    //    for(int _i = 0; _i < exits.Length; _i++)
-    //    {
-    //        if (_i == randomExit)
-    //        {
-    //            continue;                                   //L�sst nur einen Ausgang offen,...
-    //        }
-    //        else
-    //        {
-    //            Instantiate(RockPilePrefab, exits[_i]);     //...alle anderen werden zugesch�ttet.
-    //        }
-    //    }
-    //}
 
     void Start()
     {
@@ -69,13 +49,6 @@ public class GameController : MonoBehaviour
 
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
-
-
-        
-
-        
-        
-
 
 
         //preferences = FindObjectOfType<Preferences>();
@@ -198,7 +171,7 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// L�dt die Settings Scene in die Game Scene
+    /// Laedt die Settings Scene in die Game Scene
     /// </summary>
     public void LoadSettingScene()
     {

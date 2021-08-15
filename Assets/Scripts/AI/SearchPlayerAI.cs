@@ -16,7 +16,7 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  16.06.2021  RK  Created
+ *  16.06.2021  RK  erstellt
  *  
  *****************************************************************************/
 public class SearchPlayerAI : MonoBehaviour

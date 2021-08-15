@@ -17,12 +17,12 @@ using UnityEngine.SceneManagement;
  * 
  * ChangeLog
  * ----------------------------
- *  11.06.2021  FM  Created
- *  22.06.2021  FM  Edited health mechanic
- *  24.06.2021  FM  Deleted Debuglog
- *  26.06.2021  RK  Changed LoadScene to LoadSceneAsync
- *  26.07.2021  RK  Added OnTriggerEnter Event
- *  28/07.2021  FM  Added maxVal for health
+ *  11.06.2021  FM  erstellt
+ *  22.06.2021  FM  health mechanic überarbeitet
+ *  24.06.2021  FM  Debuglog entfernt
+ *  26.06.2021  RK  LoadScene zu LoadSceneAsync geändert
+ *  26.07.2021  RK  OnTriggerEnter Event hinzugefügt
+ *  28/07.2021  FM  maxVal for health hinzugefügt
  *  
  *****************************************************************************/
 

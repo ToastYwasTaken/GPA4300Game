@@ -15,7 +15,7 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  21.06.2021  RK  Created
+ *  21.06.2021  RK  erstellt
  *  
  *****************************************************************************/
 public class EnemyAnimator : MonoBehaviour

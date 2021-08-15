@@ -16,13 +16,13 @@ using CustomExtensions;
  * 
  * ChangeLog
  * ----------------------------
- *  05.07.2021  RK  Created
- *  11.08.2021  RK  Added Save_PlayerPosition()
- *                  Added Load_PlayerPosition()
- *                  Added Save_PlayerHealth()
- *                  Added Load_PlayerHealth()
- *                  Added Save_EnemyPosition()
- *                  Added Load_EnemyPosition()
+ *  05.07.2021  RK  erstellt
+ *  11.08.2021  RK  Save_PlayerPosition() hinzugefügt
+ *                  Load_PlayerPosition() hinzugefügt
+ *                  Save_PlayerHealth() hinzugefügt
+ *                  Load_PlayerHealth() hinzugefügt
+ *                  Save_EnemyPosition() hinzugefügt
+ *                  Load_EnemyPosition() hinzugefügt
  *  
  *****************************************************************************/
 public class Preferences : MonoBehaviour
