@@ -33,9 +33,6 @@ public class LoadPrefs : MonoBehaviour
         {
             //playerController.sensitivityMultiplier = PlayerPrefs.GetFloat("sensitivity");
         }
-
-        //Debug.Log("volume Pref: " + PlayerPrefs.GetFloat("volume"));
-        //Debug.Log("sensitivity Pref: " + PlayerPrefs.GetFloat("sensitivity"));
     }
 
 }

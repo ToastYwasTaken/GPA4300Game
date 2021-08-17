@@ -58,6 +58,7 @@ public class GUIHealth : MonoBehaviour
     // Update is called once per frame
     void Update()   
     {
+        //Updated die Leben des Spielers
         phealth = player.GetComponent<PlayerHealth>().pHealthProperty; //100 - 0
         healthText.text = phealth.ToString();
         changeGradientRed = (byte)(defaultHealthColorRed + (100 - phealth));
@@ -65,13 +66,13 @@ public class GUIHealth : MonoBehaviour
         healthImage.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
         if(phealth < 50)
         {
-            LightBleeding();
+            Bleeding(true);
         }
         else if(phealth < 30)
         {
             StartCoroutine("PulseHeart");
             StartCoroutine("Flash");
-            StrongBleeding();
+            Bleeding(false);
         } else if(phealth < 0)
         {
             var emission = blood.emission;
@@ -110,19 +111,20 @@ public class GUIHealth : MonoBehaviour
 
         }
     }
-    
-    private void LightBleeding()
-    {
-        var emission = blood.emission;
-        emission.enabled = true;
-        emission.rateOverTime = 10f;
-    }
 
-    private void StrongBleeding()
+    /// <summary>
+    /// false: Fügt leichten Blut-effekt hinzu, sobald die Leben des Spielers sinken
+    /// true: Fügt stärkeren Blut-effekt hinzu, sobald die Leben des Spielers stark sinken
+    /// </summary>
+    private void Bleeding(bool _isLighBleeding)   //wenn false: Starkes Bluten
     {
         var emission = blood.emission;
         emission.enabled = true;
-        emission.rateOverTime = 20f;
+        if (_isLighBleeding)
+        {
+            emission.rateOverTime = 10f;
+        }
+        else emission.rateOverTime = 20f;
     }
 
     IEnumerator Flash() //TODO

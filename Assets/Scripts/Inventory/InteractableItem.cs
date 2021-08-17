@@ -33,7 +33,7 @@ public class InteractableItem : MonoBehaviour
 {
     public float colliderLength = 1f;
     private Vector3 colliderSize;
-    public InventoryGUI inventoryGUIRef;
+    public GUIInventory inventoryGUIRef;
     private bool triggerFlag = false;
 
     

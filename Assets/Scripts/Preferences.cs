@@ -23,6 +23,7 @@ using CustomExtensions;
  *                  Load_PlayerHealth() hinzugefügt
  *                  Save_EnemyPosition() hinzugefügt
  *                  Load_EnemyPosition() hinzugefügt
+ * 17.08.2021  FM   LoadPrefs.cs gelöscht, da Funktionalität hier gegeben
  *  
  *****************************************************************************/
 public class Preferences : MonoBehaviour

@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 /******************************************************************************
 * Project: GPA4300Game
 * File: GUIDeath.cs
@@ -66,7 +65,7 @@ public class GUIDeath : MonoBehaviour
     }
 
     /// <summary>
-    /// Lädt das Hauptmenue
+    /// Lädt das Hauptmenu wenn der Button gedrückt wird
     /// </summary>
     /// <param name="_sceneIndex"></param>
     public void LoadScene(int _sceneIndex)

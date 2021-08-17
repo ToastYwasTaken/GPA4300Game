@@ -27,6 +27,8 @@ using UnityEngine.SceneManagement;
  *  22.07.2021  RK  fehlerbehoben in Preferences -> NullReferenceExpection
  *  26.07.2021  RK  SavePlayerPosition() hinzugefügt
  *  11.08.2021  RK  SaveEnemyPosition() hinzugefügt
+ *  17.08.2021  FM  GUIOptionMenu.cs gelöscht, Funktionalität hier eingefügt
+ *  15.07.2021  FM  ButtonBehaviour.cs gelöscht, Funktionalität hier eingefügt
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {

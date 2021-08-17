@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /******************************************************************************
@@ -17,7 +15,7 @@ using UnityEngine;
  * 
  * ChangeLog
  * ----------------------------
- *  15.07.2021  RK  ersstellt
+ *  15.07.2021  RK  erstellt
  *  
  *  
  *****************************************************************************/

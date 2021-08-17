@@ -21,8 +21,9 @@ using UnityEngine.SceneManagement;
  *  22.06.2021  FM  health mechanic überarbeitet
  *  24.06.2021  FM  Debuglog entfernt
  *  26.06.2021  RK  LoadScene zu LoadSceneAsync geändert
- *  26.07.2021  RK  OnTriggerEnter Event hinzugefügt
- *  28/07.2021  FM  maxVal for health hinzugefügt
+ *  26.07.2021  FM  OnTriggerEnter Event hinzugefügt
+ *  28.07.2021  FM  maxVal für health hinzugefügt
+ *  17.08.2021  FM  Werte angepasst
  *  
  *****************************************************************************/
 
@@ -69,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.tag == "Trap")
         {
-            phealth = -1;
+            phealth = 0;
         }
     }
 

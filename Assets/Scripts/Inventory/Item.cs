@@ -37,12 +37,13 @@ public class Item : MonoBehaviour
     [SerializeField]
     private Sprite sprite;  //Das Sprite, das in der GUI angezeigt werden soll
     [SerializeField]
-    private IItemTypes itemType;
+    private IItemTypes.ItemType itemType;
 
     private void Start()
     {
         SetDefaultItemName();
         SetDefaultGameobject();
+        AssignItemType();
     }
 
     /// <summary>
@@ -69,6 +70,32 @@ public class Item : MonoBehaviour
         }
     }
 
-    public IItemTypes PItemType { get => itemType; }
+    private void AssignItemType()
+    {
+        switch (itemName)
+        {
+            case "key" :
+                this.PItemType = IItemTypes.ItemType.Key;
+                break;
+            case "healPotion" :
+                this.PItemType = IItemTypes.ItemType.HealPotion;
+                break;
+            case "sprintPotion":
+                this.PItemType = IItemTypes.ItemType.SprintPotion;
+                break;
+            case "map1":
+                this.PItemType = IItemTypes.ItemType.MapPart1;
+                break;
+            case "map2":
+                this.PItemType = IItemTypes.ItemType.MapPart2;
+                break;
+            case "map3":
+                this.PItemType = IItemTypes.ItemType.MapPart3;
+                break;
+            default:
+                break;
+        }
+    }
+    public IItemTypes.ItemType PItemType { get => itemType; set => itemType = value; }
     public Sprite PItemSprite { get => sprite; }
 }
