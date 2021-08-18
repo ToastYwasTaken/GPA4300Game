@@ -74,8 +74,8 @@
     <Compile Include="Assets\Scripts\AI\EnemyAI.cs" />
     <Compile Include="Assets\JP\Scripts\HiddenDoor_Behavior.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
+    <Compile Include="Assets\Scripts\AI\SwitchEyes.cs" />
     <Compile Include="Assets\Scripts\Inventory\InteractableItem.cs" />
-    <Compile Include="Assets\Scripts\ButtonBehaviour.cs" />
     <Compile Include="Assets\JP\Scripts\TrapRocks_Behavior.cs" />
     <Compile Include="Assets\JP\Scripts\Rat_Behavior.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -108,7 +108,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\GUIMainMenu.cs" />
-    <Compile Include="Assets\Scripts\Inventory\InventoryGUI.cs" />
+    <Compile Include="Assets\Scripts\Inventory\GUIInventory.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\AI\Sector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
@@ -127,12 +127,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\AI\Waypoint.cs" />
-    <Compile Include="Assets\Scripts\GUIOptionMenu.cs" />
     <Compile Include="Assets\Scripts\WizardInDeathScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\JP\Prefabs\Interactive\portal\Old Portal\Portal_Behavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\AI\SwitchEyes.cs" />
+    <Compile Include="Assets\Scripts\StateMachineBehaviours\GateAudio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -374,6 +373,9 @@
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
