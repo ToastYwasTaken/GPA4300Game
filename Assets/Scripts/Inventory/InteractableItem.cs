@@ -56,7 +56,8 @@ public class InteractableItem : MonoBehaviour
         //hinzugefügt werden konnte
         if(triggerFlag == true)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
         triggerFlag = false;
     }
@@ -80,8 +81,9 @@ public class InteractableItem : MonoBehaviour
             //Picks up item on left mouse press
             if (Input.GetKeyDown(KeyCode.Mouse0) && this.tag.Equals("Item"))
             {
-                //Add item to inventory / show in GUI
+                //Füge Item ins Inventar hinzu / GUI Anzeige
                 Debug.Log("In trigger");
+                //TODO create new instance on Add
                 Item item = this.gameObject.GetComponent<Item>();
                 if (item && !triggerFlag)
                 {

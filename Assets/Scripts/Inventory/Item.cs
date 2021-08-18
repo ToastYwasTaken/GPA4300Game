@@ -46,6 +46,11 @@ public class Item : MonoBehaviour
         AssignItemType();
     }
 
+
+    public Item()
+    {
+
+    }
     /// <summary>
     /// Setzt standartisierte Werte für das Gameobjekt, falls es nicht im 
     /// Inspektor initialisiert wurde

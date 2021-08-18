@@ -46,11 +46,11 @@ public class GUIInventory : MonoBehaviour
 
     sbyte healValue = 20;
 
-    private bool key1isValid = false;
-    private bool key2isValid = false;
-    private bool key3isValid = false;
-    private bool key4isValid = false;
-    private bool key5isValid = false;
+    private bool key1isValid = true;
+    private bool key2isValid = true;
+    private bool key3isValid = true;
+    private bool key4isValid = true;
+    private bool key5isValid = true;
 
     private void Start()
     {
@@ -60,7 +60,7 @@ public class GUIInventory : MonoBehaviour
     private void Update()
     {
         UpdateGUI();
-        InputValidityCheck();
+        //InputValidityCheck();
         GetInput();
     }
 
@@ -145,11 +145,13 @@ public class GUIInventory : MonoBehaviour
         //{
         //    return;
         //}
+        Item currentItem = inventory[_index];
         if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.HealPotion))
         {
             Debug.Log("In case HealPotion");
             healthRef.pHealthProperty += healValue;
-            RemoveItem(inventory[_index]);
+            
+            RemoveItem(currentItem);
             Debug.Log("Item removed");
         }
         else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.SprintPotion))
