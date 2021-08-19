@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 /******************************************************************************
@@ -47,22 +48,22 @@ public class PlayerController : MonoBehaviour
     private Action OnPlayerMove;
     private Action OnPlayerMoveRun;
 
-    public Vector3 startPosition;
+    [SerializeField]
+    private Vector3 startPosition;
 
     [SerializeField]
     private Vector3 playerCurrentPosition;
-    public Transform camTransform;
-
     [SerializeField]
-    private static bool sprintActive = true;
-    public static bool SprintActive
-    {
-        set { sprintActive = value; }
-    }
+    private Transform camTransform;
 
     [Tooltip("Sprint Speed")]
-    public float speedMultiplier = 2f;
+    [SerializeField]
+    private float speedMultiplier = 2f;
     public bool playerSprints = false;
+    [SerializeField]
+    private float maxEndurance = 10;
+    [SerializeField]
+    private float waitTimeForEnduranceReset = 5;
 
     [SerializeField]
     private bool jumpActive = false;
@@ -71,8 +72,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool isGrounded;
     private bool hitWall;
+
     [SerializeField]
     private bool rotatePlayerWithButtons = false;
+
     [SerializeField]
     private float maxVerticalCameraAngle = 45f;
     private float cameraAngle = 0f;
@@ -80,8 +83,15 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -10f;
 
+    [SerializeField]
+    private static bool sprintActive = true;
+    public static bool SprintActive
+    {
+        set { sprintActive = value; }
+    }
     public bool PlayerCanMove { get; set; }
     public float Sensitivity { get; set; }
+    public float Endurance { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -92,6 +102,7 @@ public class PlayerController : MonoBehaviour
         playerAnimator.PlayIdleAnimation(true);
 
         PlayerCanMove = true;
+        Endurance = maxEndurance;
         Sensitivity = GameData.instance.Sensitivity;
 
     }
@@ -126,6 +137,7 @@ public class PlayerController : MonoBehaviour
             playerBody.transform.position = GameData.instance.PlayerStartPosition;
             PlayerCanMove = true;
             sprintActive = true;
+            Endurance = maxEndurance;
         }
     }
 
@@ -146,25 +158,28 @@ public class PlayerController : MonoBehaviour
         else
         {
             // Bewegungsgeschwindigkeit
-            float speed;
+            float speed = moveSpeed;
 
             // Sprint
             if (Input.GetButton("Run") && sprintActive && keyInput.z > 0 && !hitWall) //default l shift
             {
-                playerAnimator.PlayWalkAnimation(false);
-                playerAnimator.PlayIdleAnimation(false);
-                playerAnimator.PlaySprintAnimation(true); // true
-
-                speed = moveSpeed * speedMultiplier;
-                playerSprints = true;
-
-                if (OnPlayerMoveRun != null)
-                {
-                    OnPlayerMoveRun.Invoke();
-                }
+                PlayerSprint(speed);
             }
             else
             {
+
+
+                // Wenn die Ausdauer unter dem maximalwert liegt, Ausdauer zurücksetzen
+                if (Endurance < maxEndurance && !playerSprints)
+                {
+                    StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
+                }
+                else
+                {
+                    StopCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
+                }
+
+
                 playerAnimator.PlayWalkAnimation(true); // true
                 playerAnimator.PlayIdleAnimation(false);
                 playerAnimator.PlaySprintAnimation(false);
@@ -177,6 +192,8 @@ public class PlayerController : MonoBehaviour
                     OnPlayerMove.Invoke();
                 }
             }
+
+
 
             // Mit der Tastatur drehen
             if (rotatePlayerWithButtons)
@@ -193,6 +210,59 @@ public class PlayerController : MonoBehaviour
             // Nach vorne gehen
             playerBody.MovePosition(playerBody.position + speed * Time.deltaTime * keyInput.z * transform.forward);
         }
+    }
+
+    float PlayerSprint(float _speed)
+    {
+        if (Endurance > 0)
+        {
+            // Sprint Animation abspielen
+            playerAnimator.PlayWalkAnimation(false);
+            playerAnimator.PlayIdleAnimation(false);
+            playerAnimator.PlaySprintAnimation(true); // true
+
+            // Event aufrufen
+            if (OnPlayerMoveRun != null)
+            {
+                OnPlayerMoveRun.Invoke();
+            }
+
+            // Speed Wert erhöhen
+            _speed = moveSpeed * speedMultiplier;
+            playerSprints = true;
+
+            // 
+            Endurance -= Time.deltaTime;
+
+            Debug.Log($"Sprint Ausdauer N: {Endurance}");
+
+            return _speed;
+        }
+        else
+        {
+            playerSprints = false;
+            return _speed;
+        }
+    }
+
+    IEnumerator ResetSprintEndurance(float _waitTimeForReset, float _enduranceMaxLimit)
+    {
+        // TODO Animation mit starker Atmung abspielen
+
+        yield return new WaitForSeconds(_waitTimeForReset);
+
+        Debug.Log($"Sprint Ausdauer: {Endurance}");
+
+
+        while (Endurance < _enduranceMaxLimit)
+        {
+            Endurance += Time.deltaTime;
+            Debug.Log($"Sprint Ausdauer: {Endurance}");
+
+        }
+
+        Endurance = _enduranceMaxLimit;
+        Debug.Log($"Sprint Ausdauer Ende: {Endurance}");
     }
 
     /// <summary>
