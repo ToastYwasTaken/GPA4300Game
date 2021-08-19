@@ -16,6 +16,9 @@ using UnityEngine;
  * ChangeLog
  * ----------------------------
  *  09.07.2021  RK  erstellt
+ *  20.08.2021  RK  hinzugefügt AudioSource enemySFX
+ *                              AudioSource playerSFX
+ *                              AudioSource environment
  *  
  *****************************************************************************/
 public class AudioManager : MonoBehaviour
@@ -25,8 +28,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip audioClipGameScene = null;
 
     [SerializeField]
-    private AudioSource audioSource = null;
-
+    private AudioSource backgroundMusic = null;
+    private AudioSource enemySFX = null;
+    private AudioSource playerSFX = null;
+    private AudioSource environment = null;
 
 
     private void Awake()
@@ -47,10 +52,10 @@ public class AudioManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        audioSource = FindObjectOfType<AudioSource>();
-        if (audioSource)
+        backgroundMusic = GetComponent<AudioSource>();
+        if (backgroundMusic)
         {
-            audioSource.volume = FindObjectOfType<Preferences>().Load_AudioVolume();
+            backgroundMusic.volume = Preferences.instance.Load_AudioVolume();
         }
         else
             Debug.LogError("Kein AudioSource gefunden!");

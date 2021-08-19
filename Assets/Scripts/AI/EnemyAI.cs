@@ -7,7 +7,7 @@ using UnityEngine.UI;
 /******************************************************************************
  * Project: GPA4300Game
  * File: EnemyAI.cs
- * Version: 1.02
+ * Version: 1.06
  * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
  * 
  * 
@@ -27,7 +27,10 @@ using UnityEngine.UI;
  *                  SectorManager hinzugefügt
  *  26.06.2021  RK  LookAround() überarbeitet     
  *              RK  Setze lookAroundFlag auf false, wenn der Spieler erkannt wurde
- *  15.08.2021  RK  coroutineRunning Flag hinzugefügt            
+ *  15.08.2021  RK  coroutineRunning Flag hinzugefügt      
+ *  20.08.2021  RK  Eigenschaft: StartPosition hinzugefügt
+ *              RK  Eigenschaft: EnemyCurrentPosition hinzugefügt
+ *              RK  Eigenschaft: LastDestination hinzugefügt
  *  
  *****************************************************************************/
 
@@ -44,6 +47,7 @@ public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent agent;
     private GameObject player;
+    private Transform enemyTransform;
 
     private Action OnPatrol;
     private Action OnAttack;
@@ -79,11 +83,18 @@ public class EnemyAI : MonoBehaviour
     EnemyAnimator enemyAnim;
     SectorManager sectorManager;
 
+    public Vector3 StartPosition { get; set; }
+    public Vector3 EnemyCurrentPosition { get; set; }
+    public Vector3 LastDestination { get; set; }
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         searchAI = GetComponent<SearchPlayerAI>();
         pathfinding = GetComponent<Pathfinding>();
+
+        enemyTransform = GetComponent<Transform>();
+
         enemyAnim = FindObjectOfType<EnemyAnimator>();
         sectorManager = FindObjectOfType<SectorManager>();
 
@@ -147,6 +158,9 @@ public class EnemyAI : MonoBehaviour
                 LookAround(leftLookAroundLimit, rightLookAroundLimit);
             }           
         }
+
+        // Speichert die letzte Position der KI
+        EnemyCurrentPosition = enemyTransform.position;
     }
 
     /// <summary>
@@ -326,6 +340,9 @@ public class EnemyAI : MonoBehaviour
     {
         agent.stoppingDistance = _destDistance;
         agent.SetDestination(_destPoint.position);
+
+        // Speichert das Ziel der KI
+        LastDestination = agent.destination;
 
         pathfinding.SetTarget(_destPoint);
 

@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
-    <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\LoadingController.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemRotation.cs" />
@@ -68,7 +67,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\GUIDeath.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\Scripts\LoadPrefs.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\JP\Scripts\SwitchBehavior_Skript.cs" />
     <Compile Include="Assets\Scripts\AI\EnemyAI.cs" />
@@ -76,6 +74,7 @@
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\AI\SwitchEyes.cs" />
     <Compile Include="Assets\Scripts\Inventory\InteractableItem.cs" />
+    <Compile Include="Assets\Scripts\StateMachineBehaviours\GateAudio.cs" />
     <Compile Include="Assets\JP\Scripts\TrapRocks_Behavior.cs" />
     <Compile Include="Assets\JP\Scripts\Rat_Behavior.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
@@ -131,7 +130,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\JP\Prefabs\Interactive\portal\Old Portal\Portal_Behavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\StateMachineBehaviours\GateAudio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

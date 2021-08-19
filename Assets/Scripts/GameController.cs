@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 /******************************************************************************
  * Project: GPA4300Game
  * File: PlayerController.cs
- * Version: 1.01
+ * Version: 1.09
  * Autor: Ren� Kraus (RK); Franz M�rike (FM); Jan Pagel (JP)
  * 
  * 
@@ -29,19 +29,24 @@ using UnityEngine.SceneManagement;
  *  11.08.2021  RK  SaveEnemyPosition() hinzugefügt
  *  17.08.2021  FM  GUIOptionMenu.cs gelöscht, Funktionalität hier eingefügt
  *  15.07.2021  FM  ButtonBehaviour.cs gelöscht, Funktionalität hier eingefügt
+ *  20.08.2021  RK  
  *****************************************************************************/
 public class GameController : MonoBehaviour
 {
     [SerializeField]
     private bool isGamePaused = false;
-    private Vector3 currentPlayerPosition;
-    private Vector3 currentEnemyPosition;
-
 
     [SerializeField]
-    GameObject player;
+    private PlayerController playerController;
     [SerializeField]
-    GameObject enemy;
+    private EnemyAI enemyAI;
+
+    public Vector3 PlayerPosition { get; set; } = new Vector3(0f, 0f, 0f);
+    public Vector3 PlayerStartPosition { get; set; } = new Vector3(0f, 0f, 0f);
+    public int PlayerHealth { get; set; } = 100;
+
+    public Vector3 EnemyPosition { get; set; } = new Vector3(0f, 0f, 0f);
+    public Vector3 EnemyStartPosition { get; set; } = new Vector3(0f, 0f, 0f);
 
 
     void Start()
@@ -52,18 +57,17 @@ public class GameController : MonoBehaviour
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
 
+        if (playerController)
+        {
+            playerController = FindObjectOfType<PlayerController>();
+        }
+        
+        if (enemyAI)
+        {
+            enemyAI = FindObjectOfType<EnemyAI>();
+        }
 
-        //preferences = FindObjectOfType<Preferences>();
-
-        //if (preferences)
-        //{
-        //    audioSource.volume = preferences.Load_AudioVolume();
-        //}
-        //else
-        //{
-        //    audioSource.volume = 1f;
-        //}
-
+        NewGame();
     }
     
 
@@ -87,15 +91,11 @@ public class GameController : MonoBehaviour
     ///  </sammary>
     private void SavePlayerPosition()
     {
-        PlayerController player = FindObjectOfType<PlayerController>();
-
-        if (player)
+        if (playerController)
         {
-            currentPlayerPosition = player.transform.position;
+            Preferences.instance.Save_PlayerPosition(playerController.PlayerCurrentPosition);
 
-            Preferences.instance.Save_PlayerPosition(currentPlayerPosition);
-
-            Debug.Log($"Current Player Position: {currentPlayerPosition}");
+            Debug.Log($"Current Player Position: {playerController.PlayerCurrentPosition}");
         }
         else
         {
@@ -108,15 +108,11 @@ public class GameController : MonoBehaviour
     ///  </sammary>
     private void SaveEnemyPosition()
     {
-        EnemyAI enemy = FindObjectOfType<EnemyAI>();
-
-        if (enemy)
+        if (enemyAI)
         {
-            currentEnemyPosition = enemy.transform.position;
+            Preferences.instance.Save_PlayerPosition(enemyAI.EnemyCurrentPosition);
 
-            Preferences.instance.Save_PlayerPosition(currentEnemyPosition);
-
-            Debug.Log($"Current Enemy Position: {currentEnemyPosition}");
+            Debug.Log($"Current Enemy Position: {enemyAI.EnemyCurrentPosition}");
         }
         else
         {
@@ -130,13 +126,30 @@ public class GameController : MonoBehaviour
     public void NewGame()
     {
         // Neues Spiel starten
+        PlayerPosition = PlayerStartPosition;
+        EnemyPosition = EnemyStartPosition;
+
+        playerController.StartPosition = PlayerPosition;
+        playerController.Sensitivity = Preferences.instance.Load_Sensitivity();
+
+        enemyAI.StartPosition = EnemyPosition;
     }
 
     /// <summary>
     /// Spiel fortsetzen
     /// </summary>
     public void ContinueGame()
-    {
+    { 
+        PlayerPosition = Preferences.instance.Load_PlayerPosition();
+        PlayerHealth = Preferences.instance.Load_PlayerHealth();
+        EnemyPosition = Preferences.instance.Load_EnemyPosition();
+
+        playerController.StartPosition = PlayerPosition;
+
+        playerController.Sensitivity = Preferences.instance.Load_Sensitivity();
+
+        enemyAI.StartPosition = EnemyPosition;
+
         isGamePaused = false;
         PauseGame(isGamePaused);
     }

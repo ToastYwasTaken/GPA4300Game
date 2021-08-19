@@ -5,7 +5,7 @@ using UnityEngine;
 /******************************************************************************
  * Project: GPA4300Game
  * File: PlayerController.cs
- * Version: 1.02
+ * Version: 1.10
  * Autor: Ren� Kraus (RK); Franz M�rike (FM); Jan Pagel (JP)
  * 
  * 
@@ -45,14 +45,10 @@ public class PlayerController : MonoBehaviour
     private PlayerAnimator playerAnimator;
     //private Preferences preferences;
 
+    // Events
     private Action OnPlayerMove;
     private Action OnPlayerMoveRun;
 
-    [SerializeField]
-    private Vector3 startPosition;
-
-    [SerializeField]
-    private Vector3 playerCurrentPosition;
     [SerializeField]
     private Transform camTransform;
 
@@ -92,6 +88,8 @@ public class PlayerController : MonoBehaviour
     public bool PlayerCanMove { get; set; }
     public float Sensitivity { get; set; }
     public float Endurance { get; set; }
+    public Vector3 StartPosition { get; set; }
+    public Vector3 PlayerCurrentPosition { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -103,8 +101,6 @@ public class PlayerController : MonoBehaviour
 
         PlayerCanMove = true;
         Endurance = maxEndurance;
-        Sensitivity = GameData.instance.Sensitivity;
-
     }
 
     // Update is called once per frame
@@ -115,6 +111,9 @@ public class PlayerController : MonoBehaviour
 
         // Springen
         Jump();
+
+        // Speichert die aktuelle Position des Spielers
+        PlayerCurrentPosition = playerBody.transform.position;
 
     }
 
@@ -134,7 +133,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.y <= fallingDownLimit)
         {
-            playerBody.transform.position = GameData.instance.PlayerStartPosition;
+            playerBody.transform.position = StartPosition;
             PlayerCanMove = true;
             sprintActive = true;
             Endurance = maxEndurance;
@@ -163,12 +162,10 @@ public class PlayerController : MonoBehaviour
             // Sprint
             if (Input.GetButton("Run") && sprintActive && keyInput.z > 0 && !hitWall) //default l shift
             {
-                PlayerSprint(speed);
+                speed = PlayerSprint(speed);
             }
             else
             {
-
-
                 // Wenn die Ausdauer unter dem maximalwert liegt, Ausdauer zurücksetzen
                 if (Endurance < maxEndurance && !playerSprints)
                 {
@@ -248,6 +245,10 @@ public class PlayerController : MonoBehaviour
     IEnumerator ResetSprintEndurance(float _waitTimeForReset, float _enduranceMaxLimit)
     {
         // TODO Animation mit starker Atmung abspielen
+
+        float i = 0;
+        i += Time.deltaTime;
+        Debug.Log("Wait: " + i);
 
         yield return new WaitForSeconds(_waitTimeForReset);
 
