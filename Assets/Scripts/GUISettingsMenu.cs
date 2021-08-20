@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,45 +25,60 @@ using UnityEngine.UI;
  *              RK  PlayerController hinzugefügt
  *  22.07.2021  RK  NullReferenceExpection behoben
  *  14.08.2021  FM  auskommentierten Code und bool flag entfernt
+ *  21.08.2021  RK  Helligkeitseinstellung hinzugefügt
  *  
  *  
  *****************************************************************************/
 public class GUISettingsMenu : MonoBehaviour
 {
-    private int sceneBuildIndex = 3;
+    private readonly int sceneBuildIndex = 3;
+
+    private Preferences preferences;
+    private AudioManager audioManager;
 
     private GUIMainMenu mainMenu;
-    private Preferences preferences;
     private PlayerController playerController;
+    private GameController gameController;
 
-    public AudioSource audioSource;
-    public Camera mainCamera;
+    [SerializeField]
+    private Camera mainCamera;
 
-    private float sensitivityValue = 1;
-    private float volumeValue = 1;
-    private bool audioMute = false;
-    private bool soundsMute = false;
+    public float SensitivityValue { get; set; } = 1;
+    public float VolumeValue { get; set; } = 1;
+    public float LightValue { get; set; } = 2f;
+    public bool AudioMute { get; set; } = false;
+    public bool SoundsMute { get; set; } = false;
 
-    public TextMeshProUGUI volumeText;
-    public TextMeshProUGUI sensitivityText;
-    public Slider volumeSlider;
-    public Slider sensitivitySlider;
-    public Toggle audioToggle;
-    public Toggle soundsToggle;
+    [SerializeField]
+    private TextMeshProUGUI volumeText;
+    [SerializeField]
+    private TextMeshProUGUI sensitivityText;
+    [SerializeField]
+    private TextMeshProUGUI lightText;
+    [SerializeField]
+    private Slider volumeSlider;
+    [SerializeField]
+    private Slider sensitivitySlider;
+    [SerializeField]
+    private Slider lightSlider;
+    [SerializeField]
+    private Toggle audioToggle;
+    [SerializeField]
+    private Toggle soundsToggle;
 
     private void Start()
     {
-        audioSource = FindObjectOfType<AudioSource>();
-        preferences = FindObjectOfType<Preferences>();
+        preferences = Preferences.instance;
+        audioManager = AudioManager.instance;
 
-        // Wenn prefernces oder audioSource nicht gefunden, keine Einstellungen laden
-        if (!preferences || !audioSource) return;
+        SensitivityValue = preferences.Load_Sensitivity();
+        VolumeValue = preferences.Load_AudioVolume();
+        AudioMute = preferences.Load_AudioMute();
+        SoundsMute = preferences.Load_SoundsMute();
+        LightValue = preferences.Load_Brightness();
 
-        sensitivityValue = preferences.Load_Sensitivity();
-        volumeValue = preferences.Load_AudioVolume();
-
-        audioMute = preferences.Load_AudioMute();
-        soundsMute = preferences.Load_SoundsMute();
+        mainMenu = FindObjectOfType<GUIMainMenu>();
+        gameController = FindObjectOfType<GameController>();
 
         // Zeigt die eingestellten Werte im User Interface an
         SetUIValue();
@@ -101,14 +115,16 @@ public class GUISettingsMenu : MonoBehaviour
     /// </summary>
     private void SetUIValue()
     {
-        sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";
-        volumeText.text = $"Volume: {volumeValue * 100:0}";
+        sensitivityText.text = $"Mausempfindlichkeit: {SensitivityValue:0.#}";
+        volumeText.text = $"Lautstaerke: {VolumeValue * 100:0}";
+        lightText.text = $"Helligkeit: {LightValue * 100:0}";
 
-        sensitivitySlider.value = sensitivityValue;
-        volumeSlider.value = volumeValue;
-
-        audioToggle.isOn = audioMute;
-        soundsToggle.isOn = soundsMute;
+        sensitivitySlider.value = SensitivityValue;
+        volumeSlider.value = VolumeValue;
+        lightSlider.value = LightValue;
+        
+        audioToggle.isOn = AudioMute;
+        soundsToggle.isOn = SoundsMute;
     }
 
     /// <summary>
@@ -117,8 +133,8 @@ public class GUISettingsMenu : MonoBehaviour
     /// <param name="_value">Wert der Empfindlichkeit</param>
     public void ChangeSensitivityValue(float _value)
     {
-        sensitivityValue = _value;
-        sensitivityText.text = $"Sensitivity: {sensitivityValue:0.#}";
+        SensitivityValue = _value;
+        sensitivityText.text = $"Mausempfindlichkeit: {SensitivityValue:0.#}";
 
         if (playerController)
         {
@@ -134,12 +150,32 @@ public class GUISettingsMenu : MonoBehaviour
     /// <param name="_value">Wert der Lautstärke</param>
     public void ChangeVolumeValue(float _value)
     {
-        volumeValue = _value;
-        volumeText.text = $"Volume: {volumeValue * 100:0}";
+        VolumeValue = _value;
+        volumeText.text = $"Lautstaerke: {VolumeValue * 100:0}";
 
-        if (audioSource)
+        if (audioManager)
         {
-            audioSource.volume = _value;
+            audioManager.AudioVolume = VolumeValue;
+        }
+
+        if (mainMenu)
+        {
+            mainMenu.mainSceneAudio.volume = VolumeValue;
+        }
+    }
+
+    /// <summary>
+    /// Helligkeit einstellen
+    /// </summary>
+    /// <param name="_value"></param>
+    public void ChangeLightValue(float _value)
+    {
+        LightValue = _value;
+        lightText.text = $"Helligkeit: {LightValue * 100:0}";
+
+        if (gameController)
+        {
+            gameController.Brightness = _value;
         }
 
     }
@@ -150,10 +186,32 @@ public class GUISettingsMenu : MonoBehaviour
     /// <param name="_value"></param>
     public void MuteMusic(bool _value)
     {
-        audioMute = _value;
-        if (audioSource)
+        AudioMute = _value;
+
+        if (audioManager)
         {
-            audioSource.mute = audioMute;
+            audioManager.MusicMute = AudioMute;
+        }
+
+
+        if (mainMenu)
+        {
+            mainMenu.mainSceneAudio.mute = !AudioMute;
+        }
+
+    }
+
+    /// <summary>
+    /// schaltet SFX stumm
+    /// </summary>
+    /// <param name="_value"></param>
+    public void MuteSFX(bool _value)
+    {
+        SoundsMute = _value;
+
+        if (audioManager)
+        {
+            audioManager.SFXMute = SoundsMute;
         }
 
     }
@@ -163,13 +221,14 @@ public class GUISettingsMenu : MonoBehaviour
     /// </summary>
     private void SaveAll()
     {
-        audioMute = audioToggle.isOn;
-        soundsMute = soundsToggle.isOn;
+        AudioMute = audioToggle.isOn;
+        SoundsMute = soundsToggle.isOn;
 
-        preferences.Save_AudioMute(audioMute);
-        preferences.Save_SoundsMute(soundsMute);
-        preferences.Save_Sensitivity(sensitivityValue);
-        preferences.Save_AudioVolume(volumeValue);
+        preferences.Save_AudioMute(AudioMute);
+        preferences.Save_SoundsMute(SoundsMute);
+        preferences.Save_Sensitivity(SensitivityValue);
+        preferences.Save_AudioVolume(VolumeValue);
+        preferences.Save_Brightness(LightValue);
         preferences.SavePrefs();
     }
 
@@ -182,11 +241,12 @@ public class GUISettingsMenu : MonoBehaviour
         }
 
         SceneManager.UnloadSceneAsync(_unloadSceneIndex);
-        mainMenu = FindObjectOfType<GUIMainMenu>();
 
         if (mainMenu)
         {
             mainMenu.canvas.enabled = true;
-        } 
+        }
     }
+
+
 }

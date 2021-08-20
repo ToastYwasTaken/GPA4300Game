@@ -33,11 +33,9 @@ namespace CustomExtensions
         /// <returns>Vector3</returns>
         public static Vector3 ToVector3(this string str)
         {
-            /// erwartetes Format: (35.0, 21.0, 432.0) von Vector3.ToString()
-
             // String Argument prüfen
             if (!str.StartsWith("(") && !str.EndsWith(")") && !str.Contains(","))
-                throw new ArgumentException("Format invalid!");
+                throw new ArgumentException($"Format invalid! Format: {str}");
 
             // Klammern entfernen
             string strVector = str.Remove(str.Length - 1, 1).Remove(0, 1);

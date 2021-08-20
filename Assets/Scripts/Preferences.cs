@@ -23,7 +23,10 @@ using CustomExtensions;
  *                  Load_PlayerHealth() hinzugefügt
  *                  Save_EnemyPosition() hinzugefügt
  *                  Load_EnemyPosition() hinzugefügt
- * 17.08.2021  FM   LoadPrefs.cs gelöscht, da Funktionalität hier gegeben
+ *  17.08.2021  FM  LoadPrefs.cs gelöscht, da Funktionalität hier gegeben
+ *  21.08.2021  RK  Save_Brightness hinzugefügt
+ *                  Load_Brightness hinzugefügt
+ * 
  *  
  *****************************************************************************/
 public class Preferences : MonoBehaviour
@@ -52,7 +55,7 @@ public class Preferences : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    //-----------------LOAD----------------------------
+    #region Load
 
     public float Load_AudioVolume()
     {
@@ -89,7 +92,14 @@ public class Preferences : MonoBehaviour
         return PlayerPrefs.GetString("EnemyPos").ToVector3();
     }
 
-    //---------------------SAVE------------------------
+    public float Load_Brightness()
+    {
+        return PlayerPrefs.GetFloat("Brightness");
+    }
+
+    #endregion
+
+    #region Save
 
     public void Save_AudioVolume(float _value)
     {
@@ -125,4 +135,10 @@ public class Preferences : MonoBehaviour
     {
         PlayerPrefs.SetString("EnemyPos", _value.ToString());
     }
+
+    public void Save_Brightness(float _value)
+    {
+        PlayerPrefs.SetFloat("Brightness", _value);
+    }
+    #endregion
 }

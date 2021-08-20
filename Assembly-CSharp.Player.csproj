@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\JP\Scripts\KeyCorridorBehavior.cs" />
     <Compile Include="Assets\Scripts\LoadingController.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemRotation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />

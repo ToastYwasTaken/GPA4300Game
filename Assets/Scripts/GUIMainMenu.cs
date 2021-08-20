@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /******************************************************************************
  * Project: GPA4300Game
  * File: GUIMainMenu.cs
- * Version: 1.0
+ * Version: 1.01
  * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
  * 
  * 
@@ -19,16 +19,26 @@ using UnityEngine.SceneManagement;
  * ChangeLog
  * ----------------------------
  *  24.06.2021  RK  erstellt
+ *  21.08.2021  RK  AudioSource hinzugefügt
  *  
  *****************************************************************************/
 public class GUIMainMenu : MonoBehaviour
 {
-    public Canvas canvas;
-    public Animation wizardAnim;
+    [SerializeField]
+    private Animation wizardAnim;
+
+    public Canvas canvas;  
+    public AudioSource mainSceneAudio;
 
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>();
+    }
+
+    private void Start()
+    {
+        mainSceneAudio.mute = !Preferences.instance.Load_AudioMute();
+        mainSceneAudio.volume = Preferences.instance.Load_AudioVolume();
     }
 
     public void LoadScene(int _sceneIndex)

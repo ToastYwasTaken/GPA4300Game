@@ -3,7 +3,7 @@ using UnityEngine;
 /******************************************************************************
  * Project: GPA4300Game
  * File: AudioManager.cs
- * Version: 1.0
+ * Version: 1.01
  * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
  * 
  * 
@@ -24,14 +24,40 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    public AudioClip audioClipMainMenu = null;
-    public AudioClip audioClipGameScene = null;
 
     [SerializeField]
-    private AudioSource backgroundMusic = null;
-    private AudioSource enemySFX = null;
-    private AudioSource playerSFX = null;
-    private AudioSource environment = null;
+    private AudioSource enemySFX;
+    [SerializeField]
+    private AudioSource environment;
+
+    private float audioVolume = 1f;
+    public float AudioVolume
+    {
+        set
+        {
+            audioVolume = value;
+            ChangedVolume(audioVolume);
+        }
+    }
+
+    private bool musicMute = false;
+    public bool MusicMute
+    {
+        set
+        {
+            musicMute = value;
+            SwitchMuteMusic(musicMute);
+        }
+    }
+    private bool sFXMute = false;
+    public bool SFXMute
+    {
+        set
+        {
+            sFXMute = value;
+            SwitchMuteSFX(sFXMute);
+        }
+    }
 
 
     private void Awake()
@@ -50,20 +76,34 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-
-        backgroundMusic = GetComponent<AudioSource>();
-        if (backgroundMusic)
-        {
-            backgroundMusic.volume = Preferences.instance.Load_AudioVolume();
-        }
-        else
-            Debug.LogError("Kein AudioSource gefunden!");
+        AudioVolume = Preferences.instance.Load_AudioVolume();      
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ChangedVolume(float _value)
     {
-
+        if (enemySFX) enemySFX.volume = _value;
+        if (environment) environment.volume = _value;
     }
+
+    private void SwitchMuteMusic(bool _value)
+    {
+        if (environment) environment.mute = !_value;
+    }
+    private void SwitchMuteSFX(bool _value)
+    {
+        if (enemySFX) enemySFX.mute = !_value;
+    }
+
+    public void StopAllAudioSources()
+    {
+        if (enemySFX) enemySFX.Stop();
+        if (environment) environment.Stop();
+    }
+
+
+    public void PlayGameSceneAudio()
+    {
+        if (environment) environment.Play();
+    }
+
 }

@@ -42,8 +42,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerBody;
+    
     private PlayerAnimator playerAnimator;
-    //private Preferences preferences;
 
     // Events
     private Action OnPlayerMove;
@@ -86,7 +86,16 @@ public class PlayerController : MonoBehaviour
         set { sprintActive = value; }
     }
     public bool PlayerCanMove { get; set; }
-    public float Sensitivity { get; set; }
+
+    private float sensitivity = 1f;
+    public float Sensitivity
+    {
+        set
+        {
+            sensitivity = value;
+        }
+    }
+
     public float Endurance { get; set; }
     public Vector3 StartPosition { get; set; }
     public Vector3 PlayerCurrentPosition { get; set; }
@@ -94,6 +103,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
         playerBody.transform.position = /*GameData.instance.PlayerPosition*/ new Vector3(96, 0, 42);
@@ -113,7 +124,7 @@ public class PlayerController : MonoBehaviour
         Jump();
 
         // Speichert die aktuelle Position des Spielers
-        PlayerCurrentPosition = playerBody.transform.position;
+        // PlayerCurrentPosition = playerBody.transform.position;
 
     }
 
@@ -209,6 +220,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Erhöht die Geschwindigkeit des Player Unterberücksichtigung der Ausdauer
+    /// </summary>
+    /// <param name="_speed"></param>
+    /// <returns></returns>
     float PlayerSprint(float _speed)
     {
         if (Endurance > 0)
@@ -242,6 +258,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ausdauer für das sprinten zurücksetzen
+    /// </summary>
+    /// <param name="_waitTimeForReset"></param>
+    /// <param name="_enduranceMaxLimit"></param>
+    /// <returns></returns>
     IEnumerator ResetSprintEndurance(float _waitTimeForReset, float _enduranceMaxLimit)
     {
         // TODO Animation mit starker Atmung abspielen
@@ -274,7 +296,7 @@ public class PlayerController : MonoBehaviour
         Vector3 mouseInput = new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 
         // Spieler sieht nach oben oder unten
-        cameraAngle += -mouseInput.y * rotationSpeed * Sensitivity * Time.deltaTime;
+        cameraAngle += -mouseInput.y * rotationSpeed * sensitivity * Time.deltaTime;
 
         // Winkel der Kamera auf min und max begrenzen
         cameraAngle = Mathf.Clamp(cameraAngle, -maxVerticalCameraAngle, maxVerticalCameraAngle);
@@ -284,7 +306,7 @@ public class PlayerController : MonoBehaviour
         camTransform.transform.localEulerAngles = new Vector3(cameraAngle, 0, 0);
 
         // Spieler dreht sich nach links oder rechts
-        Quaternion deltaRotationX = Quaternion.Euler(0, rotationSpeed * Sensitivity * Time.deltaTime * mouseInput.x, 0);
+        Quaternion deltaRotationX = Quaternion.Euler(0, rotationSpeed * sensitivity * Time.deltaTime * mouseInput.x, 0);
         playerBody.MoveRotation(playerBody.rotation * deltaRotationX);
     }
 

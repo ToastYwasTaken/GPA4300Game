@@ -40,10 +40,23 @@ public class GameController : MonoBehaviour
     private PlayerController playerController;
     [SerializeField]
     private EnemyAI enemyAI;
+    [SerializeField]
+    private Light directionalLight;
+
 
     public Vector3 PlayerPosition { get; set; } = new Vector3(0f, 0f, 0f);
     public Vector3 PlayerStartPosition { get; set; } = new Vector3(0f, 0f, 0f);
     public int PlayerHealth { get; set; } = 100;
+
+    private float brightness = 2f;
+    public float Brightness
+    { 
+        set
+        {
+            brightness = value;
+            SetBrightness(brightness);
+        }
+    } 
 
     public Vector3 EnemyPosition { get; set; } = new Vector3(0f, 0f, 0f);
     public Vector3 EnemyStartPosition { get; set; } = new Vector3(0f, 0f, 0f);
@@ -53,6 +66,8 @@ public class GameController : MonoBehaviour
     {
         //RandomExit();
         isGamePaused = false;
+        // Helligkeit zum Spielstart setzen
+        SetBrightness(Preferences.instance.Load_Brightness());
 
         // Fixiert die Maus und blendet sie aus
         Cursor.lockState = CursorLockMode.Locked;
@@ -136,10 +151,10 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// Spiel fortsetzen
+    /// Spiel an der zuletzt gespeicherten Position fortsetzen
     /// </summary>
-    public void ContinueGame()
-    { 
+    public void Continue()
+    {
         PlayerPosition = Preferences.instance.Load_PlayerPosition();
         PlayerHealth = Preferences.instance.Load_PlayerHealth();
         EnemyPosition = Preferences.instance.Load_EnemyPosition();
@@ -149,7 +164,13 @@ public class GameController : MonoBehaviour
         playerController.Sensitivity = Preferences.instance.Load_Sensitivity();
 
         enemyAI.StartPosition = EnemyPosition;
+    }
 
+    /// <summary>
+    /// Spiel fortsetzen
+    /// </summary>
+    public void ContinueGame()
+    {
         isGamePaused = false;
         PauseGame(isGamePaused);
     }
@@ -183,6 +204,15 @@ public class GameController : MonoBehaviour
             Debug.Log("Game run");
         }
 
+    }
+
+    /// <summary>
+    /// Helligkeit im Level festlegen
+    /// </summary>
+    /// <param name="_value"></param>
+    private void SetBrightness(float _value)
+    {
+        directionalLight.intensity = _value;
     }
 
     /// <summary>
