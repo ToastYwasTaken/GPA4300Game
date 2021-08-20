@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 /******************************************************************************
@@ -39,6 +37,8 @@ public class PlayerHealth : MonoBehaviour
     private EnemyHealth enemyHealth;
     private sbyte edamage;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,17 +49,18 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(phealth <= 0)
+        if (phealth <= 0)
         {
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadSceneAsync(2);  //loading death screen
-        }else if(phealth >= 100)
+        }
+        else if (phealth >= 100)
         {
             phealth = 100;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)  
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag.Equals("Enemy"))   //tag = "Enemy"
         {
@@ -68,6 +69,7 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log(edamage);
         }
 
+        //Instant Death bei Falle
         if (collision.gameObject.tag == "Trap")
         {
             phealth = 0;
@@ -84,9 +86,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public sbyte pHealthProperty 
-    { 
+    public sbyte pHealthProperty
+    {
         get => phealth;
-        set => phealth = value; 
+        set => phealth = value;
     }
 }
