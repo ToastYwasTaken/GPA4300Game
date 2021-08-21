@@ -56,8 +56,8 @@ public class InteractableItem : MonoBehaviour
         //hinzugefügt werden konnte
         if(triggerFlag == true)
         {
-            gameObject.SetActive(false);
-            //Destroy(gameObject);
+            //gameObject.SetActive(false);
+            Destroy(gameObject);
         }
         triggerFlag = false;
     }
@@ -85,9 +85,10 @@ public class InteractableItem : MonoBehaviour
                 Debug.Log("In trigger");
                 //TODO create new instance on Add
                 Item item = this.gameObject.GetComponent<Item>();
-                if (item && !triggerFlag)
+                Item copyItem = item;
+                if (copyItem && !triggerFlag)
                 {
-                    inventoryGUIRef.AddItem(item);
+                    inventoryGUIRef.AddItem(copyItem);
                     triggerFlag = true;
                 }
             }

@@ -107,7 +107,8 @@ public class PlayerController : MonoBehaviour
 
         playerBody = GetComponent<Rigidbody>();
         playerAnimator = FindObjectOfType<PlayerAnimator>();
-        playerBody.transform.position = /*GameData.instance.PlayerPosition*/ new Vector3(96, 0, 42);
+        //Erste Spawnposition des Spielers
+        playerBody.transform.position = new Vector3(0, 2, 0);/*GameData.instance.PlayerPosition*/
         playerAnimator.PlayIdleAnimation(true);
 
         PlayerCanMove = true;

@@ -46,51 +46,41 @@ public class GUIInventory : MonoBehaviour
 
     sbyte healValue = 20;
 
-    private bool key1isValid = true;
-    private bool key2isValid = true;
-    private bool key3isValid = true;
-    private bool key4isValid = true;
-    private bool key5isValid = true;
-
     private void Start()
     {
-           
+
     }
 
     private void Update()
     {
         UpdateGUI();
-        //InputValidityCheck();
+
         GetInput();
     }
+
 
     /// <summary>
     /// Übersetzt den UserInput, damit das dementsprechende Item benutzt werden kann
     /// </summary>
     private void GetInput()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && key1isValid){
+        if (Input.GetKeyDown(KeyCode.Alpha1)){
             UseItem(0);
-            key1isValid = false;
-        }else if (Input.GetKeyDown(KeyCode.Alpha2) && key2isValid)
+        }else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             UseItem(1);
-            key2isValid = false;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3) && key3isValid)
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             UseItem(2);
-            key3isValid = false;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4) && key4isValid)
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             UseItem(3);
-            key4isValid = false;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha5) && key5isValid)
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             UseItem(4);
-            key5isValid = false;
         }
     }
 
@@ -105,31 +95,7 @@ public class GUIInventory : MonoBehaviour
         }
     }
 
-    //TODO: NullCheck doesnt work
-    private void InputValidityCheck()
-    {
-        Debug.Log("In InputValidityCheck");
-        if (inventory[0] != null)
-        {
-            key1isValid = true;
-        }
-        if(inventory[1] != null)
-        {
-            key2isValid = true;
-        }
-        if (inventory[2] != null)
-        {
-            key3isValid = true;
-        }
-        if (inventory[3] != null)
-        {
-            key4isValid = true;
-        }
-        if (inventory[4] != null)
-        {
-            key5isValid = true;
-        }
-    }
+
 
     /// <summary>
     /// Der Spieler setzt das Item ein indem er die Taste drückt, an dessen Index das
@@ -141,10 +107,6 @@ public class GUIInventory : MonoBehaviour
         Debug.Log("In UseItem");
         DisplayInventoryDebug();
         Debug.Log($"item in inventory at index itype: {inventory[_index].PItemType}");
-        //if (inventory[_index] == null)
-        //{
-        //    return;
-        //}
         Item currentItem = inventory[_index];
         if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.HealPotion))
         {
