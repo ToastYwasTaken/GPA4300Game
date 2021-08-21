@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc0917942dfd4042993cc6f74f4ac98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phealth: 20
   camTransform: {fileID: 5419525534969994120}
-  speedMultiplier: 2
+  speedMultiplier: 3
   playerSprints: 0
   maxEndurance: 10
   waitTimeForEnduranceReset: 5
@@ -100,7 +101,7 @@ MonoBehaviour:
   rotatePlayerWithButtons: 0
   maxVerticalCameraAngle: 75
   moveSpeed: 5
-  rotationSpeed: 200
+  rotationSpeed: 250
   fallingDownLimit: -5
 --- !u!114 &4936548192297348396
 MonoBehaviour:
@@ -114,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f7f4c3df295f346a7fd66957a99db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClipWalk: {fileID: 8300000, guid: 0cfeb72dea261a54cb7672590d2d1656, type: 3}
+  audioClipWalk: {fileID: 8300000, guid: 924e3e09c67130946a6d7b666e8b8b68, type: 3}
   audioClipRun: {fileID: 8300000, guid: 0cfeb72dea261a54cb7672590d2d1656, type: 3}
   stepTimeWalk: 0.45
   stepTimeRun: 0.3
@@ -223,8 +224,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5419525534969994120}
-  - component: {fileID: 9075502541728550576}
-  - component: {fileID: 4875786847851154196}
   - component: {fileID: 6415656645810528182}
   m_Layer: 0
   m_Name: CamHead
@@ -248,55 +247,6 @@ Transform:
   m_Father: {fileID: 5585813076002531385}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9075502541728550576
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4513941234596115797}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4875786847851154196
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4513941234596115797}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &6415656645810528182
 Animator:
   serializedVersion: 3
@@ -518,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114961877321315192, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}

@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace CustomExtensions
 {
-
     /******************************************************************************
     * Project: GPA4300Game
     * File: Item.cs

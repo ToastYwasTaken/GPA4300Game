@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /******************************************************************************
  * Project: GPA4300Game
  * File: PlayerController.cs
- * Version: 1.10
+ * Version: 1.12
  * Autor: Ren� Kraus (RK); Franz M�rike (FM); Jan Pagel (JP)
  * 
  * 
@@ -30,9 +30,13 @@ using UnityEngine.SceneManagement;
  *  22.07.2021  RK  bool flag entfernt
  *              RK  NullReferenceExpection Bug in Preferences behoben
  *  14.08.2021  FM  Kommentare angepasst
+ *  20.08.2021  RK  PlayerSprint() hinzugefügt
  *  21.08.2021  FM  bool hinzugefügt für Collisionscheck Player - ExitGate
  *                  PlayerHealth.cs integriert
- *  
+ *  21.08.2021  RK  Action OnPlayerIdle hinzugefügt                
+ *                  Action OnPlayerJump hinzugefügt      
+ *                  Action OnPlayerHit hinzugefügt      
+ *                  
  *   * ChangeLog PlayerHealth.cs
  * ----------------------------
  *  11.06.2021  FM  erstellt
@@ -61,8 +65,6 @@ public class PlayerController : MonoBehaviour
 
     //PlayerController
     private Rigidbody playerBody;
-    
-    private PlayerAnimator playerAnimator;
 
     [SerializeField]
     private Transform camTransform;
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float speedMultiplier = 2f;
     public bool playerSprints = false;
+    private bool enduranceIsRecovery = true;
     [SerializeField]
     private float maxEndurance = 10;
     [SerializeField]
@@ -98,6 +101,9 @@ public class PlayerController : MonoBehaviour
     // Events
     private Action OnPlayerMove;
     private Action OnPlayerMoveRun;
+    private Action OnPlayerIdle;
+    private Action OnPlayerJump;
+    private Action OnPlayerHit;
 
     //Properties
     [SerializeField]
@@ -116,7 +122,6 @@ public class PlayerController : MonoBehaviour
             sensitivity = value;
         }
     }
-
     public float Endurance { get; set; }
     public Vector3 StartPosition { get; set; }
     public Vector3 PlayerCurrentPosition { get; set; }
@@ -130,13 +135,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         playerBody = GetComponent<Rigidbody>();
-        playerAnimator = FindObjectOfType<PlayerAnimator>();
+
         //Erste Spawnposition des Spielers
         playerBody.transform.position = new Vector3(0, 2, 0);/*GameData.instance.PlayerPosition*/
-        playerAnimator.PlayIdleAnimation(true);
+
+        OnPlayerIdle?.Invoke();
 
         PlayerCanMove = true;
         Endurance = maxEndurance;
@@ -158,11 +162,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         PlayerRotating();
-        if (PlayerCanMove)
-            PlayerMovement();
 
+        if (PlayerCanMove) PlayerMovement();
     }
 
     private void UpdateHealth()
@@ -200,10 +202,8 @@ public class PlayerController : MonoBehaviour
 
         if (keyInput == Vector3.zero)
         {
-            playerAnimator.PlaySprintAnimation(false);
-            playerAnimator.PlayWalkAnimation(false);
-            playerAnimator.PlayIdleAnimation(true);
-
+            // Idle
+            OnPlayerIdle?.Invoke();
         }
         else
         {
@@ -218,30 +218,18 @@ public class PlayerController : MonoBehaviour
             else
             {
                 // Wenn die Ausdauer unter dem maximalwert liegt, Ausdauer zurücksetzen
-                if (Endurance < maxEndurance && !playerSprints)
-                {
-                    StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
-                }
-                else
-                {
-                    StopCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
-                }
-
-
-                playerAnimator.PlayWalkAnimation(true); // true
-                playerAnimator.PlayIdleAnimation(false);
-                playerAnimator.PlaySprintAnimation(false);
-
+                //if (Endurance < maxEndurance && !playerSprints)
+                //{
+                //    StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
+                //    Debug.Log("Ausdauer Wiederherstellung gestartet!");
+                //}
+            
+                // Walk
                 speed = moveSpeed;
                 playerSprints = false;
 
-                if (OnPlayerMove != null)
-                {
-                    OnPlayerMove.Invoke();
-                }
+                OnPlayerMove?.Invoke();
             }
-
-
 
             // Mit der Tastatur drehen
             if (rotatePlayerWithButtons)
@@ -269,33 +257,44 @@ public class PlayerController : MonoBehaviour
     {
         if (Endurance > 0)
         {
-            // Sprint Animation abspielen
-            playerAnimator.PlayWalkAnimation(false);
-            playerAnimator.PlayIdleAnimation(false);
-            playerAnimator.PlaySprintAnimation(true); // true
+            if (playerSprints && enduranceIsRecovery)
+            {
+                StopCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
+                enduranceIsRecovery = false;
+                Debug.Log("Ausdauer Wiederherstellung abgebrochen!");
+            }
 
             // Event aufrufen
-            if (OnPlayerMoveRun != null)
-            {
-                OnPlayerMoveRun.Invoke();
-            }
+            OnPlayerMoveRun?.Invoke();
 
             // Speed Wert erhöhen
             _speed = moveSpeed * speedMultiplier;
+
             playerSprints = true;
 
-            // 
-            Endurance -= Time.deltaTime;
+            // Ausdauer reduzieren
+            ReduceSprintEndurance();
 
-            Debug.Log($"Sprint Ausdauer N: {Endurance}");
+            Debug.Log($"Ausdauer : {Endurance}");
 
             return _speed;
         }
         else
         {
+            if (!enduranceIsRecovery)
+            {
+                StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
+                Debug.Log("Ausdauer Wiederherstellung gestartet!");
+            }
+            
             playerSprints = false;
             return _speed;
         }
+    }
+
+    private void ReduceSprintEndurance()
+    {
+        Endurance -= 1 * Time.deltaTime;
     }
 
     /// <summary>
@@ -308,23 +307,15 @@ public class PlayerController : MonoBehaviour
     {
         // TODO Animation mit starker Atmung abspielen
 
-        float i = 0;
-        i += Time.deltaTime;
-        Debug.Log("Wait: " + i);
+        // Ausdauer wird wiederhergestellt
+        enduranceIsRecovery = true;
+        Debug.Log($"Ausdauer Reset in: {_waitTimeForReset} sek.");
 
         yield return new WaitForSeconds(_waitTimeForReset);
 
-        Debug.Log($"Sprint Ausdauer: {Endurance}");
-
-
-        while (Endurance < _enduranceMaxLimit)
-        {
-            Endurance += Time.deltaTime;
-            Debug.Log($"Sprint Ausdauer: {Endurance}");
-        }
-
         Endurance = _enduranceMaxLimit;
-        Debug.Log($"Sprint Ausdauer Ende: {Endurance}");
+        enduranceIsRecovery = false;
+        Debug.Log($"Ausdauer Wiederherstellung: {Endurance}");
     }
 
     /// <summary>
@@ -356,7 +347,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded && jumpActive)
         {
-            playerAnimator.TriggerPlayerJump();
+            OnPlayerJump?.Invoke();
+
             // Spring
             playerBody.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -368,6 +360,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             // TODO: Hit Animation abspielen
+            OnPlayerHit?.Invoke();
             Debug.Log("Player Hit!");
             //Health aktualisieren
             phealth -= edamage;
@@ -412,6 +405,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    #region SetOnAction
     public void SetOnPlayerMove(Action _newFunc)
     {
         OnPlayerMove += _newFunc;
@@ -420,4 +414,17 @@ public class PlayerController : MonoBehaviour
     {
         OnPlayerMoveRun += _newFunc;
     }
+    public void SetOnPlayerIdle(Action _newFunc)
+    {
+        OnPlayerIdle += _newFunc;
+    }
+    public void SetOnPlayerJump(Action _newFunc)
+    {
+        OnPlayerJump += _newFunc;
+    }
+    public void SetOnPlayerHit(Action _newFunc)
+    {
+        OnPlayerHit += _newFunc;
+    }
+    #endregion
 }

@@ -15,17 +15,60 @@ using UnityEngine;
  * ChangeLog
  * ----------------------------
  *  28.06.2021  RK  erstellt
+ *  21.08.2021  RK  PlayerController Referenz hinzugefügt
+ *              RK  Methoden im PlayerController registieren
  *  
  *****************************************************************************/
 public class PlayerAnimator : MonoBehaviour
 {
     private Animator anim;
+    private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        playerController = FindObjectOfType<PlayerController>();
+
+        playerController.SetOnPlayerIdle(PlayPlayerIdle);
+        playerController.SetOnPlayerMove(PlayPlayerWalk);
+        playerController.SetOnPlayerMoveRun(PlayerPlayerRun);
+        playerController.SetOnPlayerJump(PlayPlayerJump);
+        playerController.SetOnPlayerHit(PlayPlayerHit);
+
     }
+
+    private void PlayPlayerIdle()
+    {
+        PlaySprintAnimation(false);
+        PlayWalkAnimation(false);
+        PlayIdleAnimation(true);
+    }
+
+    private void PlayPlayerWalk()
+    {
+        PlayWalkAnimation(true);
+        PlayIdleAnimation(false);
+        PlaySprintAnimation(false);
+    }
+
+    private void PlayerPlayerRun()
+    {
+        PlayWalkAnimation(false);
+        PlayIdleAnimation(false);
+        PlaySprintAnimation(true);
+    }
+
+    private void PlayPlayerJump()
+    {
+        TriggerPlayerJump();
+    }
+
+    private void PlayPlayerHit()
+    {
+        // TODO Animation wenn der Spieler getroffen wurde aktivieren
+    }
+
 
     public void PlayIdleAnimation(bool _value)
     {
