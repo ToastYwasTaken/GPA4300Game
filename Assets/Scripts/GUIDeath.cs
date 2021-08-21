@@ -30,15 +30,17 @@ using UnityEngine.SceneManagement;
 public class GUIDeath : MonoBehaviour
 {   
     [SerializeField]
-    TextMeshProUGUI textOnDeath;
+    private TextMeshProUGUI textOnDeath;
     [SerializeField]
-    GameObject mainMenuButton;
-
+    private GameObject mainMenuButton;
+    [SerializeField]
+    private AudioClip jumpscareClip;
 
     // Start is called before the first frame update
     void Start()
     {
         mainMenuButton.SetActive(false);
+        AudioSource.PlayClipAtPoint(jumpscareClip, this.transform.position);
         StartCoroutine(nameof(FadeIn));
     }
 

@@ -21,6 +21,6 @@ using UnityEngine;
  *****************************************************************************/
 public interface IItemTypes
 { 
-    public enum ItemType { Key, HealPotion, SprintPotion, MapPart1, MapPart2, MapPart3}
+    public enum ItemType { Key, HealPotion, SprintPotion, MapPart1, MapPart2, MapPart3, None}
 }
 

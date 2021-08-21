@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 716766782426496982}
   - component: {fileID: 716766782426496983}
   - component: {fileID: 716766782426496980}
+  - component: {fileID: 5491229288353274901}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -148,6 +149,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &5491229288353274901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716766782426496977}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.5, z: 2}
+  m_Center: {x: 0, y: 1, z: -1}
 --- !u!1001 &716766782785824259
 PrefabInstance:
   m_ObjectHideFlags: 0

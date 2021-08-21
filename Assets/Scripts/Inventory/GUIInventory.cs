@@ -39,16 +39,21 @@ public class GUIInventory : MonoBehaviour
     public Image[] guiInventoryImages;
     private List<Item> inventory = new List<Item>();
 
+    [SerializeField]
+    private GameObject mapPart1;
+    [SerializeField]
+    private GameObject mapPart2;
+    [SerializeField]
+    private GameObject mapPart3;
+
     public int inventoryMaxSize = 5;
     private int itemCount = 0;
 
-    PlayerHealth healthRef;
-
-    sbyte healValue = 20;
-
     private void Start()
     {
-
+        mapPart1.SetActive(false);
+        mapPart2.SetActive(false);
+        mapPart3.SetActive(false);
     }
 
     private void Update()
@@ -96,6 +101,23 @@ public class GUIInventory : MonoBehaviour
     }
 
 
+    public void OpenMap(int _mapInt)
+    {
+        if (_mapInt == 1)
+        {
+            mapPart1.SetActive(true);
+        }
+        else if (_mapInt == 2)
+        {
+            mapPart2.SetActive(true);
+        }
+        else if (_mapInt == 3)
+        {
+            mapPart3.SetActive(true);
+        }
+        else return;
+    }
+
 
     /// <summary>
     /// Der Spieler setzt das Item ein indem er die Taste drückt, an dessen Index das
@@ -108,40 +130,11 @@ public class GUIInventory : MonoBehaviour
         DisplayInventoryDebug();
         Debug.Log($"item in inventory at index itype: {inventory[_index].PItemType}");
         Item currentItem = inventory[_index];
-        if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.HealPotion))
-        {
-            Debug.Log("In case HealPotion");
-            healthRef.pHealthProperty += healValue;
-            
-            RemoveItem(currentItem);
-            Debug.Log("Item removed");
-        }
-        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.SprintPotion))
-        {
-            Debug.Log("In case SprintPotion");
-            RemoveItem(inventory[_index]);
-        }
-        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.Key))
-        {
-            Debug.Log("In case Key");
-            RemoveItem(inventory[_index]);
-        }
-        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.MapPart1))
-        {
-            Debug.Log("In case Map1");
-            RemoveItem(inventory[_index]);
-        }
-        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.MapPart2))
-        {
-            Debug.Log("In case Map2");
-            RemoveItem(inventory[_index]);
-        }
-        else if (inventory[_index].PItemType.Equals(IItemTypes.ItemType.MapPart3))
-        {
-            Debug.Log("In case Map3");
-            RemoveItem(inventory[_index]);
-        }
+        //Null Check
+        if (currentItem != null){
+            currentItem.Use();
 
+        }
     }
 
 
@@ -192,12 +185,6 @@ public class GUIInventory : MonoBehaviour
             guiInventoryImages[i].enabled = true;
             guiInventoryImages[i].sprite = inventory[i].PItemSprite;
         }
-        //int index = 0;
-        //foreach(Item item in inventory)
-        //{
-        //    Debug.Log("Item at index " + index + ", name: " + item.itemName);
-        //    index++;
-        //}
     }
 
     public List<Item> PGetInventory { get => inventory; }

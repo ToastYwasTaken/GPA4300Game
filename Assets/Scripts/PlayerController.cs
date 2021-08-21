@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -29,6 +30,18 @@ using UnityEngine;
  *  22.07.2021  RK  bool flag entfernt
  *              RK  NullReferenceExpection Bug in Preferences behoben
  *  14.08.2021  FM  Kommentare angepasst
+ *  21.08.2021  FM  bool hinzugefügt für Collisionscheck Player - ExitGate
+ *                  PlayerHealth.cs integriert
+ *  
+ *   * ChangeLog PlayerHealth.cs
+ * ----------------------------
+ *  11.06.2021  FM  erstellt
+ *  22.06.2021  FM  health mechanic überarbeitet
+ *  24.06.2021  FM  Debuglog entfernt
+ *  26.06.2021  RK  LoadScene zu LoadSceneAsync geändert
+ *  26.07.2021  FM  OnTriggerEnter Event hinzugefügt
+ *  28.07.2021  FM  maxVal für health hinzugefügt
+ *  17.08.2021  FM  Werte angepasst
  *  
  *****************************************************************************/
 
@@ -41,13 +54,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Health
+    [SerializeField]
+    private sbyte phealth = 100;    //Startwert
+    private sbyte edamage = 20;
+
+    //PlayerController
     private Rigidbody playerBody;
     
     private PlayerAnimator playerAnimator;
-
-    // Events
-    private Action OnPlayerMove;
-    private Action OnPlayerMoveRun;
 
     [SerializeField]
     private Transform camTransform;
@@ -68,6 +83,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool isGrounded;
     private bool hitWall;
+    public bool playerCollidingWithExitGate;
 
     [SerializeField]
     private bool rotatePlayerWithButtons = false;
@@ -79,6 +95,11 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -10f;
 
+    // Events
+    private Action OnPlayerMove;
+    private Action OnPlayerMoveRun;
+
+    //Properties
     [SerializeField]
     private static bool sprintActive = true;
     public static bool SprintActive
@@ -99,6 +120,12 @@ public class PlayerController : MonoBehaviour
     public float Endurance { get; set; }
     public Vector3 StartPosition { get; set; }
     public Vector3 PlayerCurrentPosition { get; set; }
+
+    public sbyte HealthProperty
+    {
+        get => phealth;
+        set => phealth = value;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -126,7 +153,7 @@ public class PlayerController : MonoBehaviour
 
         // Speichert die aktuelle Position des Spielers
         // PlayerCurrentPosition = playerBody.transform.position;
-
+        UpdateHealth();
     }
 
     private void FixedUpdate()
@@ -138,6 +165,18 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void UpdateHealth()
+    {
+        if (phealth <= 0)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadSceneAsync(2);  //death screen laden
+        }
+        else if (phealth >= 100)
+        {
+            phealth = 100;
+        }
+    }
     /// <summary>
     /// Setzt den Spieler zu Startposition zur�ck, wenn er f�llt
     /// </summary>
@@ -282,7 +321,6 @@ public class PlayerController : MonoBehaviour
         {
             Endurance += Time.deltaTime;
             Debug.Log($"Sprint Ausdauer: {Endurance}");
-
         }
 
         Endurance = _enduranceMaxLimit;
@@ -331,7 +369,10 @@ public class PlayerController : MonoBehaviour
         {
             // TODO: Hit Animation abspielen
             Debug.Log("Player Hit!");
+            //Health aktualisieren
+            phealth -= edamage;
         }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -340,6 +381,16 @@ public class PlayerController : MonoBehaviour
         {
             // Player befindet sich auf den Boden
             isGrounded = true;
+        }
+        else if (collision.gameObject.tag.Equals("Enemy"))   //tag = "Enemy"
+        {
+            phealth -= edamage;
+        }
+
+        //Sofortiger Tod bei Falle
+        else if (collision.gameObject.tag.Equals("Trap"))
+        {
+            phealth = 0;
         }
     }
 
@@ -353,6 +404,12 @@ public class PlayerController : MonoBehaviour
             hitWall = true;
         else
             hitWall = false;
+        if (collision.gameObject.CompareTag("ExitGate"))
+        {
+            //Entfernt Collider nach Kollision
+            Destroy(collision.gameObject.GetComponent<BoxCollider>());
+            playerCollidingWithExitGate = true;
+        }
     }
 
     public void SetOnPlayerMove(Action _newFunc)

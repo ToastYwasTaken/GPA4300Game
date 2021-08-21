@@ -22,6 +22,7 @@ using UnityEngine;
  *  01.08.2021  FM  Properties hinzugefügt, Zugriffsmodifizierer angepasst, 
  *                  automatisches Initialisieren für GO und Name hinzugefügt
  *  14.08.2021  FM  Kommentare hinzugefügt
+ *  21.08.2021  FM  Use() hinzugefügt, GetItemType() hjinzugefügt
  *  
  *****************************************************************************/
 
@@ -33,34 +34,30 @@ public class Item : MonoBehaviour
     {
     public string itemName;
     [SerializeField]
-    private GameObject itemGameobjectPrefab;
-    [SerializeField]
     private Sprite sprite;  //Das Sprite, das in der GUI angezeigt werden soll
     [SerializeField]
     private IItemTypes.ItemType itemType;
 
+    [SerializeField]
+    private PlayerController playerController;
+
+    private bool playerCollidingWithExitGate;
+
+    public GUIInventory inventoryRef;
+
+    private sbyte healValue = 20;
+
     private void Start()
     {
+        playerCollidingWithExitGate = playerController.playerCollidingWithExitGate;
         SetDefaultItemName();
-        SetDefaultGameobject();
-        AssignItemType();
+        SetDefaultItemtype();
     }
 
 
     public Item()
     {
 
-    }
-    /// <summary>
-    /// Setzt standartisierte Werte für das Gameobjekt, falls es nicht im 
-    /// Inspektor initialisiert wurde
-    /// </summary>
-    private void SetDefaultGameobject()
-    {
-        if(this.itemGameobjectPrefab == null)
-        {
-            itemGameobjectPrefab = this.gameObject;
-        }
     }
 
     /// <summary>
@@ -74,33 +71,104 @@ public class Item : MonoBehaviour
             itemName = this.gameObject.name;
         }
     }
-
-    private void AssignItemType()
+    private void SetDefaultItemtype()
+    {
+        this.itemType = GetItemType();
+    }
+    private IItemTypes.ItemType GetItemType()
     {
         switch (itemName)
         {
             case "key" :
-                this.PItemType = IItemTypes.ItemType.Key;
-                break;
+                return IItemTypes.ItemType.Key;
             case "healPotion" :
-                this.PItemType = IItemTypes.ItemType.HealPotion;
-                break;
+                return IItemTypes.ItemType.HealPotion;
             case "sprintPotion":
-                this.PItemType = IItemTypes.ItemType.SprintPotion;
-                break;
+                return IItemTypes.ItemType.SprintPotion;
             case "map1":
-                this.PItemType = IItemTypes.ItemType.MapPart1;
-                break;
+                return IItemTypes.ItemType.MapPart1;
             case "map2":
-                this.PItemType = IItemTypes.ItemType.MapPart2;
-                break;
+                return IItemTypes.ItemType.MapPart2;
             case "map3":
-                this.PItemType = IItemTypes.ItemType.MapPart3;
+                return IItemTypes.ItemType.MapPart3;
+            default:
+                return IItemTypes.ItemType.None;
+        }
+    }
+
+    /// <summary>
+    /// Sorgt dafür, dass der Spieler seine gesammelten Items
+    /// anwenden kann
+    /// </summary>
+    public void Use()
+    {
+        Debug.Log("Using Item: " + itemType.ToString());
+        bool itemUsed = false;
+        switch (itemType)
+        {
+            case IItemTypes.ItemType.Key:
+                if (playerCollidingWithExitGate)
+                {
+                    //Gate Animation
+
+                    itemUsed = true;
+                }
+                break;
+            case IItemTypes.ItemType.HealPotion:
+                playerController.HealthProperty += healValue;
+                itemUsed = true;
+                break;
+            case IItemTypes.ItemType.SprintPotion:
+
+                break;
+            case IItemTypes.ItemType.MapPart1:
+                OpenMap();
+                break;
+            case IItemTypes.ItemType.MapPart2:
+                OpenMap();
+                break;
+            case IItemTypes.ItemType.MapPart3:
+                OpenMap();
+                break;
+            case IItemTypes.ItemType.None:
                 break;
             default:
                 break;
         }
+        if (itemUsed)
+        {
+            inventoryRef.RemoveItem(this);
+        }
     }
+
+    private void OpenMap()
+    {
+        switch (itemType)
+        {
+            case IItemTypes.ItemType.MapPart1:
+                inventoryRef.OpenMap(1);
+                break;
+            case IItemTypes.ItemType.MapPart2:
+                inventoryRef.OpenMap(2);
+                break;
+            case IItemTypes.ItemType.MapPart3:
+                inventoryRef.OpenMap(3);
+                break;
+            case IItemTypes.ItemType.Key:
+                break;
+            case IItemTypes.ItemType.HealPotion:
+                break;
+            case IItemTypes.ItemType.SprintPotion:
+                break;
+            case IItemTypes.ItemType.None:
+                break;
+            default:
+                break;
+        }
+        
+    }
+
+
     public IItemTypes.ItemType PItemType { get => itemType; set => itemType = value; }
     public Sprite PItemSprite { get => sprite; }
 }

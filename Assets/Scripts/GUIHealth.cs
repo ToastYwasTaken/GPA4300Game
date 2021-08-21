@@ -44,6 +44,8 @@ public class GUIHealth : MonoBehaviour
     [SerializeField]
     Image flashImage;
 
+    private bool screenIsFlashing;
+
     private sbyte phealth;
     private byte defaultHealthColorRed = 95;
     private byte changeGradientRed;
@@ -59,7 +61,7 @@ public class GUIHealth : MonoBehaviour
     void Update()   
     {
         //Updated die Leben des Spielers
-        phealth = player.GetComponent<PlayerHealth>().pHealthProperty; //100 - 0
+        phealth = player.GetComponent<PlayerController>().HealthProperty; //100 - 0
         healthText.text = phealth.ToString();
         changeGradientRed = (byte)(defaultHealthColorRed + (100 - phealth));
         healthText.color = new Color32(changeGradientRed, 30, 27, byte.MaxValue);
@@ -70,9 +72,14 @@ public class GUIHealth : MonoBehaviour
         }
         else if(phealth < 30)
         {
+            if (!screenIsFlashing)
+            {
+                StartCoroutine("Flash");
+                screenIsFlashing = true;
+            }
             StartCoroutine("PulseHeart");
-            StartCoroutine("Flash");
             Bleeding(false);
+
         } else if(phealth < 0)
         {
             var emission = blood.emission;

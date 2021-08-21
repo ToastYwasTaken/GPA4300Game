@@ -52,12 +52,12 @@ public class InteractableItem : MonoBehaviour
     }
     private void Update()
     {
-        //Zerstört das GO nur, wenn es vorher auch dem Inventar
+        //Bewegt GO nur, wenn es vorher auch dem Inventar
         //hinzugefügt werden konnte
         if(triggerFlag == true)
         {
-            //gameObject.SetActive(false);
-            Destroy(gameObject);
+            //GO weg"teleportieren" da Destroy() zu fehlenden Referenzen führt
+            this.transform.position = new Vector3(0, -100, 0);
         }
         triggerFlag = false;
     }
@@ -83,16 +83,15 @@ public class InteractableItem : MonoBehaviour
             {
                 //Füge Item ins Inventar hinzu / GUI Anzeige
                 Debug.Log("In trigger");
-                //TODO create new instance on Add
+                //creates new instance on Add
                 Item item = this.gameObject.GetComponent<Item>();
-                Item copyItem = item;
-                if (copyItem && !triggerFlag)
+                if (item && !triggerFlag)
                 {
-                    inventoryGUIRef.AddItem(copyItem);
+                    inventoryGUIRef.AddItem(item);
                     triggerFlag = true;
                 }
             }
-        }
+        } 
     }
 
 }
