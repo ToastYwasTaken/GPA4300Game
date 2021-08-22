@@ -35,12 +35,18 @@ public class GUIDeath : MonoBehaviour
     private GameObject mainMenuButton;
     [SerializeField]
     private AudioClip jumpscareClip;
+    [SerializeField]
+    private AudioSource audioSource;
+
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         mainMenuButton.SetActive(false);
-        AudioSource.PlayClipAtPoint(jumpscareClip, this.transform.position);
+        audioSource.clip = jumpscareClip;
+        audioSource.volume = Preferences.instance.Load_AudioVolume()
+            * 0.4f; // ist sonst viel zu laut
+        audioSource.PlayOneShot(jumpscareClip);
         StartCoroutine(nameof(FadeIn));
     }
 

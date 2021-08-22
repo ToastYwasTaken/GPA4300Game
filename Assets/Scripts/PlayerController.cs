@@ -395,12 +395,20 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         hitWall = collision.gameObject.CompareTag("Wall");
-
+        hitWall = collision.gameObject.CompareTag("ExitGate");
         if (collision.gameObject.CompareTag("ExitGate"))
         {
-            //Entfernt Collider nach Kollision
-            Destroy(collision.gameObject.GetComponent<BoxCollider>());
+            //true wenn Player im Collider des ExitGates steht
             playerCollidingWithExitGate = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("ExitGate"))
+        {
+            //false wenn Player den Collider verlässt
+            playerCollidingWithExitGate = false;
         }
     }
 

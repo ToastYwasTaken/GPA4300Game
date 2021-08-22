@@ -39,9 +39,10 @@ public class Item : MonoBehaviour
     private IItemTypes.ItemType itemType;
 
     [SerializeField]
-    private PlayerController playerController;
+    private Animator gateAnimator;
 
-    private bool playerCollidingWithExitGate;
+    [SerializeField]
+    private PlayerController playerController;
 
     public GUIInventory inventoryRef;
 
@@ -49,7 +50,6 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        playerCollidingWithExitGate = playerController.playerCollidingWithExitGate;
         SetDefaultItemName();
         SetDefaultItemtype();
     }
@@ -107,10 +107,11 @@ public class Item : MonoBehaviour
         switch (itemType)
         {
             case IItemTypes.ItemType.Key:
-                if (playerCollidingWithExitGate)
+                if (playerController.playerCollidingWithExitGate)
                 {
+                    Debug.Log("Colliding with exit gate");
                     //Gate Animation
-
+                    gateAnimator.SetTrigger("Switch");
                     itemUsed = true;
                 }
                 break;
