@@ -21,14 +21,20 @@ using UnityEngine;
  *****************************************************************************/
 public class PlayerAnimator : MonoBehaviour
 {
-    private Animator anim;
+    [SerializeField]
+    private Animator animChar;
+    [SerializeField]
+    private Animator animCam;
     private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
         playerController = FindObjectOfType<PlayerController>();
+
+
+        playerController.SetOnCamIdle(PlayCamIdle);
+        playerController.SetOnCamSprint(PlayCamSprint);
 
         playerController.SetOnPlayerIdle(PlayPlayerIdle);
         playerController.SetOnPlayerMove(PlayPlayerWalk);
@@ -36,6 +42,18 @@ public class PlayerAnimator : MonoBehaviour
         playerController.SetOnPlayerJump(PlayPlayerJump);
         playerController.SetOnPlayerHit(PlayPlayerHit);
 
+    }
+
+    private void PlayCamIdle()
+    {
+        PlayCamIdleAnimation(true);
+        PlayCamSprinteAnimation(false);
+    }
+
+    private void PlayCamSprint()
+    {
+        PlayCamIdleAnimation(false);
+        PlayCamSprinteAnimation(true);
     }
 
     private void PlayPlayerIdle()
@@ -66,27 +84,44 @@ public class PlayerAnimator : MonoBehaviour
 
     private void PlayPlayerHit()
     {
-        // TODO Animation wenn der Spieler getroffen wurde aktivieren
+        TriggerPlayerTakeDamage();
     }
 
-
-    public void PlayIdleAnimation(bool _value)
+    private void PlayCamIdleAnimation(bool _value)
     {
-        anim.SetBool("Player Idle", _value);
+        animCam.SetBool("CamIdle", _value);
     }
 
-    public void PlayWalkAnimation(bool _value)
+    private void PlayCamSprinteAnimation(bool _value)
     {
-        anim.SetBool("Player Walk", _value);
+        animCam.SetBool("CamSprint", _value);
     }
 
-    public void PlaySprintAnimation(bool _value)
+
+    private void PlayIdleAnimation(bool _value)
     {
-        anim.SetBool("Player Sprint", _value);
+        animChar.SetBool("Player Idle", _value);
     }
 
-    public void TriggerPlayerJump()
+    private void PlayWalkAnimation(bool _value)
     {
-        anim.SetTrigger("Player Jump");
+        animChar.SetBool("Player Walk", _value);
     }
+
+    private void PlaySprintAnimation(bool _value)
+    {
+        animChar.SetBool("Player Sprint", _value);
+    }
+
+    private void TriggerPlayerJump()
+    {
+        animChar.SetTrigger("Player Jump");
+    }
+
+    private void TriggerPlayerTakeDamage()
+    {
+        animChar.SetTrigger("Player Damaged");
+    }
+
+   
 }

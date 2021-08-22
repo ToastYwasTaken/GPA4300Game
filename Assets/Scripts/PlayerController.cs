@@ -104,6 +104,8 @@ public class PlayerController : MonoBehaviour
     private Action OnPlayerIdle;
     private Action OnPlayerJump;
     private Action OnPlayerHit;
+    private Action OnCamIdle;
+    private Action OnCamSprint;
 
     //Properties
     [SerializeField]
@@ -141,6 +143,7 @@ public class PlayerController : MonoBehaviour
         playerBody.transform.position = new Vector3(0, 2, 0);/*GameData.instance.PlayerPosition*/
 
         OnPlayerIdle?.Invoke();
+        OnCamIdle?.Invoke();
 
         PlayerCanMove = true;
         Endurance = maxEndurance;
@@ -217,13 +220,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // Wenn die Ausdauer unter dem maximalwert liegt, Ausdauer zurücksetzen
-                //if (Endurance < maxEndurance && !playerSprints)
-                //{
-                //    StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
-                //    Debug.Log("Ausdauer Wiederherstellung gestartet!");
-                //}
-            
                 // Walk
                 speed = moveSpeed;
                 playerSprints = false;
@@ -266,6 +262,7 @@ public class PlayerController : MonoBehaviour
 
             // Event aufrufen
             OnPlayerMoveRun?.Invoke();
+            OnCamSprint?.Invoke();
 
             // Speed Wert erhöhen
             _speed = moveSpeed * speedMultiplier;
@@ -286,12 +283,15 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
                 Debug.Log("Ausdauer Wiederherstellung gestartet!");
             }
-            
+
             playerSprints = false;
             return _speed;
         }
     }
 
+    /// <summary>
+    /// Den aktuellen Ausdauerwert reduzieren
+    /// </summary>
     private void ReduceSprintEndurance()
     {
         Endurance -= 1 * Time.deltaTime;
@@ -305,14 +305,15 @@ public class PlayerController : MonoBehaviour
     /// <returns></returns>
     IEnumerator ResetSprintEndurance(float _waitTimeForReset, float _enduranceMaxLimit)
     {
-        // TODO Animation mit starker Atmung abspielen
-
+        //Animation mit starker Atmung abspielen
+        OnCamSprint?.Invoke();
         // Ausdauer wird wiederhergestellt
         enduranceIsRecovery = true;
         Debug.Log($"Ausdauer Reset in: {_waitTimeForReset} sek.");
 
         yield return new WaitForSeconds(_waitTimeForReset);
 
+        OnCamIdle?.Invoke();
         Endurance = _enduranceMaxLimit;
         enduranceIsRecovery = false;
         Debug.Log($"Ausdauer Wiederherstellung: {Endurance}");
@@ -359,7 +360,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            // TODO: Hit Animation abspielen
+            //Hit Animation abspielen
             OnPlayerHit?.Invoke();
             Debug.Log("Player Hit!");
             //Health aktualisieren
@@ -393,10 +394,8 @@ public class PlayerController : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
-            hitWall = true;
-        else
-            hitWall = false;
+        hitWall = collision.gameObject.CompareTag("Wall");
+
         if (collision.gameObject.CompareTag("ExitGate"))
         {
             //Entfernt Collider nach Kollision
@@ -406,6 +405,16 @@ public class PlayerController : MonoBehaviour
     }
 
     #region SetOnAction
+
+    public void SetOnCamIdle(Action _newFunc)
+    {
+        OnCamIdle += _newFunc;
+    }
+    public void SetOnCamSprint(Action _newFunc)
+    {
+        OnCamSprint += _newFunc;
+    }
+
     public void SetOnPlayerMove(Action _newFunc)
     {
         OnPlayerMove += _newFunc;
