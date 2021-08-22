@@ -10,6 +10,8 @@ public class TrapDoor_Behavior : MonoBehaviour
 {
     [SerializeField]
     private Animator trapDoorAnimator;
+    [SerializeField]
+    private AudioSource trapDoorAudio;
 
 
     private void OnTriggerEnter(Collider _other)
@@ -19,6 +21,7 @@ public class TrapDoor_Behavior : MonoBehaviour
             PlayerController.SprintActive = false;      //Damit der Spieler nicht über die Falle "hinwegsprinten" kann
 
             trapDoorAnimator.SetTrigger("triggered");
+            trapDoorAudio.Play();
         }
     }
 }

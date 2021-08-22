@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * 
+ */
 public class KeyCorridorBehavior : MonoBehaviour
 {
     [SerializeField]
     private Animator corridorAnimator;
+    [SerializeField]
+    private AudioSource corridorAudio;
+
     [SerializeField]
     private GameObject key;
 
@@ -13,7 +19,7 @@ public class KeyCorridorBehavior : MonoBehaviour
     private GameObject leftWall;
     [SerializeField]
     private GameObject rightWall;
-    public int tagchangeAfterSeconds = 5;
+    private int tagchangeAfterSeconds = 5;
 
     private IEnumerator TagWallsAsTrap()
     {
@@ -29,9 +35,10 @@ public class KeyCorridorBehavior : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                StartCoroutine(TagWallsAsTrap());
                 Destroy(key);
                 corridorAnimator.SetTrigger("triggered");
+                corridorAudio.Play();
+                StartCoroutine(TagWallsAsTrap());
             }
         }
     }

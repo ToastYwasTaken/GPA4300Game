@@ -19,6 +19,9 @@ public class TrapRocks_Behavior : MonoBehaviour
     [SerializeField]
     private float timeBetweenSpawns;
 
+    [SerializeField]
+    private AudioSource rocksAudio;
+
     private IEnumerator spawnRocks()
     {
         for (int i = 0; i < numberOfRocks; i++)
@@ -60,6 +63,7 @@ public class TrapRocks_Behavior : MonoBehaviour
         if (_other.gameObject.tag == "Player")
         {
             StartCoroutine(spawnRocks());
+            rocksAudio.Play();
         }
     }
 }
