@@ -35,6 +35,8 @@ public class GameController : MonoBehaviour
 {
     [SerializeField]
     private bool isGamePaused = false;
+    [SerializeField]
+    private GameObject uIWon;
 
     [SerializeField]
     private PlayerController playerController;
@@ -91,6 +93,12 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+
+            if (uIWon.activeInHierarchy)
+            {
+                GameIsWon();
+                return;
+            }
 
             int scenes = SceneManager.sceneCount;
             if (scenes == 1)
@@ -242,7 +250,8 @@ public class GameController : MonoBehaviour
     /// </summary>
     public void GameIsWon()
     {
-        SceneManager.LoadSceneAsync(5, LoadSceneMode.Additive);
+        Time.timeScale = 1f;
+        SceneManager.LoadSceneAsync(5, LoadSceneMode.Single);
     }
 
 

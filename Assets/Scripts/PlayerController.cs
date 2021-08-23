@@ -144,6 +144,7 @@ public class PlayerController : MonoBehaviour
         playerBody = GetComponent<Rigidbody>();
 
         //Erste Spawnposition des Spielers
+        // Ausgang: 24, 2, 174
         playerBody.transform.position = new Vector3(0, 2, 0);/*GameData.instance.PlayerPosition;*/
 
         OnPlayerIdle?.Invoke();

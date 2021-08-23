@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -21,11 +22,18 @@ using UnityEngine;
  *****************************************************************************/
 public class UIManager : MonoBehaviour
 {
-    public GameObject uIPause = null;
+    [SerializeField]
+    private GameObject uIPause = null; 
+    [SerializeField]
+    private GameObject uIWon = null;
+    [SerializeField]
+    private TMP_Text uIWonPlaytimeText = null;
+
 
     private void Start()
     {
         uIPause.SetActive(false);
+        uIWon.SetActive(false);
 
     }
 
@@ -38,6 +46,19 @@ public class UIManager : MonoBehaviour
         else
             Debug.LogError("Kein UI: Pause festgelegt!");
       
+    }
+
+    public void ShowUIWon(bool _value, string _playtime)
+    {
+        if (uIWon)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            uIWonPlaytimeText.text =$"Benoetigte Zeit:\n{_playtime}";
+            uIWon.SetActive(_value);
+        }
+        else
+            Debug.LogError("Kein UI: Gewonnen festgelegt!");
+
     }
 
 

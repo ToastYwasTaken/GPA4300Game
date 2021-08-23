@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
+    <Compile Include="Assets\Scripts\PlayerAudio.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\JP\Scripts\KeyCorridorBehavior.cs" />
     <Compile Include="Assets\Scripts\LoadingController.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\Preferences.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\AudioSourceTrigger.cs" />
     <Compile Include="Assets\JP\Scripts\TrapDoor_Behavior.cs" />
     <Compile Include="Assets\Heroes\Scripts\SetCharacter\SetCharacter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
@@ -129,9 +131,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\JP\Prefabs\Interactive\portal\Old Portal\Portal_Behavior.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\AudioSourceTrigger.cs" />
     <Compile Include="Assets\Scripts\StopAudioSource.cs" />
-    <Compile Include="Assets\Scripts\PlayerAudio.cs" />
+    <Compile Include="Assets\Scripts\ExitBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
