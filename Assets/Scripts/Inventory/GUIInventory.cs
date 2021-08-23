@@ -70,22 +70,22 @@ public class GUIInventory : MonoBehaviour
     private void GetInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)){
-            UseItem(1);
+            UseItem(0);
         }else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            UseItem(2);
+            UseItem(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            UseItem(3);
+            UseItem(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            UseItem(4);
+            UseItem(3);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            UseItem(5);
+            UseItem(4);
         }
     }
 
@@ -94,10 +94,13 @@ public class GUIInventory : MonoBehaviour
     /// </summary>
     private void DisplayInventoryDebug()
     {
+        Debug.Log("Inventory Items: ");
+        string myStr = "";
         foreach(Item item in inventory)
         {
-            Debug.Log(item.itemName + "\n");
+            myStr += item.itemName + " | ";
         }
+        Debug.Log(myStr);
     }
 
 
@@ -127,14 +130,15 @@ public class GUIInventory : MonoBehaviour
     private void UseItem(int _index)
     {
         DisplayInventoryDebug();
+        Debug.Log("index: " + _index + "inventorySize: " + inventory.Count);
         //Benutzt das Item nicht, wenn keine Items im Inventar sind
         if (_index < inventory.Count)
         {
-            //Debug.Log($"item in inventory at index itype: {inventory[_index].PItemType}");
-            Item currentItem = inventory[_index];
+            Item currentItem = inventory.ElementAt(_index);
             //Null Check
             if (currentItem != null)
             {
+                Debug.Log("Using Item...");
                 currentItem.Use();
             }
         }

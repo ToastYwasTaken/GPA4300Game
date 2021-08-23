@@ -104,70 +104,69 @@ public class Item : MonoBehaviour
     {
         Debug.Log("Using Item: " + itemType.ToString());
         bool itemUsed = false;
-        switch (itemType)
+        //Kollidiert mit ExitGate 
+        if (playerController.playerCollidingWithExitGate)
         {
-            case IItemTypes.ItemType.Key:
-                if (playerController.playerCollidingWithExitGate)
-                {
-                    Debug.Log("Colliding with exit gate");
-                    //Gate Animation
-                    gateAnimator.SetTrigger("Switch");
-                    itemUsed = true;
-                }
-                break;
-            case IItemTypes.ItemType.HealPotion:
-                playerController.HealthProperty += healValue;
+            //wenn key -> öffnen, sonst->anzeigen key fehlt
+            if (itemType.Equals(IItemTypes.ItemType.Key))
+            {
+
+                Debug.Log("Colliding with exit gate");
+                //Gate Animation
+                gateAnimator.SetTrigger("Switch");
                 itemUsed = true;
-                break;
-            case IItemTypes.ItemType.SprintPotion:
-
-                break;
-            case IItemTypes.ItemType.MapPart1:
-                OpenMap();
-                break;
-            case IItemTypes.ItemType.MapPart2:
-                OpenMap();
-                break;
-            case IItemTypes.ItemType.MapPart3:
-                OpenMap();
-                break;
-            case IItemTypes.ItemType.None:
-                break;
-            default:
-                break;
+            }
+            else
+            {
+                //TODO: Display item missing
+            }
+            if (itemUsed)
+            {
+                inventoryRef.RemoveItem(this);
+            }
         }
-        if (itemUsed)
+        //Kollidiert nicht mit ExitGate
+        else
         {
-            inventoryRef.RemoveItem(this);
+            //alle items können verwendet werden außer key
+            switch (itemType)
+            {
+
+                case IItemTypes.ItemType.Key:
+
+                    //TODO: Display missing gate
+
+                    
+                    break;
+                case IItemTypes.ItemType.HealPotion:
+                    playerController.HealthProperty += healValue;
+                    itemUsed = true;
+                    break;
+                case IItemTypes.ItemType.SprintPotion:
+
+                    itemUsed = true;
+                    break;
+                case IItemTypes.ItemType.MapPart1:
+                    inventoryRef.OpenMap(1);
+                    break;
+                case IItemTypes.ItemType.MapPart2:
+                    inventoryRef.OpenMap(2);
+                    break;
+                case IItemTypes.ItemType.MapPart3:
+                    inventoryRef.OpenMap(3);
+                    break;
+                case IItemTypes.ItemType.None:
+                    break;
+                default:
+                    break;
+            }
+            if (itemUsed)
+            {
+                inventoryRef.RemoveItem(this);
+            }
         }
     }
 
-    private void OpenMap()
-    {
-        switch (itemType)
-        {
-            case IItemTypes.ItemType.MapPart1:
-                inventoryRef.OpenMap(1);
-                break;
-            case IItemTypes.ItemType.MapPart2:
-                inventoryRef.OpenMap(2);
-                break;
-            case IItemTypes.ItemType.MapPart3:
-                inventoryRef.OpenMap(3);
-                break;
-            case IItemTypes.ItemType.Key:
-                break;
-            case IItemTypes.ItemType.HealPotion:
-                break;
-            case IItemTypes.ItemType.SprintPotion:
-                break;
-            case IItemTypes.ItemType.None:
-                break;
-            default:
-                break;
-        }
-        
-    }
 
 
     public IItemTypes.ItemType PItemType { get => itemType; set => itemType = value; }
