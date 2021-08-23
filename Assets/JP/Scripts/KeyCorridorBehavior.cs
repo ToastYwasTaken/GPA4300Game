@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * 
+ * Sobald der Spieler den Schlüssel aufhebt, fangen die Wände an, sich aufeinander zuzubewegen
+ * und zerquetschen den Spieler, wenn er nicht schnell genug ist.
  */
 public class KeyCorridorBehavior : MonoBehaviour
 {
@@ -24,7 +25,8 @@ public class KeyCorridorBehavior : MonoBehaviour
     private IEnumerator TagWallsAsTrap()
     {
         yield return new WaitForSeconds(tagchangeAfterSeconds);
-
+        //Nachdem sich die Wände einige Sekunden aufeinander zubewegen, wechset ihr Tag auf "Trap"
+        //--> Instant Death bei berührung
         leftWall.gameObject.tag = "Trap";
         rightWall.gameObject.tag = "Trap";
     }

@@ -9,6 +9,7 @@ public class Rat_Behavior : MonoBehaviour
     [SerializeField]
     private AudioSource ratAudio;
 
+    //ratAudio wird nach dem ersten Mal abspielen ausgeschaltet, damit es nicht immer ausgelöst wird, wenn der Spieler in den BoxCollider läuft
     private IEnumerator DisableMouseAudio()
     {
         yield return new WaitForSeconds(2);
