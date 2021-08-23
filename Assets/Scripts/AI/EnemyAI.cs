@@ -77,6 +77,15 @@ public class EnemyAI : MonoBehaviour
     private bool lookAroundFlag = false;
     private bool isRight = false;
     private bool coroutineRunning = false;
+    private bool canRunning = false;
+    public bool CanRunning
+    {
+        get => canRunning;
+        set
+        {
+            canRunning = value;
+        }
+    }
 
     SearchPlayerAI searchAI;
     Pathfinding pathfinding;
@@ -100,7 +109,6 @@ public class EnemyAI : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-
     }
 
     // Start is called before the first frame update
@@ -111,12 +119,20 @@ public class EnemyAI : MonoBehaviour
             agent.speed = patrolSpeed;
             agent.updatePosition = true;
             SetDestination(NextDestination(), distanceToTheWaypoint);
-            enemyAnim.PlayIdleAnimation(true);
+            enemyAnim.PlayIdleAnimation(true);  
         }
+
+      
     }
 
     private void FixedUpdate()
     {
+        if (!canRunning)
+        {
+            AgentStop();
+            return;
+        }
+
         if (useMouseDest)
         {
             MouseDestination();

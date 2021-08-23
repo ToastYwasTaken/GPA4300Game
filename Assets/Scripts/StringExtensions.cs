@@ -7,7 +7,7 @@ namespace CustomExtensions
 {
     /******************************************************************************
     * Project: GPA4300Game
-    * File: Item.cs
+    * File: StringExtensions.cs
     * Version: 1.0
     * Autor: René Kraus (RK); Franz Mörike (FM); Jan Pagel (JP)
     * 

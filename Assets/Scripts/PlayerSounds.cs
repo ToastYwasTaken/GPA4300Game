@@ -28,20 +28,39 @@ public class PlayerSounds : MonoBehaviour
     private float stepTimeRun = 0.2f;
     [SerializeField]
     private float volume = 1f;
+    [SerializeField]
+    private bool mute = !false;
 
     private float dealy = 0;
     private PlayerController playerController;
 
+    private Preferences preferences;
+
     // Start is called before the first frame update
     void Start()
     {
+        preferences = Preferences.instance;
+        preferences.SetOnPrefsSaved(SetAudioSoucrePrefs);
+
         playerController = GetComponent<PlayerController>();
         playerController.SetOnPlayerMove(FootSteps);
         playerController.SetOnPlayerMoveRun(FootStepsRun);
+
+        volume = preferences.Load_AudioVolume();
+        mute = preferences.Load_SoundsMute();
+
+    }
+
+    private void SetAudioSoucrePrefs()
+    {
+        volume = preferences.Load_AudioVolume();
+        mute = preferences.Load_SoundsMute();
     }
 
     void FootSteps()
     {
+        if (!mute) return;
+
         if (dealy >= stepTimeWalk)
         {
             AudioSource.PlayClipAtPoint(audioClipWalk, transform.position, volume);
@@ -53,6 +72,8 @@ public class PlayerSounds : MonoBehaviour
 
     void FootStepsRun()
     {
+        if (!mute) return;
+
         if (dealy >= stepTimeRun)
         {
             AudioSource.PlayClipAtPoint(audioClipRun, transform.position, volume);

@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
     private PlayerController playerController;
     [SerializeField]
     private EnemyAI enemyAI;
+    private bool enemyIsRunning = false;
     [SerializeField]
     private Light directionalLight;
 
@@ -148,6 +149,8 @@ public class GameController : MonoBehaviour
         playerController.Sensitivity = Preferences.instance.Load_Sensitivity();
 
         enemyAI.StartPosition = EnemyPosition;
+        // KI zum Anfang anhalten
+        enemyAI.CanRunning = false;
     }
 
     /// <summary>
@@ -224,7 +227,7 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// Beendet das Spiel und l�dt das Hauptmen�
+    /// Beendet das Spiel und laedt das Hauptmenue
     /// </summary>
     public void ExitGame()
     {
@@ -232,6 +235,14 @@ public class GameController : MonoBehaviour
         SaveEnemyPosition();
 
         SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+    }
+
+    /// <summary>
+    /// Beendet das Spiel und laedt die EndScene
+    /// </summary>
+    public void GameIsWon()
+    {
+        SceneManager.LoadSceneAsync(5, LoadSceneMode.Additive);
     }
 
 

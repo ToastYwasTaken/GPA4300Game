@@ -21,6 +21,7 @@ using UnityEngine.SceneManagement;
 *  14.08.2021  FM  kommentiert
 *  15.08.2021  RK  LoadScene() hinzugefügt
 *              RK  mainMenuButton hinzugeüft 
+*              RK  SetAudioSoucrePrefs() hinzugefügt
 *            
 *****************************************************************************/
 
@@ -37,17 +38,32 @@ public class GUIDeath : MonoBehaviour
     private AudioClip jumpscareClip;
     [SerializeField]
     private AudioSource audioSource;
+    private Preferences preferences;
+
+    [SerializeField]
+    private float volumeOffset = 0.4f;
 
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        preferences = Preferences.instance;
+        preferences.SetOnPrefsSaved(SetAudioSoucrePrefs);
+
         mainMenuButton.SetActive(false);
         audioSource.clip = jumpscareClip;
-        audioSource.volume = Preferences.instance.Load_AudioVolume()
-            * 0.4f; // ist sonst viel zu laut
+        audioSource.volume = preferences.Load_AudioVolume() * volumeOffset; // ist sonst viel zu laut
+        audioSource.mute = !preferences.Load_SoundsMute();
+            
+           
         audioSource.PlayOneShot(jumpscareClip);
         StartCoroutine(nameof(FadeIn));
+    }
+
+    private void SetAudioSoucrePrefs()
+    {
+        audioSource.volume = preferences.Load_AudioVolume() * volumeOffset; // ist sonst viel zu laut
+        audioSource.mute = !preferences.Load_SoundsMute();
     }
 
     /// <summary>

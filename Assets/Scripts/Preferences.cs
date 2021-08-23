@@ -1,5 +1,6 @@
 using UnityEngine;
 using CustomExtensions;
+using System;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -45,6 +46,8 @@ public class Preferences : MonoBehaviour
         }
     }
 
+    private Action OnPrefsSaved;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -53,6 +56,7 @@ public class Preferences : MonoBehaviour
     public void SavePrefs()
     {
         PlayerPrefs.Save();
+        OnPrefsSaved?.Invoke();
     }
 
     #region Load
@@ -140,5 +144,14 @@ public class Preferences : MonoBehaviour
     {
         PlayerPrefs.SetFloat("Brightness", _value);
     }
+    #endregion
+
+    #region Events
+
+    public void SetOnPrefsSaved(Action _newFunc)
+    {
+        OnPrefsSaved += _newFunc;
+    }
+
     #endregion
 }

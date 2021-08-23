@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float speedMultiplier = 2f;
     public bool playerSprints = false;
+    [SerializeField]
     private bool enduranceIsRecovery = true;
     [SerializeField]
     private float maxEndurance = 10;
@@ -104,8 +105,11 @@ public class PlayerController : MonoBehaviour
     private Action OnPlayerIdle;
     private Action OnPlayerJump;
     private Action OnPlayerHit;
+    private Action OnPlayerResetEndurance;
     private Action OnCamIdle;
     private Action OnCamSprint;
+
+
 
     //Properties
     [SerializeField]
@@ -207,9 +211,18 @@ public class PlayerController : MonoBehaviour
         {
             // Idle
             OnPlayerIdle?.Invoke();
+            if (Endurance >= maxEndurance)
+            {
+                OnCamIdle?.Invoke();
+            }
+
         }
         else
         {
+           
+
+            playerSprints = false;
+
             // Bewegungsgeschwindigkeit
             float speed = moveSpeed;
 
@@ -225,6 +238,23 @@ public class PlayerController : MonoBehaviour
                 playerSprints = false;
 
                 OnPlayerMove?.Invoke();
+
+                if (Endurance >= maxEndurance)
+                {
+                    OnCamIdle?.Invoke();
+                }
+
+                if (!enduranceIsRecovery && Endurance < maxEndurance)
+                {
+                    StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
+                    Debug.Log("Ausdauer Wiederherstellung gestartet!");
+                }
+            }
+
+            if (!enduranceIsRecovery && Endurance < maxEndurance)
+            {
+                StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
+                Debug.Log("Ausdauer Wiederherstellung gestartet!");
             }
 
             // Mit der Tastatur drehen
@@ -259,6 +289,8 @@ public class PlayerController : MonoBehaviour
                 enduranceIsRecovery = false;
                 Debug.Log("Ausdauer Wiederherstellung abgebrochen!");
             }
+
+            waitTimeForEnduranceReset += Time.deltaTime;
 
             // Event aufrufen
             OnPlayerMoveRun?.Invoke();
@@ -307,6 +339,8 @@ public class PlayerController : MonoBehaviour
     {
         //Animation mit starker Atmung abspielen
         OnCamSprint?.Invoke();
+        OnPlayerResetEndurance?.Invoke();
+
         // Ausdauer wird wiederhergestellt
         enduranceIsRecovery = true;
         Debug.Log($"Ausdauer Reset in: {_waitTimeForReset} sek.");
@@ -316,6 +350,7 @@ public class PlayerController : MonoBehaviour
         OnCamIdle?.Invoke();
         Endurance = _enduranceMaxLimit;
         enduranceIsRecovery = false;
+        waitTimeForEnduranceReset = 0f;
         Debug.Log($"Ausdauer Wiederherstellung: {Endurance}");
     }
 
@@ -394,8 +429,15 @@ public class PlayerController : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionStay(Collision collision)
     {
-        hitWall = collision.gameObject.CompareTag("Wall");
-        hitWall = collision.gameObject.CompareTag("ExitGate");
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("ExitGate"))
+        {
+            hitWall = true;
+        }
+        else
+        {
+            hitWall = false;
+        }
+
         if (collision.gameObject.CompareTag("ExitGate"))
         {
             //true wenn Player im Collider des ExitGates steht
@@ -442,6 +484,11 @@ public class PlayerController : MonoBehaviour
     public void SetOnPlayerHit(Action _newFunc)
     {
         OnPlayerHit += _newFunc;
+    }
+
+    public void SetOnPlayerResetEndurance(Action _newFunc)
+    {
+        OnPlayerResetEndurance += _newFunc;
     }
     #endregion
 }
