@@ -22,12 +22,12 @@ using UnityEngine;
 /// </summary>
 public class ItemRotation : MonoBehaviour
 {
-    private float smoothFactor = 0.1f;
+    private float smoothFactor = 2f;
     private float tiltY = 60f;
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, tiltY * smoothFactor, 0, Space.World);
+        transform.Rotate(0, tiltY * smoothFactor * Time.deltaTime, 0, Space.World);
     }
 }

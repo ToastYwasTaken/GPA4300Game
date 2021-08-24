@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 /******************************************************************************
@@ -45,6 +46,14 @@ public class GUIInventory : MonoBehaviour
     private GameObject mapPart2;
     [SerializeField]
     private GameObject mapPart3;
+    [SerializeField]
+    private TextMeshProUGUI textMeshNotAtGate;
+    [SerializeField]
+    private TextMeshProUGUI textMeshNoKeyInInventory;
+    [SerializeField]
+    private TextMeshProUGUI textMeshPressSameButtonToContinue;
+    [SerializeField]
+    private PlayerController player;
 
     public int inventoryMaxSize = 5;
     private int itemCount = 0;
@@ -54,6 +63,9 @@ public class GUIInventory : MonoBehaviour
         mapPart1.SetActive(false);
         mapPart2.SetActive(false);
         mapPart3.SetActive(false);
+        textMeshNoKeyInInventory.enabled = false;
+        textMeshNotAtGate.enabled = false;
+        textMeshPressSameButtonToContinue.enabled = false;
     }
 
     private void Update()
@@ -69,9 +81,11 @@ public class GUIInventory : MonoBehaviour
     /// </summary>
     private void GetInput()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)){
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
             UseItem(0);
-        }else if (Input.GetKeyDown(KeyCode.Alpha2))
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             UseItem(1);
         }
@@ -90,37 +104,148 @@ public class GUIInventory : MonoBehaviour
     }
 
     /// <summary>
+    /// Debug Log
     /// Zeigt das Inventar in der Console an
     /// </summary>
     private void DisplayInventoryDebug()
     {
         Debug.Log("Inventory Items: ");
         string myStr = "";
-        foreach(Item item in inventory)
+        foreach (Item item in inventory)
         {
             myStr += item.itemName + " | ";
         }
         Debug.Log(myStr);
     }
-
-
-    public void OpenMap(int _mapInt)
+    /// <summary>
+    /// Öffnet die Map
+    /// </summary>
+    /// <param name="_mapInt">Der Map zugewiesene ID</param>
+    /// <param name="_indexInInventory">Index der zu öffnenden Map</param>
+    public void OpenMap(int _mapInt, int _indexInInventory)
     {
+        //Player Position und Rotation einfrieren
+        player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+        //Anzeige: Drücke dieselbe Taste zum Fortsetzen
+        textMeshPressSameButtonToContinue.text = $"Press {++_indexInInventory} to continue.";
+        textMeshPressSameButtonToContinue.enabled = true;
+        Debug.Log("Opening Map");
+        //Öffnet die entsprechende Map
         if (_mapInt == 1)
         {
-            mapPart1.SetActive(true);
+            if (!mapPart1.activeInHierarchy)
+            {
+                Debug.Log("Setting Map active");
+                mapPart1.SetActive(true);
+                mapPart2.SetActive(false);
+                mapPart3.SetActive(false);
+            }
+            else
+            { 
+                Debug.Log("Closing Map");
+                //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+                player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+                textMeshPressSameButtonToContinue.enabled = false;
+                mapPart1.SetActive(false);
+            }
         }
         else if (_mapInt == 2)
         {
-            mapPart2.SetActive(true);
+            if (!mapPart2.activeInHierarchy)
+            {
+                Debug.Log("Setting Map active");
+                mapPart2.SetActive(true);
+                mapPart1.SetActive(false);
+                mapPart3.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Closing Map");
+                //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+                player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+                textMeshPressSameButtonToContinue.enabled = false;
+                mapPart2.SetActive(false);
+            }
         }
         else if (_mapInt == 3)
         {
-            mapPart3.SetActive(true);
+            if (!mapPart3.activeInHierarchy)
+            {
+                Debug.Log("Setting Map active");
+                mapPart3.SetActive(true);
+                mapPart2.SetActive(false);
+                mapPart1.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Closing Map");
+                //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+                player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+                textMeshPressSameButtonToContinue.enabled = false;
+                mapPart3.SetActive(false);
+            }
         }
-        else return;
+        //CloseMap(_mapInt, _indexInInventory);
     }
 
+    /// <summary>
+    /// Schließt die Map auf Druck derselben Taste wie zum Öffnen
+    /// </summary>
+    /// <param name="_mapInt">Der Map zugewiesene ID</param>
+    /// <param name="_indexInInventory">Index der zu öffnenden Map</param>
+    public void CloseMap(int _mapInt, int _indexInInventory)
+    {
+        Debug.Log("Closing Map");
+        //Spiel fortsetzen bei drücken derselben Taste wie beim Öffnen
+        if (Input.GetKeyDown(KeyCode.Alpha1) && _indexInInventory == 0)
+        {
+            //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+            Cursor.lockState = CursorLockMode.None;
+            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            //Alle Maps schließen
+            mapPart1.SetActive(false);
+            mapPart2.SetActive(false);
+            mapPart3.SetActive(false);
+            textMeshPressSameButtonToContinue.enabled = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && _indexInInventory == 1)
+        {
+            //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+            Cursor.lockState = CursorLockMode.None;
+            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            //Alle Maps schließen
+            mapPart1.SetActive(false);
+            mapPart2.SetActive(false);
+            mapPart3.SetActive(false);
+            textMeshPressSameButtonToContinue.enabled = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && _indexInInventory == 2)
+        {
+            //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+            Cursor.lockState = CursorLockMode.None;
+            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            //Alle Maps schließen
+            mapPart1.SetActive(false);
+            mapPart2.SetActive(false);
+            mapPart3.SetActive(false);
+            textMeshPressSameButtonToContinue.enabled = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && _indexInInventory == 3)
+        {
+            //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+            Cursor.lockState = CursorLockMode.None;
+            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            textMeshPressSameButtonToContinue.enabled = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5) && _indexInInventory == 4)
+        {
+            //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
+            Cursor.lockState = CursorLockMode.None;
+            player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            textMeshPressSameButtonToContinue.enabled = false;
+        }
+    }
 
     /// <summary>
     /// Der Spieler setzt das Item ein indem er die Taste drückt, an dessen Index das
@@ -175,19 +300,63 @@ public class GUIInventory : MonoBehaviour
         UpdateGUI();
     }
 
+    /// <summary>
+    /// Zeigt an, dass der Spieler den Schlüssel nur beim Gate benutzen darf
+    /// </summary>
+    public IEnumerator DisplayNotAtGate()
+    {
+        textMeshNotAtGate.enabled = true;
+        //2 Sek komplett sichtbar lassen
+        yield return new WaitForSeconds(2f);
+        Color textColor;
+        for (float i = 0f; i < 1f; i += 0.05f)
+        {
+            textColor = new Color
+                (textMeshNotAtGate.color.r, textMeshNotAtGate.color.g, textMeshNotAtGate.color.b, 1 - i);
+            textMeshNotAtGate.color = textColor;
+            //Verzögerung um 0.05 sek
+            yield return new WaitForSeconds(0.05f);
+        }
+        textMeshNotAtGate.enabled = false;
+        //Cooldown
+        yield return new WaitForSeconds(2f);
+    }
+
+    /// <summary>
+    /// Zeigt an, dass der Spieler einen Schlüssel finden muss,
+    /// um das Tor zu öffnen
+    /// </summary>
+    public IEnumerator DisplayKeyMissing()
+    {
+        textMeshNoKeyInInventory.enabled = true;
+        //2 Sek komplett sichtbar lassen
+        yield return new WaitForSeconds(2f);
+        Color textColor;
+        for (float i = 0f; i < 1f; i += 0.05f)
+        {
+            textColor = new Color
+                (textMeshNoKeyInInventory.color.r, textMeshNoKeyInInventory.color.g, textMeshNoKeyInInventory.color.b, 1 - i);
+            textMeshNoKeyInInventory.color = textColor;
+            //Verzögerung um 0.05 sek
+            yield return new WaitForSeconds(0.05f);
+        }
+        textMeshNoKeyInInventory.enabled = false;
+        //Cooldown
+        yield return new WaitForSeconds(3f);
+    }
 
     /// <summary>
     /// Zeigt die Items in der GUI am unteren Bildschirmrand an
     /// </summary>
-    private void UpdateGUI()    
+    private void UpdateGUI()
     {
 
-        for (int i = 0; i < guiInventoryImages.Count(); i++) 
-        { 
-        guiInventoryImages[i].enabled = false;
+        for (int i = 0; i < guiInventoryImages.Count(); i++)
+        {
+            guiInventoryImages[i].enabled = false;
         }
-        
-        for(int i = 0; i < inventory.Count(); i++)
+
+        for (int i = 0; i < inventory.Count(); i++)
         {
             guiInventoryImages[i].enabled = true;
             guiInventoryImages[i].sprite = inventory[i].PItemSprite;

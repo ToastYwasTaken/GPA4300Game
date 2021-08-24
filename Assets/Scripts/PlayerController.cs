@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -72,32 +73,22 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Sprint Speed")]
     [SerializeField]
     private float speedMultiplier = 2f;
-    public bool playerSprints = false;
-    [SerializeField]
-    private bool enduranceIsRecovery = false;
     [SerializeField]
     private float maxEndurance = 10;
     [SerializeField]
     private float waitTimeForEnduranceReset = 5;
-
-    [SerializeField]
-    private bool jumpActive = false;
     public float jumpForce = 200f;
 
-    [SerializeField]
-    private bool isGrounded;
-    private bool hitWall;
-    public bool playerCollidingWithExitGate;
-
-    [SerializeField]
-    private bool rotatePlayerWithButtons = false;
-
+    
     [SerializeField]
     private float maxVerticalCameraAngle = 45f;
     private float cameraAngle = 0f;
     public float moveSpeed = 5f;
     public float rotationSpeed = 200f;
     public float fallingDownLimit = -10f;
+
+    [SerializeField]
+    private GUIInventory inventoryRef;
 
     // Events
     private Action OnPlayerMove;
@@ -109,11 +100,27 @@ public class PlayerController : MonoBehaviour
     private Action OnCamIdle;
     private Action OnCamSprint;
 
+    //Bools
+    [SerializeField]
+    private bool isGrounded;
+    private bool hitWall;
+    public bool playerCollidingWithExitGate;
 
+    [SerializeField]
+    private bool rotatePlayerWithButtons = false;
 
-    //Properties
     [SerializeField]
     private static bool sprintActive = true;
+
+    [SerializeField]
+    private bool jumpActive = false;
+
+    public bool playerSprints = false;
+
+    [SerializeField]
+    private bool enduranceIsRecovery = false;
+
+    //Properties
     public static bool SprintActive
     {
         set { sprintActive = value; }
@@ -443,6 +450,14 @@ public class PlayerController : MonoBehaviour
         {
             //true wenn Player im Collider des ExitGates steht
             playerCollidingWithExitGate = true;
+            if (!inventoryRef.PGetInventory.Any(x => x.PItemType == IItemTypes.ItemType.Key))
+            {
+                    //Zeige an, dass der Spieler zum Öffnen des Tores
+                    //noch einen Schlüssel finden muss
+                    //TODO: add delay
+                    Debug.Log("no key in inventory");
+                    inventoryRef.StartCoroutine(inventoryRef.DisplayKeyMissing());
+            }
         }
     }
 

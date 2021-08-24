@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 /******************************************************************************
  * Project: GPA4300Game
  * File: Item.cs
@@ -44,7 +43,8 @@ public class Item : MonoBehaviour
     [SerializeField]
     private PlayerController playerController;
 
-    public GUIInventory inventoryRef;
+    [SerializeField]
+    private GUIInventory inventoryRef;
 
     private sbyte healValue = 20;
 
@@ -99,26 +99,24 @@ public class Item : MonoBehaviour
     /// <summary>
     /// Sorgt dafür, dass der Spieler seine gesammelten Items
     /// anwenden kann
+    /// Wenn der Spieler das Item nicht einsetzen kann erscheint ein
+    /// Hinweis...
     /// </summary>
     public void Use()
     {
         Debug.Log("Using Item: " + itemType.ToString());
         bool itemUsed = false;
+        int indexOfMapInInventory;
         //Kollidiert mit ExitGate 
         if (playerController.playerCollidingWithExitGate)
         {
             //wenn key -> öffnen, sonst->anzeigen key fehlt
             if (itemType.Equals(IItemTypes.ItemType.Key))
             {
-
                 Debug.Log("Colliding with exit gate");
                 //Gate Animation
                 gateAnimator.SetTrigger("Switch");
                 itemUsed = true;
-            }
-            else
-            {
-                //TODO: Display item missing
             }
             if (itemUsed)
             {
@@ -131,29 +129,35 @@ public class Item : MonoBehaviour
             //alle items können verwendet werden außer key
             switch (itemType)
             {
-
                 case IItemTypes.ItemType.Key:
-
-                    //TODO: Display missing gate
-
-                    
+                    //Zeige an, dass der Spieler nicht beim Gate ist
+                    inventoryRef.StartCoroutine(inventoryRef.DisplayNotAtGate());
                     break;
                 case IItemTypes.ItemType.HealPotion:
                     playerController.HealthProperty += healValue;
                     itemUsed = true;
                     break;
                 case IItemTypes.ItemType.SprintPotion:
-
+                    //TODO: Use sprint potion
                     itemUsed = true;
                     break;
                 case IItemTypes.ItemType.MapPart1:
-                    inventoryRef.OpenMap(1);
+                    indexOfMapInInventory = inventoryRef.PGetInventory
+                        .IndexOf(inventoryRef.PGetInventory
+                        .Find(x => x.itemType == IItemTypes.ItemType.MapPart1));
+                    inventoryRef.OpenMap(1, indexOfMapInInventory);
                     break;
                 case IItemTypes.ItemType.MapPart2:
-                    inventoryRef.OpenMap(2);
+                    indexOfMapInInventory = inventoryRef.PGetInventory
+                        .IndexOf(inventoryRef.PGetInventory
+                        .Find(x => x.itemType == IItemTypes.ItemType.MapPart2));
+                    inventoryRef.OpenMap(2, indexOfMapInInventory);
                     break;
                 case IItemTypes.ItemType.MapPart3:
-                    inventoryRef.OpenMap(3);
+                    indexOfMapInInventory = inventoryRef.PGetInventory
+                        .IndexOf(inventoryRef.PGetInventory
+                        .Find(x => x.itemType == IItemTypes.ItemType.MapPart3));
+                    inventoryRef.OpenMap(3, indexOfMapInInventory);
                     break;
                 case IItemTypes.ItemType.None:
                     break;
@@ -166,7 +170,6 @@ public class Item : MonoBehaviour
             }
         }
     }
-
 
 
     public IItemTypes.ItemType PItemType { get => itemType; set => itemType = value; }
