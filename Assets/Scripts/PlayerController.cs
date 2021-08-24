@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
     private float speedMultiplier = 2f;
     public bool playerSprints = false;
     [SerializeField]
-    private bool enduranceIsRecovery = true;
+    private bool enduranceIsRecovery = false;
     [SerializeField]
     private float maxEndurance = 10;
     [SerializeField]
@@ -245,10 +245,10 @@ public class PlayerController : MonoBehaviour
                     OnCamIdle?.Invoke();
                 }
 
-                if (!enduranceIsRecovery && Endurance < maxEndurance)
-                {
+               if (!enduranceIsRecovery && Endurance < maxEndurance)
+                {Debug.Log("Ausdauer Wiederherstellung gestartet!");
                     StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
-                    Debug.Log("Ausdauer Wiederherstellung gestartet!");
+                    
                 }
             }
 
