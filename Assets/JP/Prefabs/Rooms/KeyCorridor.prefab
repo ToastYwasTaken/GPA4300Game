@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   corridorAnimator: {fileID: 2400315048683217836}
   corridorAudio: {fileID: 3690073621278194081}
-  key: {fileID: 0}
+  key: {fileID: 7485071398783073141, guid: 2f4d7a2bdad75c646a6e8cb808333315, type: 3}
   leftWall: {fileID: 4898754478559459063}
   rightWall: {fileID: 7026728667425225327}
 --- !u!1 &4898754478559459063

@@ -35,9 +35,8 @@ public class KeyCorridorBehavior : MonoBehaviour
     {
         if (_other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))                //Sobald der Spieler E drückt...
+            if (Input.GetKeyDown(KeyCode.Mouse0))                //Sobald der Spieler die linke Maustaste drückt...
             {
-                Destroy(key);                               //nimmt er den Schlüssel auf...
                 corridorAnimator.SetTrigger("triggered");   //...und die Wände fangen an sich aufeinander zuzubewegen
                 corridorAudio.Play();
                 StartCoroutine(TagWallsAsTrap());           //Berührung mit den Wänden wird tödlich

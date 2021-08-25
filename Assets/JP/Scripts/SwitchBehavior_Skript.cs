@@ -17,7 +17,7 @@ public class SwitchBehavior_Skript : MonoBehaviour
     {
         if (_other.gameObject.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 switchAnimator.SetBool("switchOn", !switchAnimator.GetBool("switchOn"));
                 switchAudio.Play();
