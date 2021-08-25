@@ -16,6 +16,7 @@ public class PortalBehavior : MonoBehaviour
     private static bool portalReady = true;
     private int portalRefreshTime = 10;
 
+    //Nachdem man das Portal benutzt hat, braucht es eine Zeit, um sich wieder aufzuladen
     private IEnumerator RefreshPortal()
     {
         thisPortalAnimator.SetBool("portalReady", false);
