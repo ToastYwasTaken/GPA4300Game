@@ -697,12 +697,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268051247}
-  m_LocalRotation: {x: 0.99007463, y: 0.06888199, z: 0.122462794, w: 0.0032190762}
-  m_LocalPosition: {x: 5.2238364, y: -12.901889, z: 30.532024}
+  m_LocalRotation: {x: -0.03280467, y: -0.004121851, z: -0.99606985, w: -0.08216876}
+  m_LocalPosition: {x: -2.0627928, y: -11.125323, z: 10.38908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1772823886}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180.601, y: -14.061005, z: -7.88501}
 --- !u!4 &449248360 stripped
 Transform:
@@ -722,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013797961222, guid: cebe9eaf887c5944f95c8c1382cd119d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013797961222, guid: cebe9eaf887c5944f95c8c1382cd119d, type: 3}
       propertyPath: m_LocalScale.x
@@ -803,7 +803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4101646044407591377, guid: b5d647ac762dc1848ac4ba57fc848ec4, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4101646044407591377, guid: b5d647ac762dc1848ac4ba57fc848ec4, type: 3}
       propertyPath: m_LocalScale.y
@@ -1439,7 +1439,7 @@ Transform:
   m_Children:
   - {fileID: 1981906037}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567624849
 GameObject:
@@ -1505,7 +1505,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!111 &1587667463 stripped
 Animation:
@@ -1692,7 +1692,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772823885
 GameObject:
@@ -1721,14 +1721,13 @@ Transform:
   m_LocalPosition: {x: 12.60938, y: 1.2158967, z: 37.927658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 268051249}
   - {fileID: 449248360}
   - {fileID: 1714082036}
   - {fileID: 221571621}
   - {fileID: 822766307}
   - {fileID: 2010612288}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -0.803, y: 197.827, z: 1.398}
 --- !u!1001 &1784403251
 PrefabInstance:
@@ -1775,7 +1774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7606551003303115959, guid: e9fd17440c24468478c652d486be0af6, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7606551003303115959, guid: e9fd17440c24468478c652d486be0af6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1920,7 +1919,7 @@ RectTransform:
   - {fileID: 1919277588}
   - {fileID: 63375967}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1968,7 +1967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7606551003303115959, guid: e9fd17440c24468478c652d486be0af6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7606551003303115959, guid: e9fd17440c24468478c652d486be0af6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2176,7 +2175,7 @@ AudioSource:
   m_GameObject: {fileID: 1981906035}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6429595494843938909, guid: 71b63b51f45e65f479d57ae998c74e33, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b5c9fb9d9d431b44887e5b8e35666ce4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2290,7 +2289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4101646044407591377, guid: b5d647ac762dc1848ac4ba57fc848ec4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4101646044407591377, guid: b5d647ac762dc1848ac4ba57fc848ec4, type: 3}
       propertyPath: m_LocalScale.y
