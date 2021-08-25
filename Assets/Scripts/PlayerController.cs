@@ -77,7 +77,8 @@ public class PlayerController : MonoBehaviour
     private float maxEndurance = 10;
     [SerializeField]
     private float waitTimeForEnduranceReset = 5;
-    public float jumpForce = 200f;
+    [SerializeField]
+    private float jumpForce = 200f;
 
     
     [SerializeField]
@@ -92,13 +93,13 @@ public class PlayerController : MonoBehaviour
 
     // Events
     private Action OnPlayerMove;
-    private Action OnPlayerMoveRun;
+    private Action OnPlayerSprint;
     private Action OnPlayerIdle;
     private Action OnPlayerJump;
     private Action OnPlayerHit;
     private Action OnPlayerResetEndurance;
-    private Action OnCamIdle;
-    private Action OnCamSprint;
+    private Action OnPlayerResetEnduranceCompleted;
+    private Action OnPlayerEnduranceLimitReached;
 
     //Bools
     [SerializeField]
@@ -110,21 +111,20 @@ public class PlayerController : MonoBehaviour
     private bool rotatePlayerWithButtons = false;
 
     [SerializeField]
-    private static bool sprintActive = true;
-
-    [SerializeField]
     private bool jumpActive = false;
-
-    public bool playerSprints = false;
+    
 
     [SerializeField]
     private bool enduranceIsRecovery = false;
 
     //Properties
-    public static bool SprintActive
-    {
-        set { sprintActive = value; }
-    }
+    //[SerializeField]
+    private bool playerSprints = false;
+    public bool PlayerSprints { get => playerSprints; set => playerSprints = value; } 
+    [SerializeField]
+    private static bool sprintActive = true;
+    public static bool SprintActive {set => sprintActive = value; }
+
     public bool PlayerCanMove { get; set; }
 
     private float sensitivity = 1f;
@@ -136,8 +136,8 @@ public class PlayerController : MonoBehaviour
         }
     }
     public float Endurance { get; set; }
-    public Vector3 StartPosition { get; set; }
-    public Vector3 PlayerCurrentPosition { get; set; }
+
+    public Vector3 StartPosition { get; set; } = new Vector3(0, 2, 0);
 
     public sbyte HealthProperty
     {
@@ -152,10 +152,9 @@ public class PlayerController : MonoBehaviour
 
         //Erste Spawnposition des Spielers
         // Ausgang: 24, 2, 174
-        playerBody.transform.position = new Vector3(0, 2, 0);/*GameData.instance.PlayerPosition;*/
+        playerBody.transform.position = StartPosition;
 
         OnPlayerIdle?.Invoke();
-        OnCamIdle?.Invoke();
 
         PlayerCanMove = true;
         Endurance = maxEndurance;
@@ -219,25 +218,22 @@ public class PlayerController : MonoBehaviour
         {
             // Idle
             OnPlayerIdle?.Invoke();
-            if (Endurance >= maxEndurance)
-            {
-                OnCamIdle?.Invoke();
-            }
-
+            playerSprints = false;
         }
         else
-        {
-           
-
-            playerSprints = false;
-
+        {      
             // Bewegungsgeschwindigkeit
             float speed = moveSpeed;
 
             // Sprint
-            if (Input.GetButton("Run") && sprintActive && keyInput.z > 0 && !hitWall) //default l shift
+            if (Input.GetButton("Run") && sprintActive && keyInput.z > 0)
             {
-                speed = PlayerSprint(speed);
+                if (!hitWall)
+                {
+                    playerSprints = true;
+                    speed = PlayerSprint(speed);
+                }
+               
             }
             else
             {
@@ -247,19 +243,9 @@ public class PlayerController : MonoBehaviour
 
                 OnPlayerMove?.Invoke();
 
-                if (Endurance >= maxEndurance)
-                {
-                    OnCamIdle?.Invoke();
-                }
-
-               if (!enduranceIsRecovery && Endurance < maxEndurance)
-                {Debug.Log("Ausdauer Wiederherstellung gestartet!");
-                    StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
-                    
-                }
             }
 
-            if (!enduranceIsRecovery && Endurance < maxEndurance)
+            if (!enduranceIsRecovery && Endurance < maxEndurance && !playerSprints)
             {
                 StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
                 Debug.Log("Ausdauer Wiederherstellung gestartet!");
@@ -288,10 +274,10 @@ public class PlayerController : MonoBehaviour
     /// <param name="_speed"></param>
     /// <returns></returns>
     float PlayerSprint(float _speed)
-    {
+    {     
         if (Endurance > 0)
         {
-            if (playerSprints && enduranceIsRecovery)
+            if (enduranceIsRecovery)
             {
                 StopCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
                 enduranceIsRecovery = false;
@@ -301,30 +287,24 @@ public class PlayerController : MonoBehaviour
             waitTimeForEnduranceReset += Time.deltaTime;
 
             // Event aufrufen
-            OnPlayerMoveRun?.Invoke();
-            OnCamSprint?.Invoke();
+            OnPlayerSprint?.Invoke();
 
             // Speed Wert erhöhen
             _speed = moveSpeed * speedMultiplier;
 
-            playerSprints = true;
+           
 
             // Ausdauer reduzieren
             ReduceSprintEndurance();
 
-            Debug.Log($"Ausdauer : {Endurance}");
+           // Debug.Log($"Ausdauer : {Endurance}");
 
             return _speed;
         }
         else
         {
-            if (!enduranceIsRecovery)
-            {
-                StartCoroutine(ResetSprintEndurance(waitTimeForEnduranceReset, maxEndurance));
-                Debug.Log("Ausdauer Wiederherstellung gestartet!");
-            }
-
-            playerSprints = false;
+            OnPlayerEnduranceLimitReached?.Invoke();
+            
             return _speed;
         }
     }
@@ -342,22 +322,28 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     /// <param name="_waitTimeForReset"></param>
     /// <param name="_enduranceMaxLimit"></param>
-    /// <returns></returns>
+    /// <returns></returns>https://onlineiemcup.com/?r=tryhardteam
     IEnumerator ResetSprintEndurance(float _waitTimeForReset, float _enduranceMaxLimit)
     {
         //Animation mit starker Atmung abspielen
-        OnCamSprint?.Invoke();
         OnPlayerResetEndurance?.Invoke();
 
         // Ausdauer wird wiederhergestellt
         enduranceIsRecovery = true;
+
         Debug.Log($"Ausdauer Reset in: {_waitTimeForReset} sek.");
+        yield return new WaitForSecondsRealtime(_waitTimeForReset);
 
-        yield return new WaitForSeconds(_waitTimeForReset);
+        // Action aufrufen
+        OnPlayerResetEnduranceCompleted?.Invoke();
 
-        OnCamIdle?.Invoke();
+        // Ausdauer auf maximum setzen
         Endurance = _enduranceMaxLimit;
+
+        // Wiederherstellung abgeschlossen
         enduranceIsRecovery = false;
+
+        // Die Wartezeit auf Null setzen
         waitTimeForEnduranceReset = 0f;
         Debug.Log($"Ausdauer Wiederherstellung: {Endurance}");
     }
@@ -472,22 +458,13 @@ public class PlayerController : MonoBehaviour
 
     #region SetOnAction
 
-    public void SetOnCamIdle(Action _newFunc)
-    {
-        OnCamIdle += _newFunc;
-    }
-    public void SetOnCamSprint(Action _newFunc)
-    {
-        OnCamSprint += _newFunc;
-    }
-
     public void SetOnPlayerMove(Action _newFunc)
     {
         OnPlayerMove += _newFunc;
     }
-    public void SetOnPlayerMoveRun(Action _newFunc)
+    public void SetOnPlayerSprint(Action _newFunc)
     {
-        OnPlayerMoveRun += _newFunc;
+        OnPlayerSprint += _newFunc;
     }
     public void SetOnPlayerIdle(Action _newFunc)
     {
@@ -501,10 +478,17 @@ public class PlayerController : MonoBehaviour
     {
         OnPlayerHit += _newFunc;
     }
-
     public void SetOnPlayerResetEndurance(Action _newFunc)
     {
         OnPlayerResetEndurance += _newFunc;
+    }
+    public void SetOnPlayerResetEnduranceCompleted(Action _newFunc)
+    {
+        OnPlayerResetEnduranceCompleted += _newFunc;
+    }  
+    public void SetOnPlayerEnduranceLimitReached(Action _newFunc)
+    {
+        OnPlayerEnduranceLimitReached += _newFunc;
     }
     #endregion
 }

@@ -92,10 +92,6 @@ public class EnemyAI : MonoBehaviour
     EnemyAnimator enemyAnim;
     SectorManager sectorManager;
 
-    public Vector3 StartPosition { get; set; }
-    public Vector3 EnemyCurrentPosition { get; set; }
-    public Vector3 LastDestination { get; set; }
-
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -175,8 +171,6 @@ public class EnemyAI : MonoBehaviour
             }           
         }
 
-        // Speichert die letzte Position der KI
-        EnemyCurrentPosition = enemyTransform.position;
     }
 
     /// <summary>
@@ -356,9 +350,6 @@ public class EnemyAI : MonoBehaviour
     {
         agent.stoppingDistance = _destDistance;
         agent.SetDestination(_destPoint.position);
-
-        // Speichert das Ziel der KI
-        LastDestination = agent.destination;
 
         pathfinding.SetTarget(_destPoint);
 

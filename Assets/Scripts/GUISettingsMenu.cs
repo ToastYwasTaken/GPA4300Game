@@ -155,7 +155,7 @@ public class GUISettingsMenu : MonoBehaviour
 
         if (audioManager)
         {
-            audioManager.AudioVolume = VolumeValue;
+            audioManager.MasteraudioVolume = VolumeValue;
         }
 
         if (mainMenu)
@@ -190,7 +190,7 @@ public class GUISettingsMenu : MonoBehaviour
 
         if (audioManager)
         {
-            audioManager.MusicMute = AudioMute;
+           // audioManager.MusicMute = AudioMute;
         }
 
 
@@ -211,7 +211,7 @@ public class GUISettingsMenu : MonoBehaviour
 
         if (audioManager)
         {
-            audioManager.SFXMute = SoundsMute;
+           // audioManager.SFXMute = SoundsMute;
         }
 
     }

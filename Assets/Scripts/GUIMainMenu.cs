@@ -30,6 +30,10 @@ public class GUIMainMenu : MonoBehaviour
     public Canvas canvas;  
     public AudioSource mainSceneAudio;
 
+    [SerializeField]
+    private AudioSource enemyLaughAudio;
+
+
     private void Awake()
     {
         canvas = FindObjectOfType<Canvas>();
@@ -39,6 +43,7 @@ public class GUIMainMenu : MonoBehaviour
     {
         mainSceneAudio.mute = !Preferences.instance.Load_AudioMute();
         mainSceneAudio.volume = Preferences.instance.Load_AudioVolume();
+        
     }
 
     public void LoadScene(int _sceneIndex)
@@ -50,7 +55,11 @@ public class GUIMainMenu : MonoBehaviour
     {
         wizardAnim.Stop();
         canvas.enabled = false;
+        enemyLaughAudio.mute = !Preferences.instance.Load_AudioMute();
+        enemyLaughAudio.volume = Preferences.instance.Load_AudioVolume();
+        enemyLaughAudio.Play();
         SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
+
     }
 
 

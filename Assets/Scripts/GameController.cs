@@ -111,40 +111,6 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// Speichert die aktuelle Posistion des Spielers im Level
-    ///  </sammary>
-    private void SavePlayerPosition()
-    {
-        if (playerController)
-        {
-            Preferences.instance.Save_PlayerPosition(playerController.PlayerCurrentPosition);
-
-            Debug.Log($"Current Player Position: {playerController.PlayerCurrentPosition}");
-        }
-        else
-        {
-            Debug.LogError("Current Player Positions not found!");
-        }
-    }
-
-    /// <summary>
-    /// Speichert die aktuelle Posistion des Feindes im Level
-    ///  </sammary>
-    private void SaveEnemyPosition()
-    {
-        if (enemyAI)
-        {
-            Preferences.instance.Save_PlayerPosition(enemyAI.EnemyCurrentPosition);
-
-            Debug.Log($"Current Enemy Position: {enemyAI.EnemyCurrentPosition}");
-        }
-        else
-        {
-            Debug.LogError("Current Enemy Positions not found!");
-        }
-    }
-
-    /// <summary>
     /// Beginnt eines neues Spiel
     /// </summary>
     public void NewGame()
@@ -156,25 +122,8 @@ public class GameController : MonoBehaviour
         playerController.StartPosition = PlayerPosition;
         playerController.Sensitivity = Preferences.instance.Load_Sensitivity();
 
-        enemyAI.StartPosition = EnemyPosition;
         // KI zum Anfang anhalten
         enemyAI.CanRunning = false;
-    }
-
-    /// <summary>
-    /// Spiel an der zuletzt gespeicherten Position fortsetzen
-    /// </summary>
-    public void Continue()
-    {
-        PlayerPosition = Preferences.instance.Load_PlayerPosition();
-        PlayerHealth = Preferences.instance.Load_PlayerHealth();
-        EnemyPosition = Preferences.instance.Load_EnemyPosition();
-
-        playerController.StartPosition = PlayerPosition;
-
-        playerController.Sensitivity = Preferences.instance.Load_Sensitivity();
-
-        enemyAI.StartPosition = EnemyPosition;
     }
 
     /// <summary>
@@ -239,9 +188,6 @@ public class GameController : MonoBehaviour
     /// </summary>
     public void ExitGame()
     {
-        SavePlayerPosition();
-        SaveEnemyPosition();
-
         SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
     }
 

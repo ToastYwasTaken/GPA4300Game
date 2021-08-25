@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 /******************************************************************************
  * Project: GPA4300Game
@@ -26,84 +27,133 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField]
-    private AudioSource enemySFX;
+    private AudioMixer masterMixer;
+
     [SerializeField]
-    private AudioSource environment;
-
-    private float audioVolume = 1f;
-    public float AudioVolume
+    private float masteraudioVolume = 0f;
+    public float MasteraudioVolume
     {
+        get => masteraudioVolume;
         set
         {
-            audioVolume = value;
-            ChangedVolume(audioVolume);
+            masteraudioVolume = value;
+            SetVolume(masteraudioVolume);
         }
     }
 
-    private bool musicMute = false;
-    public bool MusicMute
+    [SerializeField]
+    private bool masteraudioMute = false;
+    public bool MasteraudioMute
     {
+        get => masteraudioMute;
         set
         {
-            musicMute = value;
-            SwitchMuteMusic(musicMute);
+            masteraudioMute = value;
+            SetMute(masteraudioMute);
         }
     }
-    private bool sFXMute = false;
-    public bool SFXMute
+
+    private void SetVolume(float _value)
     {
-        set
+        float dBValue = 0f;
+
+        if (_value <= 0)
         {
-            sFXMute = value;
-            SwitchMuteSFX(sFXMute);
+            dBValue = -80f;
         }
+        else
+        {
+            dBValue = 100 * Mathf.Log10(_value);
+            Debug.Log("Mixer Volume: " + dBValue);
+        }
+
+        masterMixer.SetFloat("masterVol", dBValue);
     }
 
-
-    private void Awake()
+    private void SetMute(bool _value)
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-
+     
     }
+
+    /*public void musicVolume(float muVol) {
+        float wert = 0;
+        if (muVol > 0.38f) {
+            wert = 100 * Mathf.Log10(muVol);
+        }
+        else {
+            wert = -80f;
+        }
+        MasterMixer.SetFloat("musicVol", wert);
+}
+    */
+    #region old
+    //[SerializeField]
+    //private AudioSource enemySFX;
+    //[SerializeField]
+    //private AudioSource environment;
+
+    //private float audioVolume = 1f;
+    //public float AudioVolume
+    //{
+    //    set
+    //    {
+    //        audioVolume = value;
+    //        ChangedVolume(audioVolume);
+    //    }
+    //}
+
+    //private bool musicMute = false;
+    //public bool MusicMute
+    //{
+    //    set
+    //    {
+    //        musicMute = value;
+    //        SwitchMuteMusic(musicMute);
+    //    }
+    //}
+    //private bool sFXMute = false;
+    //public bool SFXMute
+    //{
+    //    set
+    //    {
+    //        sFXMute = value;
+    //        SwitchMuteSFX(sFXMute);
+    //    }
+    //}
+
+
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //    }
+    //    else if (instance != this)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+
+    //}
 
     // Start is called before the first frame update
-    void Start()
-    {
-        AudioVolume = Preferences.instance.Load_AudioVolume();      
-    }
+    //void Start()
+    //{
+    //    AudioVolume = Preferences.instance.Load_AudioVolume();      
+    //}
 
-    private void ChangedVolume(float _value)
-    {
-        if (enemySFX) enemySFX.volume = _value;
-        if (environment) environment.volume = _value;
-    }
+    //private void ChangedVolume(float _value)
+    //{
+    //    if (enemySFX) enemySFX.volume = _value;
+    //    if (environment) environment.volume = _value;
+    //}
 
-    private void SwitchMuteMusic(bool _value)
-    {
-        if (environment) environment.mute = !_value;
-    }
-    private void SwitchMuteSFX(bool _value)
-    {
-        if (enemySFX) enemySFX.mute = !_value;
-    }
-
-    public void StopAllAudioSources()
-    {
-        if (enemySFX) enemySFX.Stop();
-        if (environment) environment.Stop();
-    }
-
-
-    public void PlayGameSceneAudio()
-    {
-        if (environment) environment.Play();
-    }
-
+    //private void SwitchMuteMusic(bool _value)
+    //{
+    //    if (environment) environment.mute = !_value;
+    //}
+    //private void SwitchMuteSFX(bool _value)
+    //{
+    //    if (enemySFX) enemySFX.mute = !_value;
+    //}
+    #endregion
 }

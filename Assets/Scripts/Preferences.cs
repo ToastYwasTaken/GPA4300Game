@@ -18,12 +18,8 @@ using System;
  * ChangeLog
  * ----------------------------
  *  05.07.2021  RK  erstellt
- *  11.08.2021  RK  Save_PlayerPosition() hinzugefügt
- *                  Load_PlayerPosition() hinzugefügt
- *                  Save_PlayerHealth() hinzugefügt
+ *  11.08.2021  RK  Save_PlayerHealth() hinzugefügt
  *                  Load_PlayerHealth() hinzugefügt
- *                  Save_EnemyPosition() hinzugefügt
- *                  Load_EnemyPosition() hinzugefügt
  *  17.08.2021  FM  LoadPrefs.cs gelöscht, da Funktionalität hier gegeben
  *  21.08.2021  RK  Save_Brightness hinzugefügt
  *                  Load_Brightness hinzugefügt
@@ -81,19 +77,9 @@ public class Preferences : MonoBehaviour
         return PlayerPrefs.GetInt("sounds") == 1;
     }
 
-    public Vector3 Load_PlayerPosition()
-    {
-       return PlayerPrefs.GetString("PlayerPos").ToVector3();
-    }
-
     public int Load_PlayerHealth()
     {
         return PlayerPrefs.GetInt("PlayerHealth");
-    }
-
-    public Vector3 Load_EnemyPosition()
-    {
-        return PlayerPrefs.GetString("EnemyPos").ToVector3();
     }
 
     public float Load_Brightness()
@@ -125,19 +111,9 @@ public class Preferences : MonoBehaviour
         PlayerPrefs.SetInt("sounds", _value ? 1 : 0);
     }
 
-    public void Save_PlayerPosition(Vector3 _value)
-    {
-        PlayerPrefs.SetString("PlayerPos", _value.ToString());
-    }
-
     public void Save_PlayerHealth(int _value)
     {
         PlayerPrefs.SetInt("PlayerHealth", _value);
-    }
-
-    public void Save_EnemyPosition(Vector3 _value)
-    {
-        PlayerPrefs.SetString("EnemyPos", _value.ToString());
     }
 
     public void Save_Brightness(float _value)

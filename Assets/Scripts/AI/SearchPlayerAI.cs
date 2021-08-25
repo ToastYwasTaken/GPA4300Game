@@ -78,7 +78,7 @@ public class SearchPlayerAI : MonoBehaviour
         Debug.DrawRay(transform.position, direction, Color.green);
 
         // Prüfen ob, der Spieler gerade sprintet
-        isPlayerSprints = playerController.playerSprints;
+        isPlayerSprints = playerController.PlayerSprints;
 
         if (Physics.Raycast(ray, out RaycastHit raycast, viewMaxDistance))
         {

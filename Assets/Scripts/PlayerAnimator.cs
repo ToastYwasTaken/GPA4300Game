@@ -23,8 +23,6 @@ public class PlayerAnimator : MonoBehaviour
 {
     [SerializeField]
     private Animator animChar;
-    [SerializeField]
-    private Animator animCam;
     private PlayerController playerController;
 
     // Start is called before the first frame update
@@ -32,29 +30,14 @@ public class PlayerAnimator : MonoBehaviour
     {
         playerController = FindObjectOfType<PlayerController>();
 
-
-        playerController.SetOnCamIdle(PlayCamIdle);
-        playerController.SetOnCamSprint(PlayCamSprint);
-
         playerController.SetOnPlayerIdle(PlayPlayerIdle);
         playerController.SetOnPlayerMove(PlayPlayerWalk);
-        playerController.SetOnPlayerMoveRun(PlayerPlayerRun);
+        playerController.SetOnPlayerSprint(PlayerPlayerRun);
         playerController.SetOnPlayerJump(PlayPlayerJump);
         playerController.SetOnPlayerHit(PlayPlayerHit);
 
     }
 
-    private void PlayCamIdle()
-    {
-        PlayCamIdleAnimation(true);
-        PlayCamSprinteAnimation(false);
-    }
-
-    private void PlayCamSprint()
-    {
-        PlayCamIdleAnimation(false);
-        PlayCamSprinteAnimation(true);
-    }
 
     private void PlayPlayerIdle()
     {
@@ -86,17 +69,6 @@ public class PlayerAnimator : MonoBehaviour
     {
         TriggerPlayerTakeDamage();
     }
-
-    private void PlayCamIdleAnimation(bool _value)
-    {
-        animCam.SetBool("CamIdle", _value);
-    }
-
-    private void PlayCamSprinteAnimation(bool _value)
-    {
-        animCam.SetBool("CamSprint", _value);
-    }
-
 
     private void PlayIdleAnimation(bool _value)
     {

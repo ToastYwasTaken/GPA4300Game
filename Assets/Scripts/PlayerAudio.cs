@@ -29,32 +29,31 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField]
     AudioSource breathingSound;
     [SerializeField]
-    AudioSource sighSound;
+    AudioSource inhalesSound;
     [SerializeField]
-    AudioSource painSound;
+    AudioSource damageSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
         playerController = GetComponent<PlayerController>();
 
-        playerController.SetOnCamSprint(PlayBreathingSound);
-        playerController.SetOnCamIdle(StopBreathingSound);
-        playerController.SetOnPlayerHit(PlayPainSound);
-        playerController.SetOnPlayerResetEndurance(PlaySighSound); 
-        
+        playerController.SetOnPlayerSprint(PlayBreathingSound);
+        playerController.SetOnPlayerResetEnduranceCompleted(StopBreathingSound);     
+        playerController.SetOnPlayerEnduranceLimitReached(PlayInhalesSound); 
+
+        playerController.SetOnPlayerHit(PlayTakeDamageSound);
         
         breathingSound.loop = true;
-        sighSound.loop = false;
-        painSound.loop = false;
+        inhalesSound.loop = false;
+        damageSound.loop = false;
 
     }
 
     private void PlayBreathingSound()
-    { 
-       
-        breathingSound.Play();
-       
+    {     
+        breathingSound.Play();     
     } 
     
     private void StopBreathingSound()
@@ -62,15 +61,13 @@ public class PlayerAudio : MonoBehaviour
         breathingSound.Stop();
     }
     
-    private void PlaySighSound()
+    private void PlayInhalesSound()
     {
-        sighSound.Play();
+        inhalesSound.Play();
     }
 
-    private void PlayPainSound()
+    private void PlayTakeDamageSound()
     {
-        painSound.Play();
+        damageSound.Play();
     }
-
- 
 }
