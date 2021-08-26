@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3726740952248020482
 Transform:
@@ -78,7 +78,7 @@ MeshRenderer:
   m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: 1
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -113,6 +113,14 @@ PrefabInstance:
     - target: {fileID: 126522, guid: 2d9a8098cbe8bd0418b52a24c85bcc00, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 126522, guid: 2d9a8098cbe8bd0418b52a24c85bcc00, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 126706, guid: 2d9a8098cbe8bd0418b52a24c85bcc00, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 460914, guid: 2d9a8098cbe8bd0418b52a24c85bcc00, type: 3}
       propertyPath: m_RootOrder
@@ -184,9 +192,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3726740952248020482}
     m_Modifications:
+    - target: {fileID: 4541778328833088101, guid: 52ed7b981f6a96440a90c74882a60305, type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6607036451893593388, guid: 52ed7b981f6a96440a90c74882a60305, type: 3}
       propertyPath: m_Name
       value: Point Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 6607036451893593388, guid: 52ed7b981f6a96440a90c74882a60305, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6970454242768141285, guid: 52ed7b981f6a96440a90c74882a60305, type: 3}
       propertyPath: m_RootOrder
