@@ -134,12 +134,29 @@ public class Item : MonoBehaviour
                     inventoryRef.StartCoroutine(inventoryRef.DisplayNotAtGate());
                     break;
                 case IItemTypes.ItemType.HealPotion:
-                    playerController.HealthProperty += healValue;
-                    itemUsed = true;
+                    //Zeige an, dass der Spieler volle Leben hat und deshalb
+                    //den Trank nicht benutzen kann
+                    if (playerController.HealthProperty >= 100)
+                    {
+                        inventoryRef.StartCoroutine(inventoryRef.DisplayCantUseHealpotion());
+                    }
+                    else
+                    {
+                        playerController.HealthProperty += healValue;
+                        itemUsed = true;
+                    }
                     break;
                 case IItemTypes.ItemType.SprintPotion:
                     //TODO: Use sprint potion
-                    itemUsed = true;
+                    if(playerController.Endurance >= playerController.maxEndurance)
+                    {
+                        inventoryRef.StartCoroutine(inventoryRef.DisplayCantUseEndurancepotion());
+                    }
+                    else
+                    {
+
+                        itemUsed = true;
+                    }
                     break;
                 case IItemTypes.ItemType.MapPart1:
                     indexOfMapInInventory = inventoryRef.PGetInventory

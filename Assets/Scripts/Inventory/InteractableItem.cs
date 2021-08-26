@@ -39,7 +39,7 @@ public class InteractableItem : MonoBehaviour
     
     private void Start()
     {
-        //Iniialisieren des neuen Colliders
+        //Initialisieren des neuen Colliders
         colliderSize = new Vector3(colliderLength, colliderLength, colliderLength);
         if (this.gameObject.GetComponent<Collider>() == null)
         {

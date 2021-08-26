@@ -27,6 +27,9 @@ using UnityEngine.UI;
  *  12.08.2021  FM  Problem gefixed
  *  14.08.2021  FM  Kommentare hinzugefügt
  *  17.08.2021  FM  Sript von InventoryGUI zu GUIInventory umbenannt
+ *  25.08.2021  FM  OpenMap() und CloseMap() implementiert
+ *                  DisplayKeyMissing(), DisplayNotAtGate() hinzugefügt
+ *  26.08.2021  FM  DisplayCantUseHealpotion() hinzugefügt
  *  
  *****************************************************************************/
 
@@ -53,7 +56,15 @@ public class GUIInventory : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textMeshPressSameButtonToContinue;
     [SerializeField]
+    private TextMeshProUGUI textMeshCantUseHealpotion;
+    [SerializeField]
+    private TextMeshProUGUI textCantUseEndurancepotion;
+    [SerializeField]
     private PlayerController player;
+
+    [SerializeField]
+    private float timer;
+    private bool cooldownIsActive = false;
 
     public int inventoryMaxSize = 5;
     private int itemCount = 0;
@@ -66,12 +77,13 @@ public class GUIInventory : MonoBehaviour
         textMeshNoKeyInInventory.enabled = false;
         textMeshNotAtGate.enabled = false;
         textMeshPressSameButtonToContinue.enabled = false;
+        textMeshCantUseHealpotion.enabled = false;
+        textCantUseEndurancepotion.enabled = false;
     }
 
     private void Update()
     {
         UpdateGUI();
-
         GetInput();
     }
 
@@ -142,7 +154,7 @@ public class GUIInventory : MonoBehaviour
                 mapPart3.SetActive(false);
             }
             else
-            { 
+            {
                 Debug.Log("Closing Map");
                 //Einfrieren / Pausieren beenden (Rotation bleibt gefreezed)
                 player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
@@ -186,7 +198,6 @@ public class GUIInventory : MonoBehaviour
                 mapPart3.SetActive(false);
             }
         }
-        //CloseMap(_mapInt, _indexInInventory);
     }
 
     /// <summary>
@@ -305,21 +316,24 @@ public class GUIInventory : MonoBehaviour
     /// </summary>
     public IEnumerator DisplayNotAtGate()
     {
-        textMeshNotAtGate.enabled = true;
-        //2 Sek komplett sichtbar lassen
-        yield return new WaitForSeconds(2f);
-        Color textColor;
-        for (float i = 0f; i < 1f; i += 0.05f)
+        if (cooldownIsActive)
         {
-            textColor = new Color
-                (textMeshNotAtGate.color.r, textMeshNotAtGate.color.g, textMeshNotAtGate.color.b, 1 - i);
-            textMeshNotAtGate.color = textColor;
-            //Verzögerung um 0.05 sek
-            yield return new WaitForSeconds(0.05f);
+            textMeshNotAtGate.enabled = true;
+            //2 Sek komplett sichtbar lassen
+            yield return new WaitForSeconds(2f);
+            Color textColor;
+            for (float i = 0f; i < 1f; i += 0.05f)
+            {
+                textColor = new Color
+                    (textMeshNotAtGate.color.r, textMeshNotAtGate.color.g, textMeshNotAtGate.color.b, 1 - i);
+                textMeshNotAtGate.color = textColor;
+                //Verzögerung um 0.05 sek
+                yield return new WaitForSeconds(0.05f);
+            }
+            textMeshNotAtGate.enabled = false;
+            cooldownIsActive = true;
+            Invoke("SetCoolDownActiveFalse", 3f);
         }
-        textMeshNotAtGate.enabled = false;
-        //Cooldown
-        yield return new WaitForSeconds(2f);
     }
 
     /// <summary>
@@ -328,23 +342,76 @@ public class GUIInventory : MonoBehaviour
     /// </summary>
     public IEnumerator DisplayKeyMissing()
     {
-        textMeshNoKeyInInventory.enabled = true;
-        //2 Sek komplett sichtbar lassen
-        yield return new WaitForSeconds(2f);
-        Color textColor;
-        for (float i = 0f; i < 1f; i += 0.05f)
+        if (!cooldownIsActive)
         {
-            textColor = new Color
-                (textMeshNoKeyInInventory.color.r, textMeshNoKeyInInventory.color.g, textMeshNoKeyInInventory.color.b, 1 - i);
-            textMeshNoKeyInInventory.color = textColor;
-            //Verzögerung um 0.05 sek
-            yield return new WaitForSeconds(0.05f);
+            textMeshNoKeyInInventory.enabled = true;
+            //2 Sek komplett sichtbar lassen
+            yield return new WaitForSeconds(2f);
+            Color textColor;
+            for (float i = 0f; i < 1f; i += 0.05f)
+            {
+                textColor = new Color
+                    (textMeshNoKeyInInventory.color.r, textMeshNoKeyInInventory.color.g, textMeshNoKeyInInventory.color.b, 1 - i);
+                textMeshNoKeyInInventory.color = textColor;
+                //Verzögerung um 0.05 sek
+                yield return new WaitForSeconds(0.05f);
+            }
+            textMeshNoKeyInInventory.enabled = false;
+            cooldownIsActive = true;
+            Invoke("SetCoolDownActiveFalse", 3f);
         }
-        textMeshNoKeyInInventory.enabled = false;
-        //Cooldown
-        yield return new WaitForSeconds(3f);
     }
 
+    /// <summary>
+    /// Zeigt an, dass der Spieler den Heiltrank nicht benutzen kann
+    /// </summary>
+    /// <returns></returns>
+    public IEnumerator DisplayCantUseHealpotion()
+    {
+        if (!cooldownIsActive)
+        {
+            textMeshCantUseHealpotion.enabled = true;
+            yield return new WaitForSeconds(2f);
+            Color textColor;
+            for (float i = 0f; i < 1f; i += 0.05f)
+            {
+                textColor = new Color
+                    (textMeshCantUseHealpotion.color.r, textMeshCantUseHealpotion.color.g, textMeshCantUseHealpotion.color.b, 1 - i);
+                textMeshCantUseHealpotion.color = textColor;
+                //Verzögerung um 0.05 sek
+                yield return new WaitForSeconds(0.05f);
+            }
+            textMeshCantUseHealpotion.enabled = false;
+            cooldownIsActive = true;
+            Invoke("SetCoolDownActiveFalse", 3f);
+        }
+    }
+
+    public IEnumerator DisplayCantUseEndurancepotion()
+    {
+        if (!cooldownIsActive)
+        {
+            textCantUseEndurancepotion.enabled = true;
+            yield return new WaitForSeconds(2f);
+            Color textColor;
+            for (float i = 0f; i < 1f; i += 0.05f)
+            {
+                textColor = new Color
+                    (textCantUseEndurancepotion.color.r, textCantUseEndurancepotion.color.g, textCantUseEndurancepotion.color.b, 1 - i);
+                textCantUseEndurancepotion.color = textColor;
+                //Verzögerung um 0.05 sek
+                yield return new WaitForSeconds(0.05f);
+            }
+            textCantUseEndurancepotion.enabled = false;
+            cooldownIsActive = true;
+            Invoke("SetCoolDownActiveFalse", 3f);
+        }
+    }
+
+    private void SetCoolDownActiveFalse()
+    {
+        cooldownIsActive = false;
+    }
     /// <summary>
     /// Zeigt die Items in der GUI am unteren Bildschirmrand an
     /// </summary>

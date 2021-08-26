@@ -73,8 +73,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Sprint Speed")]
     [SerializeField]
     private float speedMultiplier = 2f;
-    [SerializeField]
-    private float maxEndurance = 10;
+    public float maxEndurance = 10;
     [SerializeField]
     private float waitTimeForEnduranceReset = 5;
     [SerializeField]
