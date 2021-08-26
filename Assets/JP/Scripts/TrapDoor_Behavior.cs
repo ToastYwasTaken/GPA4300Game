@@ -24,4 +24,8 @@ public class TrapDoor_Behavior : MonoBehaviour
             trapDoorAudio.Play();
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        PlayerController.SprintActive = true;      //Sprinten wird wieder aktiviert
+    }
 }

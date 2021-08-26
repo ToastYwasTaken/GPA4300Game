@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
     }
     public float Endurance { get; set; }
 
-    public Vector3 StartPosition { get; set; } = new Vector3(0, 2, 0);
+    public Vector3 StartPosition { get; set; } = new Vector3(108, 2, 60);
 
     public sbyte HealthProperty
     {

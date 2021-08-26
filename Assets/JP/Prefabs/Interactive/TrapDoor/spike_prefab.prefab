@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7566785332507235633}
   - component: {fileID: 7566785332504317899}
   - component: {fileID: 7566785332505030475}
-  - component: {fileID: 7566785332509666103}
+  - component: {fileID: 507851633178669138}
   m_Layer: 0
   m_Name: spike_prefab
   m_TagString: Trap
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7566785332509666103
-MeshCollider:
+--- !u!65 &507851633178669138
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 80b08148bd1b80d47aeb3043fe86d434, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0.0010595303, y: 0.4540177, z: 0.0001739692}
