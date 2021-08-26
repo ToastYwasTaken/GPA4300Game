@@ -128,6 +128,8 @@ public class EnemyAI : MonoBehaviour
             AgentStop();
             return;
         }
+        else
+            AgentResume();
 
         if (useMouseDest)
         {

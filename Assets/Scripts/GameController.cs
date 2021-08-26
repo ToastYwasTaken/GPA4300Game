@@ -42,7 +42,6 @@ public class GameController : MonoBehaviour
     private PlayerController playerController;
     [SerializeField]
     private EnemyAI enemyAI;
-    private bool enemyIsRunning = false;
     [SerializeField]
     private Light directionalLight;
 

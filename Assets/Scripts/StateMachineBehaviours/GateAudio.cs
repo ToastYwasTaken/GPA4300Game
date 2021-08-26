@@ -29,8 +29,8 @@ public class GateAudio : StateMachineBehaviour
 
         Preferences preferences = Preferences.instance;
 
-        audioSource.mute = !preferences.Load_SoundsMute();
-        audioSource.volume = preferences.Load_AudioVolume();
+       // audioSource.mute = !preferences.Load_SoundsMute();
+       // audioSource.volume = preferences.Load_AudioVolume();
 
         if (audioSource.mute) return;
 

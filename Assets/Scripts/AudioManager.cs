@@ -53,6 +53,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
     private void SetVolume(float _value)
     {
         float dBValue = 0f;
