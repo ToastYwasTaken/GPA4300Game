@@ -21,6 +21,7 @@ using UnityEngine.SceneManagement;
  * ----------------------------
  *  11.06.2021  FM  erstellt
  *  22.06.2021  FM  Bug behoben, dass healthCount nicht angezeigt wurde
+ *  26.08.2021  FM  FlashImage gelöscht
  *  
  *****************************************************************************/
 
@@ -41,9 +42,6 @@ public class GUIHealth : MonoBehaviour
     [SerializeField]
     ParticleSystem blood;
 
-    [SerializeField]
-    Image flashImage;
-
     private bool screenIsFlashing;
 
     private sbyte phealth;
@@ -54,7 +52,6 @@ public class GUIHealth : MonoBehaviour
     {
         var emission = blood.emission;
         emission.enabled = false;
-        flashImage.enabled = false;
     }
 
     // Update is called once per frame
@@ -85,6 +82,10 @@ public class GUIHealth : MonoBehaviour
             var emission = blood.emission;
             emission.enabled = false;
             SceneManager.LoadSceneAsync(2);
+        }else if (phealth >= 100)
+        {
+            var emission = blood.emission;
+            emission.enabled = false;
         }
     }
 
@@ -132,19 +133,6 @@ public class GUIHealth : MonoBehaviour
             emission.rateOverTime = 10f;
         }
         else emission.rateOverTime = 20f;
-    }
-
-    IEnumerator Flash() //TODO
-    {
-        float iterationAmount = 10f;
-        for(float i = 0; i <= iterationAmount; i+= Time.deltaTime)
-        {
-            Color currentColor = flashImage.color;
-            currentColor.a = Mathf.Lerp(0, 1, i/iterationAmount);
-            flashImage.color = currentColor;
-
-            yield return null;
-        }
     }
 
 }

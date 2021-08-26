@@ -122,6 +122,11 @@ public class Item : MonoBehaviour
             {
                 inventoryRef.RemoveItem(this);
             }
+            else
+            {
+                inventoryRef.StartCoroutine(inventoryRef.DisplayKeyMissing());
+
+            }
         }
         //Kollidiert nicht mit ExitGate
         else
@@ -131,6 +136,7 @@ public class Item : MonoBehaviour
             {
                 case IItemTypes.ItemType.Key:
                     //Zeige an, dass der Spieler nicht beim Gate ist
+                    Debug.Log("Can't use key here");
                     inventoryRef.StartCoroutine(inventoryRef.DisplayNotAtGate());
                     break;
                 case IItemTypes.ItemType.HealPotion:
@@ -154,7 +160,7 @@ public class Item : MonoBehaviour
                     }
                     else
                     {
-
+                        playerController.Endurance = playerController.maxEndurance;
                         itemUsed = true;
                     }
                     break;

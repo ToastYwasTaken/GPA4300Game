@@ -140,7 +140,7 @@ public class GUIInventory : MonoBehaviour
         player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 
         //Anzeige: Drücke dieselbe Taste zum Fortsetzen
-        textMeshPressSameButtonToContinue.text = $"Press {++_indexInInventory} to continue.";
+        textMeshPressSameButtonToContinue.text = $"Druecke {++_indexInInventory} zum Fortsetzen.";
         textMeshPressSameButtonToContinue.enabled = true;
         Debug.Log("Opening Map");
         //Öffnet die entsprechende Map
@@ -316,7 +316,7 @@ public class GUIInventory : MonoBehaviour
     /// </summary>
     public IEnumerator DisplayNotAtGate()
     {
-        if (cooldownIsActive)
+        if (!cooldownIsActive)
         {
             textMeshNotAtGate.enabled = true;
             //2 Sek komplett sichtbar lassen
