@@ -16,15 +16,29 @@ using UnityEngine.Audio;
  * 
  * ChangeLog
  * ----------------------------
- *  09.07.2021  RK  erstellt
- *  20.08.2021  RK  hinzugefügt AudioSource enemySFX
- *                              AudioSource playerSFX
- *                              AudioSource environment
+ *  26.07.2021  RK  erstellt
  *  
  *****************************************************************************/
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+
+    const string MASTER_VOL = "masterVol";
+
+    const string PLAYER_VOL = "playerVol";
+    const string ENEMY_VOL = "enemyVol";
+    const string SFX_VOL = "sfxVol";
+    const string ENVIRONMENT_VOL = "environmentVol";
+
+    private readonly float muteDBValue = -80f;
+    private readonly float minDBValue = -60f;
+    private readonly float maxDBValue = 5f;
+
+    private float masterDBValue = 0f;
+    private float playerDBValue = 0f;
+    private float enemyDBValue = 0f;
+    private float sfxDBValue = 0f;
+    private float environmentDBValue = 0f;
 
     [SerializeField]
     private AudioMixer masterMixer;
@@ -42,14 +56,26 @@ public class AudioManager : MonoBehaviour
     }
 
     [SerializeField]
-    private bool masteraudioMute = false;
-    public bool MasteraudioMute
+    private bool environmentAudioMute = false;
+    public bool EnvironmentAudioMute
     {
-        get => masteraudioMute;
+        get => environmentAudioMute;
         set
         {
-            masteraudioMute = value;
-            SetMute(masteraudioMute);
+            environmentAudioMute = value;
+            SetEnvironmentMute(environmentAudioMute);
+        }
+    }
+
+    [SerializeField]
+    private bool sFXAudioMute = false;
+    public bool SFXAudioMute
+    {
+        get => sFXAudioMute;
+        set
+        {
+            sFXAudioMute = value;
+            SetSFXMute(sFXAudioMute);
         }
     }
 
@@ -66,107 +92,71 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        // Speichert alle festeingestellten Werte (Editor) aus dem AudioMixer
+        masterMixer.GetFloat(PLAYER_VOL, out playerDBValue);
+        masterMixer.GetFloat(ENEMY_VOL, out enemyDBValue);
+        masterMixer.GetFloat(SFX_VOL, out sfxDBValue);
+        masterMixer.GetFloat(ENVIRONMENT_VOL, out environmentDBValue);
+
+        // Lade die aktuellen Werte aus den PlayerPrefs
+        SetVolume(Preferences.instance.Load_AudioVolume());
+        SetSFXMute(!Preferences.instance.Load_SoundsMute());
+        SetEnvironmentMute(!Preferences.instance.Load_AudioMute());
+
+        //Debug.Log("Player: " + playerDBValue);
+        //Debug.Log("Enemy: " + enemyDBValue);
+        //Debug.Log("SFX: " + sfxDBValue);
+        //Debug.Log("Environment: " + environmentDBValue);
+    }
+
+    /// <summary>
+    /// Bestimmt das Master Volume des AudioMixer
+    /// </summary>
+    /// <param name="_value"></param>
     private void SetVolume(float _value)
     {
-        float dBValue = 0f;
+        masterDBValue = Mathf.Lerp(minDBValue, maxDBValue, Mathf.Clamp01(_value));
+       // Debug.Log("Master: " + masterDBValue);
+        masterMixer.SetFloat(MASTER_VOL, masterDBValue);
+    }
 
-        if (_value <= 0)
+    /// <summary>
+    /// Setzt alle SFX Werte auf den niedrigsten möglichen Wert
+    /// </summary>
+    /// <param name="_value"></param>
+    private void SetSFXMute(bool _value)
+    {
+        if (_value)
         {
-            dBValue = -80f;
+            masterMixer.SetFloat(PLAYER_VOL, muteDBValue);
+            masterMixer.SetFloat(ENEMY_VOL, muteDBValue);
+            masterMixer.SetFloat(SFX_VOL, muteDBValue);
         }
         else
         {
-            dBValue = 100 * Mathf.Log10(_value);
-            Debug.Log("Mixer Volume: " + dBValue);
+            masterMixer.SetFloat(PLAYER_VOL, playerDBValue);
+            masterMixer.SetFloat(ENEMY_VOL, enemyDBValue);
+            masterMixer.SetFloat(SFX_VOL, sfxDBValue);
         }
 
-        masterMixer.SetFloat("masterVol", dBValue);
     }
 
-    private void SetMute(bool _value)
+    /// <summary>
+    /// Setzt alle Environment Werte auf den niedrigsten möglichen Wert
+    /// </summary>
+    /// <param name="_value"></param>
+    private void SetEnvironmentMute(bool _value)
     {
-     
+        if (_value)
+        {
+            masterMixer.SetFloat(ENVIRONMENT_VOL, muteDBValue);
+        }
+        else
+        {
+            masterMixer.SetFloat(ENVIRONMENT_VOL, environmentDBValue);
+        }
+       
     }
-
-    /*public void musicVolume(float muVol) {
-        float wert = 0;
-        if (muVol > 0.38f) {
-            wert = 100 * Mathf.Log10(muVol);
-        }
-        else {
-            wert = -80f;
-        }
-        MasterMixer.SetFloat("musicVol", wert);
-}
-    */
-    #region old
-    //[SerializeField]
-    //private AudioSource enemySFX;
-    //[SerializeField]
-    //private AudioSource environment;
-
-    //private float audioVolume = 1f;
-    //public float AudioVolume
-    //{
-    //    set
-    //    {
-    //        audioVolume = value;
-    //        ChangedVolume(audioVolume);
-    //    }
-    //}
-
-    //private bool musicMute = false;
-    //public bool MusicMute
-    //{
-    //    set
-    //    {
-    //        musicMute = value;
-    //        SwitchMuteMusic(musicMute);
-    //    }
-    //}
-    //private bool sFXMute = false;
-    //public bool SFXMute
-    //{
-    //    set
-    //    {
-    //        sFXMute = value;
-    //        SwitchMuteSFX(sFXMute);
-    //    }
-    //}
-
-
-    //private void Awake()
-    //{
-    //    if (instance == null)
-    //    {
-    //        instance = this;
-    //    }
-    //    else if (instance != this)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-
-    //}
-
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    AudioVolume = Preferences.instance.Load_AudioVolume();      
-    //}
-
-    //private void ChangedVolume(float _value)
-    //{
-    //    if (enemySFX) enemySFX.volume = _value;
-    //    if (environment) environment.volume = _value;
-    //}
-
-    //private void SwitchMuteMusic(bool _value)
-    //{
-    //    if (environment) environment.mute = !_value;
-    //}
-    //private void SwitchMuteSFX(bool _value)
-    //{
-    //    if (enemySFX) enemySFX.mute = !_value;
-    //}
-    #endregion
 }

@@ -39,30 +39,22 @@ public class GameController : MonoBehaviour
     private GameObject uIWon;
 
     [SerializeField]
-    private PlayerController playerController;
-    [SerializeField]
     private EnemyAI enemyAI;
+
     [SerializeField]
     private Light directionalLight;
 
-
-    public Vector3 PlayerPosition { get; set; } = new Vector3(0f, 0f, 0f);
-    public Vector3 PlayerStartPosition { get; set; } = new Vector3(0f, 0f, 0f);
     public int PlayerHealth { get; set; } = 100;
 
     private float brightness = 2f;
     public float Brightness
-    { 
+    {
         set
         {
             brightness = value;
             SetBrightness(brightness);
         }
-    } 
-
-    public Vector3 EnemyPosition { get; set; } = new Vector3(0f, 0f, 0f);
-    public Vector3 EnemyStartPosition { get; set; } = new Vector3(0f, 0f, 0f);
-
+    }
 
     void Start()
     {
@@ -71,28 +63,24 @@ public class GameController : MonoBehaviour
         // Helligkeit zum Spielstart setzen
         SetBrightness(Preferences.instance.Load_Brightness());
 
-        // Fixiert die Maus und blendet sie aus
-        Cursor.lockState = CursorLockMode.Locked;
-
-        if (playerController)
-        {
-            playerController = FindObjectOfType<PlayerController>();
-        }
-        
         if (enemyAI)
         {
             enemyAI = FindObjectOfType<EnemyAI>();
+            // KI zum Anfang anhalten
+            enemyAI.CanRunning = false;
         }
 
-        NewGame();
+        // Fixiert die Maus und blendet sie aus
+        Cursor.lockState = CursorLockMode.Locked;
+
+        Time.timeScale = 1f;
     }
-    
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
+            // Lade die End Scene, wenn true
             if (uIWon.activeInHierarchy)
             {
                 GameIsWon();
@@ -100,9 +88,10 @@ public class GameController : MonoBehaviour
             }
 
             int scenes = SceneManager.sceneCount;
+            // Wenn nur eine Scene aktuell geladen ist, hebe die Pause auf
             if (scenes == 1)
             {
-                
+
                 isGamePaused = !isGamePaused;
                 PauseGame(isGamePaused);
             }
@@ -115,14 +104,7 @@ public class GameController : MonoBehaviour
     public void NewGame()
     {
         // Neues Spiel starten
-        PlayerPosition = PlayerStartPosition;
-        EnemyPosition = EnemyStartPosition;
-
-        playerController.StartPosition = PlayerPosition;
-        playerController.Sensitivity = Preferences.instance.Load_Sensitivity();
-
-        // KI zum Anfang anhalten
-        enemyAI.CanRunning = false;
+        SceneManager.LoadScene(4, LoadSceneMode.Single);
     }
 
     /// <summary>

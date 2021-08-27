@@ -25,6 +25,9 @@ public class StopAudioSource : MonoBehaviour
     [SerializeField]
     private AudioSource audioSource;
 
+    /// <summary>
+    /// Stop den AudioSource, wenn das GameObject zerstört wurde
+    /// </summary>
     private void OnDestroy()
     {
         audioSource.Stop();

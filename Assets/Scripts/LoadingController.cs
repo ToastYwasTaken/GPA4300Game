@@ -34,7 +34,7 @@ public class LoadingController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        ProgressText.text = $"Loading: {0} %";
+        ProgressText.text = $"Lade: {0} %";
 
         StartCoroutine(LoadingGame());
     }
@@ -52,6 +52,10 @@ public class LoadingController : MonoBehaviour
        // StartCoroutine(LoadingGame());
     }
 
+    /// <summary>
+    /// Lädt die GameScene und gibt den Fortschritt zurueck
+    /// </summary>
+    /// <returns></returns>
     IEnumerator LoadingGame()
     {
         yield return null;
@@ -65,7 +69,7 @@ public class LoadingController : MonoBehaviour
             operatinProgress = operation.progress;
 
             Debug.Log(operatinProgress);
-            ProgressText.text = $"Loading: {operatinProgress * 100:##0} %";
+            ProgressText.text = $"Lade: {operatinProgress * 100:##0} %";
 
             if (operatinProgress >= 0.9f)
             {

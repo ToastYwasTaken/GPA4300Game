@@ -87,7 +87,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -424,7 +424,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5613752207470976320, guid: 71b63b51f45e65f479d57ae998c74e33, type: 2}
   m_audioClip: {fileID: 8300000, guid: b06576bdf836f5f45a045957964b3980, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.693
   m_Pitch: -1.4
   Loop: 1
   Mute: 0
@@ -508,37 +508,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1130072561139805736
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3237008343574505931}
-  m_Layer: 0
-  m_Name: Cam
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3237008343574505931
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130072561139805736}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5419525534969994120}
-  m_Father: {fileID: 5585813076002531385}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319035769565289317
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +543,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2796469673723438813}
-  - {fileID: 3237008343574505931}
+  - {fileID: 5419525534969994120}
   - {fileID: 8234416164471064812}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -630,12 +599,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phealth: 100
-  camTransform: {fileID: 3237008343574505931}
+  camTransform: {fileID: 5419525534969994120}
   speedMultiplier: 3
-  maxEndurance: 10
   waitTimeForEnduranceReset: 5
   jumpForce: 200
-  maxVerticalCameraAngle: 75
+  maxVerticalCameraAngle: 60
   moveSpeed: 5
   rotationSpeed: 250
   fallingDownLimit: -5
@@ -643,8 +611,9 @@ MonoBehaviour:
   isGrounded: 0
   playerCollidingWithExitGate: 0
   rotatePlayerWithButtons: 0
-  jumpActive: 1
+  jumpActive: 0
   enduranceIsRecovery: 0
+  maxEndurance: 10
 --- !u!114 &4936548192297348396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,6 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animChar: {fileID: 2849998358143381689}
+  characterBody: {fileID: 695827615740992000}
 --- !u!114 &673894708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,7 +686,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3216888457726566613}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -0.013}
   m_LocalScale: {x: 1.4108351, y: 4.4444447, z: 2.6404328}
   m_Children: []
   m_Father: {fileID: 5419525534969994120}
@@ -797,13 +767,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4513941234596115797}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0.037}
-  m_LocalScale: {x: 0.7088001, y: 0.22500004, z: 0.37872592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.6709, z: 0.1347}
+  m_LocalScale: {x: 0.7088001, y: 0.22500004, z: 0.37872595}
   m_Children:
   - {fileID: 778182835135704156}
-  m_Father: {fileID: 3237008343574505931}
-  m_RootOrder: 0
+  m_Father: {fileID: 5585813076002531385}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6415656645810528182
 Animator:
@@ -971,6 +941,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+--- !u!1 &695827615740992000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3419931382778298941, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+  m_PrefabInstance: {fileID: 2800705699708934205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &2849998358143381689 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95455848339679364, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}

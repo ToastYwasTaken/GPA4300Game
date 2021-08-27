@@ -27,13 +27,6 @@ public class GateAudio : StateMachineBehaviour
     {
         AudioSource audioSource = animator.GetComponent<AudioSource>();
 
-        Preferences preferences = Preferences.instance;
-
-       // audioSource.mute = !preferences.Load_SoundsMute();
-       // audioSource.volume = preferences.Load_AudioVolume();
-
-        if (audioSource.mute) return;
-
         // Abspielen des Fallgitter Sounds
         audioSource.Play();
 

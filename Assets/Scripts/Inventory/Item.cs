@@ -154,13 +154,13 @@ public class Item : MonoBehaviour
                     break;
                 case IItemTypes.ItemType.SprintPotion:
                     //TODO: Use sprint potion
-                    if(playerController.Endurance >= playerController.maxEndurance)
+                    if(playerController.Endurance >= playerController.MaxEndurance)
                     {
                         inventoryRef.StartCoroutine(inventoryRef.DisplayCantUseEndurancepotion());
                     }
                     else
                     {
-                        playerController.Endurance = playerController.maxEndurance;
+                        playerController.Endurance = playerController.MaxEndurance;
                         itemUsed = true;
                     }
                     break;

@@ -54,7 +54,8 @@ public class ExitBehaviour : MonoBehaviour
     }
 
     /// <summary>
-    /// Zeigt UI für das gewonnene Spiel an und übergibt die benötigte Spielzeit
+    /// Zeigt UI für das gewonnene Spiel an und übergibt die 
+    /// benötigte Spielzeit
     /// </summary>
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
@@ -63,7 +64,8 @@ public class ExitBehaviour : MonoBehaviour
         {
             Time.timeScale = 0f;
             playerIsPlaying = false;
-            requiredPlayingTime = playTime.ToString(@"hh\:mm\:ss", CultureInfo.InvariantCulture);
+            requiredPlayingTime = 
+                playTime.ToString(@"hh\:mm\:ss", CultureInfo.InvariantCulture);
             FindObjectOfType<UIManager>().ShowUIWon(true, requiredPlayingTime);
         }
        
