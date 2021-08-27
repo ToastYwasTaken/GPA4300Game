@@ -58,32 +58,27 @@ public class Preferences : MonoBehaviour
 
     public float Load_AudioVolume()
     {
-        return PlayerPrefs.GetFloat("volume");
+        return PlayerPrefs.GetFloat("volume", 1f);
     }
 
     public float Load_Sensitivity()
     {
-        return PlayerPrefs.GetFloat("sensitivity");
+        return PlayerPrefs.GetFloat("sensitivity", 1f);
     }
 
     public bool Load_AudioMute()
     {
-        return PlayerPrefs.GetInt("audio") == 1;
+        return PlayerPrefs.GetInt("audio", 1) == 1;
     }
 
     public bool Load_SoundsMute()
     {
-        return PlayerPrefs.GetInt("sounds") == 1;
-    }
-
-    public int Load_PlayerHealth()
-    {
-        return PlayerPrefs.GetInt("PlayerHealth");
+        return PlayerPrefs.GetInt("sounds", 1) == 1;
     }
 
     public float Load_Brightness()
     {
-        return PlayerPrefs.GetFloat("Brightness");
+        return PlayerPrefs.GetFloat("Brightness", 0.2f);
     }
 
     #endregion
@@ -108,11 +103,6 @@ public class Preferences : MonoBehaviour
     public void Save_SoundsMute(bool _value)
     {
         PlayerPrefs.SetInt("sounds", _value ? 1 : 0);
-    }
-
-    public void Save_PlayerHealth(int _value)
-    {
-        PlayerPrefs.SetInt("PlayerHealth", _value);
     }
 
     public void Save_Brightness(float _value)
